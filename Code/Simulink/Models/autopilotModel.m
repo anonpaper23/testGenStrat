@@ -1,14 +1,13 @@
 %% Main
 function FR = autopilotModel(X,req)
-    a = tic;
-    t = 0:0.0125:25; %%%%
+    t = 0:0.025:25; %%%%
     if strcmp(req,'R12.1')
         nbrInputs = 8;
     else
         nbrInputs = 7;
     end
 
-    TimeSteps = 2001; %%%%
+    TimeSteps = 1001; %%%%
     apin.time = t';
     
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -49,13 +48,13 @@ function FR = autopilotModel(X,req)
 %    Else
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
             i=1;
-            while i <= 1801
+            while i <= 901
                 a=X(1,d);
-                a1(i:i+662) = a*ones(1,666);
-                i = i + 666;
+                a1(i:i+332) = a*ones(1,333);
+                i = i + 333;
                 d = d+1;
             end
-            a1(1,2001)= a; 
+            a1(1,1001)= a; 
             apin.signals(j).values = a1';
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
         end
@@ -125,7 +124,7 @@ function FR = autopilotModel(X,req)
 %    Assumptions 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%        
         Roll_Mode = zeros(TimeSteps,1);
-        for t =1:2001
+        for t =1:1001
             if (HDG_Mode(t)==0)&&(ALT_Mode(t)==0)
                 Roll_Mode(t) = 1;
             else
@@ -133,14 +132,14 @@ function FR = autopilotModel(X,req)
             end 
         end
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
-        TkDiff = zeros(2000,1);
-        for i = 2:2001
+        TkDiff = zeros(1000,1);
+        for i = 2:1001
             TkDiff(i) = TurnK(i) - TurnK(i-1);
         end
        % TkDiffMax = max(TkDiff);
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
 
-        Ft = 2000 * ones(TimeSteps,1); 
+        Ft = 1000 * ones(TimeSteps,1); 
         
         switch req
             case 'R1.1'
@@ -180,19 +179,16 @@ function FR = autopilotModel(X,req)
 
             %New requirement
             case 'R12.1'
-                for t = 1:2001
-                    Ft(t) = R121Obj(AP_Eng(1:2001), alt(1:2001), ALT_Ref(1:2001));
+                for t = 1:1001
+                    Ft(t) = R121Obj(AP_Eng(1:1001), alt(1:1001), ALT_Ref(1:1001));
                 end
             otherwise % by default R1.1
-                for t = 1:2001
+                for t = 1:1001
                     Ft(t) = R11Obj(AP_Eng(t), Ail_cmd.Data(t));
                 end
         end
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
         FR=  min(Ft);
-        b = toc(a);
-        disp("Time for a sim");
-        disp(b);
 end
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -497,9 +493,9 @@ function R121 = R121Obj(AP_Eng, alt, ALT_Ref)
     
     if maxvalue == 1
     
-        for i = maxindex:min((maxindex + 500),2001)
+        for i = maxindex:min((maxindex + 500),1001)
         
-            for j = i:min((maxindex + 500),2001)
+            for j = i:min((maxindex + 500),1001)
             
                 term = 0.05 - (ALT_Ref - alt);
 
