@@ -1,0 +1,4 @@
+Starting QVTrace Direct
+Reading ../testing/models/lm/3_regulators/invalid1.qvt
+Violations are possible, but no example could be found.
+Total time: 7.392614e-02 s

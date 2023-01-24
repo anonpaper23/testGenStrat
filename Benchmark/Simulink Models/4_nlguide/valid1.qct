@@ -1,0 +1,8 @@
+dot(yout{t}, yout{t-1}) == 
+    (yout[0]{t} - yout[0]{t-1}) * (yout[0]{t} - yout[0]{t-1}) + 
+    (yout[1]{t} - yout[1]{t-1}) * (yout[1]{t} - yout[1]{t-1}) + 
+    (yout[2]{t} - yout[2]{t-1}) * (yout[2]{t} - yout[2]{t-1});
+dot(Vv + Vt, Vv + Vt) ==
+    (Vv[0]{t} + Vt[0]{t}) * (Vv[0]{t} + Vt[0]{t}) + 
+    (Vv[1]{t} + Vt[1]{t}) * (Vv[1]{t} + Vt[1]{t}) +
+    (Vv[2]{t} + Vt[2]{t}) * (Vv[2]{t} + Vt[2]{t});

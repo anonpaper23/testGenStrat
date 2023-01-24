@@ -1,0 +1,15 @@
+(
+    (Xtarg{t} == Xtarg{t-1})
+    and
+    (NLGuidance.Outer.If_2{t} iff NLGuidance.Outer.If_2{t-1})
+) impl (
+    (
+        (yout[0]{t} - yout[0]{t-1})*(yout[0]{t} - yout[0]{t-1}) + 
+        (yout[1]{t} - yout[1]{t-1})*(yout[1]{t} - yout[1]{t-1}) + 
+        (yout[2]{t} - yout[2]{t-1})*(yout[2]{t} - yout[2]{t-1})
+    ) <= 0.0004 * (
+        (Vv[0]{t} + Vt[0]{t})*(Vv[0]{t} + Vt[0]{t}) + 
+        (Vv[1]{t} + Vt[1]{t})*(Vv[1]{t} + Vt[1]{t}) +
+        (Vv[2]{t} + Vt[2]{t})*(Vv[2]{t} + Vt[2]{t})
+    )
+);

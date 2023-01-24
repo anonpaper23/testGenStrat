@@ -1,0 +1,5 @@
+#2. The autopilot shall change states from TRANSITION to STANDBY when the pilot is in control (standby).
+
+# UPDATED: Referencing standby{t} rather than standby{t-1}. The requirements 
+# are ambiguous as to which is correct. The model uses standby{t}.
+(FiniteStateMachine.STATE{t-1}==0 and standby) impl FiniteStateMachine.STATE{t}==3;

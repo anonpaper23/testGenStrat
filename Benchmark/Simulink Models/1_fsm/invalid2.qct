@@ -1,0 +1,1 @@
+(standby{never} and apfail{never} and supported{all} and limits{all}) impl ((not pullup{0}) and pullup{1} and pullup{2});

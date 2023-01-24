@@ -1,0 +1,516 @@
+# 4. The Output (yout) of this function shall approximate the Tustin 
+# integration of the value of the input signal (xin) over time within 
+# a specified tolerance, defined in the following subtests:
+#  a) After 10 seconds of normal operation, the function computation 
+#     at an execution frequency of 10 hz, yout should equal 10.0 within
+#     a +/- 0.1 tolerance, for a constant xin equal to 1.0, and sample
+#     delta time T equal to 0.1 seconds.
+
+(
+    xin{all}==1.0 and T{all}==0.1 and reset{never} and 
+    ( 
+        (
+            (TL{t}>=BL{t} and yout{t}>=BL and yout{t}<=TL{t}) or 
+            (BL{t}>=TL{t} and yout{t}>=TL and yout{t}<=BL{t})
+        )
+        and 
+        (
+            (TL{t-1}>=BL{t-1} and yout{t-1}>=BL and yout{t-1}<=TL{t-1}) or 
+            (BL{t-1}>=TL{t-1} and yout{t-1}>=TL and yout{t-1}<=BL{t-1})
+        )
+        and 
+        (
+            (TL{t-2}>=BL{t-2} and yout{t-2}>=BL and yout{t-2}<=TL{t-2}) or 
+            (BL{t-2}>=TL{t-2} and yout{t-2}>=TL and yout{t-2}<=BL{t-2})
+        )
+        and 
+        (
+            (TL{t-3}>=BL{t-3} and yout{t-3}>=BL and yout{t-3}<=TL{t-3}) or 
+            (BL{t-3}>=TL{t-3} and yout{t-3}>=TL and yout{t-3}<=BL{t-3})
+        )
+        and 
+        (
+            (TL{t-4}>=BL{t-4} and yout{t-4}>=BL and yout{t-4}<=TL{t-4}) or 
+            (BL{t-4}>=TL{t-4} and yout{t-4}>=TL and yout{t-4}<=BL{t-4})
+        )
+        and 
+        (
+            (TL{t-5}>=BL{t-5} and yout{t-5}>=BL and yout{t-5}<=TL{t-5}) or 
+            (BL{t-5}>=TL{t-5} and yout{t-5}>=TL and yout{t-5}<=BL{t-5})
+        )
+        and 
+        (
+            (TL{t-6}>=BL{t-6} and yout{t-6}>=BL and yout{t-6}<=TL{t-6}) or 
+            (BL{t-6}>=TL{t-6} and yout{t-6}>=TL and yout{t-6}<=BL{t-6})
+        )
+        and 
+        (
+            (TL{t-7}>=BL{t-7} and yout{t-7}>=BL and yout{t-7}<=TL{t-7}) or 
+            (BL{t-7}>=TL{t-7} and yout{t-7}>=TL and yout{t-7}<=BL{t-7})
+        )
+        and 
+        (
+            (TL{t-8}>=BL{t-8} and yout{t-8}>=BL and yout{t-8}<=TL{t-8}) or 
+            (BL{t-8}>=TL{t-8} and yout{t-8}>=TL and yout{t-8}<=BL{t-8})
+        )
+        and 
+        (
+            (TL{t-9}>=BL{t-9} and yout{t-9}>=BL and yout{t-9}<=TL{t-9}) or 
+            (BL{t-9}>=TL{t-9} and yout{t-9}>=TL and yout{t-9}<=BL{t-9})
+        )
+        and 
+        (
+            (TL{t-10}>=BL{t-10} and yout{t-10}>=BL and yout{t-10}<=TL{t-10}) or 
+            (BL{t-10}>=TL{t-10} and yout{t-10}>=TL and yout{t-10}<=BL{t-10})
+        )
+        and 
+        (
+            (TL{t-11}>=BL{t-11} and yout{t-11}>=BL and yout{t-11}<=TL{t-11}) or 
+            (BL{t-11}>=TL{t-11} and yout{t-11}>=TL and yout{t-11}<=BL{t-11})
+        )
+        and 
+        (
+            (TL{t-12}>=BL{t-12} and yout{t-12}>=BL and yout{t-12}<=TL{t-12}) or 
+            (BL{t-12}>=TL{t-12} and yout{t-12}>=TL and yout{t-12}<=BL{t-12})
+        )
+        and 
+        (
+            (TL{t-13}>=BL{t-13} and yout{t-13}>=BL and yout{t-13}<=TL{t-13}) or 
+            (BL{t-13}>=TL{t-13} and yout{t-13}>=TL and yout{t-13}<=BL{t-13})
+        )
+        and 
+        (
+            (TL{t-14}>=BL{t-14} and yout{t-14}>=BL and yout{t-14}<=TL{t-14}) or 
+            (BL{t-14}>=TL{t-14} and yout{t-14}>=TL and yout{t-14}<=BL{t-14})
+        )
+        and 
+        (
+            (TL{t-15}>=BL{t-15} and yout{t-15}>=BL and yout{t-15}<=TL{t-15}) or 
+            (BL{t-15}>=TL{t-15} and yout{t-15}>=TL and yout{t-15}<=BL{t-15})
+        )
+        and 
+        (
+            (TL{t-16}>=BL{t-16} and yout{t-16}>=BL and yout{t-16}<=TL{t-16}) or 
+            (BL{t-16}>=TL{t-16} and yout{t-16}>=TL and yout{t-16}<=BL{t-16})
+        )
+        and 
+        (
+            (TL{t-17}>=BL{t-17} and yout{t-17}>=BL and yout{t-17}<=TL{t-17}) or 
+            (BL{t-17}>=TL{t-17} and yout{t-17}>=TL and yout{t-17}<=BL{t-17})
+        )
+        and 
+        (
+            (TL{t-18}>=BL{t-18} and yout{t-18}>=BL and yout{t-18}<=TL{t-18}) or 
+            (BL{t-18}>=TL{t-18} and yout{t-18}>=TL and yout{t-18}<=BL{t-18})
+        )
+        and 
+        (
+            (TL{t-19}>=BL{t-19} and yout{t-19}>=BL and yout{t-19}<=TL{t-19}) or 
+            (BL{t-19}>=TL{t-19} and yout{t-19}>=TL and yout{t-19}<=BL{t-19})
+        )
+        and 
+        (
+            (TL{t-20}>=BL{t-20} and yout{t-20}>=BL and yout{t-20}<=TL{t-20}) or 
+            (BL{t-20}>=TL{t-20} and yout{t-20}>=TL and yout{t-20}<=BL{t-20})
+        )
+        and 
+        (
+            (TL{t-21}>=BL{t-21} and yout{t-21}>=BL and yout{t-21}<=TL{t-21}) or 
+            (BL{t-21}>=TL{t-21} and yout{t-21}>=TL and yout{t-21}<=BL{t-21})
+        )
+        and 
+        (
+            (TL{t-22}>=BL{t-22} and yout{t-22}>=BL and yout{t-22}<=TL{t-22}) or 
+            (BL{t-22}>=TL{t-22} and yout{t-22}>=TL and yout{t-22}<=BL{t-22})
+        )
+        and 
+        (
+            (TL{t-23}>=BL{t-23} and yout{t-23}>=BL and yout{t-23}<=TL{t-23}) or 
+            (BL{t-23}>=TL{t-23} and yout{t-23}>=TL and yout{t-23}<=BL{t-23})
+        )
+        and 
+        (
+            (TL{t-24}>=BL{t-24} and yout{t-24}>=BL and yout{t-24}<=TL{t-24}) or 
+            (BL{t-24}>=TL{t-24} and yout{t-24}>=TL and yout{t-24}<=BL{t-24})
+        )
+        and 
+        (
+            (TL{t-25}>=BL{t-25} and yout{t-25}>=BL and yout{t-25}<=TL{t-25}) or 
+            (BL{t-25}>=TL{t-25} and yout{t-25}>=TL and yout{t-25}<=BL{t-25})
+        )
+        and 
+        (
+            (TL{t-26}>=BL{t-26} and yout{t-26}>=BL and yout{t-26}<=TL{t-26}) or 
+            (BL{t-26}>=TL{t-26} and yout{t-26}>=TL and yout{t-26}<=BL{t-26})
+        )
+        and 
+        (
+            (TL{t-27}>=BL{t-27} and yout{t-27}>=BL and yout{t-27}<=TL{t-27}) or 
+            (BL{t-27}>=TL{t-27} and yout{t-27}>=TL and yout{t-27}<=BL{t-27})
+        )
+        and 
+        (
+            (TL{t-28}>=BL{t-28} and yout{t-28}>=BL and yout{t-28}<=TL{t-28}) or 
+            (BL{t-28}>=TL{t-28} and yout{t-28}>=TL and yout{t-28}<=BL{t-28})
+        )
+        and 
+        (
+            (TL{t-29}>=BL{t-29} and yout{t-29}>=BL and yout{t-29}<=TL{t-29}) or 
+            (BL{t-29}>=TL{t-29} and yout{t-29}>=TL and yout{t-29}<=BL{t-29})
+        )
+        and 
+        (
+            (TL{t-30}>=BL{t-30} and yout{t-30}>=BL and yout{t-30}<=TL{t-30}) or 
+            (BL{t-30}>=TL{t-30} and yout{t-30}>=TL and yout{t-30}<=BL{t-30})
+        )
+        and 
+        (
+            (TL{t-31}>=BL{t-31} and yout{t-31}>=BL and yout{t-31}<=TL{t-31}) or 
+            (BL{t-31}>=TL{t-31} and yout{t-31}>=TL and yout{t-31}<=BL{t-31})
+        )
+        and 
+        (
+            (TL{t-32}>=BL{t-32} and yout{t-32}>=BL and yout{t-32}<=TL{t-32}) or 
+            (BL{t-32}>=TL{t-32} and yout{t-32}>=TL and yout{t-32}<=BL{t-32})
+        )
+        and 
+        (
+            (TL{t-33}>=BL{t-33} and yout{t-33}>=BL and yout{t-33}<=TL{t-33}) or 
+            (BL{t-33}>=TL{t-33} and yout{t-33}>=TL and yout{t-33}<=BL{t-33})
+        )
+        and 
+        (
+            (TL{t-34}>=BL{t-34} and yout{t-34}>=BL and yout{t-34}<=TL{t-34}) or 
+            (BL{t-34}>=TL{t-34} and yout{t-34}>=TL and yout{t-34}<=BL{t-34})
+        )
+        and 
+        (
+            (TL{t-35}>=BL{t-35} and yout{t-35}>=BL and yout{t-35}<=TL{t-35}) or 
+            (BL{t-35}>=TL{t-35} and yout{t-35}>=TL and yout{t-35}<=BL{t-35})
+        )
+        and 
+        (
+            (TL{t-36}>=BL{t-36} and yout{t-36}>=BL and yout{t-36}<=TL{t-36}) or 
+            (BL{t-36}>=TL{t-36} and yout{t-36}>=TL and yout{t-36}<=BL{t-36})
+        )
+        and 
+        (
+            (TL{t-37}>=BL{t-37} and yout{t-37}>=BL and yout{t-37}<=TL{t-37}) or 
+            (BL{t-37}>=TL{t-37} and yout{t-37}>=TL and yout{t-37}<=BL{t-37})
+        )
+        and 
+        (
+            (TL{t-38}>=BL{t-38} and yout{t-38}>=BL and yout{t-38}<=TL{t-38}) or 
+            (BL{t-38}>=TL{t-38} and yout{t-38}>=TL and yout{t-38}<=BL{t-38})
+        )
+        and 
+        (
+            (TL{t-39}>=BL{t-39} and yout{t-39}>=BL and yout{t-39}<=TL{t-39}) or 
+            (BL{t-39}>=TL{t-39} and yout{t-39}>=TL and yout{t-39}<=BL{t-39})
+        )
+        and 
+        (
+            (TL{t-40}>=BL{t-40} and yout{t-40}>=BL and yout{t-40}<=TL{t-40}) or 
+            (BL{t-40}>=TL{t-40} and yout{t-40}>=TL and yout{t-40}<=BL{t-40})
+        )
+        and 
+        (
+            (TL{t-41}>=BL{t-41} and yout{t-41}>=BL and yout{t-41}<=TL{t-41}) or 
+            (BL{t-41}>=TL{t-41} and yout{t-41}>=TL and yout{t-41}<=BL{t-41})
+        )
+        and 
+        (
+            (TL{t-42}>=BL{t-42} and yout{t-42}>=BL and yout{t-42}<=TL{t-42}) or 
+            (BL{t-42}>=TL{t-42} and yout{t-42}>=TL and yout{t-42}<=BL{t-42})
+        )
+        and 
+        (
+            (TL{t-43}>=BL{t-43} and yout{t-43}>=BL and yout{t-43}<=TL{t-43}) or 
+            (BL{t-43}>=TL{t-43} and yout{t-43}>=TL and yout{t-43}<=BL{t-43})
+        )
+        and 
+        (
+            (TL{t-44}>=BL{t-44} and yout{t-44}>=BL and yout{t-44}<=TL{t-44}) or 
+            (BL{t-44}>=TL{t-44} and yout{t-44}>=TL and yout{t-44}<=BL{t-44})
+        )
+        and 
+        (
+            (TL{t-45}>=BL{t-45} and yout{t-45}>=BL and yout{t-45}<=TL{t-45}) or 
+            (BL{t-45}>=TL{t-45} and yout{t-45}>=TL and yout{t-45}<=BL{t-45})
+        )
+        and 
+        (
+            (TL{t-46}>=BL{t-46} and yout{t-46}>=BL and yout{t-46}<=TL{t-46}) or 
+            (BL{t-46}>=TL{t-46} and yout{t-46}>=TL and yout{t-46}<=BL{t-46})
+        )
+        and 
+        (
+            (TL{t-47}>=BL{t-47} and yout{t-47}>=BL and yout{t-47}<=TL{t-47}) or 
+            (BL{t-47}>=TL{t-47} and yout{t-47}>=TL and yout{t-47}<=BL{t-47})
+        )
+        and 
+        (
+            (TL{t-48}>=BL{t-48} and yout{t-48}>=BL and yout{t-48}<=TL{t-48}) or 
+            (BL{t-48}>=TL{t-48} and yout{t-48}>=TL and yout{t-48}<=BL{t-48})
+        )
+        and 
+        (
+            (TL{t-49}>=BL{t-49} and yout{t-49}>=BL and yout{t-49}<=TL{t-49}) or 
+            (BL{t-49}>=TL{t-49} and yout{t-49}>=TL and yout{t-49}<=BL{t-49})
+        )
+        and 
+        (
+            (TL{t-50}>=BL{t-50} and yout{t-50}>=BL and yout{t-50}<=TL{t-50}) or 
+            (BL{t-50}>=TL{t-50} and yout{t-50}>=TL and yout{t-50}<=BL{t-50})
+        )
+        and 
+        (
+            (TL{t-51}>=BL{t-51} and yout{t-51}>=BL and yout{t-51}<=TL{t-51}) or 
+            (BL{t-51}>=TL{t-51} and yout{t-51}>=TL and yout{t-51}<=BL{t-51})
+        )
+        and 
+        (
+            (TL{t-52}>=BL{t-52} and yout{t-52}>=BL and yout{t-52}<=TL{t-52}) or 
+            (BL{t-52}>=TL{t-52} and yout{t-52}>=TL and yout{t-52}<=BL{t-52})
+        )
+        and 
+        (
+            (TL{t-53}>=BL{t-53} and yout{t-53}>=BL and yout{t-53}<=TL{t-53}) or 
+            (BL{t-53}>=TL{t-53} and yout{t-53}>=TL and yout{t-53}<=BL{t-53})
+        )
+        and 
+        (
+            (TL{t-54}>=BL{t-54} and yout{t-54}>=BL and yout{t-54}<=TL{t-54}) or 
+            (BL{t-54}>=TL{t-54} and yout{t-54}>=TL and yout{t-54}<=BL{t-54})
+        )
+        and 
+        (
+            (TL{t-55}>=BL{t-55} and yout{t-55}>=BL and yout{t-55}<=TL{t-55}) or 
+            (BL{t-55}>=TL{t-55} and yout{t-55}>=TL and yout{t-55}<=BL{t-55})
+        )
+        and 
+        (
+            (TL{t-56}>=BL{t-56} and yout{t-56}>=BL and yout{t-56}<=TL{t-56}) or 
+            (BL{t-56}>=TL{t-56} and yout{t-56}>=TL and yout{t-56}<=BL{t-56})
+        )
+        and 
+        (
+            (TL{t-57}>=BL{t-57} and yout{t-57}>=BL and yout{t-57}<=TL{t-57}) or 
+            (BL{t-57}>=TL{t-57} and yout{t-57}>=TL and yout{t-57}<=BL{t-57})
+        )
+        and 
+        (
+            (TL{t-58}>=BL{t-58} and yout{t-58}>=BL and yout{t-58}<=TL{t-58}) or 
+            (BL{t-58}>=TL{t-58} and yout{t-58}>=TL and yout{t-58}<=BL{t-58})
+        )
+        and 
+        (
+            (TL{t-59}>=BL{t-59} and yout{t-59}>=BL and yout{t-59}<=TL{t-59}) or 
+            (BL{t-59}>=TL{t-59} and yout{t-59}>=TL and yout{t-59}<=BL{t-59})
+        )
+        and 
+        (
+            (TL{t-60}>=BL{t-60} and yout{t-60}>=BL and yout{t-60}<=TL{t-60}) or 
+            (BL{t-60}>=TL{t-60} and yout{t-60}>=TL and yout{t-60}<=BL{t-60})
+        )
+        and 
+        (
+            (TL{t-61}>=BL{t-61} and yout{t-61}>=BL and yout{t-61}<=TL{t-61}) or 
+            (BL{t-61}>=TL{t-61} and yout{t-61}>=TL and yout{t-61}<=BL{t-61})
+        )
+        and 
+        (
+            (TL{t-62}>=BL{t-62} and yout{t-62}>=BL and yout{t-62}<=TL{t-62}) or 
+            (BL{t-62}>=TL{t-62} and yout{t-62}>=TL and yout{t-62}<=BL{t-62})
+        )
+        and 
+        (
+            (TL{t-63}>=BL{t-63} and yout{t-63}>=BL and yout{t-63}<=TL{t-63}) or 
+            (BL{t-63}>=TL{t-63} and yout{t-63}>=TL and yout{t-63}<=BL{t-63})
+        )
+        and 
+        (
+            (TL{t-64}>=BL{t-64} and yout{t-64}>=BL and yout{t-64}<=TL{t-64}) or 
+            (BL{t-64}>=TL{t-64} and yout{t-64}>=TL and yout{t-64}<=BL{t-64})
+        )
+        and 
+        (
+            (TL{t-65}>=BL{t-65} and yout{t-65}>=BL and yout{t-65}<=TL{t-65}) or 
+            (BL{t-65}>=TL{t-65} and yout{t-65}>=TL and yout{t-65}<=BL{t-65})
+        )
+        and 
+        (
+            (TL{t-66}>=BL{t-66} and yout{t-66}>=BL and yout{t-66}<=TL{t-66}) or 
+            (BL{t-66}>=TL{t-66} and yout{t-66}>=TL and yout{t-66}<=BL{t-66})
+        )
+        and 
+        (
+            (TL{t-67}>=BL{t-67} and yout{t-67}>=BL and yout{t-67}<=TL{t-67}) or 
+            (BL{t-67}>=TL{t-67} and yout{t-67}>=TL and yout{t-67}<=BL{t-67})
+        )
+        and 
+        (
+            (TL{t-68}>=BL{t-68} and yout{t-68}>=BL and yout{t-68}<=TL{t-68}) or 
+            (BL{t-68}>=TL{t-68} and yout{t-68}>=TL and yout{t-68}<=BL{t-68})
+        )
+        and 
+        (
+            (TL{t-69}>=BL{t-69} and yout{t-69}>=BL and yout{t-69}<=TL{t-69}) or 
+            (BL{t-69}>=TL{t-69} and yout{t-69}>=TL and yout{t-69}<=BL{t-69})
+        )
+        and 
+        (
+            (TL{t-70}>=BL{t-70} and yout{t-70}>=BL and yout{t-70}<=TL{t-70}) or 
+            (BL{t-70}>=TL{t-70} and yout{t-70}>=TL and yout{t-70}<=BL{t-70})
+        )
+        and 
+        (
+            (TL{t-71}>=BL{t-71} and yout{t-71}>=BL and yout{t-71}<=TL{t-71}) or 
+            (BL{t-71}>=TL{t-71} and yout{t-71}>=TL and yout{t-71}<=BL{t-71})
+        )
+        and 
+        (
+            (TL{t-72}>=BL{t-72} and yout{t-72}>=BL and yout{t-72}<=TL{t-72}) or 
+            (BL{t-72}>=TL{t-72} and yout{t-72}>=TL and yout{t-72}<=BL{t-72})
+        )
+        and 
+        (
+            (TL{t-73}>=BL{t-73} and yout{t-73}>=BL and yout{t-73}<=TL{t-73}) or 
+            (BL{t-73}>=TL{t-73} and yout{t-73}>=TL and yout{t-73}<=BL{t-73})
+        )
+        and 
+        (
+            (TL{t-74}>=BL{t-74} and yout{t-74}>=BL and yout{t-74}<=TL{t-74}) or 
+            (BL{t-74}>=TL{t-74} and yout{t-74}>=TL and yout{t-74}<=BL{t-74})
+        )
+        and 
+        (
+            (TL{t-75}>=BL{t-75} and yout{t-75}>=BL and yout{t-75}<=TL{t-75}) or 
+            (BL{t-75}>=TL{t-75} and yout{t-75}>=TL and yout{t-75}<=BL{t-75})
+        )
+        and 
+        (
+            (TL{t-76}>=BL{t-76} and yout{t-76}>=BL and yout{t-76}<=TL{t-76}) or 
+            (BL{t-76}>=TL{t-76} and yout{t-76}>=TL and yout{t-76}<=BL{t-76})
+        )
+        and 
+        (
+            (TL{t-77}>=BL{t-77} and yout{t-77}>=BL and yout{t-77}<=TL{t-77}) or 
+            (BL{t-77}>=TL{t-77} and yout{t-77}>=TL and yout{t-77}<=BL{t-77})
+        )
+        and 
+        (
+            (TL{t-78}>=BL{t-78} and yout{t-78}>=BL and yout{t-78}<=TL{t-78}) or 
+            (BL{t-78}>=TL{t-78} and yout{t-78}>=TL and yout{t-78}<=BL{t-78})
+        )
+        and 
+        (
+            (TL{t-79}>=BL{t-79} and yout{t-79}>=BL and yout{t-79}<=TL{t-79}) or 
+            (BL{t-79}>=TL{t-79} and yout{t-79}>=TL and yout{t-79}<=BL{t-79})
+        )
+        and 
+        (
+            (TL{t-80}>=BL{t-80} and yout{t-80}>=BL and yout{t-80}<=TL{t-80}) or 
+            (BL{t-80}>=TL{t-80} and yout{t-80}>=TL and yout{t-80}<=BL{t-80})
+        )
+        and 
+        (
+            (TL{t-81}>=BL{t-81} and yout{t-81}>=BL and yout{t-81}<=TL{t-81}) or 
+            (BL{t-81}>=TL{t-81} and yout{t-81}>=TL and yout{t-81}<=BL{t-81})
+        )
+        and 
+        (
+            (TL{t-82}>=BL{t-82} and yout{t-82}>=BL and yout{t-82}<=TL{t-82}) or 
+            (BL{t-82}>=TL{t-82} and yout{t-82}>=TL and yout{t-82}<=BL{t-82})
+        )
+        and 
+        (
+            (TL{t-83}>=BL{t-83} and yout{t-83}>=BL and yout{t-83}<=TL{t-83}) or 
+            (BL{t-83}>=TL{t-83} and yout{t-83}>=TL and yout{t-83}<=BL{t-83})
+        )
+        and 
+        (
+            (TL{t-84}>=BL{t-84} and yout{t-84}>=BL and yout{t-84}<=TL{t-84}) or 
+            (BL{t-84}>=TL{t-84} and yout{t-84}>=TL and yout{t-84}<=BL{t-84})
+        )
+        and 
+        (
+            (TL{t-85}>=BL{t-85} and yout{t-85}>=BL and yout{t-85}<=TL{t-85}) or 
+            (BL{t-85}>=TL{t-85} and yout{t-85}>=TL and yout{t-85}<=BL{t-85})
+        )
+        and 
+        (
+            (TL{t-86}>=BL{t-86} and yout{t-86}>=BL and yout{t-86}<=TL{t-86}) or 
+            (BL{t-86}>=TL{t-86} and yout{t-86}>=TL and yout{t-86}<=BL{t-86})
+        )
+        and 
+        (
+            (TL{t-87}>=BL{t-87} and yout{t-87}>=BL and yout{t-87}<=TL{t-87}) or 
+            (BL{t-87}>=TL{t-87} and yout{t-87}>=TL and yout{t-87}<=BL{t-87})
+        )
+        and 
+        (
+            (TL{t-88}>=BL{t-88} and yout{t-88}>=BL and yout{t-88}<=TL{t-88}) or 
+            (BL{t-88}>=TL{t-88} and yout{t-88}>=TL and yout{t-88}<=BL{t-88})
+        )
+        and 
+        (
+            (TL{t-89}>=BL{t-89} and yout{t-89}>=BL and yout{t-89}<=TL{t-89}) or 
+            (BL{t-89}>=TL{t-89} and yout{t-89}>=TL and yout{t-89}<=BL{t-89})
+        )
+        and 
+        (
+            (TL{t-90}>=BL{t-90} and yout{t-90}>=BL and yout{t-90}<=TL{t-90}) or 
+            (BL{t-90}>=TL{t-90} and yout{t-90}>=TL and yout{t-90}<=BL{t-90})
+        )
+        and 
+        (
+            (TL{t-91}>=BL{t-91} and yout{t-91}>=BL and yout{t-91}<=TL{t-91}) or 
+            (BL{t-91}>=TL{t-91} and yout{t-91}>=TL and yout{t-91}<=BL{t-91})
+        )
+        and 
+        (
+            (TL{t-92}>=BL{t-92} and yout{t-92}>=BL and yout{t-92}<=TL{t-92}) or 
+            (BL{t-92}>=TL{t-92} and yout{t-92}>=TL and yout{t-92}<=BL{t-92})
+        )
+        and 
+        (
+            (TL{t-93}>=BL{t-93} and yout{t-93}>=BL and yout{t-93}<=TL{t-93}) or 
+            (BL{t-93}>=TL{t-93} and yout{t-93}>=TL and yout{t-93}<=BL{t-93})
+        )
+        and 
+        (
+            (TL{t-94}>=BL{t-94} and yout{t-94}>=BL and yout{t-94}<=TL{t-94}) or 
+            (BL{t-94}>=TL{t-94} and yout{t-94}>=TL and yout{t-94}<=BL{t-94})
+        )
+        and 
+        (
+            (TL{t-95}>=BL{t-95} and yout{t-95}>=BL and yout{t-95}<=TL{t-95}) or 
+            (BL{t-95}>=TL{t-95} and yout{t-95}>=TL and yout{t-95}<=BL{t-95})
+        )
+        and 
+        (
+            (TL{t-96}>=BL{t-96} and yout{t-96}>=BL and yout{t-96}<=TL{t-96}) or 
+            (BL{t-96}>=TL{t-96} and yout{t-96}>=TL and yout{t-96}<=BL{t-96})
+        )
+        and 
+        (
+            (TL{t-97}>=BL{t-97} and yout{t-97}>=BL and yout{t-97}<=TL{t-97}) or 
+            (BL{t-97}>=TL{t-97} and yout{t-97}>=TL and yout{t-97}<=BL{t-97})
+        )
+        and 
+        (
+            (TL{t-98}>=BL{t-98} and yout{t-98}>=BL and yout{t-98}<=TL{t-98}) or 
+            (BL{t-98}>=TL{t-98} and yout{t-98}>=TL and yout{t-98}<=BL{t-98})
+        )
+        and 
+        (
+            (TL{t-99}>=BL{t-99} and yout{t-99}>=BL and yout{t-99}<=TL{t-99}) or 
+            (BL{t-99}>=TL{t-99} and yout{t-99}>=TL and yout{t-99}<=BL{t-99})
+        )
+    )
+) 
+
+impl
+ 
+( abs(yout{100}-10) <= 0.1 );

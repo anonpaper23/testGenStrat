@@ -1,0 +1,6356 @@
+<!DOCTYPE html>
+<html>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
+<head>
+<style type="text/css">
+body {color:black;}
+table.T1 {border-style:solid ;border-color:#EEEEFF;border-width:1px; border-spacing:0;padding:2px;border-collapse:collapse;}table.T0 {border-style:hidden; }TH.th1 { background-color:#EEEEFF;text-align:left;border-style:solid ;border-color:#EEEEFF;border-width:1px; padding:2px;}TD.d1 {border-style:solid ;border-color:#EEEEFF;border-width:1px; text-align:left;padding:2px;}TD.d0 {text-align: left;border-style:none;padding:2px;}.indented {margin-left:25px;}span.ERROR {color:red}
+span.FAILED {color:red}
+span.FAILED_TO_TRACE {color:red}
+span.FAILED_TO_VERIFY {color:red}
+span.NON_FUNCTIONAL {color:black}
+span.NOT_PROCESSED {color:black}
+span.PARTIALLY_PROCESSED {color:#caad00}
+span.PARTIALLY_TRACED {color:#caad00}
+span.PARTIALLY_VERIFIED {color:#caad00}
+span.PASSED {color:green}
+span.TRACED {color:green}
+span.UNABLE_TO_PROCESS {color:#caad00}
+span.UNKNOWN {color:black}
+span.VERIFIED {color:green}
+span.WARNING {color:#caad00}
+span.CODE { white-space: pre;  }
+span.FORMATTED_MSG { white-space: pre;  }
+</style>
+<link rel="stylesheet" type="text/css" href="rtwreport.css" /><script language="JavaScript" type="text/javascript"> 
+ function rtwTableShrink(o, category)
+ {
+    var indent = document.getElementById(category + "_indent");
+    var fileTable = document.getElementById(category + "_table");
+    if (fileTable.style.display == "none") {
+        fileTable.style.display = "";
+        indent.style.display = "";
+        o.innerHTML = '<span style="font-family:monospace" id = "' + category + '_button">[-] </span>';
+    } else {
+        fileTable.style.display = "none";
+        indent.style.display = "none";
+        o.innerHTML = '<span style="font-family:monospace" id = "' + category + '_button">[+] </span>';
+    } 
+ }
+ </script><title>Simulink Code Inspector Report for Autopilot.slx</title></head>
+<body>
+<div style="text-align:center"> <h2>Simulink Code Inspector Report for <a href="matlab:open_system(slci.internal.encodeString('C:\Users\bpotter\LocalWorkArea\demos\autopilot_R2013b_workarea\Autopilot.slx','html','decode'))">Autopilot.slx</a></h2></div><hr>
+<table class="T0"><TR>
+<TD class="d0">
+<b>Inspected Model File : </b></TD>
+<TD class="d0">
+<a href="matlab:open_system(slci.internal.encodeString('C:\Users\bpotter\LocalWorkArea\demos\autopilot_R2013b_workarea\Autopilot.slx','html','decode'))">C:\Users\bpotter\LocalWorkArea\demos\autopilot_R2013b_workarea\Autopilot.slx</a></TD>
+</TR>
+<TR>
+<TD class="d0">
+<b>Model Version : </b></TD>
+<TD class="d0">
+1.152</TD>
+</TR>
+<TR>
+<TD class="d0">
+<b>Simulink Version : </b></TD>
+<TD class="d0">
+8.2 (R2013b)</TD>
+</TR>
+<TR>
+<TD class="d0">
+<b>Model Checksum : </b></TD>
+<TD class="d0">
+2391891079 4093946209 1431613299 2622304348</TD>
+</TR>
+<TR>
+<TD class="d0">
+<b>Model Last Modified On :</b></TD>
+<TD class="d0">
+28-Jan-2014 07:25:09</TD>
+</TR>
+<TR>
+<TD class="d0">
+<b>Inspected Code Files : </b></TD>
+<TD class="d0">
+<a href ="file:///C:/Users/bpotter/LocalWorkArea/demos/autopilot_R2013b_workarea/slprj/ert/_sharedutils/const_params.c">C:\Users\bpotter\LocalWorkArea\demos\autopilot_R2013b_workarea\slprj\ert\_sharedutils\const_params.c</a></TD>
+</TR>
+<TR>
+<TD class="d0">
+<b></b></TD>
+<TD class="d0">
+<a href ="file:///C:/Users/bpotter/LocalWorkArea/demos/autopilot_R2013b_workarea/Autopilot_ert_rtw/Autopilot.c">C:\Users\bpotter\LocalWorkArea\demos\autopilot_R2013b_workarea\Autopilot_ert_rtw\Autopilot.c</a></TD>
+</TR>
+<TR>
+<TD class="d0">
+<b>Code Inspection Run On :</b></TD>
+<TD class="d0">
+03-Feb-2014 08:15:08</TD>
+</TR>
+<TR>
+<TD class="d0">
+&nbsp;</TD>
+<TD class="d0">
+</TD>
+</TR>
+<TR>
+<TD class="d0">
+<b>Overall Inspection Result : </b></TD>
+<TD class="d0">
+<b><span class="PASSED">Passed</span></b></TD>
+</TR>
+</table><hr><h2>Code Verification Results : <span class="VERIFIED">Verified</span></h2><h4>Function Interface Verification Results : <span class="VERIFIED">Verified</span></h4><div class="indented"><table class="T1"><TR >
+<TH class="th1">
+Function</TH>
+<TH class="th1">
+Status</TH>
+<TH class="th1">
+Details</TH>
+</TR>
+<TR >
+<TD class="d1">
+Autopilot_initialize</TD>
+<TD class="d1">
+<span class="VERIFIED">Verified</span></TD>
+<TD class="d1">
+-</TD>
+</TR>
+<TR >
+<TD class="d1">
+Autopilot_step</TD>
+<TD class="d1">
+<span class="VERIFIED">Verified</span></TD>
+<TD class="d1">
+-</TD>
+</TR>
+</table></div><br/><h4>Model To Code Verification Results : <span class="VERIFIED">Verified</span></h4><div class="indented"><table class="T1"><TR >
+<TH class="th1">
+Status</TH>
+<TH class="th1">
+Details</TH>
+</TR>
+<TR >
+<TD class="d1">
+<span class="VERIFIED">Verified</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+<span class="UNKNOWN">Model objects with status Verified : </span></TD>
+<TD class="d0">
+<span class="VERIFIED">22</span></TD>
+</TR>
+<TR>
+<TD class="d0">
+<span class="UNKNOWN">Model objects with status Partially processed : </span></TD>
+<TD class="d0">
+<span class="UNKNOWN">0</span></TD>
+</TR>
+<TR>
+<TD class="d0">
+<span class="UNKNOWN">Model objects with status Unable to process : </span></TD>
+<TD class="d0">
+<span class="UNKNOWN">0</span></TD>
+</TR>
+<TR>
+<TD class="d0">
+<span class="UNKNOWN">Model objects with status Failed to verify : </span></TD>
+<TD class="d0">
+<span class="UNKNOWN">0</span></TD>
+</TR>
+</table></TD>
+</TR>
+</table></div><br/><h4>Code To Model Verification Results : <span class="VERIFIED">Verified</span></h4><div class="indented"><table class="T1"><TR >
+<TH class="th1">
+Function</TH>
+<TH class="th1">
+Status</TH>
+<TH class="th1">
+Details</TH>
+</TR>
+<TR >
+<TD class="d1">
+Autopilot_initialize</TD>
+<TD class="d1">
+<span class="VERIFIED">Verified</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+<span class="UNKNOWN">Lines of code with status Verified : </span></TD>
+<TD class="d0">
+<span class="VERIFIED">21</span></TD>
+</TR>
+<TR>
+<TD class="d0">
+<span class="UNKNOWN">Lines of code with status Partially processed : </span></TD>
+<TD class="d0">
+<span class="UNKNOWN">0</span></TD>
+</TR>
+<TR>
+<TD class="d0">
+<span class="UNKNOWN">Lines of code with status Unable to process : </span></TD>
+<TD class="d0">
+<span class="UNKNOWN">0</span></TD>
+</TR>
+<TR>
+<TD class="d0">
+<span class="UNKNOWN">Lines of code with status Failed to verify : </span></TD>
+<TD class="d0">
+<span class="UNKNOWN">0</span></TD>
+</TR>
+</table></TD>
+</TR>
+<TR >
+<TD class="d1">
+Autopilot_step</TD>
+<TD class="d1">
+<span class="VERIFIED">Verified</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+<span class="UNKNOWN">Lines of code with status Verified : </span></TD>
+<TD class="d0">
+<span class="VERIFIED">22</span></TD>
+</TR>
+<TR>
+<TD class="d0">
+<span class="UNKNOWN">Lines of code with status Partially processed : </span></TD>
+<TD class="d0">
+<span class="UNKNOWN">0</span></TD>
+</TR>
+<TR>
+<TD class="d0">
+<span class="UNKNOWN">Lines of code with status Unable to process : </span></TD>
+<TD class="d0">
+<span class="UNKNOWN">0</span></TD>
+</TR>
+<TR>
+<TD class="d0">
+<span class="UNKNOWN">Lines of code with status Failed to verify : </span></TD>
+<TD class="d0">
+<span class="UNKNOWN">0</span></TD>
+</TR>
+</table></TD>
+</TR>
+</table></div><br/><h4>Temporary Variable Usage Results : <span class="VERIFIED">Verified</span></h4><div class="indented"><table class="T1"><TR >
+<TH class="th1">
+Function</TH>
+<TH class="th1">
+Status</TH>
+<TH class="th1">
+Details</TH>
+</TR>
+<TR >
+<TD class="d1">
+Autopilot_initialize</TD>
+<TD class="d1">
+<span class="VERIFIED">Verified</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+Function does not have any temporary variable declarations</TD>
+</TR>
+</table></TD>
+</TR>
+<TR >
+<TD class="d1">
+Autopilot_step</TD>
+<TD class="d1">
+<span class="VERIFIED">Verified</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+<span class="UNKNOWN">Temporary variables with status Failed to verify : </span></TD>
+<TD class="d0">
+<span class="UNKNOWN">0</span></TD>
+</TR>
+<TR>
+<TD class="d0">
+<span class="UNKNOWN">Temporary variables with status Verified : </span></TD>
+<TD class="d0">
+<span class="VERIFIED">9</span></TD>
+</TR>
+</table></TD>
+</TR>
+</table></div><br/><br/><h2>Traceability Results : <span class="TRACED">Traced</span></h2><h4>Model To Code Traceability Results : <span class="TRACED">Traced</span></h4><div class="indented"><table class="T1"><TR >
+<TH class="th1">
+Status</TH>
+<TH class="th1">
+Number of model objects</TH>
+</TR>
+<TR >
+<TD class="d1">
+<span class="UNKNOWN">Traced</span></TD>
+<TD class="d1">
+<span class="TRACED">22</span></TD>
+</TR>
+<TR >
+<TD class="d1">
+<span class="UNKNOWN">Partially processed</span></TD>
+<TD class="d1">
+<span class="UNKNOWN">0</span></TD>
+</TR>
+<TR >
+<TD class="d1">
+<span class="UNKNOWN">Unable to process</span></TD>
+<TD class="d1">
+<span class="UNKNOWN">0</span></TD>
+</TR>
+<TR >
+<TD class="d1">
+<span class="UNKNOWN">Failed to trace</span></TD>
+<TD class="d1">
+<span class="UNKNOWN">0</span></TD>
+</TR>
+</table></div><br/><h4>Code To Model Traceability Results : <span class="TRACED">Traced</span></h4><div class="indented"><table class="T1"><TR >
+<TH class="th1">
+Status</TH>
+<TH class="th1">
+Number of code lines</TH>
+</TR>
+<TR >
+<TD class="d1">
+<span class="UNKNOWN">Traced</span></TD>
+<TD class="d1">
+<span class="TRACED">54</span></TD>
+</TR>
+<TR >
+<TD class="d1">
+<span class="UNKNOWN">Nonfunctional code</span></TD>
+<TD class="d1">
+<span class="NON_FUNCTIONAL">67</span></TD>
+</TR>
+<TR >
+<TD class="d1">
+<span class="UNKNOWN">Not processed</span></TD>
+<TD class="d1">
+<span class="NOT_PROCESSED">18</span></TD>
+</TR>
+<TR >
+<TD class="d1">
+<span class="UNKNOWN">Partially processed</span></TD>
+<TD class="d1">
+<span class="UNKNOWN">0</span></TD>
+</TR>
+<TR >
+<TD class="d1">
+<span class="UNKNOWN">Unable to process</span></TD>
+<TD class="d1">
+<span class="UNKNOWN">0</span></TD>
+</TR>
+<TR >
+<TD class="d1">
+<span class="UNKNOWN">Failed to trace</span></TD>
+<TD class="d1">
+<span class="UNKNOWN">0</span></TD>
+</TR>
+</table></div><br/><h4>Not processed code: </h4><div class="indented"><h4>File : <a href ="file:///C:/Users/bpotter/LocalWorkArea/demos/autopilot_R2013b_workarea/Autopilot_ert_rtw/Autopilot.c">Autopilot.c</a></h4><table class="T1"><TR >
+<TH class="th1">
+Code location</TH>
+<TH class="th1">
+Code</TH>
+</TR>
+<TR >
+<TD class="d1">
+16</TD>
+<TD class="d1">
+<span class="CODE">#include &#34;Autopilot.h&#34;
+</span></TD>
+</TR>
+<TR >
+<TD class="d1">
+17</TD>
+<TD class="d1">
+<span class="CODE">#include &#34;Autopilot_private.h&#34;
+</span></TD>
+</TR>
+<TR >
+<TD class="d1">
+20</TD>
+<TD class="d1">
+<span class="CODE">  0.0,                                 /* altRate */
+</span></TD>
+</TR>
+<TR >
+<TD class="d1">
+21</TD>
+<TD class="d1">
+<span class="CODE">  0.0,                                 /* alpha */
+</span></TD>
+</TR>
+<TR >
+<TD class="d1">
+22</TD>
+<TD class="d1">
+<span class="CODE">  0.0,                                 /* beta */
+</span></TD>
+</TR>
+<TR >
+<TD class="d1">
+23</TD>
+<TD class="d1">
+<span class="CODE">  0.0,                                 /* airspeed */
+</span></TD>
+</TR>
+<TR >
+<TD class="d1">
+24</TD>
+<TD class="d1">
+<span class="CODE">  0.0                                  /* alt */
+</span></TD>
+</TR>
+<TR >
+<TD class="d1">
+25</TD>
+<TD class="d1">
+<span class="CODE">} ;                                    /* slBus1 ground */
+</span></TD>
+</TR>
+<TR >
+<TD class="d1">
+28</TD>
+<TD class="d1">
+<span class="CODE">  0.0,                                 /* phi */
+</span></TD>
+</TR>
+<TR >
+<TD class="d1">
+29</TD>
+<TD class="d1">
+<span class="CODE">  0.0,                                 /* theta */
+</span></TD>
+</TR>
+<TR >
+<TD class="d1">
+30</TD>
+<TD class="d1">
+<span class="CODE">  0.0,                                 /* psi */
+</span></TD>
+</TR>
+<TR >
+<TD class="d1">
+31</TD>
+<TD class="d1">
+<span class="CODE">  0.0,                                 /* p */
+</span></TD>
+</TR>
+<TR >
+<TD class="d1">
+32</TD>
+<TD class="d1">
+<span class="CODE">  0.0,                                 /* q */
+</span></TD>
+</TR>
+<TR >
+<TD class="d1">
+33</TD>
+<TD class="d1">
+<span class="CODE">  0.0                                  /* r */
+</span></TD>
+</TR>
+<TR >
+<TD class="d1">
+34</TD>
+<TD class="d1">
+<span class="CODE">} ;                                    /* slBus2 ground */
+</span></TD>
+</TR>
+<TR >
+<TD class="d1">
+37</TD>
+<TD class="d1">
+<span class="CODE">D_Work_Autopilot Autopilot_DWork;
+</span></TD>
+</TR>
+<TR >
+<TD class="d1">
+40</TD>
+<TD class="d1">
+<span class="CODE">ExternalInputs_Autopilot Autopilot_U;
+</span></TD>
+</TR>
+<TR >
+<TD class="d1">
+43</TD>
+<TD class="d1">
+<span class="CODE">ExternalOutputs_Autopilot Autopilot_Y;
+</span></TD>
+</TR>
+</table></div><br/><br/><hr><h2>Code Verification Details</h2><table class="T0"><TR>
+<TD class="d0">
+<table class="T0" id="2">
+  <tr> 
+    <td style="text-align:left;">
+    <span style="background-color:#ffffff;cursor:pointer;white-space:nowrap" title="Click to shrink or expand category"        onclick="rtwTableShrink(this,'2')"> 
+     <span style="font-family:monospace" id = "2_button">[-]
+</span>
+    </span>
+    </td>
+    <td class="d0">
+    <b>Function Interface Verification </b>
+    </td><td class="d0"></td>
+  </tr>
+  <tr>
+  <td class="d0">
+  <span id="2_indent"></span>
+  </td>
+  <td class="d0">
+ <table style="display:all; border-style:none;" id="2_table">
+ <tr>
+ <td class="d0"><table class="T0"><TR>
+<TD class="d0">
+<table class="T0" id="0">
+  <tr> 
+    <td style="text-align:left;">
+    <span style="background-color:#ffffff;cursor:pointer;white-space:nowrap" title="Click to shrink or expand category"        onclick="rtwTableShrink(this,'0')"> 
+     <span style="font-family:monospace" id = "0_button">[-]
+</span>
+    </span>
+    </td>
+    <td class="d0">
+    <b>Function : Autopilot_initialize</b>
+    </td><td class="d0"></td>
+  </tr>
+  <tr>
+  <td class="d0">
+  <span id="0_indent"></span>
+  </td>
+  <td class="d0">
+ <table style="display:all; border-style:none;" id="0_table">
+ <tr>
+ <td class="d0"><table class="T1"><TR >
+<TH class="th1">
+Check</TH>
+<TH class="th1">
+Status</TH>
+</TR>
+<TR >
+<TD class="d1">
+Number of function arguments </TD>
+<TD class="d1">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+<TR >
+<TD class="d1">
+Function argument names </TD>
+<TD class="d1">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+<TR >
+<TD class="d1">
+Function argument data types </TD>
+<TD class="d1">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+<TR >
+<TD class="d1">
+Function return type </TD>
+<TD class="d1">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+</table>
+ </td>
+ </tr>
+ </table>
+ </td>
+ </tr>
+ </table></TD>
+</TR>
+<TR>
+<TD class="d0">
+<table class="T0" id="1">
+  <tr> 
+    <td style="text-align:left;">
+    <span style="background-color:#ffffff;cursor:pointer;white-space:nowrap" title="Click to shrink or expand category"        onclick="rtwTableShrink(this,'1')"> 
+     <span style="font-family:monospace" id = "1_button">[-]
+</span>
+    </span>
+    </td>
+    <td class="d0">
+    <b>Function : Autopilot_step</b>
+    </td><td class="d0"></td>
+  </tr>
+  <tr>
+  <td class="d0">
+  <span id="1_indent"></span>
+  </td>
+  <td class="d0">
+ <table style="display:all; border-style:none;" id="1_table">
+ <tr>
+ <td class="d0"><table class="T1"><TR >
+<TH class="th1">
+Check</TH>
+<TH class="th1">
+Status</TH>
+</TR>
+<TR >
+<TD class="d1">
+Number of function arguments </TD>
+<TD class="d1">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+<TR >
+<TD class="d1">
+Function argument names </TD>
+<TD class="d1">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+<TR >
+<TD class="d1">
+Function argument data types </TD>
+<TD class="d1">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+<TR >
+<TD class="d1">
+Function return type </TD>
+<TD class="d1">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+</table>
+ </td>
+ </tr>
+ </table>
+ </td>
+ </tr>
+ </table></TD>
+</TR>
+</table>
+ </td>
+ </tr>
+ </table>
+ </td>
+ </tr>
+ </table><table class="T0" id="3">
+  <tr> 
+    <td style="text-align:left;">
+    <span style="background-color:#ffffff;cursor:pointer;white-space:nowrap" title="Click to shrink or expand category"        onclick="rtwTableShrink(this,'3')"> 
+     <span style="font-family:monospace" id = "3_button">[-]
+</span>
+    </span>
+    </td>
+    <td class="d0">
+    <b>Model To Code Verification </b>
+    </td><td class="d0"></td>
+  </tr>
+  <tr>
+  <td class="d0">
+  <span id="3_indent"></span>
+  </td>
+  <td class="d0">
+ <table style="display:all; border-style:none;" id="3_table">
+ <tr>
+ <td class="d0"><table class="T0"><TR>
+<TD class="d0">
+<table class="T0"><TR>
+<TD class="d0">
+<b>Model : <a href="matlab:open_system(slci.internal.encodeString('C:\Users\bpotter\LocalWorkArea\demos\autopilot_R2013b_workarea\Autopilot.slx','html','decode'))">Autopilot</a></b></TD>
+</TR>
+<TR>
+<TD class="d0">
+<table class="T1"><TR >
+<TH class="th1">
+Model object</TH>
+<TH class="th1">
+Status</TH>
+<TH class="th1">
+Details</TH>
+</TR>
+<TR >
+<TD class="d1">
+<a href="matlab:slci.internal.ReportConfig.traceCallBack('C:\Users\bpotter\LocalWorkArea\demos\autopilot_R2013b_workarea\Autopilot.slx','Autopilot:2')">&#60;model&#62;/Air Data</a>
+</TD>
+<TD class="d1">
+<span class="VERIFIED">Verified</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+Virtual/Eliminated</TD>
+<TD class="d0">
+ (Inport) </TD>
+</TR>
+</table></TD>
+</TR>
+<TR >
+<TD class="d1">
+<a href="matlab:slci.internal.ReportConfig.traceCallBack('C:\Users\bpotter\LocalWorkArea\demos\autopilot_R2013b_workarea\Autopilot.slx','Autopilot:3')">&#60;model&#62;/Inertial</a>
+</TD>
+<TD class="d1">
+<span class="VERIFIED">Verified</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+Virtual/Eliminated</TD>
+<TD class="d0">
+ (Inport) </TD>
+</TR>
+</table></TD>
+</TR>
+<TR >
+<TD class="d1">
+<a href="matlab:slci.internal.ReportConfig.traceCallBack('C:\Users\bpotter\LocalWorkArea\demos\autopilot_R2013b_workarea\Autopilot.slx','Autopilot:4')">&#60;model&#62;/AP Eng</a>
+</TD>
+<TD class="d1">
+<span class="VERIFIED">Verified</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+Virtual/Eliminated</TD>
+<TD class="d0">
+ (Inport) </TD>
+</TR>
+</table></TD>
+</TR>
+<TR >
+<TD class="d1">
+<a href="matlab:slci.internal.ReportConfig.traceCallBack('C:\Users\bpotter\LocalWorkArea\demos\autopilot_R2013b_workarea\Autopilot.slx','Autopilot:5')">&#60;model&#62;/HDG Mode</a>
+</TD>
+<TD class="d1">
+<span class="VERIFIED">Verified</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+Virtual/Eliminated</TD>
+<TD class="d0">
+ (Inport) </TD>
+</TR>
+</table></TD>
+</TR>
+<TR >
+<TD class="d1">
+<a href="matlab:slci.internal.ReportConfig.traceCallBack('C:\Users\bpotter\LocalWorkArea\demos\autopilot_R2013b_workarea\Autopilot.slx','Autopilot:6')">&#60;model&#62;/ALT Mode</a>
+</TD>
+<TD class="d1">
+<span class="VERIFIED">Verified</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+Virtual/Eliminated</TD>
+<TD class="d0">
+ (Inport) </TD>
+</TR>
+</table></TD>
+</TR>
+<TR >
+<TD class="d1">
+<a href="matlab:slci.internal.ReportConfig.traceCallBack('C:\Users\bpotter\LocalWorkArea\demos\autopilot_R2013b_workarea\Autopilot.slx','Autopilot:7')">&#60;model&#62;/HDG Ref</a>
+</TD>
+<TD class="d1">
+<span class="VERIFIED">Verified</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+Virtual/Eliminated</TD>
+<TD class="d0">
+ (Inport) </TD>
+</TR>
+</table></TD>
+</TR>
+<TR >
+<TD class="d1">
+<a href="matlab:slci.internal.ReportConfig.traceCallBack('C:\Users\bpotter\LocalWorkArea\demos\autopilot_R2013b_workarea\Autopilot.slx','Autopilot:8')">&#60;model&#62;/Turn Knob</a>
+</TD>
+<TD class="d1">
+<span class="VERIFIED">Verified</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+Virtual/Eliminated</TD>
+<TD class="d0">
+ (Inport) </TD>
+</TR>
+</table></TD>
+</TR>
+<TR >
+<TD class="d1">
+<a href="matlab:slci.internal.ReportConfig.traceCallBack('C:\Users\bpotter\LocalWorkArea\demos\autopilot_R2013b_workarea\Autopilot.slx','Autopilot:9')">&#60;model&#62;/ALT Ref</a>
+</TD>
+<TD class="d1">
+<span class="VERIFIED">Verified</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+Virtual/Eliminated</TD>
+<TD class="d0">
+ (Inport) </TD>
+</TR>
+</table></TD>
+</TR>
+<TR >
+<TD class="d1">
+<a href="matlab:slci.internal.ReportConfig.traceCallBack('C:\Users\bpotter\LocalWorkArea\demos\autopilot_R2013b_workarea\Autopilot.slx','Autopilot:10')">&#60;model&#62;/Pitch Wheel</a>
+</TD>
+<TD class="d1">
+<span class="VERIFIED">Verified</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+Virtual/Eliminated</TD>
+<TD class="d0">
+ (Inport) </TD>
+</TR>
+</table></TD>
+</TR>
+<TR >
+<TD class="d1">
+<a href="matlab:slci.internal.ReportConfig.traceCallBack('C:\Users\bpotter\LocalWorkArea\demos\autopilot_R2013b_workarea\Autopilot.slx','Autopilot:11')">&#60;model&#62;/Bus
+Selector3</a>
+</TD>
+<TD class="d1">
+<span class="VERIFIED">Verified</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+-</TD>
+</TR>
+</table></TD>
+</TR>
+<TR >
+<TD class="d1">
+<a href="matlab:slci.internal.ReportConfig.traceCallBack('C:\Users\bpotter\LocalWorkArea\demos\autopilot_R2013b_workarea\Autopilot.slx','Autopilot:12')">&#60;model&#62;/Bus
+Selector4</a>
+</TD>
+<TD class="d1">
+<span class="VERIFIED">Verified</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+-</TD>
+</TR>
+</table></TD>
+</TR>
+<TR >
+<TD class="d1">
+<a href="matlab:slci.internal.ReportConfig.traceCallBack('C:\Users\bpotter\LocalWorkArea\demos\autopilot_R2013b_workarea\Autopilot.slx','Autopilot:21')">&#60;model&#62;/Model Info</a>
+</TD>
+<TD class="d1">
+<span class="VERIFIED">Verified</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+Virtual/Eliminated</TD>
+<TD class="d0">
+ (Model Info block) </TD>
+</TR>
+</table></TD>
+</TR>
+<TR >
+<TD class="d1">
+<a href="matlab:slci.internal.ReportConfig.traceCallBack('C:\Users\bpotter\LocalWorkArea\demos\autopilot_R2013b_workarea\Autopilot.slx','Autopilot:13')">&#60;model&#62;/Pitch_Autopilot</a>
+</TD>
+<TD class="d1">
+<span class="VERIFIED">Verified</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+-</TD>
+</TR>
+</table></TD>
+</TR>
+<TR >
+<TD class="d1">
+<a href="matlab:slci.internal.ReportConfig.traceCallBack('C:\Users\bpotter\LocalWorkArea\demos\autopilot_R2013b_workarea\Autopilot.slx','Autopilot:14')">&#60;model&#62;/Roll_Autopilot</a>
+</TD>
+<TD class="d1">
+<span class="VERIFIED">Verified</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+-</TD>
+</TR>
+</table></TD>
+</TR>
+<TR >
+<TD class="d1">
+<a href="matlab:slci.internal.ReportConfig.traceCallBack('C:\Users\bpotter\LocalWorkArea\demos\autopilot_R2013b_workarea\Autopilot.slx','Autopilot:15')">&#60;model&#62;/Yaw_Damper</a>
+</TD>
+<TD class="d1">
+<span class="VERIFIED">Verified</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+-</TD>
+</TR>
+</table></TD>
+</TR>
+<TR >
+<TD class="d1">
+<a href="matlab:slci.internal.ReportConfig.traceCallBack('C:\Users\bpotter\LocalWorkArea\demos\autopilot_R2013b_workarea\Autopilot.slx','Autopilot:16')">&#60;model&#62;/Aileron Cmd</a>
+</TD>
+<TD class="d1">
+<span class="VERIFIED">Verified</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+-</TD>
+</TR>
+</table></TD>
+</TR>
+<TR >
+<TD class="d1">
+<a href="matlab:slci.internal.ReportConfig.traceCallBack('C:\Users\bpotter\LocalWorkArea\demos\autopilot_R2013b_workarea\Autopilot.slx','Autopilot:17')">&#60;model&#62;/Elevator Cmd</a>
+</TD>
+<TD class="d1">
+<span class="VERIFIED">Verified</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+-</TD>
+</TR>
+</table></TD>
+</TR>
+<TR >
+<TD class="d1">
+<a href="matlab:slci.internal.ReportConfig.traceCallBack('C:\Users\bpotter\LocalWorkArea\demos\autopilot_R2013b_workarea\Autopilot.slx','Autopilot:18')">&#60;model&#62;/Rudder Cmd</a>
+</TD>
+<TD class="d1">
+<span class="VERIFIED">Verified</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+-</TD>
+</TR>
+</table></TD>
+</TR>
+<TR >
+<TD class="d1">
+<a href="matlab:slci.internal.ReportConfig.traceCallBack('C:\Users\bpotter\LocalWorkArea\demos\autopilot_R2013b_workarea\Autopilot.slx','Autopilot:21:1')">&#60;model&#62;/Model Info/EmptySubsystem</a>
+</TD>
+<TD class="d1">
+<span class="VERIFIED">Verified</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+Virtual/Eliminated</TD>
+<TD class="d0">
+ (SubSystem) </TD>
+</TR>
+</table></TD>
+</TR>
+<TR >
+<TD class="d1">
+<a href="matlab:slci.internal.ReportConfig.traceCallBack('C:\Users\bpotter\LocalWorkArea\demos\autopilot_R2013b_workarea\Autopilot.slx','Autopilot')">dwork initialization code</a>
+</TD>
+<TD class="d1">
+<span class="VERIFIED">Verified</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+-</TD>
+</TR>
+</table></TD>
+</TR>
+<TR >
+<TD class="d1">
+<a href="matlab:slci.internal.ReportConfig.traceCallBack('C:\Users\bpotter\LocalWorkArea\demos\autopilot_R2013b_workarea\Autopilot.slx','Autopilot')">input initialization code</a>
+</TD>
+<TD class="d1">
+<span class="VERIFIED">Verified</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+-</TD>
+</TR>
+</table></TD>
+</TR>
+<TR >
+<TD class="d1">
+<a href="matlab:slci.internal.ReportConfig.traceCallBack('C:\Users\bpotter\LocalWorkArea\demos\autopilot_R2013b_workarea\Autopilot.slx','Autopilot')">output initialization code</a>
+</TD>
+<TD class="d1">
+<span class="VERIFIED">Verified</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+-</TD>
+</TR>
+</table></TD>
+</TR>
+</table></TD>
+</TR>
+</table></TD>
+</TR>
+</table>
+ </td>
+ </tr>
+ </table>
+ </td>
+ </tr>
+ </table><table class="T0" id="6">
+  <tr> 
+    <td style="text-align:left;">
+    <span style="background-color:#ffffff;cursor:pointer;white-space:nowrap" title="Click to shrink or expand category"        onclick="rtwTableShrink(this,'6')"> 
+     <span style="font-family:monospace" id = "6_button">[-]
+</span>
+    </span>
+    </td>
+    <td class="d0">
+    <b>Code To Model Verification </b>
+    </td><td class="d0"></td>
+  </tr>
+  <tr>
+  <td class="d0">
+  <span id="6_indent"></span>
+  </td>
+  <td class="d0">
+ <table style="display:all; border-style:none;" id="6_table">
+ <tr>
+ <td class="d0"><table class="T0"><TR>
+<TD class="d0">
+<table class="T0" id="4">
+  <tr> 
+    <td style="text-align:left;">
+    <span style="background-color:#ffffff;cursor:pointer;white-space:nowrap" title="Click to shrink or expand category"        onclick="rtwTableShrink(this,'4')"> 
+     <span style="font-family:monospace" id = "4_button">[-]
+</span>
+    </span>
+    </td>
+    <td class="d0">
+    <b>Function : Autopilot_initialize</b>
+    </td><td class="d0"></td>
+  </tr>
+  <tr>
+  <td class="d0">
+  <span id="4_indent"></span>
+  </td>
+  <td class="d0">
+ <table style="display:all; border-style:none;" id="4_table">
+ <tr>
+ <td class="d0"><table class="T1"><TR >
+<TH class="th1">
+Function outputs/state variables</TH>
+<TH class="th1">
+Contributing lines of code</TH>
+</TR>
+<TR >
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+Autopilot_DWork.Pitch_Autopilot_DWORK1.rtb.thetaCmd</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+Autopilot.c:102</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+<TR>
+<TD class="d0">
+Autopilot.c:103</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+</table></TD>
+</TR>
+<TR >
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+Autopilot_DWork.Pitch_Autopilot_DWORK1.rtdw.AltitudeMode_DWORK1.rtb.Probe[0]</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+Autopilot.c:102</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+<TR>
+<TD class="d0">
+Autopilot.c:103</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+</table></TD>
+</TR>
+<TR >
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+Autopilot_DWork.Pitch_Autopilot_DWORK1.rtdw.AltitudeMode_DWORK1.rtb.Probe[1]</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+Autopilot.c:102</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+<TR>
+<TD class="d0">
+Autopilot.c:103</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+</table></TD>
+</TR>
+<TR >
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+Autopilot_DWork.Pitch_Autopilot_DWORK1.rtdw.AltitudeMode_DWORK1.rtb.altError</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+Autopilot.c:102</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+<TR>
+<TD class="d0">
+Autopilot.c:103</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+</table></TD>
+</TR>
+<TR >
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+Autopilot_DWork.Pitch_Autopilot_DWORK1.rtdw.AltitudeMode_DWORK1.rtdw.DelayInput2_DSTATE</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+Autopilot.c:102</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+<TR>
+<TD class="d0">
+Autopilot.c:103</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+</table></TD>
+</TR>
+<TR >
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+Autopilot_DWork.Pitch_Autopilot_DWORK1.rtdw.AltitudeMode_DWORK1.rtdw.X_DSTATE</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+Autopilot.c:102</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+<TR>
+<TD class="d0">
+Autopilot.c:103</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+</table></TD>
+</TR>
+<TR >
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+Autopilot_DWork.Pitch_Autopilot_DWORK1.rtdw.BasicPitchMode_DWORK1.rtdw.X_DSTATE</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+Autopilot.c:102</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+<TR>
+<TD class="d0">
+Autopilot.c:103</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+</table></TD>
+</TR>
+<TR >
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+Autopilot_DWork.Pitch_Autopilot_DWORK1.rtdw.FixPtUnitDelay1_DSTATE</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+Autopilot.c:102</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+<TR>
+<TD class="d0">
+Autopilot.c:103</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+</table></TD>
+</TR>
+<TR >
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+Autopilot_DWork.Roll_Autopilot_DWORK1.rtb.phiCmd</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+Autopilot.c:102</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+<TR>
+<TD class="d0">
+Autopilot.c:103</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+</table></TD>
+</TR>
+<TR >
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+Autopilot_DWork.Roll_Autopilot_DWORK1.rtdw.BasicRollMode_DWORK1.rtdw.X_DSTATE</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+Autopilot.c:102</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+<TR>
+<TD class="d0">
+Autopilot.c:103</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+</table></TD>
+</TR>
+<TR >
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+Autopilot_DWork.Roll_Autopilot_DWORK1.rtdw.FixPtUnitDelay1_DSTATE</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+Autopilot.c:102</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+<TR>
+<TD class="d0">
+Autopilot.c:103</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+</table></TD>
+</TR>
+<TR >
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+Autopilot_DWork.Roll_Autopilot_DWORK1.rtdw.HeadingMode_DWORK1.rtb.hdgError</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+Autopilot.c:102</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+<TR>
+<TD class="d0">
+Autopilot.c:103</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+</table></TD>
+</TR>
+<TR >
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+Autopilot_DWork.Yaw_Damper_DWORK1.rtb.yawRate</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+Autopilot.c:102</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+<TR>
+<TD class="d0">
+Autopilot.c:103</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+</table></TD>
+</TR>
+<TR >
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+Autopilot_U.ALTMode</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+Autopilot.c:106</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+<TR>
+<TD class="d0">
+Autopilot.c:107</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+</table></TD>
+</TR>
+<TR >
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+Autopilot_U.ALTRef</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+Autopilot.c:106</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+<TR>
+<TD class="d0">
+Autopilot.c:107</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+</table></TD>
+</TR>
+<TR >
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+Autopilot_U.ALTRef</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+Autopilot.c:112</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+</table></TD>
+</TR>
+<TR >
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+Autopilot_U.APeng</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+Autopilot.c:106</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+<TR>
+<TD class="d0">
+Autopilot.c:107</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+</table></TD>
+</TR>
+<TR >
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+Autopilot_U.AirData.airspeed</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+Autopilot.c:106</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+<TR>
+<TD class="d0">
+Autopilot.c:107</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+</table></TD>
+</TR>
+<TR >
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+Autopilot_U.AirData.airspeed</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+Autopilot.c:19</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+<TR>
+<TD class="d0">
+Autopilot.c:108</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+</table></TD>
+</TR>
+<TR >
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+Autopilot_U.AirData.alpha</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+Autopilot.c:106</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+<TR>
+<TD class="d0">
+Autopilot.c:107</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+</table></TD>
+</TR>
+<TR >
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+Autopilot_U.AirData.alpha</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+Autopilot.c:19</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+<TR>
+<TD class="d0">
+Autopilot.c:108</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+</table></TD>
+</TR>
+<TR >
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+Autopilot_U.AirData.altRate</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+Autopilot.c:106</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+<TR>
+<TD class="d0">
+Autopilot.c:107</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+</table></TD>
+</TR>
+<TR >
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+Autopilot_U.AirData.altRate</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+Autopilot.c:19</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+<TR>
+<TD class="d0">
+Autopilot.c:108</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+</table></TD>
+</TR>
+<TR >
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+Autopilot_U.AirData.alt</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+Autopilot.c:106</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+<TR>
+<TD class="d0">
+Autopilot.c:107</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+</table></TD>
+</TR>
+<TR >
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+Autopilot_U.AirData.alt</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+Autopilot.c:19</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+<TR>
+<TD class="d0">
+Autopilot.c:108</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+</table></TD>
+</TR>
+<TR >
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+Autopilot_U.AirData.beta</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+Autopilot.c:106</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+<TR>
+<TD class="d0">
+Autopilot.c:107</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+</table></TD>
+</TR>
+<TR >
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+Autopilot_U.AirData.beta</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+Autopilot.c:19</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+<TR>
+<TD class="d0">
+Autopilot.c:108</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+</table></TD>
+</TR>
+<TR >
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+Autopilot_U.HDGmode</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+Autopilot.c:106</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+<TR>
+<TD class="d0">
+Autopilot.c:107</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+</table></TD>
+</TR>
+<TR >
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+Autopilot_U.HDGref</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+Autopilot.c:106</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+<TR>
+<TD class="d0">
+Autopilot.c:107</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+</table></TD>
+</TR>
+<TR >
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+Autopilot_U.HDGref</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+Autopilot.c:110</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+</table></TD>
+</TR>
+<TR >
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+Autopilot_U.Inertial.p</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+Autopilot.c:106</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+<TR>
+<TD class="d0">
+Autopilot.c:107</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+</table></TD>
+</TR>
+<TR >
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+Autopilot_U.Inertial.p</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+Autopilot.c:27</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+<TR>
+<TD class="d0">
+Autopilot.c:109</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+</table></TD>
+</TR>
+<TR >
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+Autopilot_U.Inertial.phi</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+Autopilot.c:106</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+<TR>
+<TD class="d0">
+Autopilot.c:107</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+</table></TD>
+</TR>
+<TR >
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+Autopilot_U.Inertial.phi</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+Autopilot.c:27</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+<TR>
+<TD class="d0">
+Autopilot.c:109</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+</table></TD>
+</TR>
+<TR >
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+Autopilot_U.Inertial.psi</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+Autopilot.c:106</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+<TR>
+<TD class="d0">
+Autopilot.c:107</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+</table></TD>
+</TR>
+<TR >
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+Autopilot_U.Inertial.psi</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+Autopilot.c:27</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+<TR>
+<TD class="d0">
+Autopilot.c:109</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+</table></TD>
+</TR>
+<TR >
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+Autopilot_U.Inertial.q</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+Autopilot.c:106</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+<TR>
+<TD class="d0">
+Autopilot.c:107</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+</table></TD>
+</TR>
+<TR >
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+Autopilot_U.Inertial.q</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+Autopilot.c:27</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+<TR>
+<TD class="d0">
+Autopilot.c:109</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+</table></TD>
+</TR>
+<TR >
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+Autopilot_U.Inertial.r</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+Autopilot.c:106</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+<TR>
+<TD class="d0">
+Autopilot.c:107</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+</table></TD>
+</TR>
+<TR >
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+Autopilot_U.Inertial.r</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+Autopilot.c:27</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+<TR>
+<TD class="d0">
+Autopilot.c:109</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+</table></TD>
+</TR>
+<TR >
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+Autopilot_U.Inertial.theta</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+Autopilot.c:106</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+<TR>
+<TD class="d0">
+Autopilot.c:107</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+</table></TD>
+</TR>
+<TR >
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+Autopilot_U.Inertial.theta</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+Autopilot.c:27</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+<TR>
+<TD class="d0">
+Autopilot.c:109</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+</table></TD>
+</TR>
+<TR >
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+Autopilot_U.PitchWheel</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+Autopilot.c:106</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+<TR>
+<TD class="d0">
+Autopilot.c:107</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+</table></TD>
+</TR>
+<TR >
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+Autopilot_U.PitchWheel</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+Autopilot.c:113</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+</table></TD>
+</TR>
+<TR >
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+Autopilot_U.TurnKnob</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+Autopilot.c:106</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+<TR>
+<TD class="d0">
+Autopilot.c:107</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+</table></TD>
+</TR>
+<TR >
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+Autopilot_U.TurnKnob</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+Autopilot.c:111</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+</table></TD>
+</TR>
+<TR >
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+Autopilot_Y.AileronCmd</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+Autopilot.c:116</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+</table></TD>
+</TR>
+<TR >
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+Autopilot_Y.ElevatorCmd</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+Autopilot.c:117</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+</table></TD>
+</TR>
+<TR >
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+Autopilot_Y.RudderCmd</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+Autopilot.c:118</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+</table></TD>
+</TR>
+<TR >
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+Autopilot_rtZslBus1.airspeed</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+Autopilot.c:19</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+</table></TD>
+</TR>
+<TR >
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+Autopilot_rtZslBus1.alpha</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+Autopilot.c:19</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+</table></TD>
+</TR>
+<TR >
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+Autopilot_rtZslBus1.altRate</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+Autopilot.c:19</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+</table></TD>
+</TR>
+<TR >
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+Autopilot_rtZslBus1.alt</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+Autopilot.c:19</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+</table></TD>
+</TR>
+<TR >
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+Autopilot_rtZslBus1.beta</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+Autopilot.c:19</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+</table></TD>
+</TR>
+<TR >
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+Autopilot_rtZslBus2.p</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+Autopilot.c:27</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+</table></TD>
+</TR>
+<TR >
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+Autopilot_rtZslBus2.phi</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+Autopilot.c:27</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+</table></TD>
+</TR>
+<TR >
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+Autopilot_rtZslBus2.psi</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+Autopilot.c:27</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+</table></TD>
+</TR>
+<TR >
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+Autopilot_rtZslBus2.q</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+Autopilot.c:27</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+</table></TD>
+</TR>
+<TR >
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+Autopilot_rtZslBus2.r</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+Autopilot.c:27</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+</table></TD>
+</TR>
+<TR >
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+Autopilot_rtZslBus2.theta</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+Autopilot.c:27</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+</table></TD>
+</TR>
+<TR >
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+pitch_ap_Start</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+Autopilot.c:102</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+<TR>
+<TD class="d0">
+Autopilot.c:103</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+<TR>
+<TD class="d0">
+Autopilot.c:132</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+</table></TD>
+</TR>
+<TR >
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+pitch_ap_initialize</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+Autopilot.c:102</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+<TR>
+<TD class="d0">
+Autopilot.c:103</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+<TR>
+<TD class="d0">
+Autopilot.c:121</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+<TR>
+<TD class="d0">
+Autopilot.c:122</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+</table></TD>
+</TR>
+<TR >
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+roll_ap_initialize</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+Autopilot.c:102</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+<TR>
+<TD class="d0">
+Autopilot.c:103</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+<TR>
+<TD class="d0">
+Autopilot.c:125</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+<TR>
+<TD class="d0">
+Autopilot.c:126</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+</table></TD>
+</TR>
+<TR >
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+yaw_damper_initialize</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+Autopilot.c:102</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+<TR>
+<TD class="d0">
+Autopilot.c:103</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+<TR>
+<TD class="d0">
+Autopilot.c:129</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+</table></TD>
+</TR>
+</table>
+ </td>
+ </tr>
+ </table>
+ </td>
+ </tr>
+ </table></TD>
+</TR>
+<TR>
+<TD class="d0">
+<table class="T0" id="5">
+  <tr> 
+    <td style="text-align:left;">
+    <span style="background-color:#ffffff;cursor:pointer;white-space:nowrap" title="Click to shrink or expand category"        onclick="rtwTableShrink(this,'5')"> 
+     <span style="font-family:monospace" id = "5_button">[-]
+</span>
+    </span>
+    </td>
+    <td class="d0">
+    <b>Function : Autopilot_step</b>
+    </td><td class="d0"></td>
+  </tr>
+  <tr>
+  <td class="d0">
+  <span id="5_indent"></span>
+  </td>
+  <td class="d0">
+ <table style="display:all; border-style:none;" id="5_table">
+ <tr>
+ <td class="d0"><table class="T1"><TR >
+<TH class="th1">
+Function outputs/state variables</TH>
+<TH class="th1">
+Contributing lines of code</TH>
+</TR>
+<TR >
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+Autopilot_DWork.Pitch_Autopilot_DWORK1.rtb.thetaCmd</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+Autopilot.c:62</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+<TR>
+<TD class="d0">
+Autopilot.c:65</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+<TR>
+<TD class="d0">
+Autopilot.c:66</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+<TR>
+<TD class="d0">
+Autopilot.c:67</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+<TR>
+<TD class="d0">
+Autopilot.c:72</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+<TR>
+<TD class="d0">
+Autopilot.c:73</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+<TR>
+<TD class="d0">
+Autopilot.c:74</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+<TR>
+<TD class="d0">
+Autopilot.c:83</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+<TR>
+<TD class="d0">
+Autopilot.c:84</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+<TR>
+<TD class="d0">
+Autopilot.c:85</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+<TR>
+<TD class="d0">
+Autopilot.c:87</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+<TR>
+<TD class="d0">
+Autopilot.c:88</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+</table></TD>
+</TR>
+<TR >
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+Autopilot_DWork.Pitch_Autopilot_DWORK1.rtdw.AltitudeMode_DWORK1.rtb.Probe[0]</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+Autopilot.c:62</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+<TR>
+<TD class="d0">
+Autopilot.c:65</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+<TR>
+<TD class="d0">
+Autopilot.c:66</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+<TR>
+<TD class="d0">
+Autopilot.c:67</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+<TR>
+<TD class="d0">
+Autopilot.c:72</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+<TR>
+<TD class="d0">
+Autopilot.c:73</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+<TR>
+<TD class="d0">
+Autopilot.c:74</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+<TR>
+<TD class="d0">
+Autopilot.c:83</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+<TR>
+<TD class="d0">
+Autopilot.c:84</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+<TR>
+<TD class="d0">
+Autopilot.c:85</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+<TR>
+<TD class="d0">
+Autopilot.c:88</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+</table></TD>
+</TR>
+<TR >
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+Autopilot_DWork.Pitch_Autopilot_DWORK1.rtdw.AltitudeMode_DWORK1.rtb.Probe[1]</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+Autopilot.c:62</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+<TR>
+<TD class="d0">
+Autopilot.c:65</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+<TR>
+<TD class="d0">
+Autopilot.c:66</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+<TR>
+<TD class="d0">
+Autopilot.c:67</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+<TR>
+<TD class="d0">
+Autopilot.c:72</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+<TR>
+<TD class="d0">
+Autopilot.c:73</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+<TR>
+<TD class="d0">
+Autopilot.c:74</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+<TR>
+<TD class="d0">
+Autopilot.c:83</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+<TR>
+<TD class="d0">
+Autopilot.c:84</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+<TR>
+<TD class="d0">
+Autopilot.c:85</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+<TR>
+<TD class="d0">
+Autopilot.c:88</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+</table></TD>
+</TR>
+<TR >
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+Autopilot_DWork.Pitch_Autopilot_DWORK1.rtdw.AltitudeMode_DWORK1.rtb.altError</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+Autopilot.c:62</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+<TR>
+<TD class="d0">
+Autopilot.c:65</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+<TR>
+<TD class="d0">
+Autopilot.c:66</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+<TR>
+<TD class="d0">
+Autopilot.c:67</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+<TR>
+<TD class="d0">
+Autopilot.c:72</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+<TR>
+<TD class="d0">
+Autopilot.c:73</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+<TR>
+<TD class="d0">
+Autopilot.c:74</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+<TR>
+<TD class="d0">
+Autopilot.c:83</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+<TR>
+<TD class="d0">
+Autopilot.c:84</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+<TR>
+<TD class="d0">
+Autopilot.c:85</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+<TR>
+<TD class="d0">
+Autopilot.c:88</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+</table></TD>
+</TR>
+<TR >
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+Autopilot_DWork.Pitch_Autopilot_DWORK1.rtdw.AltitudeMode_DWORK1.rtdw.DelayInput2_DSTATE</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+Autopilot.c:62</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+<TR>
+<TD class="d0">
+Autopilot.c:65</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+<TR>
+<TD class="d0">
+Autopilot.c:66</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+<TR>
+<TD class="d0">
+Autopilot.c:67</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+<TR>
+<TD class="d0">
+Autopilot.c:72</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+<TR>
+<TD class="d0">
+Autopilot.c:73</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+<TR>
+<TD class="d0">
+Autopilot.c:74</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+<TR>
+<TD class="d0">
+Autopilot.c:83</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+<TR>
+<TD class="d0">
+Autopilot.c:84</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+<TR>
+<TD class="d0">
+Autopilot.c:85</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+<TR>
+<TD class="d0">
+Autopilot.c:88</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+</table></TD>
+</TR>
+<TR >
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+Autopilot_DWork.Pitch_Autopilot_DWORK1.rtdw.AltitudeMode_DWORK1.rtdw.X_DSTATE</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+Autopilot.c:62</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+<TR>
+<TD class="d0">
+Autopilot.c:65</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+<TR>
+<TD class="d0">
+Autopilot.c:66</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+<TR>
+<TD class="d0">
+Autopilot.c:67</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+<TR>
+<TD class="d0">
+Autopilot.c:72</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+<TR>
+<TD class="d0">
+Autopilot.c:73</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+<TR>
+<TD class="d0">
+Autopilot.c:74</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+<TR>
+<TD class="d0">
+Autopilot.c:83</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+<TR>
+<TD class="d0">
+Autopilot.c:84</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+<TR>
+<TD class="d0">
+Autopilot.c:85</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+<TR>
+<TD class="d0">
+Autopilot.c:88</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+</table></TD>
+</TR>
+<TR >
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+Autopilot_DWork.Pitch_Autopilot_DWORK1.rtdw.BasicPitchMode_DWORK1.rtdw.X_DSTATE</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+Autopilot.c:62</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+<TR>
+<TD class="d0">
+Autopilot.c:65</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+<TR>
+<TD class="d0">
+Autopilot.c:66</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+<TR>
+<TD class="d0">
+Autopilot.c:67</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+<TR>
+<TD class="d0">
+Autopilot.c:72</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+<TR>
+<TD class="d0">
+Autopilot.c:73</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+<TR>
+<TD class="d0">
+Autopilot.c:74</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+<TR>
+<TD class="d0">
+Autopilot.c:83</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+<TR>
+<TD class="d0">
+Autopilot.c:84</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+<TR>
+<TD class="d0">
+Autopilot.c:85</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+<TR>
+<TD class="d0">
+Autopilot.c:88</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+</table></TD>
+</TR>
+<TR >
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+Autopilot_DWork.Pitch_Autopilot_DWORK1.rtdw.FixPtUnitDelay1_DSTATE</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+Autopilot.c:62</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+<TR>
+<TD class="d0">
+Autopilot.c:65</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+<TR>
+<TD class="d0">
+Autopilot.c:66</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+<TR>
+<TD class="d0">
+Autopilot.c:67</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+<TR>
+<TD class="d0">
+Autopilot.c:72</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+<TR>
+<TD class="d0">
+Autopilot.c:73</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+<TR>
+<TD class="d0">
+Autopilot.c:74</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+<TR>
+<TD class="d0">
+Autopilot.c:83</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+<TR>
+<TD class="d0">
+Autopilot.c:84</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+<TR>
+<TD class="d0">
+Autopilot.c:85</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+<TR>
+<TD class="d0">
+Autopilot.c:88</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+</table></TD>
+</TR>
+<TR >
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+Autopilot_DWork.Roll_Autopilot_DWORK1.rtb.phiCmd</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+Autopilot.c:62</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+<TR>
+<TD class="d0">
+Autopilot.c:63</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+<TR>
+<TD class="d0">
+Autopilot.c:64</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+<TR>
+<TD class="d0">
+Autopilot.c:74</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+<TR>
+<TD class="d0">
+Autopilot.c:77</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+<TR>
+<TD class="d0">
+Autopilot.c:78</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+<TR>
+<TD class="d0">
+Autopilot.c:79</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+<TR>
+<TD class="d0">
+Autopilot.c:80</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+</table></TD>
+</TR>
+<TR >
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+Autopilot_DWork.Roll_Autopilot_DWORK1.rtdw.BasicRollMode_DWORK1.rtdw.X_DSTATE</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+Autopilot.c:62</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+<TR>
+<TD class="d0">
+Autopilot.c:63</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+<TR>
+<TD class="d0">
+Autopilot.c:64</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+<TR>
+<TD class="d0">
+Autopilot.c:74</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+<TR>
+<TD class="d0">
+Autopilot.c:77</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+<TR>
+<TD class="d0">
+Autopilot.c:78</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+<TR>
+<TD class="d0">
+Autopilot.c:80</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+</table></TD>
+</TR>
+<TR >
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+Autopilot_DWork.Roll_Autopilot_DWORK1.rtdw.FixPtUnitDelay1_DSTATE</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+Autopilot.c:62</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+<TR>
+<TD class="d0">
+Autopilot.c:63</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+<TR>
+<TD class="d0">
+Autopilot.c:64</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+<TR>
+<TD class="d0">
+Autopilot.c:74</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+<TR>
+<TD class="d0">
+Autopilot.c:77</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+<TR>
+<TD class="d0">
+Autopilot.c:78</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+<TR>
+<TD class="d0">
+Autopilot.c:80</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+</table></TD>
+</TR>
+<TR >
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+Autopilot_DWork.Roll_Autopilot_DWORK1.rtdw.HeadingMode_DWORK1.rtb.hdgError</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+Autopilot.c:62</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+<TR>
+<TD class="d0">
+Autopilot.c:63</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+<TR>
+<TD class="d0">
+Autopilot.c:64</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+<TR>
+<TD class="d0">
+Autopilot.c:74</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+<TR>
+<TD class="d0">
+Autopilot.c:77</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+<TR>
+<TD class="d0">
+Autopilot.c:78</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+<TR>
+<TD class="d0">
+Autopilot.c:80</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+</table></TD>
+</TR>
+<TR >
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+Autopilot_DWork.Yaw_Damper_DWORK1.rtb.yawRate</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+Autopilot.c:62</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+<TR>
+<TD class="d0">
+Autopilot.c:67</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+<TR>
+<TD class="d0">
+Autopilot.c:74</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+<TR>
+<TD class="d0">
+Autopilot.c:91</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+<TR>
+<TD class="d0">
+Autopilot.c:92</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+<TR>
+<TD class="d0">
+Autopilot.c:93</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+</table></TD>
+</TR>
+<TR >
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+Autopilot_Y.AileronCmd</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+Autopilot.c:62</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+<TR>
+<TD class="d0">
+Autopilot.c:63</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+<TR>
+<TD class="d0">
+Autopilot.c:64</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+<TR>
+<TD class="d0">
+Autopilot.c:74</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+<TR>
+<TD class="d0">
+Autopilot.c:77</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+<TR>
+<TD class="d0">
+Autopilot.c:78</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+<TR>
+<TD class="d0">
+Autopilot.c:79</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+<TR>
+<TD class="d0">
+Autopilot.c:80</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+</table></TD>
+</TR>
+<TR >
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+Autopilot_Y.ElevatorCmd</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+Autopilot.c:62</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+<TR>
+<TD class="d0">
+Autopilot.c:65</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+<TR>
+<TD class="d0">
+Autopilot.c:66</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+<TR>
+<TD class="d0">
+Autopilot.c:67</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+<TR>
+<TD class="d0">
+Autopilot.c:72</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+<TR>
+<TD class="d0">
+Autopilot.c:73</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+<TR>
+<TD class="d0">
+Autopilot.c:74</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+<TR>
+<TD class="d0">
+Autopilot.c:83</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+<TR>
+<TD class="d0">
+Autopilot.c:84</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+<TR>
+<TD class="d0">
+Autopilot.c:85</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+<TR>
+<TD class="d0">
+Autopilot.c:86</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+<TR>
+<TD class="d0">
+Autopilot.c:88</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+</table></TD>
+</TR>
+<TR >
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+Autopilot_Y.RudderCmd</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+Autopilot.c:62</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+<TR>
+<TD class="d0">
+Autopilot.c:67</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+<TR>
+<TD class="d0">
+Autopilot.c:74</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+<TR>
+<TD class="d0">
+Autopilot.c:91</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+<TR>
+<TD class="d0">
+Autopilot.c:92</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+<TR>
+<TD class="d0">
+Autopilot.c:93</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+</table></TD>
+</TR>
+</table>
+ </td>
+ </tr>
+ </table>
+ </td>
+ </tr>
+ </table></TD>
+</TR>
+</table>
+ </td>
+ </tr>
+ </table>
+ </td>
+ </tr>
+ </table><table class="T0" id="9">
+  <tr> 
+    <td style="text-align:left;">
+    <span style="background-color:#ffffff;cursor:pointer;white-space:nowrap" title="Click to shrink or expand category"        onclick="rtwTableShrink(this,'9')"> 
+     <span style="font-family:monospace" id = "9_button">[-]
+</span>
+    </span>
+    </td>
+    <td class="d0">
+    <b>Temporary Variable Usage </b>
+    </td><td class="d0"></td>
+  </tr>
+  <tr>
+  <td class="d0">
+  <span id="9_indent"></span>
+  </td>
+  <td class="d0">
+ <table style="display:all; border-style:none;" id="9_table">
+ <tr>
+ <td class="d0"><table class="T0"><TR>
+<TD class="d0">
+<table class="T0" id="7">
+  <tr> 
+    <td style="text-align:left;">
+    <span style="background-color:#ffffff;cursor:pointer;white-space:nowrap" title="Click to shrink or expand category"        onclick="rtwTableShrink(this,'7')"> 
+     <span style="font-family:monospace" id = "7_button">[-]
+</span>
+    </span>
+    </td>
+    <td class="d0">
+    <b>Function : Autopilot_initialize</b>
+    </td><td class="d0"></td>
+  </tr>
+  <tr>
+  <td class="d0">
+  <span id="7_indent"></span>
+  </td>
+  <td class="d0">
+ <table style="display:all; border-style:none;" id="7_table">
+ <tr>
+ <td class="d0">Function does not have any temporary variable declarations
+ </td>
+ </tr>
+ </table>
+ </td>
+ </tr>
+ </table></TD>
+</TR>
+<TR>
+<TD class="d0">
+<table class="T0" id="8">
+  <tr> 
+    <td style="text-align:left;">
+    <span style="background-color:#ffffff;cursor:pointer;white-space:nowrap" title="Click to shrink or expand category"        onclick="rtwTableShrink(this,'8')"> 
+     <span style="font-family:monospace" id = "8_button">[-]
+</span>
+    </span>
+    </td>
+    <td class="d0">
+    <b>Function : Autopilot_step</b>
+    </td><td class="d0"></td>
+  </tr>
+  <tr>
+  <td class="d0">
+  <span id="8_indent"></span>
+  </td>
+  <td class="d0">
+ <table style="display:all; border-style:none;" id="8_table">
+ <tr>
+ <td class="d0"><table class="T1"><TR >
+<TH class="th1">
+Temporary variable name</TH>
+<TH class="th1">
+Status</TH>
+</TR>
+<TR >
+<TD class="d1">
+rtb_airspeed</TD>
+<TD class="d1">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+<TR >
+<TD class="d1">
+rtb_alt</TD>
+<TD class="d1">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+<TR >
+<TD class="d1">
+rtb_altRate</TD>
+<TD class="d1">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+<TR >
+<TD class="d1">
+rtb_p</TD>
+<TD class="d1">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+<TR >
+<TD class="d1">
+rtb_phi</TD>
+<TD class="d1">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+<TR >
+<TD class="d1">
+rtb_psi</TD>
+<TD class="d1">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+<TR >
+<TD class="d1">
+rtb_q</TD>
+<TD class="d1">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+<TR >
+<TD class="d1">
+rtb_r</TD>
+<TD class="d1">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+<TR >
+<TD class="d1">
+rtb_theta</TD>
+<TD class="d1">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+</table>
+ </td>
+ </tr>
+ </table>
+ </td>
+ </tr>
+ </table></TD>
+</TR>
+</table>
+ </td>
+ </tr>
+ </table>
+ </td>
+ </tr>
+ </table></TD>
+</TR>
+</table><br/><h2>Traceability Details</h2><table class="T0"><TR>
+<TD class="d0">
+<table class="T0" id="10">
+  <tr> 
+    <td style="text-align:left;">
+    <span style="background-color:#ffffff;cursor:pointer;white-space:nowrap" title="Click to shrink or expand category"        onclick="rtwTableShrink(this,'10')"> 
+     <span style="font-family:monospace" id = "10_button">[-]
+</span>
+    </span>
+    </td>
+    <td class="d0">
+    <b>Model To Code Traceability </b>
+    </td><td class="d0"></td>
+  </tr>
+  <tr>
+  <td class="d0">
+  <span id="10_indent"></span>
+  </td>
+  <td class="d0">
+ <table style="display:all; border-style:none;" id="10_table">
+ <tr>
+ <td class="d0"><table class="T0"><TR>
+<TD class="d0">
+<table class="T0"><TR>
+<TD class="d0">
+<b>Model : <a href="matlab:open_system(slci.internal.encodeString('C:\Users\bpotter\LocalWorkArea\demos\autopilot_R2013b_workarea\Autopilot.slx','html','decode'))">Autopilot</a></b></TD>
+</TR>
+<TR>
+<TD class="d0">
+<table class="T1"><TR >
+<TH class="th1">
+Model object</TH>
+<TH class="th1">
+Code location</TH>
+<TH class="th1">
+Details</TH>
+</TR>
+<TR >
+<TD class="d1">
+<a href="matlab:slci.internal.ReportConfig.traceCallBack('C:\Users\bpotter\LocalWorkArea\demos\autopilot_R2013b_workarea\Autopilot.slx','Autopilot:2')">&#60;model&#62;/Air Data</a>
+</TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+-</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN">Virtual/Eliminated (Inport)</span></TD>
+</TR>
+<TR >
+<TD class="d1">
+<a href="matlab:slci.internal.ReportConfig.traceCallBack('C:\Users\bpotter\LocalWorkArea\demos\autopilot_R2013b_workarea\Autopilot.slx','Autopilot:3')">&#60;model&#62;/Inertial</a>
+</TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+-</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN">Virtual/Eliminated (Inport)</span></TD>
+</TR>
+<TR >
+<TD class="d1">
+<a href="matlab:slci.internal.ReportConfig.traceCallBack('C:\Users\bpotter\LocalWorkArea\demos\autopilot_R2013b_workarea\Autopilot.slx','Autopilot:4')">&#60;model&#62;/AP Eng</a>
+</TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+-</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN">Virtual/Eliminated (Inport)</span></TD>
+</TR>
+<TR >
+<TD class="d1">
+<a href="matlab:slci.internal.ReportConfig.traceCallBack('C:\Users\bpotter\LocalWorkArea\demos\autopilot_R2013b_workarea\Autopilot.slx','Autopilot:5')">&#60;model&#62;/HDG Mode</a>
+</TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+-</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN">Virtual/Eliminated (Inport)</span></TD>
+</TR>
+<TR >
+<TD class="d1">
+<a href="matlab:slci.internal.ReportConfig.traceCallBack('C:\Users\bpotter\LocalWorkArea\demos\autopilot_R2013b_workarea\Autopilot.slx','Autopilot:6')">&#60;model&#62;/ALT Mode</a>
+</TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+-</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN">Virtual/Eliminated (Inport)</span></TD>
+</TR>
+<TR >
+<TD class="d1">
+<a href="matlab:slci.internal.ReportConfig.traceCallBack('C:\Users\bpotter\LocalWorkArea\demos\autopilot_R2013b_workarea\Autopilot.slx','Autopilot:7')">&#60;model&#62;/HDG Ref</a>
+</TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+-</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN">Virtual/Eliminated (Inport)</span></TD>
+</TR>
+<TR >
+<TD class="d1">
+<a href="matlab:slci.internal.ReportConfig.traceCallBack('C:\Users\bpotter\LocalWorkArea\demos\autopilot_R2013b_workarea\Autopilot.slx','Autopilot:8')">&#60;model&#62;/Turn Knob</a>
+</TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+-</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN">Virtual/Eliminated (Inport)</span></TD>
+</TR>
+<TR >
+<TD class="d1">
+<a href="matlab:slci.internal.ReportConfig.traceCallBack('C:\Users\bpotter\LocalWorkArea\demos\autopilot_R2013b_workarea\Autopilot.slx','Autopilot:9')">&#60;model&#62;/ALT Ref</a>
+</TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+-</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN">Virtual/Eliminated (Inport)</span></TD>
+</TR>
+<TR >
+<TD class="d1">
+<a href="matlab:slci.internal.ReportConfig.traceCallBack('C:\Users\bpotter\LocalWorkArea\demos\autopilot_R2013b_workarea\Autopilot.slx','Autopilot:10')">&#60;model&#62;/Pitch Wheel</a>
+</TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+-</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN">Virtual/Eliminated (Inport)</span></TD>
+</TR>
+<TR >
+<TD class="d1">
+<a href="matlab:slci.internal.ReportConfig.traceCallBack('C:\Users\bpotter\LocalWorkArea\demos\autopilot_R2013b_workarea\Autopilot.slx','Autopilot:11')">&#60;model&#62;/Bus
+Selector3</a>
+</TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+-</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN">Optimized out</span></TD>
+</TR>
+<TR >
+<TD class="d1">
+<a href="matlab:slci.internal.ReportConfig.traceCallBack('C:\Users\bpotter\LocalWorkArea\demos\autopilot_R2013b_workarea\Autopilot.slx','Autopilot:12')">&#60;model&#62;/Bus
+Selector4</a>
+</TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+-</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN">Optimized out</span></TD>
+</TR>
+<TR >
+<TD class="d1">
+<a href="matlab:slci.internal.ReportConfig.traceCallBack('C:\Users\bpotter\LocalWorkArea\demos\autopilot_R2013b_workarea\Autopilot.slx','Autopilot:21')">&#60;model&#62;/Model Info</a>
+</TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+-</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN">Virtual/Eliminated (Model Info block)</span></TD>
+</TR>
+<TR >
+<TD class="d1">
+<a href="matlab:slci.internal.ReportConfig.traceCallBack('C:\Users\bpotter\LocalWorkArea\demos\autopilot_R2013b_workarea\Autopilot.slx','Autopilot:13')">&#60;model&#62;/Pitch_Autopilot</a>
+</TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+Autopilot.c:83-85 , 87-88 , 121-122 , 132</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN">-</span></TD>
+</TR>
+<TR >
+<TD class="d1">
+<a href="matlab:slci.internal.ReportConfig.traceCallBack('C:\Users\bpotter\LocalWorkArea\demos\autopilot_R2013b_workarea\Autopilot.slx','Autopilot:14')">&#60;model&#62;/Roll_Autopilot</a>
+</TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+Autopilot.c:77-80 , 125-126</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN">-</span></TD>
+</TR>
+<TR >
+<TD class="d1">
+<a href="matlab:slci.internal.ReportConfig.traceCallBack('C:\Users\bpotter\LocalWorkArea\demos\autopilot_R2013b_workarea\Autopilot.slx','Autopilot:15')">&#60;model&#62;/Yaw_Damper</a>
+</TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+Autopilot.c:91-93 , 129</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN">-</span></TD>
+</TR>
+<TR >
+<TD class="d1">
+<a href="matlab:slci.internal.ReportConfig.traceCallBack('C:\Users\bpotter\LocalWorkArea\demos\autopilot_R2013b_workarea\Autopilot.slx','Autopilot:16')">&#60;model&#62;/Aileron Cmd</a>
+</TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+Autopilot.c:77 , 79</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN">-</span></TD>
+</TR>
+<TR >
+<TD class="d1">
+<a href="matlab:slci.internal.ReportConfig.traceCallBack('C:\Users\bpotter\LocalWorkArea\demos\autopilot_R2013b_workarea\Autopilot.slx','Autopilot:17')">&#60;model&#62;/Elevator Cmd</a>
+</TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+Autopilot.c:83 , 86</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN">-</span></TD>
+</TR>
+<TR >
+<TD class="d1">
+<a href="matlab:slci.internal.ReportConfig.traceCallBack('C:\Users\bpotter\LocalWorkArea\demos\autopilot_R2013b_workarea\Autopilot.slx','Autopilot:18')">&#60;model&#62;/Rudder Cmd</a>
+</TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+Autopilot.c:91-92</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN">-</span></TD>
+</TR>
+<TR >
+<TD class="d1">
+<a href="matlab:slci.internal.ReportConfig.traceCallBack('C:\Users\bpotter\LocalWorkArea\demos\autopilot_R2013b_workarea\Autopilot.slx','Autopilot:21:1')">&#60;model&#62;/Model Info/EmptySubsystem</a>
+</TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+-</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN">Virtual/Eliminated (SubSystem)</span></TD>
+</TR>
+<TR >
+<TD class="d1">
+<a href="matlab:slci.internal.ReportConfig.traceCallBack('C:\Users\bpotter\LocalWorkArea\demos\autopilot_R2013b_workarea\Autopilot.slx','Autopilot')">dwork initialization code</a>
+</TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+Autopilot.c:102-103</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN">-</span></TD>
+</TR>
+<TR >
+<TD class="d1">
+<a href="matlab:slci.internal.ReportConfig.traceCallBack('C:\Users\bpotter\LocalWorkArea\demos\autopilot_R2013b_workarea\Autopilot.slx','Autopilot')">input initialization code</a>
+</TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+Autopilot.c:19 , 27 , 106-113</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN">-</span></TD>
+</TR>
+<TR >
+<TD class="d1">
+<a href="matlab:slci.internal.ReportConfig.traceCallBack('C:\Users\bpotter\LocalWorkArea\demos\autopilot_R2013b_workarea\Autopilot.slx','Autopilot')">output initialization code</a>
+</TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+Autopilot.c:116-118</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN">-</span></TD>
+</TR>
+</table></TD>
+</TR>
+</table></TD>
+</TR>
+</table>
+ </td>
+ </tr>
+ </table>
+ </td>
+ </tr>
+ </table><table class="T0" id="11">
+  <tr> 
+    <td style="text-align:left;">
+    <span style="background-color:#ffffff;cursor:pointer;white-space:nowrap" title="Click to shrink or expand category"        onclick="rtwTableShrink(this,'11')"> 
+     <span style="font-family:monospace" id = "11_button">[-]
+</span>
+    </span>
+    </td>
+    <td class="d0">
+    <b>Code To Model Traceability </b>
+    </td><td class="d0"></td>
+  </tr>
+  <tr>
+  <td class="d0">
+  <span id="11_indent"></span>
+  </td>
+  <td class="d0">
+ <table style="display:all; border-style:none;" id="11_table">
+ <tr>
+ <td class="d0"><table class="T0"><TR>
+<TD class="d0">
+<table class="T0"><TR>
+<TD class="d0">
+<b>File : <a href ="file:///C:/Users/bpotter/LocalWorkArea/demos/autopilot_R2013b_workarea/Autopilot_ert_rtw/Autopilot.c">Autopilot.c</a></b></TD>
+</TR>
+<TR>
+<TD class="d0">
+<table class="T1"><TR >
+<TH class="th1">
+Code location</TH>
+<TH class="th1">
+Code</TH>
+<TH class="th1">
+Model object</TH>
+<TH class="th1">
+Details</TH>
+</TR>
+<TR >
+<TD class="d1">
+1</TD>
+<TD class="d1">
+<span class="CODE">/*
+</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+-</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN"><span class="NON_FUNCTIONAL">Nonfunctional code</span> (Comment) </span></TD>
+</TR>
+<TR >
+<TD class="d1">
+2</TD>
+<TD class="d1">
+<span class="CODE"> * File: Autopilot.c
+</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+-</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN"><span class="NON_FUNCTIONAL">Nonfunctional code</span> (Comment) </span></TD>
+</TR>
+<TR >
+<TD class="d1">
+3</TD>
+<TD class="d1">
+<span class="CODE"> *
+</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+-</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN"><span class="NON_FUNCTIONAL">Nonfunctional code</span> (Comment) </span></TD>
+</TR>
+<TR >
+<TD class="d1">
+4</TD>
+<TD class="d1">
+<span class="CODE"> * Code generated for Simulink model &#39;Autopilot&#39;.
+</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+-</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN"><span class="NON_FUNCTIONAL">Nonfunctional code</span> (Comment) </span></TD>
+</TR>
+<TR >
+<TD class="d1">
+5</TD>
+<TD class="d1">
+<span class="CODE"> *
+</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+-</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN"><span class="NON_FUNCTIONAL">Nonfunctional code</span> (Comment) </span></TD>
+</TR>
+<TR >
+<TD class="d1">
+6</TD>
+<TD class="d1">
+<span class="CODE"> * Model version                  : 1.152
+</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+-</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN"><span class="NON_FUNCTIONAL">Nonfunctional code</span> (Comment) </span></TD>
+</TR>
+<TR >
+<TD class="d1">
+7</TD>
+<TD class="d1">
+<span class="CODE"> * Simulink Coder version         : 8.5 (R2013b) 08-Aug-2013
+</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+-</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN"><span class="NON_FUNCTIONAL">Nonfunctional code</span> (Comment) </span></TD>
+</TR>
+<TR >
+<TD class="d1">
+8</TD>
+<TD class="d1">
+<span class="CODE"> * C/C++ source code generated on : Mon Feb 03 08:13:57 2014
+</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+-</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN"><span class="NON_FUNCTIONAL">Nonfunctional code</span> (Comment) </span></TD>
+</TR>
+<TR >
+<TD class="d1">
+9</TD>
+<TD class="d1">
+<span class="CODE"> *
+</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+-</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN"><span class="NON_FUNCTIONAL">Nonfunctional code</span> (Comment) </span></TD>
+</TR>
+<TR >
+<TD class="d1">
+10</TD>
+<TD class="d1">
+<span class="CODE"> * Target selection: ert.tlc
+</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+-</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN"><span class="NON_FUNCTIONAL">Nonfunctional code</span> (Comment) </span></TD>
+</TR>
+<TR >
+<TD class="d1">
+11</TD>
+<TD class="d1">
+<span class="CODE"> * Embedded hardware selection: 32-bit Embedded Processor
+</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+-</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN"><span class="NON_FUNCTIONAL">Nonfunctional code</span> (Comment) </span></TD>
+</TR>
+<TR >
+<TD class="d1">
+12</TD>
+<TD class="d1">
+<span class="CODE"> * Code generation objectives: Unspecified
+</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+-</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN"><span class="NON_FUNCTIONAL">Nonfunctional code</span> (Comment) </span></TD>
+</TR>
+<TR >
+<TD class="d1">
+13</TD>
+<TD class="d1">
+<span class="CODE"> * Validation result: Not run
+</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+-</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN"><span class="NON_FUNCTIONAL">Nonfunctional code</span> (Comment) </span></TD>
+</TR>
+<TR >
+<TD class="d1">
+14</TD>
+<TD class="d1">
+<span class="CODE"> */
+</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+-</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN"><span class="NON_FUNCTIONAL">Nonfunctional code</span> (Comment) </span></TD>
+</TR>
+<TR >
+<TD class="d1">
+15</TD>
+<TD class="d1">
+<span class="CODE">
+</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+-</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN"><span class="NON_FUNCTIONAL">Nonfunctional code</span> (Empty line) </span></TD>
+</TR>
+<TR >
+<TD class="d1">
+16</TD>
+<TD class="d1">
+<span class="CODE">#include &#34;Autopilot.h&#34;
+</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+-</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN"><span class="NOT_PROCESSED">Not processed</span> (Include statement) </span></TD>
+</TR>
+<TR >
+<TD class="d1">
+17</TD>
+<TD class="d1">
+<span class="CODE">#include &#34;Autopilot_private.h&#34;
+</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+-</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN"><span class="NOT_PROCESSED">Not processed</span> (Include statement) </span></TD>
+</TR>
+<TR >
+<TD class="d1">
+18</TD>
+<TD class="d1">
+<span class="CODE">
+</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+-</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN"><span class="NON_FUNCTIONAL">Nonfunctional code</span> (Empty line) </span></TD>
+</TR>
+<TR >
+<TD class="d1">
+19</TD>
+<TD class="d1">
+<span class="CODE">const slBus1 Autopilot_rtZslBus1 = {
+</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+<a href="matlab:slci.internal.ReportConfig.traceCallBack('C:\Users\bpotter\LocalWorkArea\demos\autopilot_R2013b_workarea\Autopilot.slx','Autopilot')">input initialization code</a>
+</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN">-</span></TD>
+</TR>
+<TR >
+<TD class="d1">
+20</TD>
+<TD class="d1">
+<span class="CODE">  0.0,                                 /* altRate */
+</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+-</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN"><span class="NOT_PROCESSED">Not processed</span></span></TD>
+</TR>
+<TR >
+<TD class="d1">
+21</TD>
+<TD class="d1">
+<span class="CODE">  0.0,                                 /* alpha */
+</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+-</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN"><span class="NOT_PROCESSED">Not processed</span></span></TD>
+</TR>
+<TR >
+<TD class="d1">
+22</TD>
+<TD class="d1">
+<span class="CODE">  0.0,                                 /* beta */
+</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+-</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN"><span class="NOT_PROCESSED">Not processed</span></span></TD>
+</TR>
+<TR >
+<TD class="d1">
+23</TD>
+<TD class="d1">
+<span class="CODE">  0.0,                                 /* airspeed */
+</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+-</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN"><span class="NOT_PROCESSED">Not processed</span></span></TD>
+</TR>
+<TR >
+<TD class="d1">
+24</TD>
+<TD class="d1">
+<span class="CODE">  0.0                                  /* alt */
+</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+-</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN"><span class="NOT_PROCESSED">Not processed</span></span></TD>
+</TR>
+<TR >
+<TD class="d1">
+25</TD>
+<TD class="d1">
+<span class="CODE">} ;                                    /* slBus1 ground */
+</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+-</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN"><span class="NOT_PROCESSED">Not processed</span></span></TD>
+</TR>
+<TR >
+<TD class="d1">
+26</TD>
+<TD class="d1">
+<span class="CODE">
+</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+-</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN"><span class="NON_FUNCTIONAL">Nonfunctional code</span> (Empty line) </span></TD>
+</TR>
+<TR >
+<TD class="d1">
+27</TD>
+<TD class="d1">
+<span class="CODE">const slBus2 Autopilot_rtZslBus2 = {
+</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+<a href="matlab:slci.internal.ReportConfig.traceCallBack('C:\Users\bpotter\LocalWorkArea\demos\autopilot_R2013b_workarea\Autopilot.slx','Autopilot')">input initialization code</a>
+</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN">-</span></TD>
+</TR>
+<TR >
+<TD class="d1">
+28</TD>
+<TD class="d1">
+<span class="CODE">  0.0,                                 /* phi */
+</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+-</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN"><span class="NOT_PROCESSED">Not processed</span></span></TD>
+</TR>
+<TR >
+<TD class="d1">
+29</TD>
+<TD class="d1">
+<span class="CODE">  0.0,                                 /* theta */
+</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+-</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN"><span class="NOT_PROCESSED">Not processed</span></span></TD>
+</TR>
+<TR >
+<TD class="d1">
+30</TD>
+<TD class="d1">
+<span class="CODE">  0.0,                                 /* psi */
+</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+-</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN"><span class="NOT_PROCESSED">Not processed</span></span></TD>
+</TR>
+<TR >
+<TD class="d1">
+31</TD>
+<TD class="d1">
+<span class="CODE">  0.0,                                 /* p */
+</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+-</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN"><span class="NOT_PROCESSED">Not processed</span></span></TD>
+</TR>
+<TR >
+<TD class="d1">
+32</TD>
+<TD class="d1">
+<span class="CODE">  0.0,                                 /* q */
+</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+-</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN"><span class="NOT_PROCESSED">Not processed</span></span></TD>
+</TR>
+<TR >
+<TD class="d1">
+33</TD>
+<TD class="d1">
+<span class="CODE">  0.0                                  /* r */
+</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+-</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN"><span class="NOT_PROCESSED">Not processed</span></span></TD>
+</TR>
+<TR >
+<TD class="d1">
+34</TD>
+<TD class="d1">
+<span class="CODE">} ;                                    /* slBus2 ground */
+</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+-</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN"><span class="NOT_PROCESSED">Not processed</span></span></TD>
+</TR>
+<TR >
+<TD class="d1">
+35</TD>
+<TD class="d1">
+<span class="CODE">
+</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+-</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN"><span class="NON_FUNCTIONAL">Nonfunctional code</span> (Empty line) </span></TD>
+</TR>
+<TR >
+<TD class="d1">
+36</TD>
+<TD class="d1">
+<span class="CODE">/* Block states (auto storage) */
+</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+-</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN"><span class="NON_FUNCTIONAL">Nonfunctional code</span> (Comment) </span></TD>
+</TR>
+<TR >
+<TD class="d1">
+37</TD>
+<TD class="d1">
+<span class="CODE">D_Work_Autopilot Autopilot_DWork;
+</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+-</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN"><span class="NOT_PROCESSED">Not processed</span></span></TD>
+</TR>
+<TR >
+<TD class="d1">
+38</TD>
+<TD class="d1">
+<span class="CODE">
+</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+-</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN"><span class="NON_FUNCTIONAL">Nonfunctional code</span> (Empty line) </span></TD>
+</TR>
+<TR >
+<TD class="d1">
+39</TD>
+<TD class="d1">
+<span class="CODE">/* External inputs (root inport signals with auto storage) */
+</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+-</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN"><span class="NON_FUNCTIONAL">Nonfunctional code</span> (Comment) </span></TD>
+</TR>
+<TR >
+<TD class="d1">
+40</TD>
+<TD class="d1">
+<span class="CODE">ExternalInputs_Autopilot Autopilot_U;
+</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+-</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN"><span class="NOT_PROCESSED">Not processed</span></span></TD>
+</TR>
+<TR >
+<TD class="d1">
+41</TD>
+<TD class="d1">
+<span class="CODE">
+</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+-</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN"><span class="NON_FUNCTIONAL">Nonfunctional code</span> (Empty line) </span></TD>
+</TR>
+<TR >
+<TD class="d1">
+42</TD>
+<TD class="d1">
+<span class="CODE">/* External outputs (root outports fed by signals with auto storage) */
+</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+-</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN"><span class="NON_FUNCTIONAL">Nonfunctional code</span> (Comment) </span></TD>
+</TR>
+<TR >
+<TD class="d1">
+43</TD>
+<TD class="d1">
+<span class="CODE">ExternalOutputs_Autopilot Autopilot_Y;
+</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+-</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN"><span class="NOT_PROCESSED">Not processed</span></span></TD>
+</TR>
+<TR >
+<TD class="d1">
+44</TD>
+<TD class="d1">
+<span class="CODE">
+</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+-</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN"><span class="NON_FUNCTIONAL">Nonfunctional code</span> (Empty line) </span></TD>
+</TR>
+<TR >
+<TD class="d1">
+45</TD>
+<TD class="d1">
+<span class="CODE">/* Model step function */
+</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+-</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN"><span class="NON_FUNCTIONAL">Nonfunctional code</span> (Comment) </span></TD>
+</TR>
+<TR >
+<TD class="d1">
+46</TD>
+<TD class="d1">
+<span class="CODE">void Autopilot_step(void)
+</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+<a href="matlab:slci.internal.ReportConfig.traceCallBack('C:\Users\bpotter\LocalWorkArea\demos\autopilot_R2013b_workarea\Autopilot.slx','Autopilot')">step function interface</a>
+</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN">-</span></TD>
+</TR>
+<TR >
+<TD class="d1">
+47</TD>
+<TD class="d1">
+<span class="CODE">{
+</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+-</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN"><span class="NON_FUNCTIONAL">Nonfunctional code</span> (Start of code segment) </span></TD>
+</TR>
+<TR >
+<TD class="d1">
+48</TD>
+<TD class="d1">
+<span class="CODE">  /* local block i/o variables */
+</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+-</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN"><span class="NON_FUNCTIONAL">Nonfunctional code</span> (Comment) </span></TD>
+</TR>
+<TR >
+<TD class="d1">
+49</TD>
+<TD class="d1">
+<span class="CODE">  real_T rtb_phi;
+</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+-</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN">Local variable declaration</span></TD>
+</TR>
+<TR >
+<TD class="d1">
+50</TD>
+<TD class="d1">
+<span class="CODE">  real_T rtb_theta;
+</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+-</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN">Local variable declaration</span></TD>
+</TR>
+<TR >
+<TD class="d1">
+51</TD>
+<TD class="d1">
+<span class="CODE">  real_T rtb_q;
+</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+-</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN">Local variable declaration</span></TD>
+</TR>
+<TR >
+<TD class="d1">
+52</TD>
+<TD class="d1">
+<span class="CODE">  real_T rtb_r;
+</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+-</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN">Local variable declaration</span></TD>
+</TR>
+<TR >
+<TD class="d1">
+53</TD>
+<TD class="d1">
+<span class="CODE">  real_T rtb_airspeed;
+</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+-</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN">Local variable declaration</span></TD>
+</TR>
+<TR >
+<TD class="d1">
+54</TD>
+<TD class="d1">
+<span class="CODE">  real_T rtb_psi;
+</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+-</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN">Local variable declaration</span></TD>
+</TR>
+<TR >
+<TD class="d1">
+55</TD>
+<TD class="d1">
+<span class="CODE">  real_T rtb_p;
+</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+-</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN">Local variable declaration</span></TD>
+</TR>
+<TR >
+<TD class="d1">
+56</TD>
+<TD class="d1">
+<span class="CODE">  real_T rtb_alt;
+</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+-</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN">Local variable declaration</span></TD>
+</TR>
+<TR >
+<TD class="d1">
+57</TD>
+<TD class="d1">
+<span class="CODE">  real_T rtb_altRate;
+</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+-</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN">Local variable declaration</span></TD>
+</TR>
+<TR >
+<TD class="d1">
+58</TD>
+<TD class="d1">
+<span class="CODE">
+</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+-</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN"><span class="NON_FUNCTIONAL">Nonfunctional code</span> (Empty line) </span></TD>
+</TR>
+<TR >
+<TD class="d1">
+59</TD>
+<TD class="d1">
+<span class="CODE">  /* BusSelector: &#39;&#60;Root&#62;/Bus Selector4&#39; incorporates:
+</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+-</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN"><span class="NON_FUNCTIONAL">Nonfunctional code</span> (Comment) </span></TD>
+</TR>
+<TR >
+<TD class="d1">
+60</TD>
+<TD class="d1">
+<span class="CODE">   *  Inport: &#39;&#60;Root&#62;/Inertial&#39;
+</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+-</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN"><span class="NON_FUNCTIONAL">Nonfunctional code</span> (Comment) </span></TD>
+</TR>
+<TR >
+<TD class="d1">
+61</TD>
+<TD class="d1">
+<span class="CODE">   */
+</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+-</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN"><span class="NON_FUNCTIONAL">Nonfunctional code</span> (Comment) </span></TD>
+</TR>
+<TR >
+<TD class="d1">
+62</TD>
+<TD class="d1">
+<span class="CODE">  rtb_phi = Autopilot_U.Inertial.phi;
+</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+<a href="matlab:slci.internal.ReportConfig.traceCallBack('C:\Users\bpotter\LocalWorkArea\demos\autopilot_R2013b_workarea\Autopilot.slx','Autopilot:3')">&#60;model&#62;/Inertial</a>
+</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN">-</span></TD>
+</TR>
+<TR >
+<TD class="d1">
+63</TD>
+<TD class="d1">
+<span class="CODE">  rtb_psi = Autopilot_U.Inertial.psi;
+</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+<a href="matlab:slci.internal.ReportConfig.traceCallBack('C:\Users\bpotter\LocalWorkArea\demos\autopilot_R2013b_workarea\Autopilot.slx','Autopilot:3')">&#60;model&#62;/Inertial</a>
+</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN">-</span></TD>
+</TR>
+<TR >
+<TD class="d1">
+64</TD>
+<TD class="d1">
+<span class="CODE">  rtb_p = Autopilot_U.Inertial.p;
+</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+<a href="matlab:slci.internal.ReportConfig.traceCallBack('C:\Users\bpotter\LocalWorkArea\demos\autopilot_R2013b_workarea\Autopilot.slx','Autopilot:3')">&#60;model&#62;/Inertial</a>
+</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN">-</span></TD>
+</TR>
+<TR >
+<TD class="d1">
+65</TD>
+<TD class="d1">
+<span class="CODE">  rtb_theta = Autopilot_U.Inertial.theta;
+</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+<a href="matlab:slci.internal.ReportConfig.traceCallBack('C:\Users\bpotter\LocalWorkArea\demos\autopilot_R2013b_workarea\Autopilot.slx','Autopilot:3')">&#60;model&#62;/Inertial</a>
+</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN">-</span></TD>
+</TR>
+<TR >
+<TD class="d1">
+66</TD>
+<TD class="d1">
+<span class="CODE">  rtb_q = Autopilot_U.Inertial.q;
+</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+<a href="matlab:slci.internal.ReportConfig.traceCallBack('C:\Users\bpotter\LocalWorkArea\demos\autopilot_R2013b_workarea\Autopilot.slx','Autopilot:3')">&#60;model&#62;/Inertial</a>
+</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN">-</span></TD>
+</TR>
+<TR >
+<TD class="d1">
+67</TD>
+<TD class="d1">
+<span class="CODE">  rtb_r = Autopilot_U.Inertial.r;
+</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+<a href="matlab:slci.internal.ReportConfig.traceCallBack('C:\Users\bpotter\LocalWorkArea\demos\autopilot_R2013b_workarea\Autopilot.slx','Autopilot:3')">&#60;model&#62;/Inertial</a>
+</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN">-</span></TD>
+</TR>
+<TR >
+<TD class="d1">
+68</TD>
+<TD class="d1">
+<span class="CODE">
+</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+-</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN"><span class="NON_FUNCTIONAL">Nonfunctional code</span> (Empty line) </span></TD>
+</TR>
+<TR >
+<TD class="d1">
+69</TD>
+<TD class="d1">
+<span class="CODE">  /* BusSelector: &#39;&#60;Root&#62;/Bus Selector3&#39; incorporates:
+</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+-</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN"><span class="NON_FUNCTIONAL">Nonfunctional code</span> (Comment) </span></TD>
+</TR>
+<TR >
+<TD class="d1">
+70</TD>
+<TD class="d1">
+<span class="CODE">   *  Inport: &#39;&#60;Root&#62;/Air Data&#39;
+</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+-</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN"><span class="NON_FUNCTIONAL">Nonfunctional code</span> (Comment) </span></TD>
+</TR>
+<TR >
+<TD class="d1">
+71</TD>
+<TD class="d1">
+<span class="CODE">   */
+</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+-</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN"><span class="NON_FUNCTIONAL">Nonfunctional code</span> (Comment) </span></TD>
+</TR>
+<TR >
+<TD class="d1">
+72</TD>
+<TD class="d1">
+<span class="CODE">  rtb_alt = Autopilot_U.AirData.alt;
+</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+<a href="matlab:slci.internal.ReportConfig.traceCallBack('C:\Users\bpotter\LocalWorkArea\demos\autopilot_R2013b_workarea\Autopilot.slx','Autopilot:2')">&#60;model&#62;/Air Data</a>
+</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN">-</span></TD>
+</TR>
+<TR >
+<TD class="d1">
+73</TD>
+<TD class="d1">
+<span class="CODE">  rtb_altRate = Autopilot_U.AirData.altRate;
+</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+<a href="matlab:slci.internal.ReportConfig.traceCallBack('C:\Users\bpotter\LocalWorkArea\demos\autopilot_R2013b_workarea\Autopilot.slx','Autopilot:2')">&#60;model&#62;/Air Data</a>
+</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN">-</span></TD>
+</TR>
+<TR >
+<TD class="d1">
+74</TD>
+<TD class="d1">
+<span class="CODE">  rtb_airspeed = Autopilot_U.AirData.airspeed;
+</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+<a href="matlab:slci.internal.ReportConfig.traceCallBack('C:\Users\bpotter\LocalWorkArea\demos\autopilot_R2013b_workarea\Autopilot.slx','Autopilot:2')">&#60;model&#62;/Air Data</a>
+</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN">-</span></TD>
+</TR>
+<TR >
+<TD class="d1">
+75</TD>
+<TD class="d1">
+<span class="CODE">
+</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+-</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN"><span class="NON_FUNCTIONAL">Nonfunctional code</span> (Empty line) </span></TD>
+</TR>
+<TR >
+<TD class="d1">
+76</TD>
+<TD class="d1">
+<span class="CODE">  /* ModelReference: &#39;&#60;Root&#62;/Roll_Autopilot&#39; */
+</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+-</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN"><span class="NON_FUNCTIONAL">Nonfunctional code</span> (Comment) </span></TD>
+</TR>
+<TR >
+<TD class="d1">
+77</TD>
+<TD class="d1">
+<span class="CODE">  roll_ap(&#38;rtb_phi, &#38;rtb_psi, &#38;rtb_p, &#38;rtb_airspeed, &#38;Autopilot_U.APeng,
+</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+<a href="matlab:slci.internal.ReportConfig.traceCallBack('C:\Users\bpotter\LocalWorkArea\demos\autopilot_R2013b_workarea\Autopilot.slx','Autopilot:14')">&#60;model&#62;/Roll_Autopilot</a>
+</TD>
+</TR>
+<TR>
+<TD class="d0">
+<a href="matlab:slci.internal.ReportConfig.traceCallBack('C:\Users\bpotter\LocalWorkArea\demos\autopilot_R2013b_workarea\Autopilot.slx','Autopilot:16')">&#60;model&#62;/Aileron Cmd</a>
+</TD>
+</TR>
+<TR>
+<TD class="d0">
+<a href="matlab:slci.internal.ReportConfig.traceCallBack('C:\Users\bpotter\LocalWorkArea\demos\autopilot_R2013b_workarea\Autopilot.slx','Autopilot:4')">&#60;model&#62;/AP Eng</a>
+</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN">-</span></TD>
+</TR>
+<TR >
+<TD class="d1">
+78</TD>
+<TD class="d1">
+<span class="CODE">          &#38;Autopilot_U.HDGmode, &#38;Autopilot_U.HDGref, &#38;Autopilot_U.TurnKnob,
+</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+<a href="matlab:slci.internal.ReportConfig.traceCallBack('C:\Users\bpotter\LocalWorkArea\demos\autopilot_R2013b_workarea\Autopilot.slx','Autopilot:14')">&#60;model&#62;/Roll_Autopilot</a>
+</TD>
+</TR>
+<TR>
+<TD class="d0">
+<a href="matlab:slci.internal.ReportConfig.traceCallBack('C:\Users\bpotter\LocalWorkArea\demos\autopilot_R2013b_workarea\Autopilot.slx','Autopilot:5')">&#60;model&#62;/HDG Mode</a>
+</TD>
+</TR>
+<TR>
+<TD class="d0">
+<a href="matlab:slci.internal.ReportConfig.traceCallBack('C:\Users\bpotter\LocalWorkArea\demos\autopilot_R2013b_workarea\Autopilot.slx','Autopilot:7')">&#60;model&#62;/HDG Ref</a>
+</TD>
+</TR>
+<TR>
+<TD class="d0">
+<a href="matlab:slci.internal.ReportConfig.traceCallBack('C:\Users\bpotter\LocalWorkArea\demos\autopilot_R2013b_workarea\Autopilot.slx','Autopilot:8')">&#60;model&#62;/Turn Knob</a>
+</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN">-</span></TD>
+</TR>
+<TR >
+<TD class="d1">
+79</TD>
+<TD class="d1">
+<span class="CODE">          &#38;Autopilot_Y.AileronCmd, &#38;(Autopilot_DWork.Roll_Autopilot_DWORK1.rtb),...</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+<a href="matlab:slci.internal.ReportConfig.traceCallBack('C:\Users\bpotter\LocalWorkArea\demos\autopilot_R2013b_workarea\Autopilot.slx','Autopilot:14')">&#60;model&#62;/Roll_Autopilot</a>
+</TD>
+</TR>
+<TR>
+<TD class="d0">
+<a href="matlab:slci.internal.ReportConfig.traceCallBack('C:\Users\bpotter\LocalWorkArea\demos\autopilot_R2013b_workarea\Autopilot.slx','Autopilot:16')">&#60;model&#62;/Aileron Cmd</a>
+</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN">-</span></TD>
+</TR>
+<TR >
+<TD class="d1">
+80</TD>
+<TD class="d1">
+<span class="CODE">          &#38;(Autopilot_DWork.Roll_Autopilot_DWORK1.rtdw), 1.0, 1.0, 3.0, 0.015);...</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+<a href="matlab:slci.internal.ReportConfig.traceCallBack('C:\Users\bpotter\LocalWorkArea\demos\autopilot_R2013b_workarea\Autopilot.slx','Autopilot:14')">&#60;model&#62;/Roll_Autopilot</a>
+</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN">-</span></TD>
+</TR>
+<TR >
+<TD class="d1">
+81</TD>
+<TD class="d1">
+<span class="CODE">
+</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+-</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN"><span class="NON_FUNCTIONAL">Nonfunctional code</span> (Empty line) </span></TD>
+</TR>
+<TR >
+<TD class="d1">
+82</TD>
+<TD class="d1">
+<span class="CODE">  /* ModelReference: &#39;&#60;Root&#62;/Pitch_Autopilot&#39; */
+</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+-</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN"><span class="NON_FUNCTIONAL">Nonfunctional code</span> (Comment) </span></TD>
+</TR>
+<TR >
+<TD class="d1">
+83</TD>
+<TD class="d1">
+<span class="CODE">  pitch_ap(&#38;rtb_phi, &#38;rtb_theta, &#38;rtb_q, &#38;rtb_r, &#38;rtb_alt, &#38;rtb_altRate,
+</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+<a href="matlab:slci.internal.ReportConfig.traceCallBack('C:\Users\bpotter\LocalWorkArea\demos\autopilot_R2013b_workarea\Autopilot.slx','Autopilot:13')">&#60;model&#62;/Pitch_Autopilot</a>
+</TD>
+</TR>
+<TR>
+<TD class="d0">
+<a href="matlab:slci.internal.ReportConfig.traceCallBack('C:\Users\bpotter\LocalWorkArea\demos\autopilot_R2013b_workarea\Autopilot.slx','Autopilot:17')">&#60;model&#62;/Elevator Cmd</a>
+</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN">-</span></TD>
+</TR>
+<TR >
+<TD class="d1">
+84</TD>
+<TD class="d1">
+<span class="CODE">           &#38;rtb_airspeed, &#38;Autopilot_U.APeng, &#38;Autopilot_U.ALTMode,
+</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+<a href="matlab:slci.internal.ReportConfig.traceCallBack('C:\Users\bpotter\LocalWorkArea\demos\autopilot_R2013b_workarea\Autopilot.slx','Autopilot:13')">&#60;model&#62;/Pitch_Autopilot</a>
+</TD>
+</TR>
+<TR>
+<TD class="d0">
+<a href="matlab:slci.internal.ReportConfig.traceCallBack('C:\Users\bpotter\LocalWorkArea\demos\autopilot_R2013b_workarea\Autopilot.slx','Autopilot:4')">&#60;model&#62;/AP Eng</a>
+</TD>
+</TR>
+<TR>
+<TD class="d0">
+<a href="matlab:slci.internal.ReportConfig.traceCallBack('C:\Users\bpotter\LocalWorkArea\demos\autopilot_R2013b_workarea\Autopilot.slx','Autopilot:6')">&#60;model&#62;/ALT Mode</a>
+</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN">-</span></TD>
+</TR>
+<TR >
+<TD class="d1">
+85</TD>
+<TD class="d1">
+<span class="CODE">           &#38;Autopilot_U.ALTRef, &#38;Autopilot_U.PitchWheel,
+</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+<a href="matlab:slci.internal.ReportConfig.traceCallBack('C:\Users\bpotter\LocalWorkArea\demos\autopilot_R2013b_workarea\Autopilot.slx','Autopilot:10')">&#60;model&#62;/Pitch Wheel</a>
+</TD>
+</TR>
+<TR>
+<TD class="d0">
+<a href="matlab:slci.internal.ReportConfig.traceCallBack('C:\Users\bpotter\LocalWorkArea\demos\autopilot_R2013b_workarea\Autopilot.slx','Autopilot:13')">&#60;model&#62;/Pitch_Autopilot</a>
+</TD>
+</TR>
+<TR>
+<TD class="d0">
+<a href="matlab:slci.internal.ReportConfig.traceCallBack('C:\Users\bpotter\LocalWorkArea\demos\autopilot_R2013b_workarea\Autopilot.slx','Autopilot:9')">&#60;model&#62;/ALT Ref</a>
+</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN">-</span></TD>
+</TR>
+<TR >
+<TD class="d1">
+86</TD>
+<TD class="d1">
+<span class="CODE">           &#38;Autopilot_Y.ElevatorCmd,
+</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+<a href="matlab:slci.internal.ReportConfig.traceCallBack('C:\Users\bpotter\LocalWorkArea\demos\autopilot_R2013b_workarea\Autopilot.slx','Autopilot:17')">&#60;model&#62;/Elevator Cmd</a>
+</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN">-</span></TD>
+</TR>
+<TR >
+<TD class="d1">
+87</TD>
+<TD class="d1">
+<span class="CODE">           &#38;(Autopilot_DWork.Pitch_Autopilot_DWORK1.rtb),
+</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+<a href="matlab:slci.internal.ReportConfig.traceCallBack('C:\Users\bpotter\LocalWorkArea\demos\autopilot_R2013b_workarea\Autopilot.slx','Autopilot:13')">&#60;model&#62;/Pitch_Autopilot</a>
+</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN">-</span></TD>
+</TR>
+<TR >
+<TD class="d1">
+88</TD>
+<TD class="d1">
+<span class="CODE">           &#38;(Autopilot_DWork.Pitch_Autopilot_DWORK1.rtdw), 2.0, 0.5, 2.0);
+</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+<a href="matlab:slci.internal.ReportConfig.traceCallBack('C:\Users\bpotter\LocalWorkArea\demos\autopilot_R2013b_workarea\Autopilot.slx','Autopilot:13')">&#60;model&#62;/Pitch_Autopilot</a>
+</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN">-</span></TD>
+</TR>
+<TR >
+<TD class="d1">
+89</TD>
+<TD class="d1">
+<span class="CODE">
+</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+-</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN"><span class="NON_FUNCTIONAL">Nonfunctional code</span> (Empty line) </span></TD>
+</TR>
+<TR >
+<TD class="d1">
+90</TD>
+<TD class="d1">
+<span class="CODE">  /* ModelReference: &#39;&#60;Root&#62;/Yaw_Damper&#39; */
+</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+-</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN"><span class="NON_FUNCTIONAL">Nonfunctional code</span> (Comment) </span></TD>
+</TR>
+<TR >
+<TD class="d1">
+91</TD>
+<TD class="d1">
+<span class="CODE">  yaw_damper(&#38;rtb_phi, &#38;rtb_r, &#38;rtb_airspeed, &#38;Autopilot_U.APeng,
+</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+<a href="matlab:slci.internal.ReportConfig.traceCallBack('C:\Users\bpotter\LocalWorkArea\demos\autopilot_R2013b_workarea\Autopilot.slx','Autopilot:15')">&#60;model&#62;/Yaw_Damper</a>
+</TD>
+</TR>
+<TR>
+<TD class="d0">
+<a href="matlab:slci.internal.ReportConfig.traceCallBack('C:\Users\bpotter\LocalWorkArea\demos\autopilot_R2013b_workarea\Autopilot.slx','Autopilot:18')">&#60;model&#62;/Rudder Cmd</a>
+</TD>
+</TR>
+<TR>
+<TD class="d0">
+<a href="matlab:slci.internal.ReportConfig.traceCallBack('C:\Users\bpotter\LocalWorkArea\demos\autopilot_R2013b_workarea\Autopilot.slx','Autopilot:4')">&#60;model&#62;/AP Eng</a>
+</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN">-</span></TD>
+</TR>
+<TR >
+<TD class="d1">
+92</TD>
+<TD class="d1">
+<span class="CODE">             &#38;Autopilot_Y.RudderCmd, &#38;(Autopilot_DWork.Yaw_Damper_DWORK1.rtb),
+</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+<a href="matlab:slci.internal.ReportConfig.traceCallBack('C:\Users\bpotter\LocalWorkArea\demos\autopilot_R2013b_workarea\Autopilot.slx','Autopilot:15')">&#60;model&#62;/Yaw_Damper</a>
+</TD>
+</TR>
+<TR>
+<TD class="d0">
+<a href="matlab:slci.internal.ReportConfig.traceCallBack('C:\Users\bpotter\LocalWorkArea\demos\autopilot_R2013b_workarea\Autopilot.slx','Autopilot:18')">&#60;model&#62;/Rudder Cmd</a>
+</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN">-</span></TD>
+</TR>
+<TR >
+<TD class="d1">
+93</TD>
+<TD class="d1">
+<span class="CODE">             1.0);
+</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+<a href="matlab:slci.internal.ReportConfig.traceCallBack('C:\Users\bpotter\LocalWorkArea\demos\autopilot_R2013b_workarea\Autopilot.slx','Autopilot:15')">&#60;model&#62;/Yaw_Damper</a>
+</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN">-</span></TD>
+</TR>
+<TR >
+<TD class="d1">
+94</TD>
+<TD class="d1">
+<span class="CODE">}
+</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+-</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN"><span class="NON_FUNCTIONAL">Nonfunctional code</span> (End of code segment) </span></TD>
+</TR>
+<TR >
+<TD class="d1">
+95</TD>
+<TD class="d1">
+<span class="CODE">
+</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+-</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN"><span class="NON_FUNCTIONAL">Nonfunctional code</span> (Empty line) </span></TD>
+</TR>
+<TR >
+<TD class="d1">
+96</TD>
+<TD class="d1">
+<span class="CODE">/* Model initialize function */
+</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+-</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN"><span class="NON_FUNCTIONAL">Nonfunctional code</span> (Comment) </span></TD>
+</TR>
+<TR >
+<TD class="d1">
+97</TD>
+<TD class="d1">
+<span class="CODE">void Autopilot_initialize(void)
+</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+<a href="matlab:slci.internal.ReportConfig.traceCallBack('C:\Users\bpotter\LocalWorkArea\demos\autopilot_R2013b_workarea\Autopilot.slx','Autopilot')">initialize function interface</a>
+</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN">-</span></TD>
+</TR>
+<TR >
+<TD class="d1">
+98</TD>
+<TD class="d1">
+<span class="CODE">{
+</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+-</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN"><span class="NON_FUNCTIONAL">Nonfunctional code</span> (Start of code segment) </span></TD>
+</TR>
+<TR >
+<TD class="d1">
+99</TD>
+<TD class="d1">
+<span class="CODE">  /* Registration code */
+</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+-</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN"><span class="NON_FUNCTIONAL">Nonfunctional code</span> (Comment) </span></TD>
+</TR>
+<TR >
+<TD class="d1">
+100</TD>
+<TD class="d1">
+<span class="CODE">
+</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+-</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN"><span class="NON_FUNCTIONAL">Nonfunctional code</span> (Empty line) </span></TD>
+</TR>
+<TR >
+<TD class="d1">
+101</TD>
+<TD class="d1">
+<span class="CODE">  /* states (dwork) */
+</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+-</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN"><span class="NON_FUNCTIONAL">Nonfunctional code</span> (Comment) </span></TD>
+</TR>
+<TR >
+<TD class="d1">
+102</TD>
+<TD class="d1">
+<span class="CODE">  (void) memset((void *)&#38;Autopilot_DWork, 0,
+</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+<a href="matlab:slci.internal.ReportConfig.traceCallBack('C:\Users\bpotter\LocalWorkArea\demos\autopilot_R2013b_workarea\Autopilot.slx','Autopilot')">dwork initialization code</a>
+</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN">-</span></TD>
+</TR>
+<TR >
+<TD class="d1">
+103</TD>
+<TD class="d1">
+<span class="CODE">                sizeof(D_Work_Autopilot));
+</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+<a href="matlab:slci.internal.ReportConfig.traceCallBack('C:\Users\bpotter\LocalWorkArea\demos\autopilot_R2013b_workarea\Autopilot.slx','Autopilot')">dwork initialization code</a>
+</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN">-</span></TD>
+</TR>
+<TR >
+<TD class="d1">
+104</TD>
+<TD class="d1">
+<span class="CODE">
+</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+-</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN"><span class="NON_FUNCTIONAL">Nonfunctional code</span> (Empty line) </span></TD>
+</TR>
+<TR >
+<TD class="d1">
+105</TD>
+<TD class="d1">
+<span class="CODE">  /* external inputs */
+</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+-</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN"><span class="NON_FUNCTIONAL">Nonfunctional code</span> (Comment) </span></TD>
+</TR>
+<TR >
+<TD class="d1">
+106</TD>
+<TD class="d1">
+<span class="CODE">  (void) memset((void *)&#38;Autopilot_U, 0,
+</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+<a href="matlab:slci.internal.ReportConfig.traceCallBack('C:\Users\bpotter\LocalWorkArea\demos\autopilot_R2013b_workarea\Autopilot.slx','Autopilot')">input initialization code</a>
+</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN">-</span></TD>
+</TR>
+<TR >
+<TD class="d1">
+107</TD>
+<TD class="d1">
+<span class="CODE">                sizeof(ExternalInputs_Autopilot));
+</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+<a href="matlab:slci.internal.ReportConfig.traceCallBack('C:\Users\bpotter\LocalWorkArea\demos\autopilot_R2013b_workarea\Autopilot.slx','Autopilot')">input initialization code</a>
+</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN">-</span></TD>
+</TR>
+<TR >
+<TD class="d1">
+108</TD>
+<TD class="d1">
+<span class="CODE">  Autopilot_U.AirData = Autopilot_rtZslBus1;
+</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+<a href="matlab:slci.internal.ReportConfig.traceCallBack('C:\Users\bpotter\LocalWorkArea\demos\autopilot_R2013b_workarea\Autopilot.slx','Autopilot')">input initialization code</a>
+</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN">-</span></TD>
+</TR>
+<TR >
+<TD class="d1">
+109</TD>
+<TD class="d1">
+<span class="CODE">  Autopilot_U.Inertial = Autopilot_rtZslBus2;
+</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+<a href="matlab:slci.internal.ReportConfig.traceCallBack('C:\Users\bpotter\LocalWorkArea\demos\autopilot_R2013b_workarea\Autopilot.slx','Autopilot')">input initialization code</a>
+</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN">-</span></TD>
+</TR>
+<TR >
+<TD class="d1">
+110</TD>
+<TD class="d1">
+<span class="CODE">  Autopilot_U.HDGref = 0.0;
+</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+<a href="matlab:slci.internal.ReportConfig.traceCallBack('C:\Users\bpotter\LocalWorkArea\demos\autopilot_R2013b_workarea\Autopilot.slx','Autopilot')">input initialization code</a>
+</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN">-</span></TD>
+</TR>
+<TR >
+<TD class="d1">
+111</TD>
+<TD class="d1">
+<span class="CODE">  Autopilot_U.TurnKnob = 0.0;
+</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+<a href="matlab:slci.internal.ReportConfig.traceCallBack('C:\Users\bpotter\LocalWorkArea\demos\autopilot_R2013b_workarea\Autopilot.slx','Autopilot')">input initialization code</a>
+</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN">-</span></TD>
+</TR>
+<TR >
+<TD class="d1">
+112</TD>
+<TD class="d1">
+<span class="CODE">  Autopilot_U.ALTRef = 0.0;
+</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+<a href="matlab:slci.internal.ReportConfig.traceCallBack('C:\Users\bpotter\LocalWorkArea\demos\autopilot_R2013b_workarea\Autopilot.slx','Autopilot')">input initialization code</a>
+</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN">-</span></TD>
+</TR>
+<TR >
+<TD class="d1">
+113</TD>
+<TD class="d1">
+<span class="CODE">  Autopilot_U.PitchWheel = 0.0;
+</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+<a href="matlab:slci.internal.ReportConfig.traceCallBack('C:\Users\bpotter\LocalWorkArea\demos\autopilot_R2013b_workarea\Autopilot.slx','Autopilot')">input initialization code</a>
+</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN">-</span></TD>
+</TR>
+<TR >
+<TD class="d1">
+114</TD>
+<TD class="d1">
+<span class="CODE">
+</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+-</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN"><span class="NON_FUNCTIONAL">Nonfunctional code</span> (Empty line) </span></TD>
+</TR>
+<TR >
+<TD class="d1">
+115</TD>
+<TD class="d1">
+<span class="CODE">  /* external outputs */
+</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+-</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN"><span class="NON_FUNCTIONAL">Nonfunctional code</span> (Comment) </span></TD>
+</TR>
+<TR >
+<TD class="d1">
+116</TD>
+<TD class="d1">
+<span class="CODE">  Autopilot_Y.AileronCmd = 0.0;
+</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+<a href="matlab:slci.internal.ReportConfig.traceCallBack('C:\Users\bpotter\LocalWorkArea\demos\autopilot_R2013b_workarea\Autopilot.slx','Autopilot')">output initialization code</a>
+</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN">-</span></TD>
+</TR>
+<TR >
+<TD class="d1">
+117</TD>
+<TD class="d1">
+<span class="CODE">  Autopilot_Y.ElevatorCmd = 0.0;
+</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+<a href="matlab:slci.internal.ReportConfig.traceCallBack('C:\Users\bpotter\LocalWorkArea\demos\autopilot_R2013b_workarea\Autopilot.slx','Autopilot')">output initialization code</a>
+</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN">-</span></TD>
+</TR>
+<TR >
+<TD class="d1">
+118</TD>
+<TD class="d1">
+<span class="CODE">  Autopilot_Y.RudderCmd = 0.0;
+</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+<a href="matlab:slci.internal.ReportConfig.traceCallBack('C:\Users\bpotter\LocalWorkArea\demos\autopilot_R2013b_workarea\Autopilot.slx','Autopilot')">output initialization code</a>
+</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN">-</span></TD>
+</TR>
+<TR >
+<TD class="d1">
+119</TD>
+<TD class="d1">
+<span class="CODE">
+</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+-</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN"><span class="NON_FUNCTIONAL">Nonfunctional code</span> (Empty line) </span></TD>
+</TR>
+<TR >
+<TD class="d1">
+120</TD>
+<TD class="d1">
+<span class="CODE">  /* Model Initialize fcn for ModelReference Block: &#39;&#60;Root&#62;/Pitch_Autopilot&#39; */...</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+-</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN"><span class="NON_FUNCTIONAL">Nonfunctional code</span> (Comment) </span></TD>
+</TR>
+<TR >
+<TD class="d1">
+121</TD>
+<TD class="d1">
+<span class="CODE">  pitch_ap_initialize(&#38;(Autopilot_DWork.Pitch_Autopilot_DWORK1.rtb),
+</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+<a href="matlab:slci.internal.ReportConfig.traceCallBack('C:\Users\bpotter\LocalWorkArea\demos\autopilot_R2013b_workarea\Autopilot.slx','Autopilot:13')">&#60;model&#62;/Pitch_Autopilot</a>
+</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN">-</span></TD>
+</TR>
+<TR >
+<TD class="d1">
+122</TD>
+<TD class="d1">
+<span class="CODE">                      &#38;(Autopilot_DWork.Pitch_Autopilot_DWORK1.rtdw));
+</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+<a href="matlab:slci.internal.ReportConfig.traceCallBack('C:\Users\bpotter\LocalWorkArea\demos\autopilot_R2013b_workarea\Autopilot.slx','Autopilot:13')">&#60;model&#62;/Pitch_Autopilot</a>
+</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN">-</span></TD>
+</TR>
+<TR >
+<TD class="d1">
+123</TD>
+<TD class="d1">
+<span class="CODE">
+</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+-</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN"><span class="NON_FUNCTIONAL">Nonfunctional code</span> (Empty line) </span></TD>
+</TR>
+<TR >
+<TD class="d1">
+124</TD>
+<TD class="d1">
+<span class="CODE">  /* Model Initialize fcn for ModelReference Block: &#39;&#60;Root&#62;/Roll_Autopilot&#39; */
+</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+-</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN"><span class="NON_FUNCTIONAL">Nonfunctional code</span> (Comment) </span></TD>
+</TR>
+<TR >
+<TD class="d1">
+125</TD>
+<TD class="d1">
+<span class="CODE">  roll_ap_initialize(&#38;(Autopilot_DWork.Roll_Autopilot_DWORK1.rtb),
+</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+<a href="matlab:slci.internal.ReportConfig.traceCallBack('C:\Users\bpotter\LocalWorkArea\demos\autopilot_R2013b_workarea\Autopilot.slx','Autopilot:14')">&#60;model&#62;/Roll_Autopilot</a>
+</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN">-</span></TD>
+</TR>
+<TR >
+<TD class="d1">
+126</TD>
+<TD class="d1">
+<span class="CODE">                     &#38;(Autopilot_DWork.Roll_Autopilot_DWORK1.rtdw));
+</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+<a href="matlab:slci.internal.ReportConfig.traceCallBack('C:\Users\bpotter\LocalWorkArea\demos\autopilot_R2013b_workarea\Autopilot.slx','Autopilot:14')">&#60;model&#62;/Roll_Autopilot</a>
+</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN">-</span></TD>
+</TR>
+<TR >
+<TD class="d1">
+127</TD>
+<TD class="d1">
+<span class="CODE">
+</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+-</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN"><span class="NON_FUNCTIONAL">Nonfunctional code</span> (Empty line) </span></TD>
+</TR>
+<TR >
+<TD class="d1">
+128</TD>
+<TD class="d1">
+<span class="CODE">  /* Model Initialize fcn for ModelReference Block: &#39;&#60;Root&#62;/Yaw_Damper&#39; */
+</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+-</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN"><span class="NON_FUNCTIONAL">Nonfunctional code</span> (Comment) </span></TD>
+</TR>
+<TR >
+<TD class="d1">
+129</TD>
+<TD class="d1">
+<span class="CODE">  yaw_damper_initialize(&#38;(Autopilot_DWork.Yaw_Damper_DWORK1.rtb));
+</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+<a href="matlab:slci.internal.ReportConfig.traceCallBack('C:\Users\bpotter\LocalWorkArea\demos\autopilot_R2013b_workarea\Autopilot.slx','Autopilot:15')">&#60;model&#62;/Yaw_Damper</a>
+</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN">-</span></TD>
+</TR>
+<TR >
+<TD class="d1">
+130</TD>
+<TD class="d1">
+<span class="CODE">
+</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+-</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN"><span class="NON_FUNCTIONAL">Nonfunctional code</span> (Empty line) </span></TD>
+</TR>
+<TR >
+<TD class="d1">
+131</TD>
+<TD class="d1">
+<span class="CODE">  /* Start for ModelReference: &#39;&#60;Root&#62;/Pitch_Autopilot&#39; */
+</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+-</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN"><span class="NON_FUNCTIONAL">Nonfunctional code</span> (Comment) </span></TD>
+</TR>
+<TR >
+<TD class="d1">
+132</TD>
+<TD class="d1">
+<span class="CODE">  pitch_ap_Start(&#38;(Autopilot_DWork.Pitch_Autopilot_DWORK1.rtdw));
+</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+<a href="matlab:slci.internal.ReportConfig.traceCallBack('C:\Users\bpotter\LocalWorkArea\demos\autopilot_R2013b_workarea\Autopilot.slx','Autopilot:13')">&#60;model&#62;/Pitch_Autopilot</a>
+</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN">-</span></TD>
+</TR>
+<TR >
+<TD class="d1">
+133</TD>
+<TD class="d1">
+<span class="CODE">}
+</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+-</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN"><span class="NON_FUNCTIONAL">Nonfunctional code</span> (End of code segment) </span></TD>
+</TR>
+<TR >
+<TD class="d1">
+134</TD>
+<TD class="d1">
+<span class="CODE">
+</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+-</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN"><span class="NON_FUNCTIONAL">Nonfunctional code</span> (Empty line) </span></TD>
+</TR>
+<TR >
+<TD class="d1">
+135</TD>
+<TD class="d1">
+<span class="CODE">/*
+</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+-</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN"><span class="NON_FUNCTIONAL">Nonfunctional code</span> (Comment) </span></TD>
+</TR>
+<TR >
+<TD class="d1">
+136</TD>
+<TD class="d1">
+<span class="CODE"> * File trailer for generated code.
+</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+-</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN"><span class="NON_FUNCTIONAL">Nonfunctional code</span> (Comment) </span></TD>
+</TR>
+<TR >
+<TD class="d1">
+137</TD>
+<TD class="d1">
+<span class="CODE"> *
+</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+-</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN"><span class="NON_FUNCTIONAL">Nonfunctional code</span> (Comment) </span></TD>
+</TR>
+<TR >
+<TD class="d1">
+138</TD>
+<TD class="d1">
+<span class="CODE"> * [EOF]
+</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+-</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN"><span class="NON_FUNCTIONAL">Nonfunctional code</span> (Comment) </span></TD>
+</TR>
+<TR >
+<TD class="d1">
+139</TD>
+<TD class="d1">
+<span class="CODE"> */
+</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+-</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN"><span class="NON_FUNCTIONAL">Nonfunctional code</span> (Comment) </span></TD>
+</TR>
+</table></TD>
+</TR>
+</table></TD>
+</TR>
+</table>
+ </td>
+ </tr>
+ </table>
+ </td>
+ </tr>
+ </table></TD>
+</TR>
+</table><br/><hr></body></html>

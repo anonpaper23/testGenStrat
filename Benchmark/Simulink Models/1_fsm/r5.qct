@@ -1,0 +1,6 @@
+#5. The autopilot shall change states from NOMINAL to STANDBY when the pilot is in control (standby).
+
+# UPDATED: Replacing {all} with specific timesteps. Requirement is not explicit
+# about which timesteps to use. These are based on the model.
+
+(FiniteStateMachine.STATE{t-1}==1 and standby) impl (FiniteStateMachine.STATE{t}==3);

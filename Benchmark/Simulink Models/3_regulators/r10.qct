@@ -1,0 +1,7 @@
+# Actual: The Inner Loop Height Regulator Shall not command transient
+# changes in angular roll acceleration greater than 32 ft/sec2/sec.
+
+# Rephrased (by QRA): The Height Output Command shall change by at most .32
+# ft/sec2 per time frame.
+
+hcvdt_cmd_fcs_fps2{t} - hcvdt_cmd_fcs_fps2{t-1} <= .32;

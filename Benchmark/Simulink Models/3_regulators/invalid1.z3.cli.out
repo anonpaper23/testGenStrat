@@ -1,0 +1,34 @@
+Starting QVTrace Direct
+Reading /home/dstaple/qvtrace/engine/../testing/models/lm-contract1/3_regulators/invalid1.qvt
+Violation found:
+    lcv_cmd_fcs_dps_{t}: 0.0
+    lcv_fps_dps{t}: 0.0
+    lcvdt_cmd_fcs_dps2{t}: 0.0
+    CV.lcv_fcs_dps{t}: 0.0
+    Inputs.lcv_cmd_fcs_dps_{t}: 0.0
+    Inputs.lcv_fps_dps{t}: 0.0
+    OL_Cmds.lcv_cmd_fcs_dps{t}: 0.0
+    Regulators.Reg{t}: 0.0
+    Regulators.lcvdt_cmd_fcs_dps2{t}: 0.0
+    Inputs.CV.lcv_fcs_dps{t}: 0.0
+    Inputs.CVcmd.lcv_cmd_fcs_dps_{t}: 0.0
+    Inputs.OL_Cmds.lcv_cmd_fcs_dps{t}: 0.0
+    Inputs.Subsystem.lcv_fps_dps{t}: 0.0
+    Regulators.CV.lcv_fcs_dps{t}: 0.0
+    Regulators.CVcmd.lcv_cmd_fcs_dps{t}: 0.0
+    Regulators.From.lcv_fcs_dps{t}: 0.0
+    Regulators.From5.lcv_cmd_fcs_dps{t}: 0.0
+    Regulators.RollRegulator.Reg{t}: 0.0
+    Regulators.RollRegulator.Signal_Conversion1{t}: 0.0
+    Regulators.RollRegulator.Signal_Conversion12{t}: 0.0
+    Regulators.RollRegulator.Sum1{t}: 0.0
+    Regulators.RollRegulator.lcv_cmd_fcs_dps{t}: 0.0
+    Regulators.RollRegulator.lcv_fcs_dps{t}: 0.0
+    Regulators.RollRegulator.one_over_Tau_roll{t}: 2.5
+    Regulators.__gototag__CV.lcv_fcs_dps{t}: 0.0
+    Regulators.__gototag__CVC.lcv_cmd_fcs_dps{t}: 0.0
+    Inputs.CVcmd.OL_Cmds.lcv_cmd_fcs_dps{t}: 0.0
+    Inputs.Subsystem.CV.lcv_fcs_dps{t}: 0.0
+    Regulators.RollRegulator.CV.lcv_fcs_dps{t}: 0.0
+    Regulators.RollRegulator.CVcmd.lcv_cmd_fcs_dps{t}: 0.0
+Total time: 3.861264e-02 s

@@ -1,0 +1,4 @@
+# The requirements document is ambiguous about what coordinate system yout is defined in. The model is also internally inconsistent: the Inner subsystem is implemented as if yout is measured with respect to the target, while the Outer subsystem is implemented as if yout is in a fixed reference frame. Here we provide three possible translations depending on the intended coordinate system of yout. Because the model is internally inconsistent, the model cannot obey any of these interpretations in all cases, and does not obey this requirement in any coordinate system.
+yout[2] == 0.0;
+yout[2] == Xtarg[2];
+yout[2] == Xtarg[2] - Xv[2];

@@ -1,0 +1,3310 @@
+{
+  "_id" : "1",
+  "name" : "integrator_12B",
+  "displayName" : "integrator_12B",
+  "component" : [ {
+    "id" : "1",
+    "name" : "xin",
+    "BackgroundColor" : "white",
+    "BlockMirror" : "off",
+    "BlockRotation" : "0",
+    "BlockType" : "Inport",
+    "BusOutputAsStruct" : "off",
+    "DropShadow" : "off",
+    "FontAngle" : "normal",
+    "FontName" : "Helvetica",
+    "FontSize" : "10",
+    "FontWeight" : "normal",
+    "ForegroundColor" : "black",
+    "IconDisplay" : "Port number",
+    "Interpolate" : "on",
+    "LatchByDelayingOutsideSignal" : "off",
+    "LatchInputForFeedbackSignals" : "off",
+    "LockScale" : "off",
+    "NamePlacement" : "normal",
+    "OutDataTypeStr" : "double",
+    "OutMax" : "[]",
+    "OutMin" : "[]",
+    "OutputFunctionCall" : "off",
+    "Port" : "1",
+    "PortDimensions" : "-1",
+    "Position" : "[75, 127, 105, 143]",
+    "SID" : "1",
+    "SampleTime" : "1.0",
+    "SamplingMode" : "auto",
+    "ShowName" : "on",
+    "SignalType" : "auto",
+    "VarSizeSig" : "Inherit",
+    "ZOrder" : "26",
+    "displayName" : "xin",
+    "mdlName" : "xin",
+    "type" : "input",
+    "x" : 75,
+    "y" : 127,
+    "width" : 30,
+    "height" : 16,
+    "io" : [ {
+      "id" : "1:1",
+      "name" : "xin",
+      "namespace" : [ ],
+      "portPosition" : {
+        "xpos" : 1.0,
+        "ypos" : 0.5,
+        "xdir" : 1.0,
+        "ydir" : 0.0
+      },
+      "signalName" : "cmd",
+      "type" : "out"
+    } ],
+    "ports" : [ 0, 1 ]
+  }, {
+    "id" : "123",
+    "name" : "ic",
+    "BackgroundColor" : "white",
+    "BlockMirror" : "off",
+    "BlockRotation" : "0",
+    "BlockType" : "Inport",
+    "BusOutputAsStruct" : "off",
+    "DropShadow" : "off",
+    "FontAngle" : "normal",
+    "FontName" : "Helvetica",
+    "FontSize" : "10",
+    "FontWeight" : "normal",
+    "ForegroundColor" : "black",
+    "IconDisplay" : "Port number",
+    "Interpolate" : "on",
+    "LatchByDelayingOutsideSignal" : "off",
+    "LatchInputForFeedbackSignals" : "off",
+    "LockScale" : "off",
+    "NamePlacement" : "normal",
+    "OutDataTypeStr" : "double",
+    "OutMax" : "[]",
+    "OutMin" : "[]",
+    "OutputFunctionCall" : "off",
+    "Port" : "4",
+    "PortDimensions" : "-1",
+    "Position" : "[130, 328, 160, 342]",
+    "SID" : "123",
+    "SampleTime" : "1.0",
+    "SamplingMode" : "auto",
+    "ShowName" : "on",
+    "SignalType" : "auto",
+    "VarSizeSig" : "Inherit",
+    "ZOrder" : "40",
+    "displayName" : "ic",
+    "mdlName" : "ic",
+    "type" : "input",
+    "x" : 130,
+    "y" : 328,
+    "width" : 30,
+    "height" : 14,
+    "io" : [ {
+      "id" : "123:1",
+      "name" : "ic",
+      "namespace" : [ ],
+      "portPosition" : {
+        "xpos" : 1.0,
+        "ypos" : 0.5,
+        "xdir" : 1.0,
+        "ydir" : 0.0
+      },
+      "type" : "out"
+    } ],
+    "ports" : [ 0, 1 ]
+  }, {
+    "id" : "124",
+    "name" : "TL",
+    "BackgroundColor" : "white",
+    "BlockMirror" : "off",
+    "BlockRotation" : "0",
+    "BlockType" : "Inport",
+    "BusOutputAsStruct" : "off",
+    "DropShadow" : "off",
+    "FontAngle" : "normal",
+    "FontName" : "Helvetica",
+    "FontSize" : "10",
+    "FontWeight" : "normal",
+    "ForegroundColor" : "black",
+    "IconDisplay" : "Port number",
+    "Interpolate" : "on",
+    "LatchByDelayingOutsideSignal" : "off",
+    "LatchInputForFeedbackSignals" : "off",
+    "LockScale" : "off",
+    "NamePlacement" : "normal",
+    "OutDataTypeStr" : "double",
+    "OutMax" : "[]",
+    "OutMin" : "[]",
+    "OutputFunctionCall" : "off",
+    "Port" : "5",
+    "PortDimensions" : "-1",
+    "Position" : "[105, 207, 135, 223]",
+    "SID" : "124",
+    "SampleTime" : "1.0",
+    "SamplingMode" : "auto",
+    "ShowName" : "on",
+    "SignalType" : "auto",
+    "VarSizeSig" : "Inherit",
+    "ZOrder" : "41",
+    "displayName" : "TL",
+    "mdlName" : "TL",
+    "type" : "input",
+    "x" : 105,
+    "y" : 207,
+    "width" : 30,
+    "height" : 16,
+    "io" : [ {
+      "id" : "124:1",
+      "name" : "TL",
+      "namespace" : [ ],
+      "portPosition" : {
+        "xpos" : 1.0,
+        "ypos" : 0.5,
+        "xdir" : 1.0,
+        "ydir" : 0.0
+      },
+      "type" : "out"
+    } ],
+    "ports" : [ 0, 1 ]
+  }, {
+    "id" : "125",
+    "name" : "BL",
+    "BackgroundColor" : "white",
+    "BlockMirror" : "off",
+    "BlockRotation" : "0",
+    "BlockType" : "Inport",
+    "BusOutputAsStruct" : "off",
+    "DropShadow" : "off",
+    "FontAngle" : "normal",
+    "FontName" : "Helvetica",
+    "FontSize" : "10",
+    "FontWeight" : "normal",
+    "ForegroundColor" : "black",
+    "IconDisplay" : "Port number",
+    "Interpolate" : "on",
+    "LatchByDelayingOutsideSignal" : "off",
+    "LatchInputForFeedbackSignals" : "off",
+    "LockScale" : "off",
+    "NamePlacement" : "normal",
+    "OutDataTypeStr" : "double",
+    "OutMax" : "[]",
+    "OutMin" : "[]",
+    "OutputFunctionCall" : "off",
+    "Port" : "6",
+    "PortDimensions" : "-1",
+    "Position" : "[145, 247, 175, 263]",
+    "SID" : "125",
+    "SampleTime" : "1.0",
+    "SamplingMode" : "auto",
+    "ShowName" : "on",
+    "SignalType" : "auto",
+    "VarSizeSig" : "Inherit",
+    "ZOrder" : "42",
+    "displayName" : "BL",
+    "mdlName" : "BL",
+    "type" : "input",
+    "x" : 145,
+    "y" : 247,
+    "width" : 30,
+    "height" : 16,
+    "io" : [ {
+      "id" : "125:1",
+      "name" : "BL",
+      "namespace" : [ ],
+      "portPosition" : {
+        "xpos" : 1.0,
+        "ypos" : 0.5,
+        "xdir" : 1.0,
+        "ydir" : 0.0
+      },
+      "type" : "out"
+    } ],
+    "ports" : [ 0, 1 ]
+  }, {
+    "id" : "2",
+    "name" : "reset",
+    "BackgroundColor" : "white",
+    "BlockMirror" : "off",
+    "BlockRotation" : "0",
+    "BlockType" : "Inport",
+    "BusOutputAsStruct" : "off",
+    "DropShadow" : "off",
+    "FontAngle" : "normal",
+    "FontName" : "Helvetica",
+    "FontSize" : "10",
+    "FontWeight" : "normal",
+    "ForegroundColor" : "black",
+    "IconDisplay" : "Port number",
+    "Interpolate" : "on",
+    "LatchByDelayingOutsideSignal" : "off",
+    "LatchInputForFeedbackSignals" : "off",
+    "LockScale" : "off",
+    "NamePlacement" : "normal",
+    "OutDataTypeStr" : "boolean",
+    "OutMax" : "[]",
+    "OutMin" : "[]",
+    "OutputFunctionCall" : "off",
+    "Port" : "2",
+    "PortDimensions" : "-1",
+    "Position" : "[105, 287, 135, 303]",
+    "SID" : "2",
+    "SampleTime" : "1.0",
+    "SamplingMode" : "auto",
+    "ShowName" : "on",
+    "SignalType" : "auto",
+    "VarSizeSig" : "Inherit",
+    "ZOrder" : "25",
+    "displayName" : "reset",
+    "mdlName" : "reset",
+    "type" : "input",
+    "x" : 105,
+    "y" : 287,
+    "width" : 30,
+    "height" : 16,
+    "io" : [ {
+      "id" : "2:1",
+      "name" : "reset",
+      "namespace" : [ ],
+      "portPosition" : {
+        "xpos" : 1.0,
+        "ypos" : 0.5,
+        "xdir" : 1.0,
+        "ydir" : 0.0
+      },
+      "type" : "out"
+    } ],
+    "ports" : [ 0, 1 ]
+  }, {
+    "id" : "3",
+    "name" : "T",
+    "BackgroundColor" : "white",
+    "BlockMirror" : "off",
+    "BlockRotation" : "0",
+    "BlockType" : "Inport",
+    "BusOutputAsStruct" : "off",
+    "DropShadow" : "off",
+    "FontAngle" : "normal",
+    "FontName" : "Helvetica",
+    "FontSize" : "10",
+    "FontWeight" : "normal",
+    "ForegroundColor" : "black",
+    "IconDisplay" : "Port number",
+    "Interpolate" : "on",
+    "LatchByDelayingOutsideSignal" : "off",
+    "LatchInputForFeedbackSignals" : "off",
+    "LockScale" : "off",
+    "NamePlacement" : "normal",
+    "OutDataTypeStr" : "double",
+    "OutMax" : "[]",
+    "OutMin" : "[]",
+    "OutputFunctionCall" : "off",
+    "Port" : "3",
+    "PortDimensions" : "-1",
+    "Position" : "[145, 168, 175, 182]",
+    "SID" : "3",
+    "SampleTime" : "1.0",
+    "SamplingMode" : "auto",
+    "ShowName" : "on",
+    "SignalType" : "auto",
+    "VarSizeSig" : "Inherit",
+    "ZOrder" : "30",
+    "displayName" : "T",
+    "mdlName" : "T",
+    "type" : "input",
+    "x" : 145,
+    "y" : 168,
+    "width" : 30,
+    "height" : 14,
+    "io" : [ {
+      "id" : "3:1",
+      "name" : "T",
+      "namespace" : [ ],
+      "portPosition" : {
+        "xpos" : 1.0,
+        "ypos" : 0.5,
+        "xdir" : 1.0,
+        "ydir" : 0.0
+      },
+      "type" : "out"
+    } ],
+    "ports" : [ 0, 1 ]
+  }, {
+    "id" : "80",
+    "name" : "yout",
+    "BackgroundColor" : "white",
+    "BlockMirror" : "off",
+    "BlockRotation" : "0",
+    "BlockType" : "Outport",
+    "BusOutputAsStruct" : "off",
+    "DropShadow" : "off",
+    "FontAngle" : "normal",
+    "FontName" : "Helvetica",
+    "FontSize" : "10",
+    "FontWeight" : "normal",
+    "ForegroundColor" : "black",
+    "IconDisplay" : "Port number",
+    "InitialOutput" : "[]",
+    "LockScale" : "off",
+    "NamePlacement" : "normal",
+    "OutDataTypeStr" : "Inherit: auto",
+    "OutMax" : "[]",
+    "OutMin" : "[]",
+    "OutputWhenDisabled" : "held",
+    "Port" : "1",
+    "PortDimensions" : "-1",
+    "Position" : "[430, 227, 460, 243]",
+    "SID" : "80",
+    "SampleTime" : "1.0",
+    "SamplingMode" : "auto",
+    "ShowName" : "on",
+    "SignalType" : "auto",
+    "SourceOfInitialOutputValue" : "Dialog",
+    "VarSizeSig" : "Inherit",
+    "ZOrder" : "11",
+    "displayName" : "yout",
+    "mdlName" : "yout",
+    "type" : "output",
+    "x" : 430,
+    "y" : 227,
+    "width" : 30,
+    "height" : 16,
+    "io" : [ {
+      "id" : "80:1",
+      "name" : "yout",
+      "namespace" : [ ],
+      "portPosition" : {
+        "xpos" : 0.0,
+        "ypos" : 0.5,
+        "xdir" : -1.0,
+        "ydir" : 0.0
+      },
+      "type" : "in"
+    } ],
+    "ports" : [ 1, 0 ]
+  }, {
+    "id" : "84",
+    "name" : "Tustin_Integrator__Limited__Resettable__States_",
+    "BackgroundColor" : "white",
+    "BlockMirror" : "off",
+    "BlockRotation" : "0",
+    "BlockType" : "SubSystem",
+    "CheckFcnCallInpInsideContextMsg" : "off",
+    "DataTypeOverride" : "UseLocalSettings",
+    "DataTypeOverrideAppliesTo" : "AllNumericTypes",
+    "DropShadow" : "off",
+    "FontAngle" : "normal",
+    "FontName" : "Helvetica",
+    "FontSize" : "10",
+    "FontWeight" : "normal",
+    "ForegroundColor" : "black",
+    "FunctionWithSeparateData" : "off",
+    "GeneratePreprocessorConditionals" : "off",
+    "MaskHideContents" : "off",
+    "MinAlgLoopOccurrences" : "off",
+    "MinMaxOverflowLogging" : "UseLocalSettings",
+    "NamePlacement" : "normal",
+    "Opaque" : "off",
+    "Permissions" : "ReadWrite",
+    "PermitHierarchicalResolution" : "All",
+    "Ports" : "[6, 1]",
+    "Position" : "[255, 121, 380, 349]",
+    "PropExecContextOutsideSubsystem" : "off",
+    "RTWFcnNameOpts" : "Auto",
+    "RTWFileNameOpts" : "Auto",
+    "RTWMemSecDataConstants" : "Inherit from model",
+    "RTWMemSecDataInternal" : "Inherit from model",
+    "RTWMemSecDataParameters" : "Inherit from model",
+    "RTWMemSecFuncExecute" : "Inherit from model",
+    "RTWMemSecFuncInitTerm" : "Inherit from model",
+    "RTWSystemCode" : "Auto",
+    "RequestExecContextInheritance" : "off",
+    "SFBlockType" : "NONE",
+    "SID" : "84",
+    "ShowName" : "on",
+    "ShowPortLabels" : "FromPortIcon",
+    "SimViewingDevice" : "off",
+    "SystemSampleTime" : "-1",
+    "TreatAsAtomicUnit" : "off",
+    "Variant" : "off",
+    "ZOrder" : "34",
+    "displayName" : "Tustin\nIntegrator\n(Limited, Resettable, States)",
+    "mdlName" : "Tustin\nIntegrator\n(Limited, Resettable, States)",
+    "type" : "subsystem",
+    "x" : 255,
+    "y" : 121,
+    "width" : 125,
+    "height" : 228,
+    "io" : [ {
+      "id" : "84:1",
+      "name" : "xin",
+      "namespace" : [ ],
+      "portPosition" : {
+        "xpos" : 0.0,
+        "ypos" : 0.06140350877192982,
+        "xdir" : -1.0,
+        "ydir" : 0.0,
+        "label" : "xin"
+      },
+      "type" : "in"
+    }, {
+      "id" : "84:2",
+      "name" : "T",
+      "namespace" : [ ],
+      "portPosition" : {
+        "xpos" : 0.0,
+        "ypos" : 0.2368421052631579,
+        "xdir" : -1.0,
+        "ydir" : 0.0,
+        "label" : "T"
+      },
+      "type" : "in"
+    }, {
+      "id" : "84:3",
+      "name" : "TL",
+      "namespace" : [ ],
+      "portPosition" : {
+        "xpos" : 0.0,
+        "ypos" : 0.41228070175438597,
+        "xdir" : -1.0,
+        "ydir" : 0.0,
+        "label" : "TL"
+      },
+      "type" : "in"
+    }, {
+      "id" : "84:4",
+      "name" : "BL",
+      "namespace" : [ ],
+      "portPosition" : {
+        "xpos" : 0.0,
+        "ypos" : 0.5877192982456141,
+        "xdir" : -1.0,
+        "ydir" : 0.0,
+        "label" : "BL"
+      },
+      "type" : "in"
+    }, {
+      "id" : "84:5",
+      "name" : "reset",
+      "namespace" : [ ],
+      "portPosition" : {
+        "xpos" : 0.0,
+        "ypos" : 0.7631578947368421,
+        "xdir" : -1.0,
+        "ydir" : 0.0,
+        "label" : "reset"
+      },
+      "type" : "in"
+    }, {
+      "id" : "84:6",
+      "name" : "ic",
+      "namespace" : [ ],
+      "portPosition" : {
+        "xpos" : 0.0,
+        "ypos" : 0.9385964912280701,
+        "xdir" : -1.0,
+        "ydir" : 0.0,
+        "label" : "ic"
+      },
+      "type" : "in"
+    }, {
+      "id" : "84:7",
+      "name" : "yout",
+      "namespace" : [ ],
+      "portPosition" : {
+        "xpos" : 1.0,
+        "ypos" : 0.5,
+        "xdir" : 1.0,
+        "ydir" : 0.0,
+        "label" : "yout"
+      },
+      "signalName" : "yout",
+      "type" : "out"
+    } ],
+    "ast" : [ {
+      "operator" : "=",
+      "operands" : [ {
+        "dataType" : "REAL",
+        "name" : "xin",
+        "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_" ],
+        "timeStyle" : "relative",
+        "timeValue" : 0
+      }, {
+        "dataType" : "REAL",
+        "name" : "xin",
+        "namespace" : [ ],
+        "timeStyle" : "relative",
+        "timeValue" : 0
+      } ]
+    }, {
+      "operator" : "=",
+      "operands" : [ {
+        "dataType" : "REAL",
+        "name" : "T",
+        "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_" ],
+        "timeStyle" : "relative",
+        "timeValue" : 0
+      }, {
+        "dataType" : "REAL",
+        "name" : "T",
+        "namespace" : [ ],
+        "timeStyle" : "relative",
+        "timeValue" : 0
+      } ]
+    }, {
+      "operator" : "=",
+      "operands" : [ {
+        "dataType" : "REAL",
+        "name" : "TL",
+        "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_" ],
+        "timeStyle" : "relative",
+        "timeValue" : 0
+      }, {
+        "dataType" : "REAL",
+        "name" : "TL",
+        "namespace" : [ ],
+        "timeStyle" : "relative",
+        "timeValue" : 0
+      } ]
+    }, {
+      "operator" : "=",
+      "operands" : [ {
+        "dataType" : "REAL",
+        "name" : "BL",
+        "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_" ],
+        "timeStyle" : "relative",
+        "timeValue" : 0
+      }, {
+        "dataType" : "REAL",
+        "name" : "BL",
+        "namespace" : [ ],
+        "timeStyle" : "relative",
+        "timeValue" : 0
+      } ]
+    }, {
+      "operator" : "=",
+      "operands" : [ {
+        "dataType" : "BOOLEAN",
+        "name" : "reset",
+        "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_" ],
+        "timeStyle" : "relative",
+        "timeValue" : 0
+      }, {
+        "dataType" : "BOOLEAN",
+        "name" : "reset",
+        "namespace" : [ ],
+        "timeStyle" : "relative",
+        "timeValue" : 0
+      } ]
+    }, {
+      "operator" : "=",
+      "operands" : [ {
+        "dataType" : "REAL",
+        "name" : "ic",
+        "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_" ],
+        "timeStyle" : "relative",
+        "timeValue" : 0
+      }, {
+        "dataType" : "REAL",
+        "name" : "ic",
+        "namespace" : [ ],
+        "timeStyle" : "relative",
+        "timeValue" : 0
+      } ]
+    }, {
+      "operator" : "=",
+      "operands" : [ {
+        "dataType" : "REAL",
+        "name" : "yout",
+        "namespace" : [ ],
+        "timeStyle" : "relative",
+        "timeValue" : 0
+      }, {
+        "dataType" : "REAL",
+        "name" : "yout",
+        "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_" ],
+        "timeStyle" : "relative",
+        "timeValue" : 0
+      } ]
+    } ],
+    "ports" : [ 6, 1 ],
+    "model" : {
+      "name" : "Tustin_Integrator__Limited__Resettable__States_",
+      "displayName" : "Tustin\nIntegrator\n(Limited, Resettable, States)",
+      "type" : "subsystem",
+      "component" : [ {
+        "id" : "126",
+        "name" : "Unit_Delay",
+        "BackgroundColor" : "white",
+        "BlockMirror" : "off",
+        "BlockRotation" : "0",
+        "BlockType" : "UnitDelay",
+        "CodeGenStateStorageClass" : "Auto",
+        "DropShadow" : "off",
+        "FontAngle" : "normal",
+        "FontName" : "Helvetica",
+        "FontSize" : "10",
+        "FontWeight" : "normal",
+        "ForegroundColor" : "black",
+        "HasFrameUpgradeWarning" : "on",
+        "InitialCondition" : "0",
+        "InputProcessing" : "Elements as channels (sample based)",
+        "NamePlacement" : "normal",
+        "Position" : "[175, 333, 210, 367]",
+        "SID" : "126",
+        "SampleTime" : "1.0",
+        "ShowName" : "on",
+        "StateMustResolveToSignalObject" : "off",
+        "ZOrder" : "3",
+        "displayName" : "Unit Delay",
+        "mdlName" : "Unit Delay",
+        "type" : "unitdelay",
+        "x" : 175,
+        "y" : 333,
+        "width" : 35,
+        "height" : 34,
+        "io" : [ {
+          "id" : "126:1",
+          "name" : "xin",
+          "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_" ],
+          "portPosition" : {
+            "xpos" : 0.0,
+            "ypos" : 0.5,
+            "xdir" : -1.0,
+            "ydir" : 0.0
+          },
+          "type" : "in"
+        }, {
+          "id" : "126:2",
+          "name" : "Unit_Delay",
+          "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_" ],
+          "portPosition" : {
+            "xpos" : 1.0,
+            "ypos" : 0.5,
+            "xdir" : 1.0,
+            "ydir" : 0.0
+          },
+          "type" : "out"
+        } ],
+        "ast" : [ {
+          "operator" : "=",
+          "operands" : [ {
+            "dataType" : "REAL",
+            "name" : "Unit_Delay",
+            "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_" ],
+            "timeStyle" : "absolute",
+            "timeValue" : 0
+          }, {
+            "dataType" : "REAL",
+            "value" : 0.0
+          } ]
+        }, {
+          "operator" : "=",
+          "operands" : [ {
+            "dataType" : "REAL",
+            "name" : "Unit_Delay",
+            "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_" ],
+            "timeStyle" : "relative",
+            "timeValue" : 0
+          }, {
+            "dataType" : "REAL",
+            "name" : "xin",
+            "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_" ],
+            "timeStyle" : "relative",
+            "timeValue" : -1
+          } ]
+        } ],
+        "ports" : [ 1, 1 ]
+      }, {
+        "id" : "127",
+        "name" : "Unit_Delay1",
+        "BackgroundColor" : "white",
+        "BlockMirror" : "on",
+        "BlockRotation" : "0",
+        "BlockType" : "UnitDelay",
+        "CodeGenStateStorageClass" : "Auto",
+        "DropShadow" : "off",
+        "FontAngle" : "normal",
+        "FontName" : "Helvetica",
+        "FontSize" : "10",
+        "FontWeight" : "normal",
+        "ForegroundColor" : "black",
+        "HasFrameUpgradeWarning" : "on",
+        "InitialCondition" : "0",
+        "InputProcessing" : "Elements as channels (sample based)",
+        "NamePlacement" : "normal",
+        "Position" : "[675, 118, 710, 152]",
+        "SID" : "127",
+        "SampleTime" : "1.0",
+        "ShowName" : "on",
+        "StateMustResolveToSignalObject" : "off",
+        "ZOrder" : "4",
+        "displayName" : "Unit Delay1",
+        "mdlName" : "Unit Delay1",
+        "type" : "unitdelay",
+        "x" : 675,
+        "y" : 118,
+        "width" : 35,
+        "height" : 34,
+        "io" : [ {
+          "id" : "127:1",
+          "name" : "yout",
+          "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_" ],
+          "portPosition" : {
+            "xpos" : 1.0,
+            "ypos" : 0.5,
+            "xdir" : 1.0,
+            "ydir" : 0.0
+          },
+          "type" : "in"
+        }, {
+          "id" : "127:2",
+          "name" : "Unit_Delay1",
+          "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_" ],
+          "portPosition" : {
+            "xpos" : 0.0,
+            "ypos" : 0.5,
+            "xdir" : -1.0,
+            "ydir" : 0.0
+          },
+          "type" : "out"
+        } ],
+        "ast" : [ {
+          "operator" : "=",
+          "operands" : [ {
+            "dataType" : "REAL",
+            "name" : "Unit_Delay1",
+            "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_" ],
+            "timeStyle" : "absolute",
+            "timeValue" : 0
+          }, {
+            "dataType" : "REAL",
+            "value" : 0.0
+          } ]
+        }, {
+          "operator" : "=",
+          "operands" : [ {
+            "dataType" : "REAL",
+            "name" : "Unit_Delay1",
+            "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_" ],
+            "timeStyle" : "relative",
+            "timeValue" : 0
+          }, {
+            "dataType" : "REAL",
+            "name" : "yout",
+            "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_" ],
+            "timeStyle" : "relative",
+            "timeValue" : -1
+          } ]
+        } ],
+        "ports" : [ 1, 1 ]
+      }, {
+        "id" : "132",
+        "name" : "Goto",
+        "BackgroundColor" : "white",
+        "BlockMirror" : "off",
+        "BlockRotation" : "0",
+        "BlockType" : "Goto",
+        "DropShadow" : "off",
+        "FontAngle" : "normal",
+        "FontName" : "Helvetica",
+        "FontSize" : "10",
+        "FontWeight" : "normal",
+        "ForegroundColor" : "black",
+        "GotoTag" : "TL",
+        "IconDisplay" : "Tag",
+        "NamePlacement" : "normal",
+        "Position" : "[265, 30, 305, 60]",
+        "SID" : "132",
+        "ShowName" : "on",
+        "TagVisibility" : "local",
+        "ZOrder" : "9",
+        "displayName" : "Goto",
+        "mdlName" : "Goto",
+        "type" : "goto",
+        "x" : 265,
+        "y" : 30,
+        "width" : 40,
+        "height" : 30,
+        "io" : [ {
+          "id" : "132:1",
+          "name" : "TLc",
+          "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_" ],
+          "portPosition" : {
+            "xpos" : 0.0,
+            "ypos" : 0.4583333333333333,
+            "xdir" : -1.0,
+            "ydir" : 0.0
+          },
+          "type" : "in"
+        } ],
+        "ast" : [ {
+          "operator" : "=",
+          "operands" : [ {
+            "dataType" : "REAL",
+            "name" : "__gototag__TL",
+            "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_" ],
+            "timeStyle" : "relative",
+            "timeValue" : 0
+          }, {
+            "dataType" : "REAL",
+            "name" : "TLc",
+            "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_" ],
+            "timeStyle" : "relative",
+            "timeValue" : 0
+          } ]
+        } ],
+        "ports" : [ 1, 0 ]
+      }, {
+        "id" : "133",
+        "name" : "bounds",
+        "BackgroundColor" : "white",
+        "BlockMirror" : "off",
+        "BlockRotation" : "0",
+        "BlockType" : "SubSystem",
+        "CheckFcnCallInpInsideContextMsg" : "off",
+        "DataTypeOverride" : "UseLocalSettings",
+        "DataTypeOverrideAppliesTo" : "AllNumericTypes",
+        "DropShadow" : "off",
+        "FontAngle" : "normal",
+        "FontName" : "Helvetica",
+        "FontSize" : "10",
+        "FontWeight" : "normal",
+        "ForegroundColor" : "black",
+        "FunctionWithSeparateData" : "off",
+        "GeneratePreprocessorConditionals" : "off",
+        "MaskHideContents" : "off",
+        "MinAlgLoopOccurrences" : "off",
+        "MinMaxOverflowLogging" : "UseLocalSettings",
+        "NamePlacement" : "normal",
+        "Opaque" : "off",
+        "Permissions" : "ReadWrite",
+        "PermitHierarchicalResolution" : "All",
+        "Ports" : "[2, 2]",
+        "Position" : "[165, 20, 210, 115]",
+        "PropExecContextOutsideSubsystem" : "off",
+        "RTWFcnNameOpts" : "Auto",
+        "RTWFileNameOpts" : "Auto",
+        "RTWMemSecDataConstants" : "Inherit from model",
+        "RTWMemSecDataInternal" : "Inherit from model",
+        "RTWMemSecDataParameters" : "Inherit from model",
+        "RTWMemSecFuncExecute" : "Inherit from model",
+        "RTWMemSecFuncInitTerm" : "Inherit from model",
+        "RTWSystemCode" : "Auto",
+        "RequestExecContextInheritance" : "off",
+        "SFBlockType" : "NONE",
+        "SID" : "133",
+        "ShowName" : "on",
+        "ShowPortLabels" : "FromPortIcon",
+        "SimViewingDevice" : "off",
+        "SystemSampleTime" : "-1",
+        "TreatAsAtomicUnit" : "off",
+        "Variant" : "off",
+        "ZOrder" : "10",
+        "displayName" : "bounds",
+        "mdlName" : "bounds",
+        "type" : "subsystem",
+        "x" : 165,
+        "y" : 20,
+        "width" : 45,
+        "height" : 95,
+        "io" : [ {
+          "id" : "133:1",
+          "name" : "TL",
+          "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_" ],
+          "portPosition" : {
+            "xpos" : 0.0,
+            "ypos" : 0.2631578947368421,
+            "xdir" : -1.0,
+            "ydir" : 0.0,
+            "label" : "TL"
+          },
+          "type" : "in"
+        }, {
+          "id" : "133:2",
+          "name" : "BL",
+          "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_" ],
+          "portPosition" : {
+            "xpos" : 0.0,
+            "ypos" : 0.7368421052631579,
+            "xdir" : -1.0,
+            "ydir" : 0.0,
+            "label" : "BL"
+          },
+          "type" : "in"
+        }, {
+          "id" : "133:3",
+          "name" : "TLc",
+          "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_" ],
+          "portPosition" : {
+            "xpos" : 1.0,
+            "ypos" : 0.25,
+            "xdir" : 1.0,
+            "ydir" : 0.0,
+            "label" : "TLc"
+          },
+          "signalName" : "TLc",
+          "type" : "out"
+        }, {
+          "id" : "133:4",
+          "name" : "BLc",
+          "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_" ],
+          "portPosition" : {
+            "xpos" : 1.0,
+            "ypos" : 0.75,
+            "xdir" : 1.0,
+            "ydir" : 0.0,
+            "label" : "BLc"
+          },
+          "signalName" : "BLc",
+          "type" : "out"
+        } ],
+        "ast" : [ {
+          "operator" : "=",
+          "operands" : [ {
+            "dataType" : "REAL",
+            "name" : "TL",
+            "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_", "bounds" ],
+            "timeStyle" : "relative",
+            "timeValue" : 0
+          }, {
+            "dataType" : "REAL",
+            "name" : "TL",
+            "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_" ],
+            "timeStyle" : "relative",
+            "timeValue" : 0
+          } ]
+        }, {
+          "operator" : "=",
+          "operands" : [ {
+            "dataType" : "REAL",
+            "name" : "BL",
+            "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_", "bounds" ],
+            "timeStyle" : "relative",
+            "timeValue" : 0
+          }, {
+            "dataType" : "REAL",
+            "name" : "BL",
+            "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_" ],
+            "timeStyle" : "relative",
+            "timeValue" : 0
+          } ]
+        }, {
+          "operator" : "=",
+          "operands" : [ {
+            "dataType" : "REAL",
+            "name" : "TLc",
+            "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_" ],
+            "timeStyle" : "relative",
+            "timeValue" : 0
+          }, {
+            "dataType" : "REAL",
+            "name" : "TLc",
+            "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_", "bounds" ],
+            "timeStyle" : "relative",
+            "timeValue" : 0
+          } ]
+        }, {
+          "operator" : "=",
+          "operands" : [ {
+            "dataType" : "REAL",
+            "name" : "BLc",
+            "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_" ],
+            "timeStyle" : "relative",
+            "timeValue" : 0
+          }, {
+            "dataType" : "REAL",
+            "name" : "BLc",
+            "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_", "bounds" ],
+            "timeStyle" : "relative",
+            "timeValue" : 0
+          } ]
+        } ],
+        "ports" : [ 2, 2 ],
+        "model" : {
+          "name" : "bounds",
+          "displayName" : "bounds",
+          "type" : "subsystem",
+          "component" : [ {
+            "id" : "128",
+            "name" : "Switch1",
+            "AllowDiffInputSizes" : "off",
+            "BackgroundColor" : "white",
+            "BlockMirror" : "off",
+            "BlockRotation" : "0",
+            "BlockType" : "Switch",
+            "Criteria" : "u2 ~= 0",
+            "DropShadow" : "off",
+            "FontAngle" : "normal",
+            "FontName" : "Helvetica",
+            "FontSize" : "10",
+            "FontWeight" : "normal",
+            "ForegroundColor" : "black",
+            "InputSameDT" : "off",
+            "LockScale" : "off",
+            "NamePlacement" : "normal",
+            "OutDataTypeStr" : "Inherit: Inherit via internal rule",
+            "OutMax" : "[]",
+            "OutMin" : "[]",
+            "Position" : "[300, 19, 345, 111]",
+            "RndMeth" : "Floor",
+            "SID" : "128",
+            "SampleTime" : "1.0",
+            "SaturateOnIntegerOverflow" : "off",
+            "ShowName" : "on",
+            "Threshold" : "0.5",
+            "ZOrder" : "5",
+            "ZeroCross" : "on",
+            "displayName" : "Switch1",
+            "mdlName" : "Switch1",
+            "type" : "switch",
+            "x" : 300,
+            "y" : 19,
+            "width" : 45,
+            "height" : 92,
+            "io" : [ {
+              "id" : "128:1",
+              "name" : "BL",
+              "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_", "bounds" ],
+              "portPosition" : {
+                "xpos" : 0.0,
+                "ypos" : 0.17391304347826092,
+                "xdir" : -1.0,
+                "ydir" : 0.0
+              },
+              "type" : "in"
+            }, {
+              "id" : "128:2",
+              "name" : "Relational_Operator",
+              "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_", "bounds" ],
+              "portPosition" : {
+                "xpos" : 0.0,
+                "ypos" : 0.47282608695652173,
+                "xdir" : -1.0,
+                "ydir" : 0.0
+              },
+              "type" : "in"
+            }, {
+              "id" : "128:3",
+              "name" : "TL",
+              "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_", "bounds" ],
+              "portPosition" : {
+                "xpos" : 0.0,
+                "ypos" : 0.8260869565217391,
+                "xdir" : -1.0,
+                "ydir" : 0.0
+              },
+              "type" : "in"
+            }, {
+              "id" : "128:4",
+              "name" : "TLc",
+              "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_", "bounds" ],
+              "portPosition" : {
+                "xpos" : 1.0,
+                "ypos" : 0.5,
+                "xdir" : 1.0,
+                "ydir" : 0.0
+              },
+              "type" : "out"
+            } ],
+            "ast" : [ {
+              "operator" : "=",
+              "operands" : [ {
+                "dataType" : "REAL",
+                "name" : "TLc",
+                "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_", "bounds" ],
+                "timeStyle" : "relative",
+                "timeValue" : 0
+              }, {
+                "dataType" : "REAL",
+                "operator" : "ite",
+                "operands" : [ {
+                  "dataType" : "BOOLEAN",
+                  "name" : "Relational_Operator",
+                  "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_", "bounds" ],
+                  "timeStyle" : "relative",
+                  "timeValue" : 0
+                }, {
+                  "dataType" : "REAL",
+                  "name" : "BL",
+                  "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_", "bounds" ],
+                  "timeStyle" : "relative",
+                  "timeValue" : 0
+                }, {
+                  "dataType" : "REAL",
+                  "name" : "TL",
+                  "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_", "bounds" ],
+                  "timeStyle" : "relative",
+                  "timeValue" : 0
+                } ]
+              } ]
+            } ],
+            "ports" : [ 3, 1 ]
+          }, {
+            "id" : "129",
+            "name" : "Relational_Operator",
+            "BackgroundColor" : "white",
+            "BlockMirror" : "off",
+            "BlockRotation" : "0",
+            "BlockType" : "RelationalOperator",
+            "DropShadow" : "off",
+            "FontAngle" : "normal",
+            "FontName" : "Helvetica",
+            "FontSize" : "10",
+            "FontWeight" : "normal",
+            "ForegroundColor" : "black",
+            "InputSameDT" : "off",
+            "NamePlacement" : "normal",
+            "Operator" : "<",
+            "OutDataTypeStr" : "boolean",
+            "Ports" : "[2, 1]",
+            "Position" : "[175, 47, 205, 78]",
+            "SID" : "129",
+            "SampleTime" : "1.0",
+            "ShowName" : "on",
+            "ZOrder" : "6",
+            "ZeroCross" : "on",
+            "displayName" : "Relational Operator",
+            "mdlName" : "Relational Operator",
+            "type" : "relationalOperator",
+            "x" : 175,
+            "y" : 47,
+            "width" : 30,
+            "height" : 31,
+            "io" : [ {
+              "id" : "129:1",
+              "name" : "TL",
+              "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_", "bounds" ],
+              "portPosition" : {
+                "xpos" : 0.0,
+                "ypos" : 0.25806451612903225,
+                "xdir" : -1.0,
+                "ydir" : 0.0
+              },
+              "type" : "in"
+            }, {
+              "id" : "129:2",
+              "name" : "BL",
+              "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_", "bounds" ],
+              "portPosition" : {
+                "xpos" : 0.0,
+                "ypos" : 0.7419354838709677,
+                "xdir" : -1.0,
+                "ydir" : 0.0
+              },
+              "type" : "in"
+            }, {
+              "id" : "129:3",
+              "name" : "Relational_Operator",
+              "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_", "bounds" ],
+              "portPosition" : {
+                "xpos" : 1.0,
+                "ypos" : 0.5,
+                "xdir" : 1.0,
+                "ydir" : 0.0
+              },
+              "type" : "out"
+            } ],
+            "ast" : [ {
+              "operator" : "=",
+              "operands" : [ {
+                "dataType" : "BOOLEAN",
+                "name" : "Relational_Operator",
+                "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_", "bounds" ],
+                "timeStyle" : "relative",
+                "timeValue" : 0
+              }, {
+                "dataType" : "BOOLEAN",
+                "operator" : "<",
+                "operands" : [ {
+                  "dataType" : "REAL",
+                  "name" : "TL",
+                  "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_", "bounds" ],
+                  "timeStyle" : "relative",
+                  "timeValue" : 0
+                }, {
+                  "dataType" : "REAL",
+                  "name" : "BL",
+                  "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_", "bounds" ],
+                  "timeStyle" : "relative",
+                  "timeValue" : 0
+                } ]
+              } ]
+            } ],
+            "ports" : [ 2, 1 ]
+          }, {
+            "id" : "134",
+            "name" : "TL",
+            "BackgroundColor" : "white",
+            "BlockMirror" : "off",
+            "BlockRotation" : "0",
+            "BlockType" : "Inport",
+            "BusOutputAsStruct" : "off",
+            "DropShadow" : "off",
+            "FontAngle" : "normal",
+            "FontName" : "Helvetica",
+            "FontSize" : "10",
+            "FontWeight" : "normal",
+            "ForegroundColor" : "black",
+            "IconDisplay" : "Port number",
+            "Interpolate" : "on",
+            "LatchByDelayingOutsideSignal" : "off",
+            "LatchInputForFeedbackSignals" : "off",
+            "LockScale" : "off",
+            "NamePlacement" : "normal",
+            "OutDataTypeStr" : "Inherit: auto",
+            "OutMax" : "[]",
+            "OutMin" : "[]",
+            "OutputFunctionCall" : "off",
+            "Port" : "1",
+            "PortDimensions" : "-1",
+            "Position" : "[80, 48, 110, 62]",
+            "SID" : "134",
+            "SampleTime" : "1.0",
+            "SamplingMode" : "auto",
+            "ShowName" : "on",
+            "SignalType" : "auto",
+            "VarSizeSig" : "Inherit",
+            "ZOrder" : "7",
+            "displayName" : "TL",
+            "mdlName" : "TL",
+            "type" : "input",
+            "x" : 80,
+            "y" : 48,
+            "width" : 30,
+            "height" : 14,
+            "io" : [ {
+              "id" : "134:1",
+              "name" : "TL",
+              "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_", "bounds" ],
+              "portPosition" : {
+                "xpos" : 1.0,
+                "ypos" : 0.5,
+                "xdir" : 1.0,
+                "ydir" : 0.0
+              },
+              "type" : "out"
+            } ],
+            "ports" : [ 0, 1 ]
+          }, {
+            "id" : "135",
+            "name" : "BL",
+            "BackgroundColor" : "white",
+            "BlockMirror" : "off",
+            "BlockRotation" : "0",
+            "BlockType" : "Inport",
+            "BusOutputAsStruct" : "off",
+            "DropShadow" : "off",
+            "FontAngle" : "normal",
+            "FontName" : "Helvetica",
+            "FontSize" : "10",
+            "FontWeight" : "normal",
+            "ForegroundColor" : "black",
+            "IconDisplay" : "Port number",
+            "Interpolate" : "on",
+            "LatchByDelayingOutsideSignal" : "off",
+            "LatchInputForFeedbackSignals" : "off",
+            "LockScale" : "off",
+            "NamePlacement" : "normal",
+            "OutDataTypeStr" : "Inherit: auto",
+            "OutMax" : "[]",
+            "OutMin" : "[]",
+            "OutputFunctionCall" : "off",
+            "Port" : "2",
+            "PortDimensions" : "-1",
+            "Position" : "[20, 73, 50, 87]",
+            "SID" : "135",
+            "SampleTime" : "1.0",
+            "SamplingMode" : "auto",
+            "ShowName" : "on",
+            "SignalType" : "auto",
+            "VarSizeSig" : "Inherit",
+            "ZOrder" : "8",
+            "displayName" : "BL",
+            "mdlName" : "BL",
+            "type" : "input",
+            "x" : 20,
+            "y" : 73,
+            "width" : 30,
+            "height" : 14,
+            "io" : [ {
+              "id" : "135:1",
+              "name" : "BL",
+              "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_", "bounds" ],
+              "portPosition" : {
+                "xpos" : 1.0,
+                "ypos" : 0.5,
+                "xdir" : 1.0,
+                "ydir" : 0.0
+              },
+              "type" : "out"
+            } ],
+            "ports" : [ 0, 1 ]
+          }, {
+            "id" : "136",
+            "name" : "TLc",
+            "BackgroundColor" : "white",
+            "BlockMirror" : "off",
+            "BlockRotation" : "0",
+            "BlockType" : "Outport",
+            "BusOutputAsStruct" : "off",
+            "DropShadow" : "off",
+            "FontAngle" : "normal",
+            "FontName" : "Helvetica",
+            "FontSize" : "10",
+            "FontWeight" : "normal",
+            "ForegroundColor" : "black",
+            "IconDisplay" : "Port number",
+            "InitialOutput" : "[]",
+            "LockScale" : "off",
+            "NamePlacement" : "normal",
+            "OutDataTypeStr" : "Inherit: auto",
+            "OutMax" : "[]",
+            "OutMin" : "[]",
+            "OutputWhenDisabled" : "held",
+            "Port" : "1",
+            "PortDimensions" : "-1",
+            "Position" : "[425, 58, 455, 72]",
+            "SID" : "136",
+            "SampleTime" : "1.0",
+            "SamplingMode" : "auto",
+            "ShowName" : "on",
+            "SignalType" : "auto",
+            "SourceOfInitialOutputValue" : "Dialog",
+            "VarSizeSig" : "Inherit",
+            "ZOrder" : "9",
+            "displayName" : "TLc",
+            "mdlName" : "TLc",
+            "type" : "output",
+            "x" : 425,
+            "y" : 58,
+            "width" : 30,
+            "height" : 14,
+            "io" : [ {
+              "id" : "136:1",
+              "name" : "TLc",
+              "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_", "bounds" ],
+              "portPosition" : {
+                "xpos" : 0.0,
+                "ypos" : 0.5,
+                "xdir" : -1.0,
+                "ydir" : 0.0
+              },
+              "type" : "in"
+            } ],
+            "ports" : [ 1, 0 ]
+          }, {
+            "id" : "137",
+            "name" : "Switch2",
+            "AllowDiffInputSizes" : "off",
+            "BackgroundColor" : "white",
+            "BlockMirror" : "off",
+            "BlockRotation" : "0",
+            "BlockType" : "Switch",
+            "Criteria" : "u2 ~= 0",
+            "DropShadow" : "off",
+            "FontAngle" : "normal",
+            "FontName" : "Helvetica",
+            "FontSize" : "10",
+            "FontWeight" : "normal",
+            "ForegroundColor" : "black",
+            "InputSameDT" : "off",
+            "LockScale" : "off",
+            "NamePlacement" : "normal",
+            "OutDataTypeStr" : "Inherit: Inherit via internal rule",
+            "OutMax" : "[]",
+            "OutMin" : "[]",
+            "Position" : "[300, 154, 345, 246]",
+            "RndMeth" : "Floor",
+            "SID" : "137",
+            "SampleTime" : "1.0",
+            "SaturateOnIntegerOverflow" : "off",
+            "ShowName" : "on",
+            "Threshold" : "0.5",
+            "ZOrder" : "10",
+            "ZeroCross" : "on",
+            "displayName" : "Switch2",
+            "mdlName" : "Switch2",
+            "type" : "switch",
+            "x" : 300,
+            "y" : 154,
+            "width" : 45,
+            "height" : 92,
+            "io" : [ {
+              "id" : "137:1",
+              "name" : "TL",
+              "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_", "bounds" ],
+              "portPosition" : {
+                "xpos" : 0.0,
+                "ypos" : 0.17391304347826075,
+                "xdir" : -1.0,
+                "ydir" : 0.0
+              },
+              "type" : "in"
+            }, {
+              "id" : "137:2",
+              "name" : "Relational_Operator",
+              "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_", "bounds" ],
+              "portPosition" : {
+                "xpos" : 0.0,
+                "ypos" : 0.47282608695652173,
+                "xdir" : -1.0,
+                "ydir" : 0.0
+              },
+              "type" : "in"
+            }, {
+              "id" : "137:3",
+              "name" : "BL",
+              "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_", "bounds" ],
+              "portPosition" : {
+                "xpos" : 0.0,
+                "ypos" : 0.8260869565217389,
+                "xdir" : -1.0,
+                "ydir" : 0.0
+              },
+              "type" : "in"
+            }, {
+              "id" : "137:4",
+              "name" : "BLc",
+              "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_", "bounds" ],
+              "portPosition" : {
+                "xpos" : 1.0,
+                "ypos" : 0.5,
+                "xdir" : 1.0,
+                "ydir" : 0.0
+              },
+              "type" : "out"
+            } ],
+            "ast" : [ {
+              "operator" : "=",
+              "operands" : [ {
+                "dataType" : "REAL",
+                "name" : "BLc",
+                "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_", "bounds" ],
+                "timeStyle" : "relative",
+                "timeValue" : 0
+              }, {
+                "dataType" : "REAL",
+                "operator" : "ite",
+                "operands" : [ {
+                  "dataType" : "BOOLEAN",
+                  "name" : "Relational_Operator",
+                  "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_", "bounds" ],
+                  "timeStyle" : "relative",
+                  "timeValue" : 0
+                }, {
+                  "dataType" : "REAL",
+                  "name" : "TL",
+                  "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_", "bounds" ],
+                  "timeStyle" : "relative",
+                  "timeValue" : 0
+                }, {
+                  "dataType" : "REAL",
+                  "name" : "BL",
+                  "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_", "bounds" ],
+                  "timeStyle" : "relative",
+                  "timeValue" : 0
+                } ]
+              } ]
+            } ],
+            "ports" : [ 3, 1 ]
+          }, {
+            "id" : "139",
+            "name" : "BLc",
+            "BackgroundColor" : "white",
+            "BlockMirror" : "off",
+            "BlockRotation" : "0",
+            "BlockType" : "Outport",
+            "BusOutputAsStruct" : "off",
+            "DropShadow" : "off",
+            "FontAngle" : "normal",
+            "FontName" : "Helvetica",
+            "FontSize" : "10",
+            "FontWeight" : "normal",
+            "ForegroundColor" : "black",
+            "IconDisplay" : "Port number",
+            "InitialOutput" : "[]",
+            "LockScale" : "off",
+            "NamePlacement" : "normal",
+            "OutDataTypeStr" : "Inherit: auto",
+            "OutMax" : "[]",
+            "OutMin" : "[]",
+            "OutputWhenDisabled" : "held",
+            "Port" : "2",
+            "PortDimensions" : "-1",
+            "Position" : "[425, 193, 455, 207]",
+            "SID" : "139",
+            "SampleTime" : "1.0",
+            "SamplingMode" : "auto",
+            "ShowName" : "on",
+            "SignalType" : "auto",
+            "SourceOfInitialOutputValue" : "Dialog",
+            "VarSizeSig" : "Inherit",
+            "ZOrder" : "12",
+            "displayName" : "BLc",
+            "mdlName" : "BLc",
+            "type" : "output",
+            "x" : 425,
+            "y" : 193,
+            "width" : 30,
+            "height" : 14,
+            "io" : [ {
+              "id" : "139:1",
+              "name" : "BLc",
+              "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_", "bounds" ],
+              "portPosition" : {
+                "xpos" : 0.0,
+                "ypos" : 0.5,
+                "xdir" : -1.0,
+                "ydir" : 0.0
+              },
+              "type" : "in"
+            } ],
+            "ports" : [ 1, 0 ]
+          } ],
+          "connection" : [ {
+            "id" : "128:4,136:1",
+            "name" : "TLc",
+            "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_", "bounds" ],
+            "sourceIOID" : "128:4",
+            "targetIOID" : "136:1",
+            "wirepath" : "[]"
+          }, {
+            "id" : "129:3,128:2",
+            "name" : "Relational_Operator",
+            "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_", "bounds" ],
+            "sourceIOID" : "129:3",
+            "targetIOID" : "128:2",
+            "wirepath" : "[48, 0]"
+          }, {
+            "id" : "129:3,137:2",
+            "name" : "Relational_Operator",
+            "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_", "bounds" ],
+            "sourceIOID" : "129:3",
+            "targetIOID" : "137:2",
+            "wirepath" : "[48, 0; 0, 135]"
+          }, {
+            "id" : "134:1,128:3",
+            "name" : "TL",
+            "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_", "bounds" ],
+            "sourceIOID" : "134:1",
+            "targetIOID" : "128:3",
+            "wirepath" : "[10, 0; 0, 28, 18, 0, 0, 12, 126, 0]"
+          }, {
+            "id" : "134:1,129:1",
+            "name" : "TL",
+            "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_", "bounds" ],
+            "sourceIOID" : "134:1",
+            "targetIOID" : "129:1",
+            "wirepath" : "[10, 0]"
+          }, {
+            "id" : "134:1,137:1",
+            "name" : "TL",
+            "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_", "bounds" ],
+            "sourceIOID" : "134:1",
+            "targetIOID" : "137:1",
+            "wirepath" : "[10, 0; 0, 28, 18, 0, 0, 12, 126, 0; 0, 75]"
+          }, {
+            "id" : "135:1,128:1",
+            "name" : "BL",
+            "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_", "bounds" ],
+            "sourceIOID" : "135:1",
+            "targetIOID" : "128:1",
+            "wirepath" : "[11, 0; 0, -45]"
+          }, {
+            "id" : "135:1,129:2",
+            "name" : "BL",
+            "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_", "bounds" ],
+            "sourceIOID" : "135:1",
+            "targetIOID" : "129:2",
+            "wirepath" : "[11, 0; 5, 0; 46, 0, 0, -10]"
+          }, {
+            "id" : "135:1,137:3",
+            "name" : "BL",
+            "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_", "bounds" ],
+            "sourceIOID" : "135:1",
+            "targetIOID" : "137:3",
+            "wirepath" : "[11, 0; 5, 0; 0, 150]"
+          }, {
+            "id" : "137:4,139:1",
+            "name" : "BLc",
+            "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_", "bounds" ],
+            "sourceIOID" : "137:4",
+            "targetIOID" : "139:1",
+            "wirepath" : "[]"
+          } ]
+        }
+      }, {
+        "id" : "140",
+        "name" : "Goto1",
+        "BackgroundColor" : "white",
+        "BlockMirror" : "off",
+        "BlockRotation" : "0",
+        "BlockType" : "Goto",
+        "DropShadow" : "off",
+        "FontAngle" : "normal",
+        "FontName" : "Helvetica",
+        "FontSize" : "10",
+        "FontWeight" : "normal",
+        "ForegroundColor" : "black",
+        "GotoTag" : "BL",
+        "IconDisplay" : "Tag",
+        "NamePlacement" : "normal",
+        "Position" : "[320, 75, 360, 105]",
+        "SID" : "140",
+        "ShowName" : "on",
+        "TagVisibility" : "local",
+        "ZOrder" : "11",
+        "displayName" : "Goto1",
+        "mdlName" : "Goto1",
+        "type" : "goto",
+        "x" : 320,
+        "y" : 75,
+        "width" : 40,
+        "height" : 30,
+        "io" : [ {
+          "id" : "140:1",
+          "name" : "BLc",
+          "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_" ],
+          "portPosition" : {
+            "xpos" : 0.0,
+            "ypos" : 0.5416666666666666,
+            "xdir" : -1.0,
+            "ydir" : 0.0
+          },
+          "type" : "in"
+        } ],
+        "ast" : [ {
+          "operator" : "=",
+          "operands" : [ {
+            "dataType" : "REAL",
+            "name" : "__gototag__BL",
+            "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_" ],
+            "timeStyle" : "relative",
+            "timeValue" : 0
+          }, {
+            "dataType" : "REAL",
+            "name" : "BLc",
+            "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_" ],
+            "timeStyle" : "relative",
+            "timeValue" : 0
+          } ]
+        } ],
+        "ports" : [ 1, 0 ]
+      }, {
+        "id" : "141",
+        "name" : "From",
+        "BackgroundColor" : "white",
+        "BlockMirror" : "off",
+        "BlockRotation" : "0",
+        "BlockType" : "From",
+        "DropShadow" : "off",
+        "FontAngle" : "normal",
+        "FontName" : "Helvetica",
+        "FontSize" : "10",
+        "FontWeight" : "normal",
+        "ForegroundColor" : "black",
+        "GotoTag" : "TL",
+        "IconDisplay" : "Tag",
+        "NamePlacement" : "normal",
+        "Position" : "[705, 186, 745, 214]",
+        "SID" : "141",
+        "ShowName" : "on",
+        "TagVisibility" : "local",
+        "ZOrder" : "12",
+        "displayName" : "From",
+        "mdlName" : "From",
+        "type" : "from",
+        "x" : 705,
+        "y" : 186,
+        "width" : 40,
+        "height" : 28,
+        "io" : [ {
+          "id" : "141:1",
+          "name" : "From",
+          "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_" ],
+          "portPosition" : {
+            "xpos" : 1.0,
+            "ypos" : 0.5,
+            "xdir" : 1.0,
+            "ydir" : 0.0
+          },
+          "type" : "out"
+        } ],
+        "ast" : [ {
+          "operator" : "=",
+          "operands" : [ {
+            "dataType" : "REAL",
+            "name" : "From",
+            "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_" ],
+            "timeStyle" : "relative",
+            "timeValue" : 0
+          }, {
+            "dataType" : "REAL",
+            "name" : "__gototag__TL",
+            "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_" ],
+            "timeStyle" : "relative",
+            "timeValue" : 0
+          } ]
+        } ],
+        "ports" : [ 0, 1 ]
+      }, {
+        "id" : "142",
+        "name" : "From1",
+        "BackgroundColor" : "white",
+        "BlockMirror" : "off",
+        "BlockRotation" : "0",
+        "BlockType" : "From",
+        "DropShadow" : "off",
+        "FontAngle" : "normal",
+        "FontName" : "Helvetica",
+        "FontSize" : "10",
+        "FontWeight" : "normal",
+        "ForegroundColor" : "black",
+        "GotoTag" : "BL",
+        "IconDisplay" : "Tag",
+        "NamePlacement" : "normal",
+        "Position" : "[705, 326, 745, 354]",
+        "SID" : "142",
+        "ShowName" : "on",
+        "TagVisibility" : "local",
+        "ZOrder" : "13",
+        "displayName" : "From1",
+        "mdlName" : "From1",
+        "type" : "from",
+        "x" : 705,
+        "y" : 326,
+        "width" : 40,
+        "height" : 28,
+        "io" : [ {
+          "id" : "142:1",
+          "name" : "From1",
+          "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_" ],
+          "portPosition" : {
+            "xpos" : 1.0,
+            "ypos" : 0.5,
+            "xdir" : 1.0,
+            "ydir" : 0.0
+          },
+          "type" : "out"
+        } ],
+        "ast" : [ {
+          "operator" : "=",
+          "operands" : [ {
+            "dataType" : "REAL",
+            "name" : "From1",
+            "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_" ],
+            "timeStyle" : "relative",
+            "timeValue" : 0
+          }, {
+            "dataType" : "REAL",
+            "name" : "__gototag__BL",
+            "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_" ],
+            "timeStyle" : "relative",
+            "timeValue" : 0
+          } ]
+        } ],
+        "ports" : [ 0, 1 ]
+      }, {
+        "id" : "85",
+        "name" : "xin",
+        "BackgroundColor" : "white",
+        "BlockMirror" : "off",
+        "BlockRotation" : "0",
+        "BlockType" : "Inport",
+        "BusOutputAsStruct" : "off",
+        "DropShadow" : "off",
+        "FontAngle" : "normal",
+        "FontName" : "Helvetica",
+        "FontSize" : "10",
+        "FontWeight" : "normal",
+        "ForegroundColor" : "black",
+        "IconDisplay" : "Port number",
+        "Interpolate" : "on",
+        "LatchByDelayingOutsideSignal" : "off",
+        "LatchInputForFeedbackSignals" : "off",
+        "LockScale" : "off",
+        "NamePlacement" : "normal",
+        "OutDataTypeStr" : "Inherit: auto",
+        "OutMax" : "[]",
+        "OutMin" : "[]",
+        "OutputFunctionCall" : "off",
+        "Port" : "1",
+        "PortDimensions" : "-1",
+        "Position" : "[120, 308, 150, 322]",
+        "SID" : "85",
+        "SampleTime" : "1.0",
+        "SamplingMode" : "auto",
+        "ShowName" : "on",
+        "SignalType" : "auto",
+        "VarSizeSig" : "Inherit",
+        "ZOrder" : "-1",
+        "displayName" : "xin",
+        "mdlName" : "xin",
+        "type" : "input",
+        "x" : 120,
+        "y" : 308,
+        "width" : 30,
+        "height" : 14,
+        "io" : [ {
+          "id" : "85:1",
+          "name" : "xin",
+          "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_" ],
+          "portPosition" : {
+            "xpos" : 1.0,
+            "ypos" : 0.5,
+            "xdir" : 1.0,
+            "ydir" : 0.0
+          },
+          "type" : "out"
+        } ],
+        "ports" : [ 0, 1 ]
+      }, {
+        "id" : "86",
+        "name" : "T",
+        "BackgroundColor" : "white",
+        "BlockMirror" : "off",
+        "BlockRotation" : "0",
+        "BlockType" : "Inport",
+        "BusOutputAsStruct" : "off",
+        "DropShadow" : "off",
+        "FontAngle" : "normal",
+        "FontName" : "Helvetica",
+        "FontSize" : "10",
+        "FontWeight" : "normal",
+        "ForegroundColor" : "black",
+        "IconDisplay" : "Port number",
+        "Interpolate" : "on",
+        "LatchByDelayingOutsideSignal" : "off",
+        "LatchInputForFeedbackSignals" : "off",
+        "LockScale" : "off",
+        "NamePlacement" : "normal",
+        "OutDataTypeStr" : "Inherit: auto",
+        "OutMax" : "[]",
+        "OutMin" : "[]",
+        "OutputFunctionCall" : "off",
+        "Port" : "2",
+        "PortDimensions" : "-1",
+        "Position" : "[145, 403, 175, 417]",
+        "SID" : "86",
+        "SampleTime" : "1.0",
+        "SamplingMode" : "auto",
+        "ShowName" : "on",
+        "SignalType" : "auto",
+        "VarSizeSig" : "Inherit",
+        "ZOrder" : "-1",
+        "displayName" : "T",
+        "mdlName" : "T",
+        "type" : "input",
+        "x" : 145,
+        "y" : 403,
+        "width" : 30,
+        "height" : 14,
+        "io" : [ {
+          "id" : "86:1",
+          "name" : "T",
+          "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_" ],
+          "portPosition" : {
+            "xpos" : 1.0,
+            "ypos" : 0.5,
+            "xdir" : 1.0,
+            "ydir" : 0.0
+          },
+          "type" : "out"
+        } ],
+        "ports" : [ 0, 1 ]
+      }, {
+        "id" : "87",
+        "name" : "TL",
+        "BackgroundColor" : "white",
+        "BlockMirror" : "off",
+        "BlockRotation" : "0",
+        "BlockType" : "Inport",
+        "BusOutputAsStruct" : "off",
+        "DropShadow" : "off",
+        "FontAngle" : "normal",
+        "FontName" : "Helvetica",
+        "FontSize" : "10",
+        "FontWeight" : "normal",
+        "ForegroundColor" : "black",
+        "IconDisplay" : "Port number",
+        "Interpolate" : "on",
+        "LatchByDelayingOutsideSignal" : "off",
+        "LatchInputForFeedbackSignals" : "off",
+        "LockScale" : "off",
+        "NamePlacement" : "normal",
+        "OutDataTypeStr" : "Inherit: auto",
+        "OutMax" : "[]",
+        "OutMin" : "[]",
+        "OutputFunctionCall" : "off",
+        "Port" : "3",
+        "PortDimensions" : "-1",
+        "Position" : "[20, 38, 50, 52]",
+        "SID" : "87",
+        "SampleTime" : "1.0",
+        "SamplingMode" : "auto",
+        "ShowName" : "on",
+        "SignalType" : "auto",
+        "VarSizeSig" : "Inherit",
+        "ZOrder" : "-1",
+        "displayName" : "TL",
+        "mdlName" : "TL",
+        "type" : "input",
+        "x" : 20,
+        "y" : 38,
+        "width" : 30,
+        "height" : 14,
+        "io" : [ {
+          "id" : "87:1",
+          "name" : "TL",
+          "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_" ],
+          "portPosition" : {
+            "xpos" : 1.0,
+            "ypos" : 0.5,
+            "xdir" : 1.0,
+            "ydir" : 0.0
+          },
+          "type" : "out"
+        } ],
+        "ports" : [ 0, 1 ]
+      }, {
+        "id" : "88",
+        "name" : "BL",
+        "BackgroundColor" : "white",
+        "BlockMirror" : "off",
+        "BlockRotation" : "0",
+        "BlockType" : "Inport",
+        "BusOutputAsStruct" : "off",
+        "DropShadow" : "off",
+        "FontAngle" : "normal",
+        "FontName" : "Helvetica",
+        "FontSize" : "10",
+        "FontWeight" : "normal",
+        "ForegroundColor" : "black",
+        "IconDisplay" : "Port number",
+        "Interpolate" : "on",
+        "LatchByDelayingOutsideSignal" : "off",
+        "LatchInputForFeedbackSignals" : "off",
+        "LockScale" : "off",
+        "NamePlacement" : "normal",
+        "OutDataTypeStr" : "Inherit: auto",
+        "OutMax" : "[]",
+        "OutMin" : "[]",
+        "OutputFunctionCall" : "off",
+        "Port" : "4",
+        "PortDimensions" : "-1",
+        "Position" : "[20, 83, 50, 97]",
+        "SID" : "88",
+        "SampleTime" : "1.0",
+        "SamplingMode" : "auto",
+        "ShowName" : "on",
+        "SignalType" : "auto",
+        "VarSizeSig" : "Inherit",
+        "ZOrder" : "-1",
+        "displayName" : "BL",
+        "mdlName" : "BL",
+        "type" : "input",
+        "x" : 20,
+        "y" : 83,
+        "width" : 30,
+        "height" : 14,
+        "io" : [ {
+          "id" : "88:1",
+          "name" : "BL",
+          "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_" ],
+          "portPosition" : {
+            "xpos" : 1.0,
+            "ypos" : 0.5,
+            "xdir" : 1.0,
+            "ydir" : 0.0
+          },
+          "type" : "out"
+        } ],
+        "ports" : [ 0, 1 ]
+      }, {
+        "id" : "89",
+        "name" : "reset",
+        "BackgroundColor" : "white",
+        "BlockMirror" : "off",
+        "BlockRotation" : "0",
+        "BlockType" : "Inport",
+        "BusOutputAsStruct" : "off",
+        "DropShadow" : "off",
+        "FontAngle" : "normal",
+        "FontName" : "Helvetica",
+        "FontSize" : "10",
+        "FontWeight" : "normal",
+        "ForegroundColor" : "black",
+        "IconDisplay" : "Port number",
+        "Interpolate" : "on",
+        "LatchByDelayingOutsideSignal" : "off",
+        "LatchInputForFeedbackSignals" : "off",
+        "LockScale" : "off",
+        "NamePlacement" : "normal",
+        "OutDataTypeStr" : "Inherit: auto",
+        "OutMax" : "[]",
+        "OutMin" : "[]",
+        "OutputFunctionCall" : "off",
+        "Port" : "5",
+        "PortDimensions" : "-1",
+        "Position" : "[545, 258, 575, 272]",
+        "SID" : "89",
+        "SampleTime" : "1.0",
+        "SamplingMode" : "auto",
+        "ShowName" : "on",
+        "SignalType" : "auto",
+        "VarSizeSig" : "Inherit",
+        "ZOrder" : "-1",
+        "displayName" : "reset",
+        "mdlName" : "reset",
+        "type" : "input",
+        "x" : 545,
+        "y" : 258,
+        "width" : 30,
+        "height" : 14,
+        "io" : [ {
+          "id" : "89:1",
+          "name" : "reset",
+          "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_" ],
+          "portPosition" : {
+            "xpos" : 1.0,
+            "ypos" : 0.5,
+            "xdir" : 1.0,
+            "ydir" : 0.0
+          },
+          "type" : "out"
+        } ],
+        "ports" : [ 0, 1 ]
+      }, {
+        "id" : "90",
+        "name" : "ic",
+        "BackgroundColor" : "white",
+        "BlockMirror" : "off",
+        "BlockRotation" : "0",
+        "BlockType" : "Inport",
+        "BusOutputAsStruct" : "off",
+        "DropShadow" : "off",
+        "FontAngle" : "normal",
+        "FontName" : "Helvetica",
+        "FontSize" : "10",
+        "FontWeight" : "normal",
+        "ForegroundColor" : "black",
+        "IconDisplay" : "Port number",
+        "Interpolate" : "on",
+        "LatchByDelayingOutsideSignal" : "off",
+        "LatchInputForFeedbackSignals" : "off",
+        "LockScale" : "off",
+        "NamePlacement" : "normal",
+        "OutDataTypeStr" : "Inherit: auto",
+        "OutMax" : "[]",
+        "OutMin" : "[]",
+        "OutputFunctionCall" : "off",
+        "Port" : "6",
+        "PortDimensions" : "-1",
+        "Position" : "[545, 228, 575, 242]",
+        "SID" : "90",
+        "SampleTime" : "1.0",
+        "SamplingMode" : "auto",
+        "ShowName" : "on",
+        "SignalType" : "auto",
+        "VarSizeSig" : "Inherit",
+        "ZOrder" : "-1",
+        "displayName" : "ic",
+        "mdlName" : "ic",
+        "type" : "input",
+        "x" : 545,
+        "y" : 228,
+        "width" : 30,
+        "height" : 14,
+        "io" : [ {
+          "id" : "90:1",
+          "name" : "ic",
+          "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_" ],
+          "portPosition" : {
+            "xpos" : 1.0,
+            "ypos" : 0.5,
+            "xdir" : 1.0,
+            "ydir" : 0.0
+          },
+          "type" : "out"
+        } ],
+        "ports" : [ 0, 1 ]
+      }, {
+        "id" : "91",
+        "name" : "Gain",
+        "BackgroundColor" : "white",
+        "BlockMirror" : "off",
+        "BlockRotation" : "0",
+        "BlockType" : "Gain",
+        "DropShadow" : "off",
+        "FontAngle" : "normal",
+        "FontName" : "Helvetica",
+        "FontSize" : "10",
+        "FontWeight" : "normal",
+        "ForegroundColor" : "black",
+        "Gain" : ".5",
+        "LockScale" : "off",
+        "Multiplication" : "Element-wise(K.*u)",
+        "NamePlacement" : "normal",
+        "OutDataTypeStr" : "Inherit: Inherit via internal rule",
+        "OutMax" : "[]",
+        "OutMin" : "[]",
+        "ParamDataTypeStr" : "Inherit: Inherit via internal rule",
+        "ParamMax" : "[]",
+        "ParamMin" : "[]",
+        "Position" : "[305, 300, 335, 330]",
+        "RndMeth" : "Floor",
+        "SID" : "91",
+        "SampleTime" : "1.0",
+        "SaturateOnIntegerOverflow" : "off",
+        "ShowName" : "on",
+        "ZOrder" : "-8",
+        "displayName" : "Gain",
+        "mdlName" : "Gain",
+        "type" : "gain",
+        "x" : 305,
+        "y" : 300,
+        "width" : 30,
+        "height" : 30,
+        "io" : [ {
+          "id" : "91:1",
+          "name" : "Sum",
+          "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_" ],
+          "portPosition" : {
+            "xpos" : 0.0,
+            "ypos" : 0.5,
+            "xdir" : -1.0,
+            "ydir" : 0.0,
+            "label" : ".5"
+          },
+          "type" : "in"
+        }, {
+          "id" : "91:2",
+          "name" : "Gain",
+          "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_" ],
+          "portPosition" : {
+            "xpos" : 1.0,
+            "ypos" : 0.5,
+            "xdir" : 1.0,
+            "ydir" : 0.0
+          },
+          "type" : "out"
+        } ],
+        "ast" : [ {
+          "operator" : "=",
+          "operands" : [ {
+            "dataType" : "REAL",
+            "name" : "Gain",
+            "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_" ],
+            "timeStyle" : "relative",
+            "timeValue" : 0
+          }, {
+            "dataType" : "REAL",
+            "operator" : "times",
+            "operands" : [ {
+              "dataType" : "REAL",
+              "name" : "Sum",
+              "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_" ],
+              "timeStyle" : "relative",
+              "timeValue" : 0
+            }, {
+              "dataType" : "REAL",
+              "value" : 0.5
+            } ]
+          } ]
+        } ],
+        "ports" : [ 1, 1 ]
+      }, {
+        "id" : "92",
+        "name" : "Product",
+        "BackgroundColor" : "white",
+        "BlockMirror" : "off",
+        "BlockRotation" : "0",
+        "BlockType" : "Product",
+        "CollapseDim" : "1",
+        "CollapseMode" : "All dimensions",
+        "DropShadow" : "off",
+        "FontAngle" : "normal",
+        "FontName" : "Helvetica",
+        "FontSize" : "10",
+        "FontWeight" : "normal",
+        "ForegroundColor" : "black",
+        "InputSameDT" : "off",
+        "Inputs" : "2",
+        "LockScale" : "off",
+        "Multiplication" : "Element-wise(.*)",
+        "NamePlacement" : "normal",
+        "OutDataTypeStr" : "Inherit: Inherit via internal rule",
+        "OutMax" : "[]",
+        "OutMin" : "[]",
+        "Ports" : "[2, 1]",
+        "Position" : "[395, 268, 425, 457]",
+        "RndMeth" : "Zero",
+        "SID" : "92",
+        "SampleTime" : "1.0",
+        "SaturateOnIntegerOverflow" : "off",
+        "ShowName" : "on",
+        "ZOrder" : "-19",
+        "displayName" : "Product",
+        "mdlName" : "Product",
+        "type" : "product",
+        "x" : 395,
+        "y" : 268,
+        "width" : 30,
+        "height" : 189,
+        "io" : [ {
+          "id" : "92:1",
+          "name" : "Gain",
+          "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_" ],
+          "portPosition" : {
+            "xpos" : 0.0,
+            "ypos" : 0.24867724867724866,
+            "xdir" : -1.0,
+            "ydir" : 0.0,
+            "label" : "*"
+          },
+          "type" : "in"
+        }, {
+          "id" : "92:2",
+          "name" : "T",
+          "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_" ],
+          "portPosition" : {
+            "xpos" : 0.0,
+            "ypos" : 0.7513227513227513,
+            "xdir" : -1.0,
+            "ydir" : 0.0,
+            "label" : "*"
+          },
+          "type" : "in"
+        }, {
+          "id" : "92:3",
+          "name" : "Product",
+          "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_" ],
+          "portPosition" : {
+            "xpos" : 1.0,
+            "ypos" : 0.5,
+            "xdir" : 1.0,
+            "ydir" : 0.0
+          },
+          "type" : "out"
+        } ],
+        "ast" : [ {
+          "operator" : "=",
+          "operands" : [ {
+            "dataType" : "REAL",
+            "name" : "Product",
+            "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_" ],
+            "timeStyle" : "relative",
+            "timeValue" : 0
+          }, {
+            "dataType" : "REAL",
+            "operator" : ".*",
+            "operands" : [ {
+              "dataType" : "REAL",
+              "name" : "Gain",
+              "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_" ],
+              "timeStyle" : "relative",
+              "timeValue" : 0
+            }, {
+              "dataType" : "REAL",
+              "name" : "T",
+              "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_" ],
+              "timeStyle" : "relative",
+              "timeValue" : 0
+            } ]
+          } ]
+        } ],
+        "ports" : [ 2, 1 ]
+      }, {
+        "id" : "93",
+        "name" : "limiter",
+        "BackgroundColor" : "white",
+        "BlockMirror" : "off",
+        "BlockRotation" : "0",
+        "BlockType" : "Reference",
+        "DoSatur" : "off",
+        "DropShadow" : "off",
+        "FontAngle" : "normal",
+        "FontName" : "Helvetica",
+        "FontSize" : "10",
+        "FontWeight" : "normal",
+        "ForegroundColor" : "black",
+        "LibraryVersion" : "1.281",
+        "LockScale" : "off",
+        "NamePlacement" : "normal",
+        "OutDataType" : "fixdt(1, 16)",
+        "OutDataTypeStr" : "Inherit: Same as second input",
+        "OutMax" : "[]",
+        "OutMin" : "[]",
+        "OutScaling" : "2^-10",
+        "OutputDataTypeScalingMode" : "Same as second input",
+        "Ports" : "[3, 1]",
+        "Position" : "[765, 245, 845, 285]",
+        "RndMeth" : "Floor",
+        "SID" : "93",
+        "ShowName" : "on",
+        "SourceBlock" : "simulink/Discontinuities/Saturation\nDynamic",
+        "SourceType" : "Saturation Dynamic",
+        "ZOrder" : "-11",
+        "displayName" : "limiter",
+        "mdlName" : "Saturation\nDynamic",
+        "type" : "limiter",
+        "x" : 765,
+        "y" : 245,
+        "width" : 80,
+        "height" : 40,
+        "io" : [ {
+          "id" : "93:1",
+          "name" : "From",
+          "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_" ],
+          "portPosition" : {
+            "xpos" : 0.0,
+            "ypos" : 0.12500000000000022,
+            "xdir" : -1.0,
+            "ydir" : 0.0
+          },
+          "type" : "in"
+        }, {
+          "id" : "93:2",
+          "name" : "Switch",
+          "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_" ],
+          "portPosition" : {
+            "xpos" : 0.0,
+            "ypos" : 0.5,
+            "xdir" : -1.0,
+            "ydir" : 0.0
+          },
+          "type" : "in"
+        }, {
+          "id" : "93:3",
+          "name" : "From1",
+          "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_" ],
+          "portPosition" : {
+            "xpos" : 0.0,
+            "ypos" : 0.8750000000000006,
+            "xdir" : -1.0,
+            "ydir" : 0.0
+          },
+          "type" : "in"
+        }, {
+          "id" : "93:4",
+          "name" : "yout",
+          "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_" ],
+          "portPosition" : {
+            "xpos" : 1.0,
+            "ypos" : 0.5,
+            "xdir" : 1.0,
+            "ydir" : 0.0
+          },
+          "type" : "out"
+        } ],
+        "ast" : [ {
+          "operator" : "=",
+          "operands" : [ {
+            "dataType" : "REAL",
+            "name" : "yout",
+            "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_" ],
+            "timeStyle" : "relative",
+            "timeValue" : 0
+          }, {
+            "dataType" : "REAL",
+            "operator" : "ite",
+            "operands" : [ {
+              "dataType" : "BOOLEAN",
+              "operator" : "<",
+              "operands" : [ {
+                "dataType" : "REAL",
+                "name" : "Switch",
+                "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_" ],
+                "timeStyle" : "relative",
+                "timeValue" : 0
+              }, {
+                "dataType" : "REAL",
+                "name" : "From1",
+                "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_" ],
+                "timeStyle" : "relative",
+                "timeValue" : 0
+              } ]
+            }, {
+              "dataType" : "REAL",
+              "name" : "From1",
+              "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_" ],
+              "timeStyle" : "relative",
+              "timeValue" : 0
+            }, {
+              "dataType" : "REAL",
+              "operator" : "ite",
+              "operands" : [ {
+                "dataType" : "BOOLEAN",
+                "operator" : ">",
+                "operands" : [ {
+                  "dataType" : "REAL",
+                  "name" : "Switch",
+                  "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_" ],
+                  "timeStyle" : "relative",
+                  "timeValue" : 0
+                }, {
+                  "dataType" : "REAL",
+                  "name" : "From",
+                  "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_" ],
+                  "timeStyle" : "relative",
+                  "timeValue" : 0
+                } ]
+              }, {
+                "dataType" : "REAL",
+                "name" : "From",
+                "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_" ],
+                "timeStyle" : "relative",
+                "timeValue" : 0
+              }, {
+                "dataType" : "REAL",
+                "name" : "Switch",
+                "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_" ],
+                "timeStyle" : "relative",
+                "timeValue" : 0
+              } ]
+            } ]
+          } ]
+        } ],
+        "ports" : [ 3, 1 ]
+      }, {
+        "id" : "94",
+        "name" : "Sum",
+        "AccumDataTypeStr" : "Inherit: Inherit via internal rule",
+        "BackgroundColor" : "white",
+        "BlockMirror" : "off",
+        "BlockRotation" : "0",
+        "BlockType" : "Sum",
+        "CollapseDim" : "1",
+        "CollapseMode" : "All dimensions",
+        "DropShadow" : "off",
+        "FontAngle" : "normal",
+        "FontName" : "Helvetica",
+        "FontSize" : "10",
+        "FontWeight" : "normal",
+        "ForegroundColor" : "black",
+        "IconShape" : "round",
+        "InputSameDT" : "off",
+        "Inputs" : "|++",
+        "LockScale" : "off",
+        "NamePlacement" : "normal",
+        "OutDataTypeStr" : "Inherit: Inherit via internal rule",
+        "OutMax" : "[]",
+        "OutMin" : "[]",
+        "Ports" : "[2, 1]",
+        "Position" : "[230, 305, 250, 325]",
+        "RndMeth" : "Floor",
+        "SID" : "94",
+        "SampleTime" : "1.0",
+        "SaturateOnIntegerOverflow" : "off",
+        "ShowName" : "off",
+        "ZOrder" : "-18",
+        "displayName" : "Sum",
+        "mdlName" : "Sum",
+        "type" : "sum",
+        "x" : 230,
+        "y" : 305,
+        "width" : 20,
+        "height" : 20,
+        "io" : [ {
+          "id" : "94:1",
+          "name" : "xin",
+          "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_" ],
+          "portPosition" : {
+            "xpos" : 0.0,
+            "ypos" : 0.49999999999999994,
+            "xdir" : -1.0,
+            "ydir" : -1.2246467991473532E-16,
+            "label" : "+"
+          },
+          "type" : "in"
+        }, {
+          "id" : "94:2",
+          "name" : "Unit_Delay",
+          "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_" ],
+          "portPosition" : {
+            "xpos" : 0.4999999999999999,
+            "ypos" : 1.0,
+            "xdir" : -1.8369701987210297E-16,
+            "ydir" : 1.0,
+            "label" : "+"
+          },
+          "type" : "in"
+        }, {
+          "id" : "94:3",
+          "name" : "Sum",
+          "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_" ],
+          "portPosition" : {
+            "xpos" : 1.0,
+            "ypos" : 0.5,
+            "xdir" : 1.0,
+            "ydir" : 0.0
+          },
+          "type" : "out"
+        } ],
+        "ast" : [ {
+          "operator" : "=",
+          "operands" : [ {
+            "dataType" : "REAL",
+            "name" : "Sum",
+            "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_" ],
+            "timeStyle" : "relative",
+            "timeValue" : 0
+          }, {
+            "dataType" : "REAL",
+            "operator" : "+",
+            "operands" : [ {
+              "dataType" : "REAL",
+              "name" : "xin",
+              "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_" ],
+              "timeStyle" : "relative",
+              "timeValue" : 0
+            }, {
+              "dataType" : "REAL",
+              "name" : "Unit_Delay",
+              "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_" ],
+              "timeStyle" : "relative",
+              "timeValue" : 0
+            } ]
+          } ]
+        } ],
+        "ports" : [ 2, 1 ]
+      }, {
+        "id" : "95",
+        "name" : "Sum1",
+        "AccumDataTypeStr" : "Inherit: Inherit via internal rule",
+        "BackgroundColor" : "white",
+        "BlockMirror" : "off",
+        "BlockRotation" : "0",
+        "BlockType" : "Sum",
+        "CollapseDim" : "1",
+        "CollapseMode" : "All dimensions",
+        "DropShadow" : "off",
+        "FontAngle" : "normal",
+        "FontName" : "Helvetica",
+        "FontSize" : "10",
+        "FontWeight" : "normal",
+        "ForegroundColor" : "black",
+        "IconShape" : "round",
+        "InputSameDT" : "off",
+        "Inputs" : "++",
+        "LockScale" : "off",
+        "NamePlacement" : "normal",
+        "OutDataTypeStr" : "Inherit: Inherit via internal rule",
+        "OutMax" : "[]",
+        "OutMin" : "[]",
+        "Ports" : "[2, 1]",
+        "Position" : "[475, 285, 495, 305]",
+        "RndMeth" : "Floor",
+        "SID" : "95",
+        "SampleTime" : "1.0",
+        "SaturateOnIntegerOverflow" : "off",
+        "ShowName" : "off",
+        "ZOrder" : "-18",
+        "displayName" : "Sum1",
+        "mdlName" : "Sum1",
+        "type" : "sum",
+        "x" : 475,
+        "y" : 285,
+        "width" : 20,
+        "height" : 20,
+        "io" : [ {
+          "id" : "95:1",
+          "name" : "Unit_Delay1",
+          "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_" ],
+          "portPosition" : {
+            "xpos" : 0.5,
+            "ypos" : 0.0,
+            "xdir" : 6.123233995736766E-17,
+            "ydir" : -1.0,
+            "label" : "+"
+          },
+          "type" : "in"
+        }, {
+          "id" : "95:2",
+          "name" : "Product",
+          "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_" ],
+          "portPosition" : {
+            "xpos" : 0.4999999999999999,
+            "ypos" : 1.0,
+            "xdir" : -1.8369701987210297E-16,
+            "ydir" : 1.0,
+            "label" : "+"
+          },
+          "type" : "in"
+        }, {
+          "id" : "95:3",
+          "name" : "Sum1",
+          "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_" ],
+          "portPosition" : {
+            "xpos" : 1.0,
+            "ypos" : 0.5,
+            "xdir" : 1.0,
+            "ydir" : 0.0
+          },
+          "type" : "out"
+        } ],
+        "ast" : [ {
+          "operator" : "=",
+          "operands" : [ {
+            "dataType" : "REAL",
+            "name" : "Sum1",
+            "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_" ],
+            "timeStyle" : "relative",
+            "timeValue" : 0
+          }, {
+            "dataType" : "REAL",
+            "operator" : "+",
+            "operands" : [ {
+              "dataType" : "REAL",
+              "name" : "Unit_Delay1",
+              "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_" ],
+              "timeStyle" : "relative",
+              "timeValue" : 0
+            }, {
+              "dataType" : "REAL",
+              "name" : "Product",
+              "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_" ],
+              "timeStyle" : "relative",
+              "timeValue" : 0
+            } ]
+          } ]
+        } ],
+        "ports" : [ 2, 1 ]
+      }, {
+        "id" : "96",
+        "name" : "Switch",
+        "AllowDiffInputSizes" : "off",
+        "BackgroundColor" : "white",
+        "BlockMirror" : "off",
+        "BlockRotation" : "0",
+        "BlockType" : "Switch",
+        "Criteria" : "u2 ~= 0",
+        "DropShadow" : "off",
+        "FontAngle" : "normal",
+        "FontName" : "Helvetica",
+        "FontSize" : "10",
+        "FontWeight" : "normal",
+        "ForegroundColor" : "black",
+        "InputSameDT" : "off",
+        "LockScale" : "off",
+        "NamePlacement" : "normal",
+        "OutDataTypeStr" : "Inherit: Inherit via internal rule",
+        "OutMax" : "[]",
+        "OutMin" : "[]",
+        "Position" : "[650, 219, 695, 311]",
+        "RndMeth" : "Floor",
+        "SID" : "96",
+        "SampleTime" : "1.0",
+        "SaturateOnIntegerOverflow" : "off",
+        "ShowName" : "on",
+        "Threshold" : "0.5",
+        "ZOrder" : "-19",
+        "ZeroCross" : "on",
+        "displayName" : "Switch",
+        "mdlName" : "Switch",
+        "type" : "switch",
+        "x" : 650,
+        "y" : 219,
+        "width" : 45,
+        "height" : 92,
+        "io" : [ {
+          "id" : "96:1",
+          "name" : "ic",
+          "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_" ],
+          "portPosition" : {
+            "xpos" : 0.0,
+            "ypos" : 0.17391304347826075,
+            "xdir" : -1.0,
+            "ydir" : 0.0
+          },
+          "type" : "in"
+        }, {
+          "id" : "96:2",
+          "name" : "reset",
+          "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_" ],
+          "portPosition" : {
+            "xpos" : 0.0,
+            "ypos" : 0.5,
+            "xdir" : -1.0,
+            "ydir" : 0.0
+          },
+          "type" : "in"
+        }, {
+          "id" : "96:3",
+          "name" : "Sum1",
+          "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_" ],
+          "portPosition" : {
+            "xpos" : 0.0,
+            "ypos" : 0.8260869565217389,
+            "xdir" : -1.0,
+            "ydir" : 0.0
+          },
+          "type" : "in"
+        }, {
+          "id" : "96:4",
+          "name" : "Switch",
+          "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_" ],
+          "portPosition" : {
+            "xpos" : 1.0,
+            "ypos" : 0.5,
+            "xdir" : 1.0,
+            "ydir" : 0.0
+          },
+          "type" : "out"
+        } ],
+        "ast" : [ {
+          "operator" : "=",
+          "operands" : [ {
+            "dataType" : "REAL",
+            "name" : "Switch",
+            "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_" ],
+            "timeStyle" : "relative",
+            "timeValue" : 0
+          }, {
+            "dataType" : "REAL",
+            "operator" : "ite",
+            "operands" : [ {
+              "dataType" : "BOOLEAN",
+              "name" : "reset",
+              "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_" ],
+              "timeStyle" : "relative",
+              "timeValue" : 0
+            }, {
+              "dataType" : "REAL",
+              "name" : "ic",
+              "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_" ],
+              "timeStyle" : "relative",
+              "timeValue" : 0
+            }, {
+              "dataType" : "REAL",
+              "name" : "Sum1",
+              "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_" ],
+              "timeStyle" : "relative",
+              "timeValue" : 0
+            } ]
+          } ]
+        } ],
+        "ports" : [ 3, 1 ]
+      }, {
+        "id" : "99",
+        "name" : "yout",
+        "BackgroundColor" : "white",
+        "BlockMirror" : "off",
+        "BlockRotation" : "0",
+        "BlockType" : "Outport",
+        "BusOutputAsStruct" : "off",
+        "DropShadow" : "off",
+        "FontAngle" : "normal",
+        "FontName" : "Helvetica",
+        "FontSize" : "10",
+        "FontWeight" : "normal",
+        "ForegroundColor" : "black",
+        "IconDisplay" : "Port number",
+        "InitialOutput" : "[]",
+        "LockScale" : "off",
+        "NamePlacement" : "normal",
+        "OutDataTypeStr" : "Inherit: auto",
+        "OutMax" : "[]",
+        "OutMin" : "[]",
+        "OutputWhenDisabled" : "held",
+        "Port" : "1",
+        "PortDimensions" : "-1",
+        "Position" : "[905, 258, 935, 272]",
+        "SID" : "99",
+        "SampleTime" : "1.0",
+        "SamplingMode" : "auto",
+        "ShowName" : "on",
+        "SignalType" : "auto",
+        "SourceOfInitialOutputValue" : "Dialog",
+        "VarSizeSig" : "Inherit",
+        "ZOrder" : "-9",
+        "displayName" : "yout",
+        "mdlName" : "yout",
+        "type" : "output",
+        "x" : 905,
+        "y" : 258,
+        "width" : 30,
+        "height" : 14,
+        "io" : [ {
+          "id" : "99:1",
+          "name" : "yout",
+          "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_" ],
+          "portPosition" : {
+            "xpos" : 0.0,
+            "ypos" : 0.5,
+            "xdir" : -1.0,
+            "ydir" : 0.0
+          },
+          "type" : "in"
+        } ],
+        "ports" : [ 1, 0 ]
+      } ],
+      "connection" : [ {
+        "id" : "126:2,94:2",
+        "name" : "Unit_Delay",
+        "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_" ],
+        "sourceIOID" : "126:2",
+        "targetIOID" : "94:2",
+        "wirepath" : "[25, 0]"
+      }, {
+        "id" : "127:2,95:1",
+        "name" : "Unit_Delay1",
+        "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_" ],
+        "sourceIOID" : "127:2",
+        "targetIOID" : "95:1",
+        "wirepath" : "[-185, 0]"
+      }, {
+        "id" : "133:3,132:1",
+        "name" : "TLc",
+        "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_" ],
+        "sourceIOID" : "133:3",
+        "targetIOID" : "132:1",
+        "wirepath" : "[]"
+      }, {
+        "id" : "133:4,140:1",
+        "name" : "BLc",
+        "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_" ],
+        "sourceIOID" : "133:4",
+        "targetIOID" : "140:1",
+        "wirepath" : "[]"
+      }, {
+        "id" : "141:1,93:1",
+        "name" : "From",
+        "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_" ],
+        "sourceIOID" : "141:1",
+        "targetIOID" : "93:1",
+        "wirepath" : "[5, 0, 0, 50]"
+      }, {
+        "id" : "142:1,93:3",
+        "name" : "From1",
+        "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_" ],
+        "sourceIOID" : "142:1",
+        "targetIOID" : "93:3",
+        "wirepath" : "[5, 0, 0, -60]"
+      }, {
+        "id" : "85:1,126:1",
+        "name" : "xin",
+        "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_" ],
+        "sourceIOID" : "85:1",
+        "targetIOID" : "126:1",
+        "wirepath" : "[4, 0; 0, 35]"
+      }, {
+        "id" : "85:1,94:1",
+        "name" : "xin",
+        "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_" ],
+        "sourceIOID" : "85:1",
+        "targetIOID" : "94:1",
+        "wirepath" : "[4, 0]"
+      }, {
+        "id" : "86:1,92:2",
+        "name" : "T",
+        "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_" ],
+        "sourceIOID" : "86:1",
+        "targetIOID" : "92:2",
+        "wirepath" : "[]"
+      }, {
+        "id" : "87:1,133:1",
+        "name" : "TL",
+        "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_" ],
+        "sourceIOID" : "87:1",
+        "targetIOID" : "133:1",
+        "wirepath" : "[]"
+      }, {
+        "id" : "88:1,133:2",
+        "name" : "BL",
+        "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_" ],
+        "sourceIOID" : "88:1",
+        "targetIOID" : "133:2",
+        "wirepath" : "[]"
+      }, {
+        "id" : "89:1,96:2",
+        "name" : "reset",
+        "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_" ],
+        "sourceIOID" : "89:1",
+        "targetIOID" : "96:2",
+        "wirepath" : "[]"
+      }, {
+        "id" : "90:1,96:1",
+        "name" : "ic",
+        "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_" ],
+        "sourceIOID" : "90:1",
+        "targetIOID" : "96:1",
+        "wirepath" : "[]"
+      }, {
+        "id" : "91:2,92:1",
+        "name" : "Gain",
+        "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_" ],
+        "sourceIOID" : "91:2",
+        "targetIOID" : "92:1",
+        "wirepath" : "[]"
+      }, {
+        "id" : "92:3,95:2",
+        "name" : "Product",
+        "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_" ],
+        "sourceIOID" : "92:3",
+        "targetIOID" : "95:2",
+        "wirepath" : "[55, 0]"
+      }, {
+        "id" : "93:4,127:1",
+        "name" : "yout",
+        "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_" ],
+        "sourceIOID" : "93:4",
+        "targetIOID" : "127:1",
+        "wirepath" : "[14, 0; 0, -130]"
+      }, {
+        "id" : "93:4,99:1",
+        "name" : "yout",
+        "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_" ],
+        "sourceIOID" : "93:4",
+        "targetIOID" : "99:1",
+        "wirepath" : "[14, 0]"
+      }, {
+        "id" : "94:3,91:1",
+        "name" : "Sum",
+        "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_" ],
+        "sourceIOID" : "94:3",
+        "targetIOID" : "91:1",
+        "wirepath" : "[]"
+      }, {
+        "id" : "95:3,96:3",
+        "name" : "Sum1",
+        "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_" ],
+        "sourceIOID" : "95:3",
+        "targetIOID" : "96:3",
+        "wirepath" : "[]"
+      }, {
+        "id" : "96:4,93:2",
+        "name" : "Switch",
+        "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_" ],
+        "sourceIOID" : "96:4",
+        "targetIOID" : "93:2",
+        "wirepath" : "[]"
+      } ]
+    }
+  } ],
+  "connection" : [ {
+    "id" : "123:1,84:6",
+    "name" : "ic",
+    "sourceIOID" : "123:1",
+    "targetIOID" : "84:6",
+    "wirepath" : "[]"
+  }, {
+    "id" : "124:1,84:3",
+    "name" : "TL",
+    "sourceIOID" : "124:1",
+    "targetIOID" : "84:3",
+    "wirepath" : "[]"
+  }, {
+    "id" : "125:1,84:4",
+    "name" : "BL",
+    "sourceIOID" : "125:1",
+    "targetIOID" : "84:4",
+    "wirepath" : "[]"
+  }, {
+    "id" : "1:1,84:1",
+    "name" : "xin",
+    "sourceIOID" : "1:1",
+    "targetIOID" : "84:1",
+    "wirepath" : "[]"
+  }, {
+    "id" : "2:1,84:5",
+    "name" : "reset",
+    "sourceIOID" : "2:1",
+    "targetIOID" : "84:5",
+    "wirepath" : "[]"
+  }, {
+    "id" : "3:1,84:2",
+    "name" : "T",
+    "sourceIOID" : "3:1",
+    "targetIOID" : "84:2",
+    "wirepath" : "[]"
+  }, {
+    "id" : "84:7,80:1",
+    "name" : "yout",
+    "sourceIOID" : "84:7",
+    "targetIOID" : "80:1",
+    "wirepath" : "[]"
+  } ],
+  "variables" : [ {
+    "name" : "BL",
+    "elementType" : "float",
+    "dataType" : "REAL",
+    "namespace" : [ ],
+    "timeStyle" : "relative",
+    "timeValue" : 0,
+    "dimensions" : [ 1, 1 ]
+  }, {
+    "name" : "TL",
+    "elementType" : "float",
+    "dataType" : "REAL",
+    "namespace" : [ ],
+    "timeStyle" : "relative",
+    "timeValue" : 0,
+    "dimensions" : [ 1, 1 ]
+  }, {
+    "name" : "BLc",
+    "elementType" : "float",
+    "dataType" : "REAL",
+    "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_" ],
+    "signalName" : "BLc",
+    "timeStyle" : "relative",
+    "timeValue" : 0,
+    "dimensions" : [ 1, 1 ]
+  }, {
+    "name" : "BL",
+    "elementType" : "float",
+    "dataType" : "REAL",
+    "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_" ],
+    "timeStyle" : "relative",
+    "timeValue" : 0,
+    "dimensions" : [ 1, 1 ]
+  }, {
+    "name" : "From1",
+    "elementType" : "float",
+    "dataType" : "REAL",
+    "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_" ],
+    "signalName" : "BLc",
+    "timeStyle" : "relative",
+    "timeValue" : 0,
+    "dimensions" : [ 1, 1 ]
+  }, {
+    "name" : "From",
+    "elementType" : "float",
+    "dataType" : "REAL",
+    "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_" ],
+    "signalName" : "TLc",
+    "timeStyle" : "relative",
+    "timeValue" : 0,
+    "dimensions" : [ 1, 1 ]
+  }, {
+    "name" : "Gain",
+    "elementType" : "float",
+    "dataType" : "REAL",
+    "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_" ],
+    "signalName" : "cmd",
+    "timeStyle" : "relative",
+    "timeValue" : 0,
+    "dimensions" : [ 1, 1 ]
+  }, {
+    "name" : "Product",
+    "elementType" : "float",
+    "dataType" : "REAL",
+    "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_" ],
+    "signalName" : "cmd",
+    "timeStyle" : "relative",
+    "timeValue" : 0,
+    "dimensions" : [ 1, 1 ]
+  }, {
+    "name" : "Sum1",
+    "elementType" : "float",
+    "dataType" : "REAL",
+    "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_" ],
+    "signalName" : "TLc",
+    "timeStyle" : "relative",
+    "timeValue" : 0,
+    "dimensions" : [ 1, 1 ]
+  }, {
+    "name" : "Sum",
+    "elementType" : "float",
+    "dataType" : "REAL",
+    "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_" ],
+    "signalName" : "cmd",
+    "timeStyle" : "relative",
+    "timeValue" : 0,
+    "dimensions" : [ 1, 1 ]
+  }, {
+    "name" : "Switch",
+    "elementType" : "float",
+    "dataType" : "REAL",
+    "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_" ],
+    "signalName" : "TLc",
+    "timeStyle" : "relative",
+    "timeValue" : 0,
+    "dimensions" : [ 1, 1 ]
+  }, {
+    "name" : "TLc",
+    "elementType" : "float",
+    "dataType" : "REAL",
+    "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_" ],
+    "signalName" : "TLc",
+    "timeStyle" : "relative",
+    "timeValue" : 0,
+    "dimensions" : [ 1, 1 ]
+  }, {
+    "name" : "TL",
+    "elementType" : "float",
+    "dataType" : "REAL",
+    "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_" ],
+    "timeStyle" : "relative",
+    "timeValue" : 0,
+    "dimensions" : [ 1, 1 ]
+  }, {
+    "name" : "T",
+    "elementType" : "float",
+    "dataType" : "REAL",
+    "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_" ],
+    "timeStyle" : "relative",
+    "timeValue" : 0,
+    "dimensions" : [ 1, 1 ]
+  }, {
+    "name" : "Unit_Delay1",
+    "elementType" : "float",
+    "dataType" : "REAL",
+    "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_" ],
+    "signalName" : "TLc",
+    "timeStyle" : "relative",
+    "timeValue" : 0,
+    "dimensions" : [ 1, 1 ]
+  }, {
+    "name" : "Unit_Delay",
+    "elementType" : "float",
+    "dataType" : "REAL",
+    "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_" ],
+    "signalName" : "cmd",
+    "timeStyle" : "relative",
+    "timeValue" : 0,
+    "dimensions" : [ 1, 1 ]
+  }, {
+    "name" : "__gototag__BL",
+    "elementType" : "float",
+    "dataType" : "REAL",
+    "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_" ],
+    "signalName" : "BLc",
+    "timeStyle" : "relative",
+    "timeValue" : 0,
+    "dimensions" : [ 1, 1 ]
+  }, {
+    "name" : "__gototag__TL",
+    "elementType" : "float",
+    "dataType" : "REAL",
+    "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_" ],
+    "signalName" : "TLc",
+    "timeStyle" : "relative",
+    "timeValue" : 0,
+    "dimensions" : [ 1, 1 ]
+  }, {
+    "name" : "BLc",
+    "elementType" : "float",
+    "dataType" : "REAL",
+    "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_", "bounds" ],
+    "timeStyle" : "relative",
+    "timeValue" : 0,
+    "dimensions" : [ 1, 1 ]
+  }, {
+    "name" : "BL",
+    "elementType" : "float",
+    "dataType" : "REAL",
+    "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_", "bounds" ],
+    "timeStyle" : "relative",
+    "timeValue" : 0,
+    "dimensions" : [ 1, 1 ]
+  }, {
+    "name" : "Relational_Operator",
+    "elementType" : "boole",
+    "dataType" : "BOOLEAN",
+    "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_", "bounds" ],
+    "timeStyle" : "relative",
+    "timeValue" : 0,
+    "dimensions" : [ 1, 1 ]
+  }, {
+    "name" : "TLc",
+    "elementType" : "float",
+    "dataType" : "REAL",
+    "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_", "bounds" ],
+    "timeStyle" : "relative",
+    "timeValue" : 0,
+    "dimensions" : [ 1, 1 ]
+  }, {
+    "name" : "TL",
+    "elementType" : "float",
+    "dataType" : "REAL",
+    "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_", "bounds" ],
+    "timeStyle" : "relative",
+    "timeValue" : 0,
+    "dimensions" : [ 1, 1 ]
+  }, {
+    "name" : "ic",
+    "elementType" : "float",
+    "dataType" : "REAL",
+    "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_" ],
+    "timeStyle" : "relative",
+    "timeValue" : 0,
+    "dimensions" : [ 1, 1 ]
+  }, {
+    "name" : "reset",
+    "elementType" : "boole",
+    "dataType" : "BOOLEAN",
+    "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_" ],
+    "timeStyle" : "relative",
+    "timeValue" : 0,
+    "dimensions" : [ 1, 1 ]
+  }, {
+    "name" : "xin",
+    "elementType" : "float",
+    "dataType" : "REAL",
+    "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_" ],
+    "signalName" : "cmd",
+    "timeStyle" : "relative",
+    "timeValue" : 0,
+    "dimensions" : [ 1, 1 ]
+  }, {
+    "name" : "yout",
+    "elementType" : "float",
+    "dataType" : "REAL",
+    "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_" ],
+    "signalName" : "TLc",
+    "timeStyle" : "relative",
+    "timeValue" : 0,
+    "dimensions" : [ 1, 1 ]
+  }, {
+    "name" : "T",
+    "elementType" : "float",
+    "dataType" : "REAL",
+    "namespace" : [ ],
+    "timeStyle" : "relative",
+    "timeValue" : 0,
+    "dimensions" : [ 1, 1 ]
+  }, {
+    "name" : "pi",
+    "value" : "3.1415926536",
+    "elementType" : "float",
+    "dataType" : "REAL",
+    "namespace" : [ "__workspace__" ],
+    "timeStyle" : "relative",
+    "timeValue" : 0,
+    "dimensions" : [ 1, 1 ]
+  }, {
+    "name" : "ic",
+    "elementType" : "float",
+    "dataType" : "REAL",
+    "namespace" : [ ],
+    "timeStyle" : "relative",
+    "timeValue" : 0,
+    "dimensions" : [ 1, 1 ]
+  }, {
+    "name" : "reset",
+    "elementType" : "boole",
+    "dataType" : "BOOLEAN",
+    "namespace" : [ ],
+    "timeStyle" : "relative",
+    "timeValue" : 0,
+    "dimensions" : [ 1, 1 ]
+  }, {
+    "name" : "xin",
+    "elementType" : "float",
+    "dataType" : "REAL",
+    "namespace" : [ ],
+    "signalName" : "cmd",
+    "timeStyle" : "relative",
+    "timeValue" : 0,
+    "dimensions" : [ 1, 1 ]
+  }, {
+    "name" : "yout",
+    "elementType" : "float",
+    "dataType" : "REAL",
+    "namespace" : [ ],
+    "signalName" : "yout",
+    "timeStyle" : "relative",
+    "timeValue" : 0,
+    "dimensions" : [ 1, 1 ]
+  } ]
+}

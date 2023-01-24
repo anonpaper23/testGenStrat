@@ -1,0 +1,9 @@
+#11.    The sensor shall change states from NOMINAL to TRANSITION when the autopilot is not requesting support (not request).
+
+# VIOLATION: limits override. This violation can be suppressed:
+#
+#   (not limits and FiniteStateMachine.SENSTATE{t-1}==0 and 
+#   not FiniteStateMachine.REQUEST{t}) impl 
+#   (FiniteStateMachine.SENSTATE{t}==1);
+
+(FiniteStateMachine.SENSTATE{t-1}==0 and not FiniteStateMachine.REQUEST{t}) impl (FiniteStateMachine.SENSTATE{t}==1);

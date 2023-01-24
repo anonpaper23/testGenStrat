@@ -1,0 +1,7 @@
+# Actual: The Inner Loop Airspeed Regulator Shall not command transient
+# changes in angular roll acceleration greater than 32 ft/sec2/sec.
+
+# Rephrased (by QRA): The Airspeed Output Command shall change by at most .32
+# ft/sec2 per time frame.
+
+xcvdt_cmd_fcs_fps2{t} - xcvdt_cmd_fcs_fps2{t-1} <= .32;

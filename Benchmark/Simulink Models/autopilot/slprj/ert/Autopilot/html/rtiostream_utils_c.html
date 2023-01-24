@@ -1,0 +1,126 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>RTW Report - rtiostream_utils.c</title>
+<style> .LN { font-style: italic; color: #888888 } </style>
+<style> .CT { font-style: italic; color: #117755 } </style>
+<style> .PP { font-style: bold;   color: #992211 } </style>
+<style> .KW { font-style: bold;   color: #112266 } </style>
+<style> .DT { font-style: bold;   color: #112266 } </style>
+<link rel="stylesheet" type="text/css" href="rtwreport.css"></link><script language="JavaScript" type="text/javascript" src="rtwreport_utils.js"></script>
+<SCRIPT type="text/javascript" src="rtwannotate.js"></SCRIPT>
+</head>
+<body bgcolor="#eeeeee" text="#1122aa" onload="try {if (top) { if (top.rtwFileOnLoad) top.rtwFileOnLoad(window.document); else local_onload();}} catch(err) {};if (typeof rtwannotate === 'function') {rtwannotate('rtiostream_utils_c_cov.xml');}">
+<p>
+<table border="0" cellspacing="0" cellpadding="6" width="100%%" height="100%%"><tr><td width="100%%" valign="top" bgcolor="#ffffff">
+<h4>File: <a href="../../../../../../../../../Program Files/MATLAB/R2013b/toolbox/coder/rtiostream/src/utils/rtiostream_utils.c" target="rtwreport_document_frame" id="linkToText_plain">rtiostream_utils.c</a></h4>
+<pre id="RTWcode">
+<span><a class="LN" name="1">    1   </a><span class="CT">/* Copyright 2012-2013 The MathWorks, Inc. */</span>
+</span><span><a class="LN" name="2">    2   </a>
+</span><span><a class="LN" name="3">    3   </a><font color="#992211">#</font><span class="PP">include</span> <font color="#992211">&quot;rtiostream_utils.h&quot;</font>
+</span><span><a class="LN" name="4">    4   </a>
+</span><span><a class="LN" name="5">    5   </a><span class="CT">/* include rtIOStream interface to use */</span>
+</span><span><a class="LN" name="6">    6   </a><font color="#992211">#</font><span class="PP">include</span> <font color="#992211">&quot;rtiostream.h&quot;</font> 
+</span><span><a class="LN" name="7">    7   </a>
+</span><span><a class="LN" name="8">    8   </a><span class="CT">/* TARGET_CONNECTIVITY_TESTING might be defined by some MathWorks tests for</span>
+</span><span><a class="LN" name="9">    9   </a><span class="CT"> * testing purposes only. In this case, we force SIZE_MAX to be 4 so we </span>
+</span><span><a class="LN" name="10">   10   </a><span class="CT"> * could test the pointer arithmetic in rtIOStreamBlockingSend and</span>
+</span><span><a class="LN" name="11">   11   </a><span class="CT"> * rtIOStreamBlockingRecv.</span>
+</span><span><a class="LN" name="12">   12   </a><span class="CT"> */</span> 
+</span><span><a class="LN" name="13">   13   </a><font color="#992211">#</font><span class="PP">ifdef</span> TARGET_CONNECTIVITY_TESTING
+</span><span><a class="LN" name="14">   14   </a>    #define SIZE_MAX 4
+</span><span><a class="LN" name="15">   15   </a><font color="#992211">#</font><span class="PP">else</span>
+</span><span><a class="LN" name="16">   16   </a>    <span class="CT">/* define SIZE_MAX if not already defined (e.g. by a C99 compiler) */</span>
+</span><span><a class="LN" name="17">   17   </a>    #ifndef SIZE_MAX
+</span><span><a class="LN" name="18">   18   </a>        #define SIZE_MAX ((size_t)-1)
+</span><span><a class="LN" name="19">   19   </a>    #endif
+</span><span><a class="LN" name="20">   20   </a><font color="#992211">#</font><span class="PP">endif</span>
+</span><span><a class="LN" name="21">   21   </a>
+</span><span><a class="LN" name="22">   22   </a><font color="#992211">#</font><span class="PP">ifndef</span> MemUnit_T
+</span><span><a class="LN" name="23">   23   </a>   <span class="CT">/* External Mode */</span>
+</span><span><a class="LN" name="24">   24   </a>   <span class="KW">typedef</span> <span class="DT">unsigned</span> <span class="DT">char</span> <a href="xil_rtio_data_stream_c.html#type_IOUnit_T" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_IOUnit_T');" target="rtwreport_document_frame"><font color="#1122aa">IOUnit_T</font></a>; 
+</span><span><a class="LN" name="25">   25   </a><font color="#992211">#</font><span class="PP">else</span>
+</span><span><a class="LN" name="26">   26   </a>   <span class="CT">/* SIL/PIL */</span>
+</span><span><a class="LN" name="27">   27   </a>   #ifdef HOST_WORD_ADDRESSABLE_TESTING
+</span><span><a class="LN" name="28">   28   </a>      <span class="CT">/* rtIOStream will handle data in single byte chunks </span>
+</span><span><a class="LN" name="29">   29   </a><span class="CT">       *</span>
+</span><span><a class="LN" name="30">   30   </a><span class="CT">       * uint8_T can be &gt; 8-bits for certain portable word sizes </span>
+</span><span><a class="LN" name="31">   31   </a><span class="CT">       * cases (e.g. C2000) so use native type instead */</span>
+</span><span><a class="LN" name="32">   32   </a>      <span class="KW">typedef</span> <span class="DT">unsigned</span> <span class="DT">char</span> <a href="xil_rtio_data_stream_c.html#type_IOUnit_T" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_IOUnit_T');" target="rtwreport_document_frame"><font color="#1122aa">IOUnit_T</font></a>;
+</span><span><a class="LN" name="33">   33   </a>   #<span class="KW">else</span>
+</span><span><a class="LN" name="34">   34   </a>      <span class="CT">/* rtIOStream will handle data in MemUnit_T size chunks */</span>
+</span><span><a class="LN" name="35">   35   </a>      <span class="KW">typedef</span> MemUnit_T <a href="xil_rtio_data_stream_c.html#type_IOUnit_T" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_IOUnit_T');" target="rtwreport_document_frame"><font color="#1122aa">IOUnit_T</font></a>;
+</span><span><a class="LN" name="36">   36   </a>   #endif
+</span><span><a class="LN" name="37">   37   </a><font color="#992211">#</font><span class="PP">endif</span>
+</span><span><a class="LN" name="38">   38   </a>
+</span><span><a class="LN" name="39">   39   </a><span class="CT">/* Blocks until all requested outgoing data is sent */</span>
+</span><span><a class="LN" name="40">   40   </a><span class="DT">int</span> <a name="fcn_rtIOStreamBlockingSend">rtIOStreamBlockingSend</a>(<span class="DT">const</span> <span class="DT">int</span> streamID, 
+</span><span><a class="LN" name="41">   41   </a>                           <span class="DT">const</span> <span class="DT">void</span> * <span class="DT">const</span> src, 
+</span><span><a class="LN" name="42">   42   </a>                           <a href="../../_sharedutils/html/rtwtypes_h.html#type_uint32_T" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_uint32_T');" target="rtwreport_document_frame"><font color="#1122aa">uint32_T</font></a> size) <b>{</b>
+</span><span><a class="LN" name="43">   43   </a>
+</span><span><a class="LN" name="44">   44   </a>    size_t transferAmount;
+</span><span><a class="LN" name="45">   45   </a>    size_t sizeSent;
+</span><span><a class="LN" name="46">   46   </a>    <span class="DT">int</span> errorCode      = RTIOSTREAM_NO_ERROR;   
+</span><span><a class="LN" name="47">   47   </a>    <span class="DT">const</span> <a href="xil_rtio_data_stream_c.html#type_IOUnit_T" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_IOUnit_T');" target="rtwreport_document_frame"><font color="#1122aa">IOUnit_T</font></a> * srcPtr = (<span class="DT">const</span> <a href="xil_rtio_data_stream_c.html#type_IOUnit_T" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_IOUnit_T');" target="rtwreport_document_frame"><font color="#1122aa">IOUnit_T</font></a> *) src;
+</span><span><a class="LN" name="48">   48   </a>    
+</span><span><a class="LN" name="49">   49   </a>    <span class="CT">/* use a variable to avoid SIZE_MAX being treated as a constant</span>
+</span><span><a class="LN" name="50">   50   </a><span class="CT">     * which leads to compiler warnings for "MIN" on platforms where</span>
+</span><span><a class="LN" name="51">   51   </a><span class="CT">     * SIZE_MAX &gt; UINT32_MAX */</span>
+</span><span><a class="LN" name="52">   52   </a>    size_t sizeMax = SIZE_MAX;
+</span><span><a class="LN" name="53">   53   </a>    <span class="KW">while</span> (size &gt; 0) <b>{</b>
+</span><span><a class="LN" name="54">   54   </a>        <span class="CT">/* support full uint32 size */</span>
+</span><span><a class="LN" name="55">   55   </a>        transferAmount = (size_t) MIN(sizeMax, size);        
+</span><span><a class="LN" name="56">   56   </a>        errorCode = <a href="rtiostream_tcpip_c.html#fcn_rtIOStreamSend" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_rtIOStreamSend');" target="rtwreport_document_frame"><font color="#1122aa">rtIOStreamSend</font></a>(streamID,
+</span><span><a class="LN" name="57">   57   </a>                                   (<span class="DT">const</span> <span class="DT">void</span> *) srcPtr,
+</span><span><a class="LN" name="58">   58   </a>                                   transferAmount,
+</span><span><a class="LN" name="59">   59   </a>                                   &amp;sizeSent);
+</span><span><a class="LN" name="60">   60   </a>        <span class="KW">if</span> (errorCode == RTIOSTREAM_ERROR) <b>{</b>
+</span><span><a class="LN" name="61">   61   </a>            <span class="KW">return</span> errorCode;
+</span><span><a class="LN" name="62">   62   </a>        <b>}</b>
+</span><span><a class="LN" name="63">   63   </a>        <span class="KW">else</span> <b>{</b>            
+</span><span><a class="LN" name="64">   64   </a>            size -= (<a href="../../_sharedutils/html/rtwtypes_h.html#type_uint32_T" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_uint32_T');" target="rtwreport_document_frame"><font color="#1122aa">uint32_T</font></a>) sizeSent;
+</span><span><a class="LN" name="65">   65   </a>            srcPtr += sizeSent;
+</span><span><a class="LN" name="66">   66   </a>        <b>}</b>
+</span><span><a class="LN" name="67">   67   </a>    <b>}</b>
+</span><span><a class="LN" name="68">   68   </a>    <span class="KW">return</span> errorCode;
+</span><span><a class="LN" name="69">   69   </a><b>}</b>
+</span><span><a class="LN" name="70">   70   </a>
+</span><span><a class="LN" name="71">   71   </a><span class="CT">/* Blocks until all requested incoming data is received */</span>
+</span><span><a class="LN" name="72">   72   </a><span class="DT">int</span> <a name="fcn_rtIOStreamBlockingRecv">rtIOStreamBlockingRecv</a>(<span class="DT">const</span> <span class="DT">int</span> streamID,
+</span><span><a class="LN" name="73">   73   </a>                           <span class="DT">void</span> * <span class="DT">const</span> dst,
+</span><span><a class="LN" name="74">   74   </a>                           <a href="../../_sharedutils/html/rtwtypes_h.html#type_uint32_T" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_uint32_T');" target="rtwreport_document_frame"><font color="#1122aa">uint32_T</font></a> size) <b>{</b>
+</span><span><a class="LN" name="75">   75   </a>
+</span><span><a class="LN" name="76">   76   </a>   size_t transferAmount;
+</span><span><a class="LN" name="77">   77   </a>   size_t sizeRecvd;
+</span><span><a class="LN" name="78">   78   </a>   <span class="DT">int</span> errorCode      = RTIOSTREAM_NO_ERROR;
+</span><span><a class="LN" name="79">   79   </a>   <a href="xil_rtio_data_stream_c.html#type_IOUnit_T" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_IOUnit_T');" target="rtwreport_document_frame"><font color="#1122aa">IOUnit_T</font></a> * dstPtr = (<a href="xil_rtio_data_stream_c.html#type_IOUnit_T" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_IOUnit_T');" target="rtwreport_document_frame"><font color="#1122aa">IOUnit_T</font></a> *) dst;
+</span><span><a class="LN" name="80">   80   </a>   
+</span><span><a class="LN" name="81">   81   </a>   <span class="CT">/* use a variable to avoid SIZE_MAX being treated as a constant</span>
+</span><span><a class="LN" name="82">   82   </a><span class="CT">    * which leads to compiler warnings for "MIN" on platforms where </span>
+</span><span><a class="LN" name="83">   83   </a><span class="CT">    * SIZE_MAX &gt; UINT32_MAX */</span>
+</span><span><a class="LN" name="84">   84   </a>   size_t sizeMax = SIZE_MAX;
+</span><span><a class="LN" name="85">   85   </a>   <span class="KW">while</span> (size &gt; 0) <b>{</b>
+</span><span><a class="LN" name="86">   86   </a>      <span class="CT">/* support full uint32 size */</span>
+</span><span><a class="LN" name="87">   87   </a>      transferAmount = (size_t) MIN(sizeMax, size);      
+</span><span><a class="LN" name="88">   88   </a>      errorCode = <a href="rtiostream_tcpip_c.html#fcn_rtIOStreamRecv" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_rtIOStreamRecv');" target="rtwreport_document_frame"><font color="#1122aa">rtIOStreamRecv</font></a>(streamID, 
+</span><span><a class="LN" name="89">   89   </a>                                 (<span class="DT">void</span> *) dstPtr, 
+</span><span><a class="LN" name="90">   90   </a>                                 transferAmount, 
+</span><span><a class="LN" name="91">   91   </a>                                 &amp;sizeRecvd);
+</span><span><a class="LN" name="92">   92   </a>      <span class="KW">if</span> (errorCode == RTIOSTREAM_ERROR) <b>{</b>
+</span><span><a class="LN" name="93">   93   </a>            <span class="KW">return</span> errorCode;
+</span><span><a class="LN" name="94">   94   </a>      <b>}</b>
+</span><span><a class="LN" name="95">   95   </a>      <span class="KW">else</span> <b>{</b>          
+</span><span><a class="LN" name="96">   96   </a>         size -= (<a href="../../_sharedutils/html/rtwtypes_h.html#type_uint32_T" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_uint32_T');" target="rtwreport_document_frame"><font color="#1122aa">uint32_T</font></a>) sizeRecvd;
+</span><span><a class="LN" name="97">   97   </a>         dstPtr += sizeRecvd;
+</span><span><a class="LN" name="98">   98   </a>      <b>}</b>
+</span><span><a class="LN" name="99">   99   </a>   <b>}</b>
+</span><span><a class="LN" name="100">  100   </a>   <span class="KW">return</span> errorCode;
+</span><span><a class="LN" name="101">  101   </a><b>}</b>
+</span><span><a class="LN" name="102">  102   </a>
+</span><span><a class="LN" name="103">  103   </a>
+</span><span><a class="LN" name="104">  104   </a>
+</span></pre>
+</td></tr></table>
+</p>
+</body>
+</html>

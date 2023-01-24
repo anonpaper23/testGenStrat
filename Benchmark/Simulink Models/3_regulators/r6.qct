@@ -1,0 +1,7 @@
+# Actual: The Inner Loop Roll Regulator Shall not command transient
+# changes in angular roll acceleration greater than 50 deg/sec2/sec.
+
+# Rephrased (by QRA): The Roll Output Command shall change by at most .5
+# deg/sec2 per time frame.
+
+lcvdt_cmd_fcs_dps2{t} - lcvdt_cmd_fcs_dps2{t-1} <= .50;

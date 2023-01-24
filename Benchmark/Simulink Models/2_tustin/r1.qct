@@ -1,0 +1,12 @@
+# 1. When Reset is True and the Initial Condition (ic) is
+# bounded by the provided Top and Bottom Limits (BL<=ic<=TL),
+# the Output (yout) shall equal the Initial Condition (ic).
+# If the Initial Condition is not bound by the Limits 
+# during a Reset, the Output shall equal the saturation 
+# point (nominally with TL>=BL, ic>=TL impl SP==TL and ic<=BL impl SP==BL.  
+# Off-nominally with TL<BL, ic, ic>=BL impl SP==BL and ic<=TL impl SP==TL.
+((reset and ic<=TL and ic>=BL) impl yout == ic); #1a 
+((reset and ic>=TL and TL>=BL) impl yout == TL); #1b 
+((reset and ic<=BL and TL>=BL) impl yout == BL); #1c
+((reset and ic>=BL and TL<BL) impl yout == BL); #1d
+((reset and ic<=TL and TL<BL) impl yout == TL); #1e

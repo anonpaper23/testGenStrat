@@ -1,0 +1,13 @@
+#4. The autopilot shall change states from NOMINAL to MANEUVER when the sensor data is not good.
+
+# UPDATED: i
+# 1) Replacing {all} with specific timesteps. Requirement is not explicit
+#    about which timesteps to use. These are based on the model.
+# 2) The variable standby is not referenced in the requirement, and has been left out of the QCT.
+
+# VIOLATION: standby override. This violation can be suppressed:
+#
+#   (not standby{t} and FiniteStateMachine.STATE{t-1} == 1 and 
+#   not FiniteStateMachine.good{t-1}) impl 
+#   (FiniteStateMachine.STATE{t}==2);
+(FiniteStateMachine.STATE{t-1} == 1 and not FiniteStateMachine.good{t-1}) impl (FiniteStateMachine.STATE{t}==2);

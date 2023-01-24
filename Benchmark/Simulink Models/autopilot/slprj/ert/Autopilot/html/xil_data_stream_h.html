@@ -1,0 +1,50 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>RTW Report - xil_data_stream.h</title>
+<style> .LN { font-style: italic; color: #888888 } </style>
+<style> .CT { font-style: italic; color: #117755 } </style>
+<style> .PP { font-style: bold;   color: #992211 } </style>
+<style> .KW { font-style: bold;   color: #112266 } </style>
+<style> .DT { font-style: bold;   color: #112266 } </style>
+<link rel="stylesheet" type="text/css" href="rtwreport.css"></link><script language="JavaScript" type="text/javascript" src="rtwreport_utils.js"></script>
+<SCRIPT type="text/javascript" src="rtwannotate.js"></SCRIPT>
+</head>
+<body bgcolor="#eeeeee" text="#1122aa" onload="try {if (top) { if (top.rtwFileOnLoad) top.rtwFileOnLoad(window.document); else local_onload();}} catch(err) {};if (typeof rtwannotate === 'function') {rtwannotate('xil_data_stream_h_cov.xml');}">
+<p>
+<table border="0" cellspacing="0" cellpadding="6" width="100%%" height="100%%"><tr><td width="100%%" valign="top" bgcolor="#ffffff">
+<h4>File: <a href="../../../../../../../../../Program Files/MATLAB/R2013b/toolbox/rtw/targets/pil/c/xil_data_stream.h" target="rtwreport_document_frame" id="linkToText_plain">xil_data_stream.h</a></h4>
+<pre id="RTWcode">
+<span><a class="LN" name="1">    1   </a><span class="CT">/* Copyright 2007-2011 The MathWorks, Inc. */</span>
+</span><span><a class="LN" name="2">    2   </a>
+</span><span><a class="LN" name="3">    3   </a><span class="CT">/* </span>
+</span><span><a class="LN" name="4">    4   </a><span class="CT"> * File: xil_data_stream.h</span>
+</span><span><a class="LN" name="5">    5   </a><span class="CT"> *</span>
+</span><span><a class="LN" name="6">    6   </a><span class="CT"> * SIL/PIL data stream</span>
+</span><span><a class="LN" name="7">    7   </a><span class="CT"> */</span>
+</span><span><a class="LN" name="8">    8   </a>
+</span><span><a class="LN" name="9">    9   </a><font color="#992211">#</font><span class="PP">ifndef</span> __XIL_DATA_STREAM_H__
+</span><span><a class="LN" name="10">   10   </a><font color="#992211">#</font><span class="PP">define</span> __XIL_DATA_STREAM_H__
+</span><span><a class="LN" name="11">   11   </a>
+</span><span><a class="LN" name="12">   12   </a><font color="#992211">#</font><span class="PP">include</span> <font color="#992211">&quot;xil_common.h&quot;</font>
+</span><span><a class="LN" name="13">   13   </a>
+</span><span><a class="LN" name="14">   14   </a><span class="CT">/* define some error codes */</span>
+</span><span><a class="LN" name="15">   15   </a><span class="KW">typedef</span> <span class="KW">enum</span> <b>{</b>XIL_DATA_STREAM_SUCCESS=0,              
+</span><span><a class="LN" name="16">   16   </a>              XIL_READ_DATA_ERROR, 
+</span><span><a class="LN" name="17">   17   </a>              XIL_WRITE_DATA_ERROR, 
+</span><span><a class="LN" name="18">   18   </a>              XIL_DATA_FLUSH_ERROR<b>}</b> <a name="type_XIL_DATA_STREAM_ERROR_CODE">XIL_DATA_STREAM_ERROR_CODE</a>;
+</span><span><a class="LN" name="19">   19   </a>
+</span><span><a class="LN" name="20">   20   </a><span class="CT">/* copy specified amount of data from the input stream to the address specified */</span>
+</span><span><a class="LN" name="21">   21   </a><a href="#type_XIL_DATA_STREAM_ERROR_CODE" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_XIL_DATA_STREAM_ERROR_CODE');" target="rtwreport_document_frame"><font color="#1122aa">XIL_DATA_STREAM_ERROR_CODE</font></a> <a href="xil_rtio_data_stream_c.html#fcn_xilReadData" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_xilReadData');" target="rtwreport_document_frame"><font color="#1122aa">xilReadData</font></a>(MemUnit_T *, <a href="../../_sharedutils/html/rtwtypes_h.html#type_uint32_T" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_uint32_T');" target="rtwreport_document_frame"><font color="#1122aa">uint32_T</font></a>); 
+</span><span><a class="LN" name="22">   22   </a><span class="CT">/* copy specified amount of data from the address specified to the output stream */</span>
+</span><span><a class="LN" name="23">   23   </a><a href="#type_XIL_DATA_STREAM_ERROR_CODE" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_XIL_DATA_STREAM_ERROR_CODE');" target="rtwreport_document_frame"><font color="#1122aa">XIL_DATA_STREAM_ERROR_CODE</font></a> <a href="xil_rtio_data_stream_c.html#fcn_xilWriteData" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_xilWriteData');" target="rtwreport_document_frame"><font color="#1122aa">xilWriteData</font></a>(<span class="DT">const</span> MemUnit_T *, <a href="../../_sharedutils/html/rtwtypes_h.html#type_uint32_T" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_uint32_T');" target="rtwreport_document_frame"><font color="#1122aa">uint32_T</font></a>);
+</span><span><a class="LN" name="24">   24   </a><span class="CT">/* flush any buffered writes */</span>
+</span><span><a class="LN" name="25">   25   </a><a href="#type_XIL_DATA_STREAM_ERROR_CODE" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_XIL_DATA_STREAM_ERROR_CODE');" target="rtwreport_document_frame"><font color="#1122aa">XIL_DATA_STREAM_ERROR_CODE</font></a> <a href="xil_rtio_data_stream_c.html#fcn_xilDataFlush" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_xilDataFlush');" target="rtwreport_document_frame"><font color="#1122aa">xilDataFlush</font></a>(<span class="DT">void</span>);
+</span><span><a class="LN" name="26">   26   </a>
+</span><span><a class="LN" name="27">   27   </a><font color="#992211">#</font><span class="PP">endif</span>
+</span><span><a class="LN" name="28">   28   </a>
+</span></pre>
+</td></tr></table>
+</p>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>RTW Report - rtiostream_utils.h</title>
+<style> .LN { font-style: italic; color: #888888 } </style>
+<style> .CT { font-style: italic; color: #117755 } </style>
+<style> .PP { font-style: bold;   color: #992211 } </style>
+<style> .KW { font-style: bold;   color: #112266 } </style>
+<style> .DT { font-style: bold;   color: #112266 } </style>
+<link rel="stylesheet" type="text/css" href="rtwreport.css"></link><script language="JavaScript" type="text/javascript" src="rtwreport_utils.js"></script>
+<SCRIPT type="text/javascript" src="rtwannotate.js"></SCRIPT>
+</head>
+<body bgcolor="#eeeeee" text="#1122aa" onload="try {if (top) { if (top.rtwFileOnLoad) top.rtwFileOnLoad(window.document); else local_onload();}} catch(err) {};if (typeof rtwannotate === 'function') {rtwannotate('rtiostream_utils_h_cov.xml');}">
+<p>
+<table border="0" cellspacing="0" cellpadding="6" width="100%%" height="100%%"><tr><td width="100%%" valign="top" bgcolor="#ffffff">
+<h4>File: <a href="../../../../../../../../../Program Files/MATLAB/R2013b/toolbox/coder/rtiostream/src/utils/rtiostream_utils.h" target="rtwreport_document_frame" id="linkToText_plain">rtiostream_utils.h</a></h4>
+<pre id="RTWcode">
+<span><a class="LN" name="1">    1   </a><span class="CT">/* Copyright 2012 The MathWorks, Inc. */</span>
+</span><span><a class="LN" name="2">    2   </a>
+</span><span><a class="LN" name="3">    3   </a><font color="#992211">#</font><span class="PP">ifndef</span> _RTIOSTREAM_UTILS_H_
+</span><span><a class="LN" name="4">    4   </a><font color="#992211">#</font><span class="PP">define</span> _RTIOSTREAM_UTILS_H_
+</span><span><a class="LN" name="5">    5   </a>
+</span><span><a class="LN" name="6">    6   </a>
+</span><span><a class="LN" name="7">    7   </a><font color="#992211">#</font><span class="PP">ifdef</span> __cplusplus
+</span><span><a class="LN" name="8">    8   </a><span class="DT">extern</span> <font color="#1122ff">&quot;C&quot;</font> <b>{</b>
+</span><span><a class="LN" name="9">    9   </a><font color="#992211">#</font><span class="PP">endif</span>
+</span><span><a class="LN" name="10">   10   </a>    
+</span><span><a class="LN" name="11">   11   </a><span class="CT">/* Target-side rtIOStream utility APIs */</span>
+</span><span><a class="LN" name="12">   12   </a>
+</span><span><a class="LN" name="13">   13   </a><font color="#992211">#</font><span class="PP">include</span> <font color="#992211">&quot;rtwtypes.h&quot;</font> <span class="CT">/* include definition of uint32_T */</span>
+</span><span><a class="LN" name="14">   14   </a><font color="#992211">#</font><span class="PP">include</span> <font color="#992211">&lt;stddef.h&gt;</font>   <span class="CT">/* include definition of size_t */</span>
+</span><span><a class="LN" name="15">   15   </a>
+</span><span><a class="LN" name="16">   16   </a><span class="CT">/* MIN utility */</span>
+</span><span><a class="LN" name="17">   17   </a><font color="#992211">#</font><span class="PP">ifndef</span> MIN
+</span><span><a class="LN" name="18">   18   </a><font color="#992211">#</font><span class="PP">define</span> MIN(a,b) ((a) &lt; (b) ? (a) : (b))
+</span><span><a class="LN" name="19">   19   </a><font color="#992211">#</font><span class="PP">endif</span>
+</span><span><a class="LN" name="20">   20   </a>          
+</span><span><a class="LN" name="21">   21   </a><span class="CT">/* Blocks until all requested outgoing data is sent. */</span>
+</span><span><a class="LN" name="22">   22   </a><span class="DT">extern</span> <span class="DT">int</span> <a href="rtiostream_utils_c.html#fcn_rtIOStreamBlockingSend" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_rtIOStreamBlockingSend');" target="rtwreport_document_frame"><font color="#1122aa">rtIOStreamBlockingSend</font></a>(<span class="DT">const</span> <span class="DT">int</span> streamID,
+</span><span><a class="LN" name="23">   23   </a>                                  <span class="DT">const</span> <span class="DT">void</span> * <span class="DT">const</span> src,
+</span><span><a class="LN" name="24">   24   </a>                                  <a href="../../_sharedutils/html/rtwtypes_h.html#type_uint32_T" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_uint32_T');" target="rtwreport_document_frame"><font color="#1122aa">uint32_T</font></a> size);
+</span><span><a class="LN" name="25">   25   </a>
+</span><span><a class="LN" name="26">   26   </a><span class="CT">/* Blocks until all requested incoming data is received. */</span>
+</span><span><a class="LN" name="27">   27   </a><span class="DT">extern</span> <span class="DT">int</span> <a href="rtiostream_utils_c.html#fcn_rtIOStreamBlockingRecv" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_rtIOStreamBlockingRecv');" target="rtwreport_document_frame"><font color="#1122aa">rtIOStreamBlockingRecv</font></a>(<span class="DT">const</span> <span class="DT">int</span> streamID,
+</span><span><a class="LN" name="28">   28   </a>                                  <span class="DT">void</span> * <span class="DT">const</span> dst,
+</span><span><a class="LN" name="29">   29   </a>                                  <a href="../../_sharedutils/html/rtwtypes_h.html#type_uint32_T" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_uint32_T');" target="rtwreport_document_frame"><font color="#1122aa">uint32_T</font></a> size);
+</span><span><a class="LN" name="30">   30   </a>
+</span><span><a class="LN" name="31">   31   </a><font color="#992211">#</font><span class="PP">ifdef</span> __cplusplus
+</span><span><a class="LN" name="32">   32   </a><b>}</b>
+</span><span><a class="LN" name="33">   33   </a><font color="#992211">#</font><span class="PP">endif</span> <span class="CT">/* __cplusplus */</span>
+</span><span><a class="LN" name="34">   34   </a>
+</span><span><a class="LN" name="35">   35   </a><font color="#992211">#</font><span class="PP">endif</span> <span class="CT">/* _RTIOSTREAM_UTILS_H_ */</span>
+</span><span><a class="LN" name="36">   36   </a>
+</span></pre>
+</td></tr></table>
+</p>
+</body>
+</html>

@@ -1,0 +1,1525 @@
+{
+  "_id" : "0",
+  "name" : "integrator_12B",
+  "outputSpecs" : [ {
+    "variable" : {
+      "dataType" : "REAL",
+      "name" : "BLc",
+      "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_" ],
+      "timeStyle" : "relative",
+      "timeValue" : 0
+    },
+    "astList" : [ {
+      "operator" : "=",
+      "operands" : [ {
+        "dataType" : "REAL",
+        "name" : "BLc",
+        "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_" ],
+        "timeStyle" : "relative",
+        "timeValue" : 0
+      }, {
+        "dataType" : "REAL",
+        "name" : "BLc",
+        "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_", "bounds" ],
+        "timeStyle" : "relative",
+        "timeValue" : 0
+      } ]
+    } ],
+    "objectType" : "OutputSpec",
+    "source" : "\nTustin_Integrator__Limited__Resettable__States_.BLc{t} = Tustin_Integrator__Limited__Resettable__States_.bounds.BLc{t};\n"
+  }, {
+    "variable" : {
+      "dataType" : "REAL",
+      "name" : "BL",
+      "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_" ],
+      "timeStyle" : "relative",
+      "timeValue" : 0
+    },
+    "astList" : [ {
+      "operator" : "=",
+      "operands" : [ {
+        "dataType" : "REAL",
+        "name" : "BL",
+        "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_" ],
+        "timeStyle" : "relative",
+        "timeValue" : 0
+      }, {
+        "dataType" : "REAL",
+        "name" : "BL",
+        "namespace" : [ ],
+        "timeStyle" : "relative",
+        "timeValue" : 0
+      } ]
+    } ],
+    "objectType" : "OutputSpec",
+    "source" : "\nTustin_Integrator__Limited__Resettable__States_.BL{t} = BL{t};\n"
+  }, {
+    "variable" : {
+      "dataType" : "REAL",
+      "name" : "From1",
+      "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_" ],
+      "timeStyle" : "relative",
+      "timeValue" : 0
+    },
+    "astList" : [ {
+      "operator" : "=",
+      "operands" : [ {
+        "dataType" : "REAL",
+        "name" : "From1",
+        "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_" ],
+        "timeStyle" : "relative",
+        "timeValue" : 0
+      }, {
+        "dataType" : "REAL",
+        "name" : "__gototag__BL",
+        "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_" ],
+        "timeStyle" : "relative",
+        "timeValue" : 0
+      } ]
+    } ],
+    "objectType" : "OutputSpec",
+    "source" : "\nTustin_Integrator__Limited__Resettable__States_.From1{t} = Tustin_Integrator__Limited__Resettable__States_.__gototag__BL{t};\n"
+  }, {
+    "variable" : {
+      "dataType" : "REAL",
+      "name" : "From",
+      "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_" ],
+      "timeStyle" : "relative",
+      "timeValue" : 0
+    },
+    "astList" : [ {
+      "operator" : "=",
+      "operands" : [ {
+        "dataType" : "REAL",
+        "name" : "From",
+        "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_" ],
+        "timeStyle" : "relative",
+        "timeValue" : 0
+      }, {
+        "dataType" : "REAL",
+        "name" : "__gototag__TL",
+        "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_" ],
+        "timeStyle" : "relative",
+        "timeValue" : 0
+      } ]
+    } ],
+    "objectType" : "OutputSpec",
+    "source" : "\nTustin_Integrator__Limited__Resettable__States_.From{t} = Tustin_Integrator__Limited__Resettable__States_.__gototag__TL{t};\n"
+  }, {
+    "variable" : {
+      "dataType" : "REAL",
+      "name" : "Gain",
+      "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_" ],
+      "timeStyle" : "relative",
+      "timeValue" : 0
+    },
+    "astList" : [ {
+      "operator" : "=",
+      "operands" : [ {
+        "dataType" : "REAL",
+        "name" : "Gain",
+        "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_" ],
+        "timeStyle" : "relative",
+        "timeValue" : 0
+      }, {
+        "dataType" : "REAL",
+        "operator" : "*",
+        "operands" : [ {
+          "dataType" : "REAL",
+          "name" : "Sum",
+          "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_" ],
+          "timeStyle" : "relative",
+          "timeValue" : 0
+        }, {
+          "dataType" : "REAL",
+          "value" : 0.5
+        } ]
+      } ]
+    } ],
+    "objectType" : "OutputSpec",
+    "source" : "\nTustin_Integrator__Limited__Resettable__States_.Gain{t} = Tustin_Integrator__Limited__Resettable__States_.Sum{t} * 0.5;\n"
+  }, {
+    "variable" : {
+      "dataType" : "REAL",
+      "name" : "Product",
+      "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_" ],
+      "timeStyle" : "relative",
+      "timeValue" : 0
+    },
+    "astList" : [ {
+      "operator" : "=",
+      "operands" : [ {
+        "dataType" : "REAL",
+        "name" : "Product",
+        "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_" ],
+        "timeStyle" : "relative",
+        "timeValue" : 0
+      }, {
+        "dataType" : "REAL",
+        "operator" : "*",
+        "operands" : [ {
+          "dataType" : "REAL",
+          "name" : "Gain",
+          "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_" ],
+          "timeStyle" : "relative",
+          "timeValue" : 0
+        }, {
+          "dataType" : "REAL",
+          "name" : "T",
+          "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_" ],
+          "timeStyle" : "relative",
+          "timeValue" : 0
+        } ]
+      } ]
+    } ],
+    "objectType" : "OutputSpec",
+    "source" : "\nTustin_Integrator__Limited__Resettable__States_.Product{t} = Tustin_Integrator__Limited__Resettable__States_.Gain{t} * Tustin_Integrator__Limited__Resettable__States_.T{t};\n"
+  }, {
+    "variable" : {
+      "dataType" : "REAL",
+      "name" : "Sum1",
+      "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_" ],
+      "timeStyle" : "relative",
+      "timeValue" : 0
+    },
+    "astList" : [ {
+      "operator" : "=",
+      "operands" : [ {
+        "dataType" : "REAL",
+        "name" : "Sum1",
+        "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_" ],
+        "timeStyle" : "relative",
+        "timeValue" : 0
+      }, {
+        "dataType" : "REAL",
+        "operator" : "+",
+        "operands" : [ {
+          "dataType" : "REAL",
+          "name" : "Unit_Delay1",
+          "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_" ],
+          "timeStyle" : "relative",
+          "timeValue" : 0
+        }, {
+          "dataType" : "REAL",
+          "name" : "Product",
+          "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_" ],
+          "timeStyle" : "relative",
+          "timeValue" : 0
+        } ]
+      } ]
+    } ],
+    "objectType" : "OutputSpec",
+    "source" : "\nTustin_Integrator__Limited__Resettable__States_.Sum1{t} = Tustin_Integrator__Limited__Resettable__States_.Unit_Delay1{t} + Tustin_Integrator__Limited__Resettable__States_.Product{t};\n"
+  }, {
+    "variable" : {
+      "dataType" : "REAL",
+      "name" : "Sum",
+      "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_" ],
+      "timeStyle" : "relative",
+      "timeValue" : 0
+    },
+    "astList" : [ {
+      "operator" : "=",
+      "operands" : [ {
+        "dataType" : "REAL",
+        "name" : "Sum",
+        "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_" ],
+        "timeStyle" : "relative",
+        "timeValue" : 0
+      }, {
+        "dataType" : "REAL",
+        "operator" : "+",
+        "operands" : [ {
+          "dataType" : "REAL",
+          "name" : "xin",
+          "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_" ],
+          "timeStyle" : "relative",
+          "timeValue" : 0
+        }, {
+          "dataType" : "REAL",
+          "name" : "Unit_Delay",
+          "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_" ],
+          "timeStyle" : "relative",
+          "timeValue" : 0
+        } ]
+      } ]
+    } ],
+    "objectType" : "OutputSpec",
+    "source" : "\nTustin_Integrator__Limited__Resettable__States_.Sum{t} = Tustin_Integrator__Limited__Resettable__States_.xin{t} + Tustin_Integrator__Limited__Resettable__States_.Unit_Delay{t};\n"
+  }, {
+    "variable" : {
+      "dataType" : "REAL",
+      "name" : "Switch",
+      "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_" ],
+      "timeStyle" : "relative",
+      "timeValue" : 0
+    },
+    "astList" : [ {
+      "operator" : "=",
+      "operands" : [ {
+        "dataType" : "REAL",
+        "name" : "Switch",
+        "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_" ],
+        "timeStyle" : "relative",
+        "timeValue" : 0
+      }, {
+        "dataType" : "REAL",
+        "operator" : "ite",
+        "operands" : [ {
+          "dataType" : "BOOLEAN",
+          "name" : "reset",
+          "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_" ],
+          "timeStyle" : "relative",
+          "timeValue" : 0
+        }, {
+          "dataType" : "REAL",
+          "name" : "ic",
+          "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_" ],
+          "timeStyle" : "relative",
+          "timeValue" : 0
+        }, {
+          "dataType" : "REAL",
+          "name" : "Sum1",
+          "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_" ],
+          "timeStyle" : "relative",
+          "timeValue" : 0
+        } ]
+      } ]
+    } ],
+    "objectType" : "OutputSpec",
+    "source" : "\nTustin_Integrator__Limited__Resettable__States_.Switch{t} = ite(Tustin_Integrator__Limited__Resettable__States_.reset{t}, Tustin_Integrator__Limited__Resettable__States_.ic{t}, Tustin_Integrator__Limited__Resettable__States_.Sum1{t});\n"
+  }, {
+    "variable" : {
+      "dataType" : "REAL",
+      "name" : "TLc",
+      "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_" ],
+      "timeStyle" : "relative",
+      "timeValue" : 0
+    },
+    "astList" : [ {
+      "operator" : "=",
+      "operands" : [ {
+        "dataType" : "REAL",
+        "name" : "TLc",
+        "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_" ],
+        "timeStyle" : "relative",
+        "timeValue" : 0
+      }, {
+        "dataType" : "REAL",
+        "name" : "TLc",
+        "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_", "bounds" ],
+        "timeStyle" : "relative",
+        "timeValue" : 0
+      } ]
+    } ],
+    "objectType" : "OutputSpec",
+    "source" : "\nTustin_Integrator__Limited__Resettable__States_.TLc{t} = Tustin_Integrator__Limited__Resettable__States_.bounds.TLc{t};\n"
+  }, {
+    "variable" : {
+      "dataType" : "REAL",
+      "name" : "TL",
+      "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_" ],
+      "timeStyle" : "relative",
+      "timeValue" : 0
+    },
+    "astList" : [ {
+      "operator" : "=",
+      "operands" : [ {
+        "dataType" : "REAL",
+        "name" : "TL",
+        "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_" ],
+        "timeStyle" : "relative",
+        "timeValue" : 0
+      }, {
+        "dataType" : "REAL",
+        "name" : "TL",
+        "namespace" : [ ],
+        "timeStyle" : "relative",
+        "timeValue" : 0
+      } ]
+    } ],
+    "objectType" : "OutputSpec",
+    "source" : "\nTustin_Integrator__Limited__Resettable__States_.TL{t} = TL{t};\n"
+  }, {
+    "variable" : {
+      "dataType" : "REAL",
+      "name" : "T",
+      "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_" ],
+      "timeStyle" : "relative",
+      "timeValue" : 0
+    },
+    "astList" : [ {
+      "operator" : "=",
+      "operands" : [ {
+        "dataType" : "REAL",
+        "name" : "T",
+        "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_" ],
+        "timeStyle" : "relative",
+        "timeValue" : 0
+      }, {
+        "dataType" : "REAL",
+        "name" : "T",
+        "namespace" : [ ],
+        "timeStyle" : "relative",
+        "timeValue" : 0
+      } ]
+    } ],
+    "objectType" : "OutputSpec",
+    "source" : "\nTustin_Integrator__Limited__Resettable__States_.T{t} = T{t};\n"
+  }, {
+    "variable" : {
+      "dataType" : "REAL",
+      "name" : "Unit_Delay1",
+      "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_" ],
+      "timeStyle" : "absolute",
+      "timeValue" : 0
+    },
+    "astList" : [ {
+      "operator" : "=",
+      "operands" : [ {
+        "dataType" : "REAL",
+        "name" : "Unit_Delay1",
+        "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_" ],
+        "timeStyle" : "absolute",
+        "timeValue" : 0
+      }, {
+        "dataType" : "REAL",
+        "value" : 0.0
+      } ]
+    } ],
+    "objectType" : "OutputSpec",
+    "source" : "\nTustin_Integrator__Limited__Resettable__States_.Unit_Delay1{0} = 0.0;\n"
+  }, {
+    "variable" : {
+      "dataType" : "REAL",
+      "name" : "Unit_Delay1",
+      "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_" ],
+      "timeStyle" : "relative",
+      "timeValue" : 0
+    },
+    "astList" : [ {
+      "operator" : "=",
+      "operands" : [ {
+        "dataType" : "REAL",
+        "name" : "Unit_Delay1",
+        "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_" ],
+        "timeStyle" : "relative",
+        "timeValue" : 0
+      }, {
+        "dataType" : "REAL",
+        "name" : "yout",
+        "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_" ],
+        "timeStyle" : "relative",
+        "timeValue" : -1
+      } ]
+    } ],
+    "objectType" : "OutputSpec",
+    "source" : "\nTustin_Integrator__Limited__Resettable__States_.Unit_Delay1{t} = Tustin_Integrator__Limited__Resettable__States_.yout{t-1};\n"
+  }, {
+    "variable" : {
+      "dataType" : "REAL",
+      "name" : "Unit_Delay",
+      "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_" ],
+      "timeStyle" : "absolute",
+      "timeValue" : 0
+    },
+    "astList" : [ {
+      "operator" : "=",
+      "operands" : [ {
+        "dataType" : "REAL",
+        "name" : "Unit_Delay",
+        "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_" ],
+        "timeStyle" : "absolute",
+        "timeValue" : 0
+      }, {
+        "dataType" : "REAL",
+        "value" : 0.0
+      } ]
+    } ],
+    "objectType" : "OutputSpec",
+    "source" : "\nTustin_Integrator__Limited__Resettable__States_.Unit_Delay{0} = 0.0;\n"
+  }, {
+    "variable" : {
+      "dataType" : "REAL",
+      "name" : "Unit_Delay",
+      "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_" ],
+      "timeStyle" : "relative",
+      "timeValue" : 0
+    },
+    "astList" : [ {
+      "operator" : "=",
+      "operands" : [ {
+        "dataType" : "REAL",
+        "name" : "Unit_Delay",
+        "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_" ],
+        "timeStyle" : "relative",
+        "timeValue" : 0
+      }, {
+        "dataType" : "REAL",
+        "name" : "xin",
+        "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_" ],
+        "timeStyle" : "relative",
+        "timeValue" : -1
+      } ]
+    } ],
+    "objectType" : "OutputSpec",
+    "source" : "\nTustin_Integrator__Limited__Resettable__States_.Unit_Delay{t} = Tustin_Integrator__Limited__Resettable__States_.xin{t-1};\n"
+  }, {
+    "variable" : {
+      "dataType" : "REAL",
+      "name" : "__gototag__BL",
+      "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_" ],
+      "timeStyle" : "relative",
+      "timeValue" : 0
+    },
+    "astList" : [ {
+      "operator" : "=",
+      "operands" : [ {
+        "dataType" : "REAL",
+        "name" : "__gototag__BL",
+        "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_" ],
+        "timeStyle" : "relative",
+        "timeValue" : 0
+      }, {
+        "dataType" : "REAL",
+        "name" : "BLc",
+        "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_" ],
+        "timeStyle" : "relative",
+        "timeValue" : 0
+      } ]
+    } ],
+    "objectType" : "OutputSpec",
+    "source" : "\nTustin_Integrator__Limited__Resettable__States_.__gototag__BL{t} = Tustin_Integrator__Limited__Resettable__States_.BLc{t};\n"
+  }, {
+    "variable" : {
+      "dataType" : "REAL",
+      "name" : "__gototag__TL",
+      "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_" ],
+      "timeStyle" : "relative",
+      "timeValue" : 0
+    },
+    "astList" : [ {
+      "operator" : "=",
+      "operands" : [ {
+        "dataType" : "REAL",
+        "name" : "__gototag__TL",
+        "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_" ],
+        "timeStyle" : "relative",
+        "timeValue" : 0
+      }, {
+        "dataType" : "REAL",
+        "name" : "TLc",
+        "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_" ],
+        "timeStyle" : "relative",
+        "timeValue" : 0
+      } ]
+    } ],
+    "objectType" : "OutputSpec",
+    "source" : "\nTustin_Integrator__Limited__Resettable__States_.__gototag__TL{t} = Tustin_Integrator__Limited__Resettable__States_.TLc{t};\n"
+  }, {
+    "variable" : {
+      "dataType" : "REAL",
+      "name" : "BLc",
+      "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_", "bounds" ],
+      "timeStyle" : "relative",
+      "timeValue" : 0
+    },
+    "astList" : [ {
+      "operator" : "=",
+      "operands" : [ {
+        "dataType" : "REAL",
+        "name" : "BLc",
+        "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_", "bounds" ],
+        "timeStyle" : "relative",
+        "timeValue" : 0
+      }, {
+        "dataType" : "REAL",
+        "operator" : "ite",
+        "operands" : [ {
+          "dataType" : "BOOLEAN",
+          "name" : "Relational_Operator",
+          "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_", "bounds" ],
+          "timeStyle" : "relative",
+          "timeValue" : 0
+        }, {
+          "dataType" : "REAL",
+          "name" : "TL",
+          "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_", "bounds" ],
+          "timeStyle" : "relative",
+          "timeValue" : 0
+        }, {
+          "dataType" : "REAL",
+          "name" : "BL",
+          "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_", "bounds" ],
+          "timeStyle" : "relative",
+          "timeValue" : 0
+        } ]
+      } ]
+    } ],
+    "objectType" : "OutputSpec",
+    "source" : "\nTustin_Integrator__Limited__Resettable__States_.bounds.BLc{t} = ite(Tustin_Integrator__Limited__Resettable__States_.bounds.Relational_Operator{t}, Tustin_Integrator__Limited__Resettable__States_.bounds.TL{t}, Tustin_Integrator__Limited__Resettable__States_.bounds.BL{t});\n"
+  }, {
+    "variable" : {
+      "dataType" : "REAL",
+      "name" : "BL",
+      "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_", "bounds" ],
+      "timeStyle" : "relative",
+      "timeValue" : 0
+    },
+    "astList" : [ {
+      "operator" : "=",
+      "operands" : [ {
+        "dataType" : "REAL",
+        "name" : "BL",
+        "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_", "bounds" ],
+        "timeStyle" : "relative",
+        "timeValue" : 0
+      }, {
+        "dataType" : "REAL",
+        "name" : "BL",
+        "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_" ],
+        "timeStyle" : "relative",
+        "timeValue" : 0
+      } ]
+    } ],
+    "objectType" : "OutputSpec",
+    "source" : "\nTustin_Integrator__Limited__Resettable__States_.bounds.BL{t} = Tustin_Integrator__Limited__Resettable__States_.BL{t};\n"
+  }, {
+    "variable" : {
+      "dataType" : "BOOLEAN",
+      "name" : "Relational_Operator",
+      "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_", "bounds" ],
+      "timeStyle" : "relative",
+      "timeValue" : 0
+    },
+    "astList" : [ {
+      "operator" : "=",
+      "operands" : [ {
+        "dataType" : "BOOLEAN",
+        "name" : "Relational_Operator",
+        "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_", "bounds" ],
+        "timeStyle" : "relative",
+        "timeValue" : 0
+      }, {
+        "dataType" : "BOOLEAN",
+        "operator" : "<",
+        "operands" : [ {
+          "dataType" : "REAL",
+          "name" : "TL",
+          "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_", "bounds" ],
+          "timeStyle" : "relative",
+          "timeValue" : 0
+        }, {
+          "dataType" : "REAL",
+          "name" : "BL",
+          "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_", "bounds" ],
+          "timeStyle" : "relative",
+          "timeValue" : 0
+        } ]
+      } ]
+    } ],
+    "objectType" : "OutputSpec",
+    "source" : "\nTustin_Integrator__Limited__Resettable__States_.bounds.Relational_Operator{t} = Tustin_Integrator__Limited__Resettable__States_.bounds.TL{t} < Tustin_Integrator__Limited__Resettable__States_.bounds.BL{t};\n"
+  }, {
+    "variable" : {
+      "dataType" : "REAL",
+      "name" : "TLc",
+      "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_", "bounds" ],
+      "timeStyle" : "relative",
+      "timeValue" : 0
+    },
+    "astList" : [ {
+      "operator" : "=",
+      "operands" : [ {
+        "dataType" : "REAL",
+        "name" : "TLc",
+        "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_", "bounds" ],
+        "timeStyle" : "relative",
+        "timeValue" : 0
+      }, {
+        "dataType" : "REAL",
+        "operator" : "ite",
+        "operands" : [ {
+          "dataType" : "BOOLEAN",
+          "name" : "Relational_Operator",
+          "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_", "bounds" ],
+          "timeStyle" : "relative",
+          "timeValue" : 0
+        }, {
+          "dataType" : "REAL",
+          "name" : "BL",
+          "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_", "bounds" ],
+          "timeStyle" : "relative",
+          "timeValue" : 0
+        }, {
+          "dataType" : "REAL",
+          "name" : "TL",
+          "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_", "bounds" ],
+          "timeStyle" : "relative",
+          "timeValue" : 0
+        } ]
+      } ]
+    } ],
+    "objectType" : "OutputSpec",
+    "source" : "\nTustin_Integrator__Limited__Resettable__States_.bounds.TLc{t} = ite(Tustin_Integrator__Limited__Resettable__States_.bounds.Relational_Operator{t}, Tustin_Integrator__Limited__Resettable__States_.bounds.BL{t}, Tustin_Integrator__Limited__Resettable__States_.bounds.TL{t});\n"
+  }, {
+    "variable" : {
+      "dataType" : "REAL",
+      "name" : "TL",
+      "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_", "bounds" ],
+      "timeStyle" : "relative",
+      "timeValue" : 0
+    },
+    "astList" : [ {
+      "operator" : "=",
+      "operands" : [ {
+        "dataType" : "REAL",
+        "name" : "TL",
+        "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_", "bounds" ],
+        "timeStyle" : "relative",
+        "timeValue" : 0
+      }, {
+        "dataType" : "REAL",
+        "name" : "TL",
+        "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_" ],
+        "timeStyle" : "relative",
+        "timeValue" : 0
+      } ]
+    } ],
+    "objectType" : "OutputSpec",
+    "source" : "\nTustin_Integrator__Limited__Resettable__States_.bounds.TL{t} = Tustin_Integrator__Limited__Resettable__States_.TL{t};\n"
+  }, {
+    "variable" : {
+      "dataType" : "REAL",
+      "name" : "ic",
+      "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_" ],
+      "timeStyle" : "relative",
+      "timeValue" : 0
+    },
+    "astList" : [ {
+      "operator" : "=",
+      "operands" : [ {
+        "dataType" : "REAL",
+        "name" : "ic",
+        "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_" ],
+        "timeStyle" : "relative",
+        "timeValue" : 0
+      }, {
+        "dataType" : "REAL",
+        "name" : "ic",
+        "namespace" : [ ],
+        "timeStyle" : "relative",
+        "timeValue" : 0
+      } ]
+    } ],
+    "objectType" : "OutputSpec",
+    "source" : "\nTustin_Integrator__Limited__Resettable__States_.ic{t} = ic{t};\n"
+  }, {
+    "variable" : {
+      "dataType" : "BOOLEAN",
+      "name" : "reset",
+      "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_" ],
+      "timeStyle" : "relative",
+      "timeValue" : 0
+    },
+    "astList" : [ {
+      "operator" : "=",
+      "operands" : [ {
+        "dataType" : "BOOLEAN",
+        "name" : "reset",
+        "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_" ],
+        "timeStyle" : "relative",
+        "timeValue" : 0
+      }, {
+        "dataType" : "BOOLEAN",
+        "name" : "reset",
+        "namespace" : [ ],
+        "timeStyle" : "relative",
+        "timeValue" : 0
+      } ]
+    } ],
+    "objectType" : "OutputSpec",
+    "source" : "\nTustin_Integrator__Limited__Resettable__States_.reset{t} = reset{t};\n"
+  }, {
+    "variable" : {
+      "dataType" : "REAL",
+      "name" : "xin",
+      "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_" ],
+      "timeStyle" : "relative",
+      "timeValue" : 0
+    },
+    "astList" : [ {
+      "operator" : "=",
+      "operands" : [ {
+        "dataType" : "REAL",
+        "name" : "xin",
+        "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_" ],
+        "timeStyle" : "relative",
+        "timeValue" : 0
+      }, {
+        "dataType" : "REAL",
+        "name" : "xin",
+        "namespace" : [ ],
+        "timeStyle" : "relative",
+        "timeValue" : 0
+      } ]
+    } ],
+    "objectType" : "OutputSpec",
+    "source" : "\nTustin_Integrator__Limited__Resettable__States_.xin{t} = xin{t};\n"
+  }, {
+    "variable" : {
+      "dataType" : "REAL",
+      "name" : "yout",
+      "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_" ],
+      "timeStyle" : "relative",
+      "timeValue" : 0
+    },
+    "astList" : [ {
+      "operator" : "=",
+      "operands" : [ {
+        "dataType" : "REAL",
+        "name" : "yout",
+        "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_" ],
+        "timeStyle" : "relative",
+        "timeValue" : 0
+      }, {
+        "dataType" : "REAL",
+        "operator" : "ite",
+        "operands" : [ {
+          "dataType" : "BOOLEAN",
+          "operator" : "<",
+          "operands" : [ {
+            "dataType" : "REAL",
+            "name" : "Switch",
+            "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_" ],
+            "timeStyle" : "relative",
+            "timeValue" : 0
+          }, {
+            "dataType" : "REAL",
+            "name" : "From1",
+            "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_" ],
+            "timeStyle" : "relative",
+            "timeValue" : 0
+          } ]
+        }, {
+          "dataType" : "REAL",
+          "name" : "From1",
+          "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_" ],
+          "timeStyle" : "relative",
+          "timeValue" : 0
+        }, {
+          "dataType" : "REAL",
+          "operator" : "ite",
+          "operands" : [ {
+            "dataType" : "BOOLEAN",
+            "operator" : ">",
+            "operands" : [ {
+              "dataType" : "REAL",
+              "name" : "Switch",
+              "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_" ],
+              "timeStyle" : "relative",
+              "timeValue" : 0
+            }, {
+              "dataType" : "REAL",
+              "name" : "From",
+              "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_" ],
+              "timeStyle" : "relative",
+              "timeValue" : 0
+            } ]
+          }, {
+            "dataType" : "REAL",
+            "name" : "From",
+            "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_" ],
+            "timeStyle" : "relative",
+            "timeValue" : 0
+          }, {
+            "dataType" : "REAL",
+            "name" : "Switch",
+            "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_" ],
+            "timeStyle" : "relative",
+            "timeValue" : 0
+          } ]
+        } ]
+      } ]
+    } ],
+    "objectType" : "OutputSpec",
+    "source" : "\nTustin_Integrator__Limited__Resettable__States_.yout{t} = ite(Tustin_Integrator__Limited__Resettable__States_.Switch{t} < Tustin_Integrator__Limited__Resettable__States_.From1{t}, Tustin_Integrator__Limited__Resettable__States_.From1{t}, ite(Tustin_Integrator__Limited__Resettable__States_.Switch{t} > Tustin_Integrator__Limited__Resettable__States_.From{t}, Tustin_Integrator__Limited__Resettable__States_.From{t}, Tustin_Integrator__Limited__Resettable__States_.Switch{t}));\n"
+  }, {
+    "variable" : {
+      "dataType" : "REAL",
+      "name" : "pi",
+      "namespace" : [ "__workspace__" ],
+      "timeStyle" : "relative",
+      "timeValue" : 0
+    },
+    "astList" : [ {
+      "operator" : "=",
+      "operands" : [ {
+        "dataType" : "REAL",
+        "name" : "pi",
+        "namespace" : [ "__workspace__" ],
+        "timeStyle" : "relative",
+        "timeValue" : 0
+      }, {
+        "dataType" : "REAL",
+        "value" : 3.1415926536
+      } ]
+    } ],
+    "objectType" : "OutputSpec",
+    "source" : "\n__workspace__.pi{t} = 3.1415926536;\n"
+  }, {
+    "variable" : {
+      "dataType" : "REAL",
+      "name" : "yout",
+      "namespace" : [ ],
+      "timeStyle" : "relative",
+      "timeValue" : 0
+    },
+    "astList" : [ {
+      "operator" : "=",
+      "operands" : [ {
+        "dataType" : "REAL",
+        "name" : "yout",
+        "namespace" : [ ],
+        "timeStyle" : "relative",
+        "timeValue" : 0
+      }, {
+        "dataType" : "REAL",
+        "name" : "yout",
+        "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_" ],
+        "timeStyle" : "relative",
+        "timeValue" : 0
+      } ]
+    } ],
+    "objectType" : "OutputSpec",
+    "source" : "\nyout{t} = Tustin_Integrator__Limited__Resettable__States_.yout{t};\n"
+  } ],
+  "variables" : [ {
+    "name" : "BL",
+    "elementType" : "float",
+    "dataType" : "REAL",
+    "namespace" : [ ],
+    "timeStyle" : "relative",
+    "timeValue" : 0,
+    "dimensions" : [ 1, 1 ]
+  }, {
+    "name" : "TL",
+    "elementType" : "float",
+    "dataType" : "REAL",
+    "namespace" : [ ],
+    "timeStyle" : "relative",
+    "timeValue" : 0,
+    "dimensions" : [ 1, 1 ]
+  }, {
+    "name" : "BLc",
+    "elementType" : "float",
+    "dataType" : "REAL",
+    "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_" ],
+    "timeStyle" : "relative",
+    "timeValue" : 0,
+    "dimensions" : [ 1, 1 ]
+  }, {
+    "name" : "BL",
+    "elementType" : "float",
+    "dataType" : "REAL",
+    "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_" ],
+    "timeStyle" : "relative",
+    "timeValue" : 0,
+    "dimensions" : [ 1, 1 ]
+  }, {
+    "name" : "From1",
+    "elementType" : "float",
+    "dataType" : "REAL",
+    "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_" ],
+    "timeStyle" : "relative",
+    "timeValue" : 0,
+    "dimensions" : [ 1, 1 ]
+  }, {
+    "name" : "From",
+    "elementType" : "float",
+    "dataType" : "REAL",
+    "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_" ],
+    "timeStyle" : "relative",
+    "timeValue" : 0,
+    "dimensions" : [ 1, 1 ]
+  }, {
+    "name" : "Gain",
+    "elementType" : "float",
+    "dataType" : "REAL",
+    "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_" ],
+    "timeStyle" : "relative",
+    "timeValue" : 0,
+    "dimensions" : [ 1, 1 ]
+  }, {
+    "name" : "Product",
+    "elementType" : "float",
+    "dataType" : "REAL",
+    "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_" ],
+    "timeStyle" : "relative",
+    "timeValue" : 0,
+    "dimensions" : [ 1, 1 ]
+  }, {
+    "name" : "Sum1",
+    "elementType" : "float",
+    "dataType" : "REAL",
+    "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_" ],
+    "timeStyle" : "relative",
+    "timeValue" : 0,
+    "dimensions" : [ 1, 1 ]
+  }, {
+    "name" : "Sum",
+    "elementType" : "float",
+    "dataType" : "REAL",
+    "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_" ],
+    "timeStyle" : "relative",
+    "timeValue" : 0,
+    "dimensions" : [ 1, 1 ]
+  }, {
+    "name" : "Switch",
+    "elementType" : "float",
+    "dataType" : "REAL",
+    "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_" ],
+    "timeStyle" : "relative",
+    "timeValue" : 0,
+    "dimensions" : [ 1, 1 ]
+  }, {
+    "name" : "TLc",
+    "elementType" : "float",
+    "dataType" : "REAL",
+    "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_" ],
+    "timeStyle" : "relative",
+    "timeValue" : 0,
+    "dimensions" : [ 1, 1 ]
+  }, {
+    "name" : "TL",
+    "elementType" : "float",
+    "dataType" : "REAL",
+    "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_" ],
+    "timeStyle" : "relative",
+    "timeValue" : 0,
+    "dimensions" : [ 1, 1 ]
+  }, {
+    "name" : "T",
+    "elementType" : "float",
+    "dataType" : "REAL",
+    "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_" ],
+    "timeStyle" : "relative",
+    "timeValue" : 0,
+    "dimensions" : [ 1, 1 ]
+  }, {
+    "name" : "Unit_Delay1",
+    "elementType" : "float",
+    "dataType" : "REAL",
+    "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_" ],
+    "timeStyle" : "absolute",
+    "timeValue" : 0,
+    "dimensions" : [ 1, 1 ]
+  }, {
+    "name" : "Unit_Delay1",
+    "elementType" : "float",
+    "dataType" : "REAL",
+    "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_" ],
+    "timeStyle" : "relative",
+    "timeValue" : 0,
+    "dimensions" : [ 1, 1 ]
+  }, {
+    "name" : "Unit_Delay",
+    "elementType" : "float",
+    "dataType" : "REAL",
+    "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_" ],
+    "timeStyle" : "absolute",
+    "timeValue" : 0,
+    "dimensions" : [ 1, 1 ]
+  }, {
+    "name" : "Unit_Delay",
+    "elementType" : "float",
+    "dataType" : "REAL",
+    "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_" ],
+    "timeStyle" : "relative",
+    "timeValue" : 0,
+    "dimensions" : [ 1, 1 ]
+  }, {
+    "name" : "__gototag__BL",
+    "elementType" : "float",
+    "dataType" : "REAL",
+    "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_" ],
+    "timeStyle" : "relative",
+    "timeValue" : 0,
+    "dimensions" : [ 1, 1 ]
+  }, {
+    "name" : "__gototag__TL",
+    "elementType" : "float",
+    "dataType" : "REAL",
+    "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_" ],
+    "timeStyle" : "relative",
+    "timeValue" : 0,
+    "dimensions" : [ 1, 1 ]
+  }, {
+    "name" : "BLc",
+    "elementType" : "float",
+    "dataType" : "REAL",
+    "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_", "bounds" ],
+    "timeStyle" : "relative",
+    "timeValue" : 0,
+    "dimensions" : [ 1, 1 ]
+  }, {
+    "name" : "BL",
+    "elementType" : "float",
+    "dataType" : "REAL",
+    "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_", "bounds" ],
+    "timeStyle" : "relative",
+    "timeValue" : 0,
+    "dimensions" : [ 1, 1 ]
+  }, {
+    "name" : "Relational_Operator",
+    "elementType" : "boole",
+    "dataType" : "BOOLEAN",
+    "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_", "bounds" ],
+    "timeStyle" : "relative",
+    "timeValue" : 0,
+    "dimensions" : [ 1, 1 ]
+  }, {
+    "name" : "TLc",
+    "elementType" : "float",
+    "dataType" : "REAL",
+    "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_", "bounds" ],
+    "timeStyle" : "relative",
+    "timeValue" : 0,
+    "dimensions" : [ 1, 1 ]
+  }, {
+    "name" : "TL",
+    "elementType" : "float",
+    "dataType" : "REAL",
+    "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_", "bounds" ],
+    "timeStyle" : "relative",
+    "timeValue" : 0,
+    "dimensions" : [ 1, 1 ]
+  }, {
+    "name" : "ic",
+    "elementType" : "float",
+    "dataType" : "REAL",
+    "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_" ],
+    "timeStyle" : "relative",
+    "timeValue" : 0,
+    "dimensions" : [ 1, 1 ]
+  }, {
+    "name" : "reset",
+    "elementType" : "boole",
+    "dataType" : "BOOLEAN",
+    "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_" ],
+    "timeStyle" : "relative",
+    "timeValue" : 0,
+    "dimensions" : [ 1, 1 ]
+  }, {
+    "name" : "xin",
+    "elementType" : "float",
+    "dataType" : "REAL",
+    "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_" ],
+    "timeStyle" : "relative",
+    "timeValue" : -1,
+    "dimensions" : [ 1, 1 ]
+  }, {
+    "name" : "xin",
+    "elementType" : "float",
+    "dataType" : "REAL",
+    "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_" ],
+    "timeStyle" : "relative",
+    "timeValue" : 0,
+    "dimensions" : [ 1, 1 ]
+  }, {
+    "name" : "yout",
+    "elementType" : "float",
+    "dataType" : "REAL",
+    "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_" ],
+    "timeStyle" : "relative",
+    "timeValue" : -1,
+    "dimensions" : [ 1, 1 ]
+  }, {
+    "name" : "yout",
+    "elementType" : "float",
+    "dataType" : "REAL",
+    "namespace" : [ "Tustin_Integrator__Limited__Resettable__States_" ],
+    "timeStyle" : "relative",
+    "timeValue" : 0,
+    "dimensions" : [ 1, 1 ]
+  }, {
+    "name" : "T",
+    "elementType" : "float",
+    "dataType" : "REAL",
+    "namespace" : [ ],
+    "timeStyle" : "relative",
+    "timeValue" : 0,
+    "dimensions" : [ 1, 1 ]
+  }, {
+    "name" : "pi",
+    "elementType" : "float",
+    "dataType" : "REAL",
+    "namespace" : [ "__workspace__" ],
+    "timeStyle" : "relative",
+    "timeValue" : 0,
+    "dimensions" : [ 1, 1 ]
+  }, {
+    "name" : "ic",
+    "elementType" : "float",
+    "dataType" : "REAL",
+    "namespace" : [ ],
+    "timeStyle" : "relative",
+    "timeValue" : 0,
+    "dimensions" : [ 1, 1 ]
+  }, {
+    "name" : "reset",
+    "elementType" : "boole",
+    "dataType" : "BOOLEAN",
+    "namespace" : [ ],
+    "timeStyle" : "relative",
+    "timeValue" : 0,
+    "dimensions" : [ 1, 1 ]
+  }, {
+    "name" : "xin",
+    "elementType" : "float",
+    "dataType" : "REAL",
+    "namespace" : [ ],
+    "timeStyle" : "relative",
+    "timeValue" : 0,
+    "dimensions" : [ 1, 1 ]
+  }, {
+    "name" : "yout",
+    "elementType" : "float",
+    "dataType" : "REAL",
+    "namespace" : [ ],
+    "timeStyle" : "relative",
+    "timeValue" : 0,
+    "dimensions" : [ 1, 1 ]
+  } ],
+  "constraints" : [ {
+    "dataType" : "BOOLEAN",
+    "operator" : "impl",
+    "operands" : [ {
+      "dataType" : "BOOLEAN",
+      "operator" : "and",
+      "operands" : [ {
+        "dataType" : "BOOLEAN",
+        "operator" : "and",
+        "operands" : [ {
+          "dataType" : "BOOLEAN",
+          "name" : "reset",
+          "namespace" : [ ],
+          "timeStyle" : "relative",
+          "timeValue" : 0
+        }, {
+          "dataType" : "BOOLEAN",
+          "operator" : "<=",
+          "operands" : [ {
+            "dataType" : "REAL",
+            "name" : "ic",
+            "namespace" : [ ],
+            "timeStyle" : "relative",
+            "timeValue" : 0
+          }, {
+            "dataType" : "REAL",
+            "name" : "TL",
+            "namespace" : [ ],
+            "timeStyle" : "relative",
+            "timeValue" : 0
+          } ]
+        } ]
+      }, {
+        "dataType" : "BOOLEAN",
+        "operator" : ">=",
+        "operands" : [ {
+          "dataType" : "REAL",
+          "name" : "ic",
+          "namespace" : [ ],
+          "timeStyle" : "relative",
+          "timeValue" : 0
+        }, {
+          "dataType" : "REAL",
+          "name" : "BL",
+          "namespace" : [ ],
+          "timeStyle" : "relative",
+          "timeValue" : 0
+        } ]
+      } ]
+    }, {
+      "dataType" : "BOOLEAN",
+      "operator" : "==",
+      "operands" : [ {
+        "dataType" : "REAL",
+        "name" : "yout",
+        "namespace" : [ ],
+        "timeStyle" : "relative",
+        "timeValue" : 0
+      }, {
+        "dataType" : "REAL",
+        "name" : "ic",
+        "namespace" : [ ],
+        "timeStyle" : "relative",
+        "timeValue" : 0
+      } ]
+    } ]
+  }, {
+    "dataType" : "BOOLEAN",
+    "operator" : "impl",
+    "operands" : [ {
+      "dataType" : "BOOLEAN",
+      "operator" : "and",
+      "operands" : [ {
+        "dataType" : "BOOLEAN",
+        "operator" : "and",
+        "operands" : [ {
+          "dataType" : "BOOLEAN",
+          "name" : "reset",
+          "namespace" : [ ],
+          "timeStyle" : "relative",
+          "timeValue" : 0
+        }, {
+          "dataType" : "BOOLEAN",
+          "operator" : ">=",
+          "operands" : [ {
+            "dataType" : "REAL",
+            "name" : "ic",
+            "namespace" : [ ],
+            "timeStyle" : "relative",
+            "timeValue" : 0
+          }, {
+            "dataType" : "REAL",
+            "name" : "TL",
+            "namespace" : [ ],
+            "timeStyle" : "relative",
+            "timeValue" : 0
+          } ]
+        } ]
+      }, {
+        "dataType" : "BOOLEAN",
+        "operator" : ">=",
+        "operands" : [ {
+          "dataType" : "REAL",
+          "name" : "TL",
+          "namespace" : [ ],
+          "timeStyle" : "relative",
+          "timeValue" : 0
+        }, {
+          "dataType" : "REAL",
+          "name" : "BL",
+          "namespace" : [ ],
+          "timeStyle" : "relative",
+          "timeValue" : 0
+        } ]
+      } ]
+    }, {
+      "dataType" : "BOOLEAN",
+      "operator" : "==",
+      "operands" : [ {
+        "dataType" : "REAL",
+        "name" : "yout",
+        "namespace" : [ ],
+        "timeStyle" : "relative",
+        "timeValue" : 0
+      }, {
+        "dataType" : "REAL",
+        "name" : "TL",
+        "namespace" : [ ],
+        "timeStyle" : "relative",
+        "timeValue" : 0
+      } ]
+    } ]
+  }, {
+    "dataType" : "BOOLEAN",
+    "operator" : "impl",
+    "operands" : [ {
+      "dataType" : "BOOLEAN",
+      "operator" : "and",
+      "operands" : [ {
+        "dataType" : "BOOLEAN",
+        "operator" : "and",
+        "operands" : [ {
+          "dataType" : "BOOLEAN",
+          "name" : "reset",
+          "namespace" : [ ],
+          "timeStyle" : "relative",
+          "timeValue" : 0
+        }, {
+          "dataType" : "BOOLEAN",
+          "operator" : "<=",
+          "operands" : [ {
+            "dataType" : "REAL",
+            "name" : "ic",
+            "namespace" : [ ],
+            "timeStyle" : "relative",
+            "timeValue" : 0
+          }, {
+            "dataType" : "REAL",
+            "name" : "BL",
+            "namespace" : [ ],
+            "timeStyle" : "relative",
+            "timeValue" : 0
+          } ]
+        } ]
+      }, {
+        "dataType" : "BOOLEAN",
+        "operator" : ">=",
+        "operands" : [ {
+          "dataType" : "REAL",
+          "name" : "TL",
+          "namespace" : [ ],
+          "timeStyle" : "relative",
+          "timeValue" : 0
+        }, {
+          "dataType" : "REAL",
+          "name" : "BL",
+          "namespace" : [ ],
+          "timeStyle" : "relative",
+          "timeValue" : 0
+        } ]
+      } ]
+    }, {
+      "dataType" : "BOOLEAN",
+      "operator" : "==",
+      "operands" : [ {
+        "dataType" : "REAL",
+        "name" : "yout",
+        "namespace" : [ ],
+        "timeStyle" : "relative",
+        "timeValue" : 0
+      }, {
+        "dataType" : "REAL",
+        "name" : "BL",
+        "namespace" : [ ],
+        "timeStyle" : "relative",
+        "timeValue" : 0
+      } ]
+    } ]
+  }, {
+    "dataType" : "BOOLEAN",
+    "operator" : "impl",
+    "operands" : [ {
+      "dataType" : "BOOLEAN",
+      "operator" : "and",
+      "operands" : [ {
+        "dataType" : "BOOLEAN",
+        "operator" : "and",
+        "operands" : [ {
+          "dataType" : "BOOLEAN",
+          "name" : "reset",
+          "namespace" : [ ],
+          "timeStyle" : "relative",
+          "timeValue" : 0
+        }, {
+          "dataType" : "BOOLEAN",
+          "operator" : ">=",
+          "operands" : [ {
+            "dataType" : "REAL",
+            "name" : "ic",
+            "namespace" : [ ],
+            "timeStyle" : "relative",
+            "timeValue" : 0
+          }, {
+            "dataType" : "REAL",
+            "name" : "BL",
+            "namespace" : [ ],
+            "timeStyle" : "relative",
+            "timeValue" : 0
+          } ]
+        } ]
+      }, {
+        "dataType" : "BOOLEAN",
+        "operator" : "<",
+        "operands" : [ {
+          "dataType" : "REAL",
+          "name" : "TL",
+          "namespace" : [ ],
+          "timeStyle" : "relative",
+          "timeValue" : 0
+        }, {
+          "dataType" : "REAL",
+          "name" : "BL",
+          "namespace" : [ ],
+          "timeStyle" : "relative",
+          "timeValue" : 0
+        } ]
+      } ]
+    }, {
+      "dataType" : "BOOLEAN",
+      "operator" : "==",
+      "operands" : [ {
+        "dataType" : "REAL",
+        "name" : "yout",
+        "namespace" : [ ],
+        "timeStyle" : "relative",
+        "timeValue" : 0
+      }, {
+        "dataType" : "REAL",
+        "name" : "BL",
+        "namespace" : [ ],
+        "timeStyle" : "relative",
+        "timeValue" : 0
+      } ]
+    } ]
+  }, {
+    "dataType" : "BOOLEAN",
+    "operator" : "impl",
+    "operands" : [ {
+      "dataType" : "BOOLEAN",
+      "operator" : "and",
+      "operands" : [ {
+        "dataType" : "BOOLEAN",
+        "operator" : "and",
+        "operands" : [ {
+          "dataType" : "BOOLEAN",
+          "name" : "reset",
+          "namespace" : [ ],
+          "timeStyle" : "relative",
+          "timeValue" : 0
+        }, {
+          "dataType" : "BOOLEAN",
+          "operator" : "<=",
+          "operands" : [ {
+            "dataType" : "REAL",
+            "name" : "ic",
+            "namespace" : [ ],
+            "timeStyle" : "relative",
+            "timeValue" : 0
+          }, {
+            "dataType" : "REAL",
+            "name" : "TL",
+            "namespace" : [ ],
+            "timeStyle" : "relative",
+            "timeValue" : 0
+          } ]
+        } ]
+      }, {
+        "dataType" : "BOOLEAN",
+        "operator" : "<",
+        "operands" : [ {
+          "dataType" : "REAL",
+          "name" : "TL",
+          "namespace" : [ ],
+          "timeStyle" : "relative",
+          "timeValue" : 0
+        }, {
+          "dataType" : "REAL",
+          "name" : "BL",
+          "namespace" : [ ],
+          "timeStyle" : "relative",
+          "timeValue" : 0
+        } ]
+      } ]
+    }, {
+      "dataType" : "BOOLEAN",
+      "operator" : "==",
+      "operands" : [ {
+        "dataType" : "REAL",
+        "name" : "yout",
+        "namespace" : [ ],
+        "timeStyle" : "relative",
+        "timeValue" : 0
+      }, {
+        "dataType" : "REAL",
+        "name" : "TL",
+        "namespace" : [ ],
+        "timeStyle" : "relative",
+        "timeValue" : 0
+      } ]
+    } ]
+  } ]
+}

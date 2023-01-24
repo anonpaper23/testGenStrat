@@ -1,0 +1,4 @@
+# 2. The Output (yout) shall be bounded by the provided Top
+# and Bottom Limits (TL and BL).
+(TL>=BL) impl (BL<=yout and yout<=TL); #2a
+(TL<BL) impl (TL<=yout and yout<=BL); #2b

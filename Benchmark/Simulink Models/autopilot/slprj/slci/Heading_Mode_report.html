@@ -1,0 +1,2924 @@
+<!DOCTYPE html>
+<html>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
+<head>
+<style type="text/css">
+body {color:black;}
+table.T1 {border-style:solid ;border-color:#EEEEFF;border-width:1px; border-spacing:0;padding:2px;border-collapse:collapse;}table.T0 {border-style:hidden; }TH.th1 { background-color:#EEEEFF;text-align:left;border-style:solid ;border-color:#EEEEFF;border-width:1px; padding:2px;}TD.d1 {border-style:solid ;border-color:#EEEEFF;border-width:1px; text-align:left;padding:2px;}TD.d0 {text-align: left;border-style:none;padding:2px;}.indented {margin-left:25px;}span.ERROR {color:red}
+span.FAILED {color:red}
+span.FAILED_TO_TRACE {color:red}
+span.FAILED_TO_VERIFY {color:red}
+span.NON_FUNCTIONAL {color:black}
+span.NOT_PROCESSED {color:black}
+span.PARTIALLY_PROCESSED {color:#caad00}
+span.PARTIALLY_TRACED {color:#caad00}
+span.PARTIALLY_VERIFIED {color:#caad00}
+span.PASSED {color:green}
+span.TRACED {color:green}
+span.UNABLE_TO_PROCESS {color:#caad00}
+span.UNKNOWN {color:black}
+span.VERIFIED {color:green}
+span.WARNING {color:#caad00}
+span.CODE { white-space: pre;  }
+span.FORMATTED_MSG { white-space: pre;  }
+</style>
+<link rel="stylesheet" type="text/css" href="rtwreport.css" /><script language="JavaScript" type="text/javascript"> 
+ function rtwTableShrink(o, category)
+ {
+    var indent = document.getElementById(category + "_indent");
+    var fileTable = document.getElementById(category + "_table");
+    if (fileTable.style.display == "none") {
+        fileTable.style.display = "";
+        indent.style.display = "";
+        o.innerHTML = '<span style="font-family:monospace" id = "' + category + '_button">[-] </span>';
+    } else {
+        fileTable.style.display = "none";
+        indent.style.display = "none";
+        o.innerHTML = '<span style="font-family:monospace" id = "' + category + '_button">[+] </span>';
+    } 
+ }
+ </script><title>Simulink Code Inspector Report for Heading_Mode.slx</title></head>
+<body>
+<div style="text-align:center"> <h2>Simulink Code Inspector Report for <a href="matlab:open_system(slci.internal.encodeString('C:\Users\bpotter\LocalWorkArea\demos\autopilot_R2013b_workarea\Heading_Mode.slx','html','decode'))">Heading_Mode.slx</a></h2></div><hr>
+<table class="T0"><TR>
+<TD class="d0">
+<b>Inspected Model File : </b></TD>
+<TD class="d0">
+<a href="matlab:open_system(slci.internal.encodeString('C:\Users\bpotter\LocalWorkArea\demos\autopilot_R2013b_workarea\Heading_Mode.slx','html','decode'))">C:\Users\bpotter\LocalWorkArea\demos\autopilot_R2013b_workarea\Heading_Mode.slx</a></TD>
+</TR>
+<TR>
+<TD class="d0">
+<b>Model Version : </b></TD>
+<TD class="d0">
+1.146</TD>
+</TR>
+<TR>
+<TD class="d0">
+<b>Simulink Version : </b></TD>
+<TD class="d0">
+8.2 (R2013b)</TD>
+</TR>
+<TR>
+<TD class="d0">
+<b>Model Checksum : </b></TD>
+<TD class="d0">
+3081775825 1444590382 2650175411 2881307676</TD>
+</TR>
+<TR>
+<TD class="d0">
+<b>Model Last Modified On :</b></TD>
+<TD class="d0">
+28-Jan-2014 07:25:55</TD>
+</TR>
+<TR>
+<TD class="d0">
+<b>Inspected Code Files : </b></TD>
+<TD class="d0">
+<a href ="file:///C:/Users/bpotter/LocalWorkArea/demos/autopilot_R2013b_workarea/slprj/ert/_sharedutils/const_params.c">C:\Users\bpotter\LocalWorkArea\demos\autopilot_R2013b_workarea\slprj\ert\_sharedutils\const_params.c</a></TD>
+</TR>
+<TR>
+<TD class="d0">
+<b></b></TD>
+<TD class="d0">
+<a href ="file:///C:/Users/bpotter/LocalWorkArea/demos/autopilot_R2013b_workarea/slprj/ert/Heading_Mode/Heading_Mode.c">C:\Users\bpotter\LocalWorkArea\demos\autopilot_R2013b_workarea\slprj\ert\Heading_Mode\Heading_Mode.c</a></TD>
+</TR>
+<TR>
+<TD class="d0">
+<b>Code Inspection Run On :</b></TD>
+<TD class="d0">
+03-Feb-2014 08:15:53</TD>
+</TR>
+<TR>
+<TD class="d0">
+&nbsp;</TD>
+<TD class="d0">
+</TD>
+</TR>
+<TR>
+<TD class="d0">
+<b>Overall Inspection Result : </b></TD>
+<TD class="d0">
+<b><span class="PASSED">Passed</span></b></TD>
+</TR>
+</table><hr><h2>Code Verification Results : <span class="VERIFIED">Verified</span></h2><h4>Function Interface Verification Results : <span class="VERIFIED">Verified</span></h4><div class="indented"><table class="T1"><TR >
+<TH class="th1">
+Function</TH>
+<TH class="th1">
+Status</TH>
+<TH class="th1">
+Details</TH>
+</TR>
+<TR >
+<TD class="d1">
+Heading_Mode_initialize</TD>
+<TD class="d1">
+<span class="VERIFIED">Verified</span></TD>
+<TD class="d1">
+-</TD>
+</TR>
+<TR >
+<TD class="d1">
+Heading_Mode</TD>
+<TD class="d1">
+<span class="VERIFIED">Verified</span></TD>
+<TD class="d1">
+-</TD>
+</TR>
+</table></div><br/><h4>Model To Code Verification Results : <span class="VERIFIED">Verified</span></h4><div class="indented"><table class="T1"><TR >
+<TH class="th1">
+Status</TH>
+<TH class="th1">
+Details</TH>
+</TR>
+<TR >
+<TD class="d1">
+<span class="VERIFIED">Verified</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+<span class="UNKNOWN">Model objects with status Verified : </span></TD>
+<TD class="d0">
+<span class="VERIFIED">24</span></TD>
+</TR>
+<TR>
+<TD class="d0">
+<span class="UNKNOWN">Model objects with status Partially processed : </span></TD>
+<TD class="d0">
+<span class="UNKNOWN">0</span></TD>
+</TR>
+<TR>
+<TD class="d0">
+<span class="UNKNOWN">Model objects with status Unable to process : </span></TD>
+<TD class="d0">
+<span class="UNKNOWN">0</span></TD>
+</TR>
+<TR>
+<TD class="d0">
+<span class="UNKNOWN">Model objects with status Failed to verify : </span></TD>
+<TD class="d0">
+<span class="UNKNOWN">0</span></TD>
+</TR>
+</table></TD>
+</TR>
+</table></div><br/><h4>Code To Model Verification Results : <span class="VERIFIED">Verified</span></h4><div class="indented"><table class="T1"><TR >
+<TH class="th1">
+Function</TH>
+<TH class="th1">
+Status</TH>
+<TH class="th1">
+Details</TH>
+</TR>
+<TR >
+<TD class="d1">
+Heading_Mode_initialize</TD>
+<TD class="d1">
+<span class="VERIFIED">Verified</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+<span class="UNKNOWN">Lines of code with status Verified : </span></TD>
+<TD class="d0">
+<span class="VERIFIED">2</span></TD>
+</TR>
+<TR>
+<TD class="d0">
+<span class="UNKNOWN">Lines of code with status Partially processed : </span></TD>
+<TD class="d0">
+<span class="UNKNOWN">0</span></TD>
+</TR>
+<TR>
+<TD class="d0">
+<span class="UNKNOWN">Lines of code with status Unable to process : </span></TD>
+<TD class="d0">
+<span class="UNKNOWN">0</span></TD>
+</TR>
+<TR>
+<TD class="d0">
+<span class="UNKNOWN">Lines of code with status Failed to verify : </span></TD>
+<TD class="d0">
+<span class="UNKNOWN">0</span></TD>
+</TR>
+</table></TD>
+</TR>
+<TR >
+<TD class="d1">
+Heading_Mode</TD>
+<TD class="d1">
+<span class="VERIFIED">Verified</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+<span class="UNKNOWN">Lines of code with status Verified : </span></TD>
+<TD class="d0">
+<span class="VERIFIED">10</span></TD>
+</TR>
+<TR>
+<TD class="d0">
+<span class="UNKNOWN">Lines of code with status Partially processed : </span></TD>
+<TD class="d0">
+<span class="UNKNOWN">0</span></TD>
+</TR>
+<TR>
+<TD class="d0">
+<span class="UNKNOWN">Lines of code with status Unable to process : </span></TD>
+<TD class="d0">
+<span class="UNKNOWN">0</span></TD>
+</TR>
+<TR>
+<TD class="d0">
+<span class="UNKNOWN">Lines of code with status Failed to verify : </span></TD>
+<TD class="d0">
+<span class="UNKNOWN">0</span></TD>
+</TR>
+</table></TD>
+</TR>
+</table></div><br/><h4>Temporary Variable Usage Results : <span class="VERIFIED">Verified</span></h4><div class="indented"><table class="T1"><TR >
+<TH class="th1">
+Function</TH>
+<TH class="th1">
+Status</TH>
+<TH class="th1">
+Details</TH>
+</TR>
+<TR >
+<TD class="d1">
+Heading_Mode_initialize</TD>
+<TD class="d1">
+<span class="VERIFIED">Verified</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+Function does not have any temporary variable declarations</TD>
+</TR>
+</table></TD>
+</TR>
+<TR >
+<TD class="d1">
+Heading_Mode</TD>
+<TD class="d1">
+<span class="VERIFIED">Verified</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+<span class="UNKNOWN">Temporary variables with status Failed to verify : </span></TD>
+<TD class="d0">
+<span class="UNKNOWN">0</span></TD>
+</TR>
+<TR>
+<TD class="d0">
+<span class="UNKNOWN">Temporary variables with status Verified : </span></TD>
+<TD class="d0">
+<span class="VERIFIED">2</span></TD>
+</TR>
+</table></TD>
+</TR>
+</table></div><br/><br/><h2>Traceability Results : <span class="TRACED">Traced</span></h2><h4>Model To Code Traceability Results : <span class="TRACED">Traced</span></h4><div class="indented"><table class="T1"><TR >
+<TH class="th1">
+Status</TH>
+<TH class="th1">
+Number of model objects</TH>
+</TR>
+<TR >
+<TD class="d1">
+<span class="UNKNOWN">Traced</span></TD>
+<TD class="d1">
+<span class="TRACED">24</span></TD>
+</TR>
+<TR >
+<TD class="d1">
+<span class="UNKNOWN">Partially processed</span></TD>
+<TD class="d1">
+<span class="UNKNOWN">0</span></TD>
+</TR>
+<TR >
+<TD class="d1">
+<span class="UNKNOWN">Unable to process</span></TD>
+<TD class="d1">
+<span class="UNKNOWN">0</span></TD>
+</TR>
+<TR >
+<TD class="d1">
+<span class="UNKNOWN">Failed to trace</span></TD>
+<TD class="d1">
+<span class="UNKNOWN">0</span></TD>
+</TR>
+</table></div><br/><h4>Code To Model Traceability Results : <span class="TRACED">Traced</span></h4><div class="indented"><table class="T1"><TR >
+<TH class="th1">
+Status</TH>
+<TH class="th1">
+Number of code lines</TH>
+</TR>
+<TR >
+<TD class="d1">
+<span class="UNKNOWN">Traced</span></TD>
+<TD class="d1">
+<span class="TRACED">18</span></TD>
+</TR>
+<TR >
+<TD class="d1">
+<span class="UNKNOWN">Nonfunctional code</span></TD>
+<TD class="d1">
+<span class="NON_FUNCTIONAL">59</span></TD>
+</TR>
+<TR >
+<TD class="d1">
+<span class="UNKNOWN">Not processed</span></TD>
+<TD class="d1">
+<span class="NOT_PROCESSED">2</span></TD>
+</TR>
+<TR >
+<TD class="d1">
+<span class="UNKNOWN">Partially processed</span></TD>
+<TD class="d1">
+<span class="UNKNOWN">0</span></TD>
+</TR>
+<TR >
+<TD class="d1">
+<span class="UNKNOWN">Unable to process</span></TD>
+<TD class="d1">
+<span class="UNKNOWN">0</span></TD>
+</TR>
+<TR >
+<TD class="d1">
+<span class="UNKNOWN">Failed to trace</span></TD>
+<TD class="d1">
+<span class="UNKNOWN">0</span></TD>
+</TR>
+</table></div><br/><h4>Not processed code: </h4><div class="indented"><h4>File : <a href ="file:///C:/Users/bpotter/LocalWorkArea/demos/autopilot_R2013b_workarea/slprj/ert/Heading_Mode/Heading_Mode.c">Heading_Mode.c</a></h4><table class="T1"><TR >
+<TH class="th1">
+Code location</TH>
+<TH class="th1">
+Code</TH>
+</TR>
+<TR >
+<TD class="d1">
+16</TD>
+<TD class="d1">
+<span class="CODE">#include &#34;Heading_Mode.h&#34;
+</span></TD>
+</TR>
+<TR >
+<TD class="d1">
+17</TD>
+<TD class="d1">
+<span class="CODE">#include &#34;Heading_Mode_private.h&#34;
+</span></TD>
+</TR>
+</table></div><br/><br/><hr><h2>Code Verification Details</h2><table class="T0"><TR>
+<TD class="d0">
+<table class="T0" id="56">
+  <tr> 
+    <td style="text-align:left;">
+    <span style="background-color:#ffffff;cursor:pointer;white-space:nowrap" title="Click to shrink or expand category"        onclick="rtwTableShrink(this,'56')"> 
+     <span style="font-family:monospace" id = "56_button">[-]
+</span>
+    </span>
+    </td>
+    <td class="d0">
+    <b>Function Interface Verification </b>
+    </td><td class="d0"></td>
+  </tr>
+  <tr>
+  <td class="d0">
+  <span id="56_indent"></span>
+  </td>
+  <td class="d0">
+ <table style="display:all; border-style:none;" id="56_table">
+ <tr>
+ <td class="d0"><table class="T0"><TR>
+<TD class="d0">
+<table class="T0" id="54">
+  <tr> 
+    <td style="text-align:left;">
+    <span style="background-color:#ffffff;cursor:pointer;white-space:nowrap" title="Click to shrink or expand category"        onclick="rtwTableShrink(this,'54')"> 
+     <span style="font-family:monospace" id = "54_button">[-]
+</span>
+    </span>
+    </td>
+    <td class="d0">
+    <b>Function : Heading_Mode_initialize</b>
+    </td><td class="d0"></td>
+  </tr>
+  <tr>
+  <td class="d0">
+  <span id="54_indent"></span>
+  </td>
+  <td class="d0">
+ <table style="display:all; border-style:none;" id="54_table">
+ <tr>
+ <td class="d0"><table class="T1"><TR >
+<TH class="th1">
+Check</TH>
+<TH class="th1">
+Status</TH>
+</TR>
+<TR >
+<TD class="d1">
+Number of function arguments </TD>
+<TD class="d1">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+<TR >
+<TD class="d1">
+Function argument names </TD>
+<TD class="d1">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+<TR >
+<TD class="d1">
+Function argument data types </TD>
+<TD class="d1">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+<TR >
+<TD class="d1">
+Function return type </TD>
+<TD class="d1">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+</table>
+ </td>
+ </tr>
+ </table>
+ </td>
+ </tr>
+ </table></TD>
+</TR>
+<TR>
+<TD class="d0">
+<table class="T0" id="55">
+  <tr> 
+    <td style="text-align:left;">
+    <span style="background-color:#ffffff;cursor:pointer;white-space:nowrap" title="Click to shrink or expand category"        onclick="rtwTableShrink(this,'55')"> 
+     <span style="font-family:monospace" id = "55_button">[-]
+</span>
+    </span>
+    </td>
+    <td class="d0">
+    <b>Function : Heading_Mode</b>
+    </td><td class="d0"></td>
+  </tr>
+  <tr>
+  <td class="d0">
+  <span id="55_indent"></span>
+  </td>
+  <td class="d0">
+ <table style="display:all; border-style:none;" id="55_table">
+ <tr>
+ <td class="d0"><table class="T1"><TR >
+<TH class="th1">
+Check</TH>
+<TH class="th1">
+Status</TH>
+</TR>
+<TR >
+<TD class="d1">
+Number of function arguments </TD>
+<TD class="d1">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+<TR >
+<TD class="d1">
+Function argument names </TD>
+<TD class="d1">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+<TR >
+<TD class="d1">
+Function argument data types </TD>
+<TD class="d1">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+<TR >
+<TD class="d1">
+Function return type </TD>
+<TD class="d1">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+</table>
+ </td>
+ </tr>
+ </table>
+ </td>
+ </tr>
+ </table></TD>
+</TR>
+</table>
+ </td>
+ </tr>
+ </table>
+ </td>
+ </tr>
+ </table><table class="T0" id="57">
+  <tr> 
+    <td style="text-align:left;">
+    <span style="background-color:#ffffff;cursor:pointer;white-space:nowrap" title="Click to shrink or expand category"        onclick="rtwTableShrink(this,'57')"> 
+     <span style="font-family:monospace" id = "57_button">[-]
+</span>
+    </span>
+    </td>
+    <td class="d0">
+    <b>Model To Code Verification </b>
+    </td><td class="d0"></td>
+  </tr>
+  <tr>
+  <td class="d0">
+  <span id="57_indent"></span>
+  </td>
+  <td class="d0">
+ <table style="display:all; border-style:none;" id="57_table">
+ <tr>
+ <td class="d0"><table class="T0"><TR>
+<TD class="d0">
+<table class="T0"><TR>
+<TD class="d0">
+<b>Model : <a href="matlab:open_system(slci.internal.encodeString('C:\Users\bpotter\LocalWorkArea\demos\autopilot_R2013b_workarea\Heading_Mode.slx','html','decode'))">Heading_Mode</a></b></TD>
+</TR>
+<TR>
+<TD class="d0">
+<table class="T1"><TR >
+<TH class="th1">
+Model object</TH>
+<TH class="th1">
+Status</TH>
+<TH class="th1">
+Details</TH>
+</TR>
+<TR >
+<TD class="d1">
+<a href="matlab:slci.internal.ReportConfig.traceCallBack('C:\Users\bpotter\LocalWorkArea\demos\autopilot_R2013b_workarea\Heading_Mode.slx','Heading_Mode:1')">&#60;model&#62;/Psi Ref</a>
+</TD>
+<TD class="d1">
+<span class="VERIFIED">Verified</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+Virtual/Eliminated</TD>
+<TD class="d0">
+ (Inport) </TD>
+</TR>
+</table></TD>
+</TR>
+<TR >
+<TD class="d1">
+<a href="matlab:slci.internal.ReportConfig.traceCallBack('C:\Users\bpotter\LocalWorkArea\demos\autopilot_R2013b_workarea\Heading_Mode.slx','Heading_Mode:2')">&#60;model&#62;/Psi</a>
+</TD>
+<TD class="d1">
+<span class="VERIFIED">Verified</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+Virtual/Eliminated</TD>
+<TD class="d0">
+ (Inport) </TD>
+</TR>
+</table></TD>
+</TR>
+<TR >
+<TD class="d1">
+<a href="matlab:slci.internal.ReportConfig.traceCallBack('C:\Users\bpotter\LocalWorkArea\demos\autopilot_R2013b_workarea\Heading_Mode.slx','Heading_Mode:3')">&#60;model&#62;/TAS</a>
+</TD>
+<TD class="d1">
+<span class="VERIFIED">Verified</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+Virtual/Eliminated</TD>
+<TD class="d0">
+ (Inport) </TD>
+</TR>
+</table></TD>
+</TR>
+<TR >
+<TD class="d1">
+<a href="matlab:slci.internal.ReportConfig.traceCallBack('C:\Users\bpotter\LocalWorkArea\demos\autopilot_R2013b_workarea\Heading_Mode.slx','Heading_Mode:26')">&#60;model&#62;/Angle_Diff</a>
+</TD>
+<TD class="d1">
+<span class="VERIFIED">Verified</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+Virtual/Eliminated</TD>
+<TD class="d0">
+ (SubSystem) </TD>
+</TR>
+</table></TD>
+</TR>
+<TR >
+<TD class="d1">
+<a href="matlab:slci.internal.ReportConfig.traceCallBack('C:\Users\bpotter\LocalWorkArea\demos\autopilot_R2013b_workarea\Heading_Mode.slx','Heading_Mode:4')">&#60;model&#62;/Disp Gain</a>
+</TD>
+<TD class="d1">
+<span class="VERIFIED">Verified</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+-</TD>
+</TR>
+</table></TD>
+</TR>
+<TR >
+<TD class="d1">
+<a href="matlab:slci.internal.ReportConfig.traceCallBack('C:\Users\bpotter\LocalWorkArea\demos\autopilot_R2013b_workarea\Heading_Mode.slx','Heading_Mode:5')">&#60;model&#62;/Model Info</a>
+</TD>
+<TD class="d1">
+<span class="VERIFIED">Verified</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+Virtual/Eliminated</TD>
+<TD class="d0">
+ (Model Info block) </TD>
+</TR>
+</table></TD>
+</TR>
+<TR >
+<TD class="d1">
+<a href="matlab:slci.internal.ReportConfig.traceCallBack('C:\Users\bpotter\LocalWorkArea\demos\autopilot_R2013b_workarea\Heading_Mode.slx','Heading_Mode:6')">&#60;model&#62;/Product</a>
+</TD>
+<TD class="d1">
+<span class="VERIFIED">Verified</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+-</TD>
+</TR>
+</table></TD>
+</TR>
+<TR >
+<TD class="d1">
+<a href="matlab:slci.internal.ReportConfig.traceCallBack('C:\Users\bpotter\LocalWorkArea\demos\autopilot_R2013b_workarea\Heading_Mode.slx','Heading_Mode:8')">&#60;model&#62;/Phi Cmd</a>
+</TD>
+<TD class="d1">
+<span class="VERIFIED">Verified</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+-</TD>
+</TR>
+</table></TD>
+</TR>
+<TR >
+<TD class="d1">
+<a href="matlab:slci.internal.ReportConfig.traceCallBack('C:\Users\bpotter\LocalWorkArea\demos\autopilot_R2013b_workarea\Heading_Mode.slx','Heading_Mode:26:33')">&#60;model&#62;/Angle_Diff/plus</a>
+</TD>
+<TD class="d1">
+<span class="VERIFIED">Verified</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+Virtual/Eliminated</TD>
+<TD class="d0">
+ (Inport) </TD>
+</TR>
+</table></TD>
+</TR>
+<TR >
+<TD class="d1">
+<a href="matlab:slci.internal.ReportConfig.traceCallBack('C:\Users\bpotter\LocalWorkArea\demos\autopilot_R2013b_workarea\Heading_Mode.slx','Heading_Mode:26:34')">&#60;model&#62;/Angle_Diff/minus</a>
+</TD>
+<TD class="d1">
+<span class="VERIFIED">Verified</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+Virtual/Eliminated</TD>
+<TD class="d0">
+ (Inport) </TD>
+</TR>
+</table></TD>
+</TR>
+<TR >
+<TD class="d1">
+<a href="matlab:slci.internal.ReportConfig.traceCallBack('C:\Users\bpotter\LocalWorkArea\demos\autopilot_R2013b_workarea\Heading_Mode.slx','Heading_Mode:26:35')">&#60;model&#62;/Angle_Diff/abs</a>
+</TD>
+<TD class="d1">
+<span class="VERIFIED">Verified</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+-</TD>
+</TR>
+</table></TD>
+</TR>
+<TR >
+<TD class="d1">
+<a href="matlab:slci.internal.ReportConfig.traceCallBack('C:\Users\bpotter\LocalWorkArea\demos\autopilot_R2013b_workarea\Heading_Mode.slx','Heading_Mode:26:36')">&#60;model&#62;/Angle_Diff/constant</a>
+</TD>
+<TD class="d1">
+<span class="VERIFIED">Verified</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+-</TD>
+</TR>
+</table></TD>
+</TR>
+<TR >
+<TD class="d1">
+<a href="matlab:slci.internal.ReportConfig.traceCallBack('C:\Users\bpotter\LocalWorkArea\demos\autopilot_R2013b_workarea\Heading_Mode.slx','Heading_Mode:26:37')">&#60;model&#62;/Angle_Diff/constant1</a>
+</TD>
+<TD class="d1">
+<span class="VERIFIED">Verified</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+-</TD>
+</TR>
+</table></TD>
+</TR>
+<TR >
+<TD class="d1">
+<a href="matlab:slci.internal.ReportConfig.traceCallBack('C:\Users\bpotter\LocalWorkArea\demos\autopilot_R2013b_workarea\Heading_Mode.slx','Heading_Mode:26:38')">&#60;model&#62;/Angle_Diff/floor</a>
+</TD>
+<TD class="d1">
+<span class="VERIFIED">Verified</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+-</TD>
+</TR>
+</table></TD>
+</TR>
+<TR >
+<TD class="d1">
+<a href="matlab:slci.internal.ReportConfig.traceCallBack('C:\Users\bpotter\LocalWorkArea\demos\autopilot_R2013b_workarea\Heading_Mode.slx','Heading_Mode:26:39')">&#60;model&#62;/Angle_Diff/product</a>
+</TD>
+<TD class="d1">
+<span class="VERIFIED">Verified</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+-</TD>
+</TR>
+</table></TD>
+</TR>
+<TR >
+<TD class="d1">
+<a href="matlab:slci.internal.ReportConfig.traceCallBack('C:\Users\bpotter\LocalWorkArea\demos\autopilot_R2013b_workarea\Heading_Mode.slx','Heading_Mode:26:40')">&#60;model&#62;/Angle_Diff/product1</a>
+</TD>
+<TD class="d1">
+<span class="VERIFIED">Verified</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+-</TD>
+</TR>
+</table></TD>
+</TR>
+<TR >
+<TD class="d1">
+<a href="matlab:slci.internal.ReportConfig.traceCallBack('C:\Users\bpotter\LocalWorkArea\demos\autopilot_R2013b_workarea\Heading_Mode.slx','Heading_Mode:26:41')">&#60;model&#62;/Angle_Diff/product2</a>
+</TD>
+<TD class="d1">
+<span class="VERIFIED">Verified</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+-</TD>
+</TR>
+</table></TD>
+</TR>
+<TR >
+<TD class="d1">
+<a href="matlab:slci.internal.ReportConfig.traceCallBack('C:\Users\bpotter\LocalWorkArea\demos\autopilot_R2013b_workarea\Heading_Mode.slx','Heading_Mode:26:42')">&#60;model&#62;/Angle_Diff/signum</a>
+</TD>
+<TD class="d1">
+<span class="VERIFIED">Verified</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+-</TD>
+</TR>
+</table></TD>
+</TR>
+<TR >
+<TD class="d1">
+<a href="matlab:slci.internal.ReportConfig.traceCallBack('C:\Users\bpotter\LocalWorkArea\demos\autopilot_R2013b_workarea\Heading_Mode.slx','Heading_Mode:26:43')">&#60;model&#62;/Angle_Diff/sum</a>
+</TD>
+<TD class="d1">
+<span class="VERIFIED">Verified</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+-</TD>
+</TR>
+</table></TD>
+</TR>
+<TR >
+<TD class="d1">
+<a href="matlab:slci.internal.ReportConfig.traceCallBack('C:\Users\bpotter\LocalWorkArea\demos\autopilot_R2013b_workarea\Heading_Mode.slx','Heading_Mode:26:44')">&#60;model&#62;/Angle_Diff/sum1</a>
+</TD>
+<TD class="d1">
+<span class="VERIFIED">Verified</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+-</TD>
+</TR>
+</table></TD>
+</TR>
+<TR >
+<TD class="d1">
+<a href="matlab:slci.internal.ReportConfig.traceCallBack('C:\Users\bpotter\LocalWorkArea\demos\autopilot_R2013b_workarea\Heading_Mode.slx','Heading_Mode:26:45')">&#60;model&#62;/Angle_Diff/sum2</a>
+</TD>
+<TD class="d1">
+<span class="VERIFIED">Verified</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+-</TD>
+</TR>
+</table></TD>
+</TR>
+<TR >
+<TD class="d1">
+<a href="matlab:slci.internal.ReportConfig.traceCallBack('C:\Users\bpotter\LocalWorkArea\demos\autopilot_R2013b_workarea\Heading_Mode.slx','Heading_Mode:26:46')">&#60;model&#62;/Angle_Diff/diff</a>
+</TD>
+<TD class="d1">
+<span class="VERIFIED">Verified</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+Virtual/Eliminated</TD>
+<TD class="d0">
+ (Outport) </TD>
+</TR>
+</table></TD>
+</TR>
+<TR >
+<TD class="d1">
+<a href="matlab:slci.internal.ReportConfig.traceCallBack('C:\Users\bpotter\LocalWorkArea\demos\autopilot_R2013b_workarea\Heading_Mode.slx','Heading_Mode:5:1')">&#60;model&#62;/Model Info/EmptySubsystem</a>
+</TD>
+<TD class="d1">
+<span class="VERIFIED">Verified</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+Virtual/Eliminated</TD>
+<TD class="d0">
+ (SubSystem) </TD>
+</TR>
+</table></TD>
+</TR>
+<TR >
+<TD class="d1">
+<a href="matlab:slci.internal.ReportConfig.traceCallBack('C:\Users\bpotter\LocalWorkArea\demos\autopilot_R2013b_workarea\Heading_Mode.slx','Heading_Mode')">block I/O initialization code</a>
+</TD>
+<TD class="d1">
+<span class="VERIFIED">Verified</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+-</TD>
+</TR>
+</table></TD>
+</TR>
+</table></TD>
+</TR>
+</table></TD>
+</TR>
+</table>
+ </td>
+ </tr>
+ </table>
+ </td>
+ </tr>
+ </table><table class="T0" id="60">
+  <tr> 
+    <td style="text-align:left;">
+    <span style="background-color:#ffffff;cursor:pointer;white-space:nowrap" title="Click to shrink or expand category"        onclick="rtwTableShrink(this,'60')"> 
+     <span style="font-family:monospace" id = "60_button">[-]
+</span>
+    </span>
+    </td>
+    <td class="d0">
+    <b>Code To Model Verification </b>
+    </td><td class="d0"></td>
+  </tr>
+  <tr>
+  <td class="d0">
+  <span id="60_indent"></span>
+  </td>
+  <td class="d0">
+ <table style="display:all; border-style:none;" id="60_table">
+ <tr>
+ <td class="d0"><table class="T0"><TR>
+<TD class="d0">
+<table class="T0" id="58">
+  <tr> 
+    <td style="text-align:left;">
+    <span style="background-color:#ffffff;cursor:pointer;white-space:nowrap" title="Click to shrink or expand category"        onclick="rtwTableShrink(this,'58')"> 
+     <span style="font-family:monospace" id = "58_button">[-]
+</span>
+    </span>
+    </td>
+    <td class="d0">
+    <b>Function : Heading_Mode_initialize</b>
+    </td><td class="d0"></td>
+  </tr>
+  <tr>
+  <td class="d0">
+  <span id="58_indent"></span>
+  </td>
+  <td class="d0">
+ <table style="display:all; border-style:none;" id="58_table">
+ <tr>
+ <td class="d0"><table class="T1"><TR >
+<TH class="th1">
+Function outputs/state variables</TH>
+<TH class="th1">
+Contributing lines of code</TH>
+</TR>
+<TR >
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+*localB.hdgError</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+Heading_Mode.c:71</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+<TR>
+<TD class="d0">
+Heading_Mode.c:72</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+</table></TD>
+</TR>
+</table>
+ </td>
+ </tr>
+ </table>
+ </td>
+ </tr>
+ </table></TD>
+</TR>
+<TR>
+<TD class="d0">
+<table class="T0" id="59">
+  <tr> 
+    <td style="text-align:left;">
+    <span style="background-color:#ffffff;cursor:pointer;white-space:nowrap" title="Click to shrink or expand category"        onclick="rtwTableShrink(this,'59')"> 
+     <span style="font-family:monospace" id = "59_button">[-]
+</span>
+    </span>
+    </td>
+    <td class="d0">
+    <b>Function : Heading_Mode</b>
+    </td><td class="d0"></td>
+  </tr>
+  <tr>
+  <td class="d0">
+  <span id="59_indent"></span>
+  </td>
+  <td class="d0">
+ <table style="display:all; border-style:none;" id="59_table">
+ <tr>
+ <td class="d0"><table class="T1"><TR >
+<TH class="th1">
+Function outputs/state variables</TH>
+<TH class="th1">
+Contributing lines of code</TH>
+</TR>
+<TR >
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+*localB.hdgError</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+Heading_Mode.c:28</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+<TR>
+<TD class="d0">
+Heading_Mode.c:31</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+<TR>
+<TD class="d0">
+Heading_Mode.c:32</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+<TR>
+<TD class="d0">
+Heading_Mode.c:33</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+<TR>
+<TD class="d0">
+Heading_Mode.c:34</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+<TR>
+<TD class="d0">
+Heading_Mode.c:35</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+<TR>
+<TD class="d0">
+Heading_Mode.c:36</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+<TR>
+<TD class="d0">
+Heading_Mode.c:50</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+<TR>
+<TD class="d0">
+Heading_Mode.c:51</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+</table></TD>
+</TR>
+<TR >
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+*rty_PhiCmd</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+Heading_Mode.c:28</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+<TR>
+<TD class="d0">
+Heading_Mode.c:31</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+<TR>
+<TD class="d0">
+Heading_Mode.c:32</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+<TR>
+<TD class="d0">
+Heading_Mode.c:33</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+<TR>
+<TD class="d0">
+Heading_Mode.c:34</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+<TR>
+<TD class="d0">
+Heading_Mode.c:35</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+<TR>
+<TD class="d0">
+Heading_Mode.c:36</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+<TR>
+<TD class="d0">
+Heading_Mode.c:50</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+<TR>
+<TD class="d0">
+Heading_Mode.c:51</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+<TR>
+<TD class="d0">
+Heading_Mode.c:62</TD>
+<TD class="d0">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+</table></TD>
+</TR>
+</table>
+ </td>
+ </tr>
+ </table>
+ </td>
+ </tr>
+ </table></TD>
+</TR>
+</table>
+ </td>
+ </tr>
+ </table>
+ </td>
+ </tr>
+ </table><table class="T0" id="63">
+  <tr> 
+    <td style="text-align:left;">
+    <span style="background-color:#ffffff;cursor:pointer;white-space:nowrap" title="Click to shrink or expand category"        onclick="rtwTableShrink(this,'63')"> 
+     <span style="font-family:monospace" id = "63_button">[-]
+</span>
+    </span>
+    </td>
+    <td class="d0">
+    <b>Temporary Variable Usage </b>
+    </td><td class="d0"></td>
+  </tr>
+  <tr>
+  <td class="d0">
+  <span id="63_indent"></span>
+  </td>
+  <td class="d0">
+ <table style="display:all; border-style:none;" id="63_table">
+ <tr>
+ <td class="d0"><table class="T0"><TR>
+<TD class="d0">
+<table class="T0" id="61">
+  <tr> 
+    <td style="text-align:left;">
+    <span style="background-color:#ffffff;cursor:pointer;white-space:nowrap" title="Click to shrink or expand category"        onclick="rtwTableShrink(this,'61')"> 
+     <span style="font-family:monospace" id = "61_button">[-]
+</span>
+    </span>
+    </td>
+    <td class="d0">
+    <b>Function : Heading_Mode_initialize</b>
+    </td><td class="d0"></td>
+  </tr>
+  <tr>
+  <td class="d0">
+  <span id="61_indent"></span>
+  </td>
+  <td class="d0">
+ <table style="display:all; border-style:none;" id="61_table">
+ <tr>
+ <td class="d0">Function does not have any temporary variable declarations
+ </td>
+ </tr>
+ </table>
+ </td>
+ </tr>
+ </table></TD>
+</TR>
+<TR>
+<TD class="d0">
+<table class="T0" id="62">
+  <tr> 
+    <td style="text-align:left;">
+    <span style="background-color:#ffffff;cursor:pointer;white-space:nowrap" title="Click to shrink or expand category"        onclick="rtwTableShrink(this,'62')"> 
+     <span style="font-family:monospace" id = "62_button">[-]
+</span>
+    </span>
+    </td>
+    <td class="d0">
+    <b>Function : Heading_Mode</b>
+    </td><td class="d0"></td>
+  </tr>
+  <tr>
+  <td class="d0">
+  <span id="62_indent"></span>
+  </td>
+  <td class="d0">
+ <table style="display:all; border-style:none;" id="62_table">
+ <tr>
+ <td class="d0"><table class="T1"><TR >
+<TH class="th1">
+Temporary variable name</TH>
+<TH class="th1">
+Status</TH>
+</TR>
+<TR >
+<TD class="d1">
+rtb_sum</TD>
+<TD class="d1">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+<TR >
+<TD class="d1">
+y</TD>
+<TD class="d1">
+<span class="VERIFIED">Verified</span></TD>
+</TR>
+</table>
+ </td>
+ </tr>
+ </table>
+ </td>
+ </tr>
+ </table></TD>
+</TR>
+</table>
+ </td>
+ </tr>
+ </table>
+ </td>
+ </tr>
+ </table></TD>
+</TR>
+</table><br/><h2>Traceability Details</h2><table class="T0"><TR>
+<TD class="d0">
+<table class="T0" id="64">
+  <tr> 
+    <td style="text-align:left;">
+    <span style="background-color:#ffffff;cursor:pointer;white-space:nowrap" title="Click to shrink or expand category"        onclick="rtwTableShrink(this,'64')"> 
+     <span style="font-family:monospace" id = "64_button">[-]
+</span>
+    </span>
+    </td>
+    <td class="d0">
+    <b>Model To Code Traceability </b>
+    </td><td class="d0"></td>
+  </tr>
+  <tr>
+  <td class="d0">
+  <span id="64_indent"></span>
+  </td>
+  <td class="d0">
+ <table style="display:all; border-style:none;" id="64_table">
+ <tr>
+ <td class="d0"><table class="T0"><TR>
+<TD class="d0">
+<table class="T0"><TR>
+<TD class="d0">
+<b>Model : <a href="matlab:open_system(slci.internal.encodeString('C:\Users\bpotter\LocalWorkArea\demos\autopilot_R2013b_workarea\Heading_Mode.slx','html','decode'))">Heading_Mode</a></b></TD>
+</TR>
+<TR>
+<TD class="d0">
+<table class="T1"><TR >
+<TH class="th1">
+Model object</TH>
+<TH class="th1">
+Code location</TH>
+<TH class="th1">
+Details</TH>
+</TR>
+<TR >
+<TD class="d1">
+<a href="matlab:slci.internal.ReportConfig.traceCallBack('C:\Users\bpotter\LocalWorkArea\demos\autopilot_R2013b_workarea\Heading_Mode.slx','Heading_Mode:1')">&#60;model&#62;/Psi Ref</a>
+</TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+-</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN">Virtual/Eliminated (Inport)</span></TD>
+</TR>
+<TR >
+<TD class="d1">
+<a href="matlab:slci.internal.ReportConfig.traceCallBack('C:\Users\bpotter\LocalWorkArea\demos\autopilot_R2013b_workarea\Heading_Mode.slx','Heading_Mode:2')">&#60;model&#62;/Psi</a>
+</TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+-</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN">Virtual/Eliminated (Inport)</span></TD>
+</TR>
+<TR >
+<TD class="d1">
+<a href="matlab:slci.internal.ReportConfig.traceCallBack('C:\Users\bpotter\LocalWorkArea\demos\autopilot_R2013b_workarea\Heading_Mode.slx','Heading_Mode:3')">&#60;model&#62;/TAS</a>
+</TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+-</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN">Virtual/Eliminated (Inport)</span></TD>
+</TR>
+<TR >
+<TD class="d1">
+<a href="matlab:slci.internal.ReportConfig.traceCallBack('C:\Users\bpotter\LocalWorkArea\demos\autopilot_R2013b_workarea\Heading_Mode.slx','Heading_Mode:26')">&#60;model&#62;/Angle_Diff</a>
+</TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+-</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN">Virtual/Eliminated (SubSystem)</span></TD>
+</TR>
+<TR >
+<TD class="d1">
+<a href="matlab:slci.internal.ReportConfig.traceCallBack('C:\Users\bpotter\LocalWorkArea\demos\autopilot_R2013b_workarea\Heading_Mode.slx','Heading_Mode:4')">&#60;model&#62;/Disp Gain</a>
+</TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+Heading_Mode.c:62</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN">-</span></TD>
+</TR>
+<TR >
+<TD class="d1">
+<a href="matlab:slci.internal.ReportConfig.traceCallBack('C:\Users\bpotter\LocalWorkArea\demos\autopilot_R2013b_workarea\Heading_Mode.slx','Heading_Mode:5')">&#60;model&#62;/Model Info</a>
+</TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+-</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN">Virtual/Eliminated (Model Info block)</span></TD>
+</TR>
+<TR >
+<TD class="d1">
+<a href="matlab:slci.internal.ReportConfig.traceCallBack('C:\Users\bpotter\LocalWorkArea\demos\autopilot_R2013b_workarea\Heading_Mode.slx','Heading_Mode:6')">&#60;model&#62;/Product</a>
+</TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+Heading_Mode.c:62</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN">-</span></TD>
+</TR>
+<TR >
+<TD class="d1">
+<a href="matlab:slci.internal.ReportConfig.traceCallBack('C:\Users\bpotter\LocalWorkArea\demos\autopilot_R2013b_workarea\Heading_Mode.slx','Heading_Mode:8')">&#60;model&#62;/Phi Cmd</a>
+</TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+Heading_Mode.c:62</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN">-</span></TD>
+</TR>
+<TR >
+<TD class="d1">
+<a href="matlab:slci.internal.ReportConfig.traceCallBack('C:\Users\bpotter\LocalWorkArea\demos\autopilot_R2013b_workarea\Heading_Mode.slx','Heading_Mode:26:33')">&#60;model&#62;/Angle_Diff/plus</a>
+</TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+-</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN">Virtual/Eliminated (Inport)</span></TD>
+</TR>
+<TR >
+<TD class="d1">
+<a href="matlab:slci.internal.ReportConfig.traceCallBack('C:\Users\bpotter\LocalWorkArea\demos\autopilot_R2013b_workarea\Heading_Mode.slx','Heading_Mode:26:34')">&#60;model&#62;/Angle_Diff/minus</a>
+</TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+-</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN">Virtual/Eliminated (Inport)</span></TD>
+</TR>
+<TR >
+<TD class="d1">
+<a href="matlab:slci.internal.ReportConfig.traceCallBack('C:\Users\bpotter\LocalWorkArea\demos\autopilot_R2013b_workarea\Heading_Mode.slx','Heading_Mode:26:35')">&#60;model&#62;/Angle_Diff/abs</a>
+</TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+Heading_Mode.c:50</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN">-</span></TD>
+</TR>
+<TR >
+<TD class="d1">
+<a href="matlab:slci.internal.ReportConfig.traceCallBack('C:\Users\bpotter\LocalWorkArea\demos\autopilot_R2013b_workarea\Heading_Mode.slx','Heading_Mode:26:36')">&#60;model&#62;/Angle_Diff/constant</a>
+</TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+Heading_Mode.c:50</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN">-</span></TD>
+</TR>
+<TR >
+<TD class="d1">
+<a href="matlab:slci.internal.ReportConfig.traceCallBack('C:\Users\bpotter\LocalWorkArea\demos\autopilot_R2013b_workarea\Heading_Mode.slx','Heading_Mode:26:37')">&#60;model&#62;/Angle_Diff/constant1</a>
+</TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+Heading_Mode.c:50-51</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN">-</span></TD>
+</TR>
+<TR >
+<TD class="d1">
+<a href="matlab:slci.internal.ReportConfig.traceCallBack('C:\Users\bpotter\LocalWorkArea\demos\autopilot_R2013b_workarea\Heading_Mode.slx','Heading_Mode:26:38')">&#60;model&#62;/Angle_Diff/floor</a>
+</TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+Heading_Mode.c:50</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN">-</span></TD>
+</TR>
+<TR >
+<TD class="d1">
+<a href="matlab:slci.internal.ReportConfig.traceCallBack('C:\Users\bpotter\LocalWorkArea\demos\autopilot_R2013b_workarea\Heading_Mode.slx','Heading_Mode:26:39')">&#60;model&#62;/Angle_Diff/product</a>
+</TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+Heading_Mode.c:50</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN">-</span></TD>
+</TR>
+<TR >
+<TD class="d1">
+<a href="matlab:slci.internal.ReportConfig.traceCallBack('C:\Users\bpotter\LocalWorkArea\demos\autopilot_R2013b_workarea\Heading_Mode.slx','Heading_Mode:26:40')">&#60;model&#62;/Angle_Diff/product1</a>
+</TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+Heading_Mode.c:50</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN">-</span></TD>
+</TR>
+<TR >
+<TD class="d1">
+<a href="matlab:slci.internal.ReportConfig.traceCallBack('C:\Users\bpotter\LocalWorkArea\demos\autopilot_R2013b_workarea\Heading_Mode.slx','Heading_Mode:26:41')">&#60;model&#62;/Angle_Diff/product2</a>
+</TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+Heading_Mode.c:50</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN">-</span></TD>
+</TR>
+<TR >
+<TD class="d1">
+<a href="matlab:slci.internal.ReportConfig.traceCallBack('C:\Users\bpotter\LocalWorkArea\demos\autopilot_R2013b_workarea\Heading_Mode.slx','Heading_Mode:26:42')">&#60;model&#62;/Angle_Diff/signum</a>
+</TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+Heading_Mode.c:31-36</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN">-</span></TD>
+</TR>
+<TR >
+<TD class="d1">
+<a href="matlab:slci.internal.ReportConfig.traceCallBack('C:\Users\bpotter\LocalWorkArea\demos\autopilot_R2013b_workarea\Heading_Mode.slx','Heading_Mode:26:43')">&#60;model&#62;/Angle_Diff/sum</a>
+</TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+Heading_Mode.c:28 , 36</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN">-</span></TD>
+</TR>
+<TR >
+<TD class="d1">
+<a href="matlab:slci.internal.ReportConfig.traceCallBack('C:\Users\bpotter\LocalWorkArea\demos\autopilot_R2013b_workarea\Heading_Mode.slx','Heading_Mode:26:44')">&#60;model&#62;/Angle_Diff/sum1</a>
+</TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+Heading_Mode.c:50</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN">-</span></TD>
+</TR>
+<TR >
+<TD class="d1">
+<a href="matlab:slci.internal.ReportConfig.traceCallBack('C:\Users\bpotter\LocalWorkArea\demos\autopilot_R2013b_workarea\Heading_Mode.slx','Heading_Mode:26:45')">&#60;model&#62;/Angle_Diff/sum2</a>
+</TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+Heading_Mode.c:50</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN">-</span></TD>
+</TR>
+<TR >
+<TD class="d1">
+<a href="matlab:slci.internal.ReportConfig.traceCallBack('C:\Users\bpotter\LocalWorkArea\demos\autopilot_R2013b_workarea\Heading_Mode.slx','Heading_Mode:26:46')">&#60;model&#62;/Angle_Diff/diff</a>
+</TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+-</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN">Virtual/Eliminated (Outport)</span></TD>
+</TR>
+<TR >
+<TD class="d1">
+<a href="matlab:slci.internal.ReportConfig.traceCallBack('C:\Users\bpotter\LocalWorkArea\demos\autopilot_R2013b_workarea\Heading_Mode.slx','Heading_Mode:5:1')">&#60;model&#62;/Model Info/EmptySubsystem</a>
+</TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+-</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN">Virtual/Eliminated (SubSystem)</span></TD>
+</TR>
+<TR >
+<TD class="d1">
+<a href="matlab:slci.internal.ReportConfig.traceCallBack('C:\Users\bpotter\LocalWorkArea\demos\autopilot_R2013b_workarea\Heading_Mode.slx','Heading_Mode')">block I/O initialization code</a>
+</TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+Heading_Mode.c:71-72</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN">-</span></TD>
+</TR>
+</table></TD>
+</TR>
+</table></TD>
+</TR>
+</table>
+ </td>
+ </tr>
+ </table>
+ </td>
+ </tr>
+ </table><table class="T0" id="65">
+  <tr> 
+    <td style="text-align:left;">
+    <span style="background-color:#ffffff;cursor:pointer;white-space:nowrap" title="Click to shrink or expand category"        onclick="rtwTableShrink(this,'65')"> 
+     <span style="font-family:monospace" id = "65_button">[-]
+</span>
+    </span>
+    </td>
+    <td class="d0">
+    <b>Code To Model Traceability </b>
+    </td><td class="d0"></td>
+  </tr>
+  <tr>
+  <td class="d0">
+  <span id="65_indent"></span>
+  </td>
+  <td class="d0">
+ <table style="display:all; border-style:none;" id="65_table">
+ <tr>
+ <td class="d0"><table class="T0"><TR>
+<TD class="d0">
+<table class="T0"><TR>
+<TD class="d0">
+<b>File : <a href ="file:///C:/Users/bpotter/LocalWorkArea/demos/autopilot_R2013b_workarea/slprj/ert/Heading_Mode/Heading_Mode.c">Heading_Mode.c</a></b></TD>
+</TR>
+<TR>
+<TD class="d0">
+<table class="T1"><TR >
+<TH class="th1">
+Code location</TH>
+<TH class="th1">
+Code</TH>
+<TH class="th1">
+Model object</TH>
+<TH class="th1">
+Details</TH>
+</TR>
+<TR >
+<TD class="d1">
+1</TD>
+<TD class="d1">
+<span class="CODE">/*
+</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+-</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN"><span class="NON_FUNCTIONAL">Nonfunctional code</span> (Comment) </span></TD>
+</TR>
+<TR >
+<TD class="d1">
+2</TD>
+<TD class="d1">
+<span class="CODE"> * File: Heading_Mode.c
+</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+-</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN"><span class="NON_FUNCTIONAL">Nonfunctional code</span> (Comment) </span></TD>
+</TR>
+<TR >
+<TD class="d1">
+3</TD>
+<TD class="d1">
+<span class="CODE"> *
+</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+-</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN"><span class="NON_FUNCTIONAL">Nonfunctional code</span> (Comment) </span></TD>
+</TR>
+<TR >
+<TD class="d1">
+4</TD>
+<TD class="d1">
+<span class="CODE"> * Code generated for Simulink model &#39;Heading_Mode&#39;.
+</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+-</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN"><span class="NON_FUNCTIONAL">Nonfunctional code</span> (Comment) </span></TD>
+</TR>
+<TR >
+<TD class="d1">
+5</TD>
+<TD class="d1">
+<span class="CODE"> *
+</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+-</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN"><span class="NON_FUNCTIONAL">Nonfunctional code</span> (Comment) </span></TD>
+</TR>
+<TR >
+<TD class="d1">
+6</TD>
+<TD class="d1">
+<span class="CODE"> * Model version                  : 1.146
+</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+-</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN"><span class="NON_FUNCTIONAL">Nonfunctional code</span> (Comment) </span></TD>
+</TR>
+<TR >
+<TD class="d1">
+7</TD>
+<TD class="d1">
+<span class="CODE"> * Simulink Coder version         : 8.5 (R2013b) 08-Aug-2013
+</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+-</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN"><span class="NON_FUNCTIONAL">Nonfunctional code</span> (Comment) </span></TD>
+</TR>
+<TR >
+<TD class="d1">
+8</TD>
+<TD class="d1">
+<span class="CODE"> * C/C++ source code generated on : Mon Feb 03 08:13:34 2014
+</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+-</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN"><span class="NON_FUNCTIONAL">Nonfunctional code</span> (Comment) </span></TD>
+</TR>
+<TR >
+<TD class="d1">
+9</TD>
+<TD class="d1">
+<span class="CODE"> *
+</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+-</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN"><span class="NON_FUNCTIONAL">Nonfunctional code</span> (Comment) </span></TD>
+</TR>
+<TR >
+<TD class="d1">
+10</TD>
+<TD class="d1">
+<span class="CODE"> * Target selection: ert.tlc
+</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+-</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN"><span class="NON_FUNCTIONAL">Nonfunctional code</span> (Comment) </span></TD>
+</TR>
+<TR >
+<TD class="d1">
+11</TD>
+<TD class="d1">
+<span class="CODE"> * Embedded hardware selection: 32-bit Embedded Processor
+</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+-</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN"><span class="NON_FUNCTIONAL">Nonfunctional code</span> (Comment) </span></TD>
+</TR>
+<TR >
+<TD class="d1">
+12</TD>
+<TD class="d1">
+<span class="CODE"> * Code generation objectives: Unspecified
+</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+-</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN"><span class="NON_FUNCTIONAL">Nonfunctional code</span> (Comment) </span></TD>
+</TR>
+<TR >
+<TD class="d1">
+13</TD>
+<TD class="d1">
+<span class="CODE"> * Validation result: Not run
+</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+-</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN"><span class="NON_FUNCTIONAL">Nonfunctional code</span> (Comment) </span></TD>
+</TR>
+<TR >
+<TD class="d1">
+14</TD>
+<TD class="d1">
+<span class="CODE"> */
+</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+-</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN"><span class="NON_FUNCTIONAL">Nonfunctional code</span> (Comment) </span></TD>
+</TR>
+<TR >
+<TD class="d1">
+15</TD>
+<TD class="d1">
+<span class="CODE">
+</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+-</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN"><span class="NON_FUNCTIONAL">Nonfunctional code</span> (Empty line) </span></TD>
+</TR>
+<TR >
+<TD class="d1">
+16</TD>
+<TD class="d1">
+<span class="CODE">#include &#34;Heading_Mode.h&#34;
+</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+-</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN"><span class="NOT_PROCESSED">Not processed</span> (Include statement) </span></TD>
+</TR>
+<TR >
+<TD class="d1">
+17</TD>
+<TD class="d1">
+<span class="CODE">#include &#34;Heading_Mode_private.h&#34;
+</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+-</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN"><span class="NOT_PROCESSED">Not processed</span> (Include statement) </span></TD>
+</TR>
+<TR >
+<TD class="d1">
+18</TD>
+<TD class="d1">
+<span class="CODE">
+</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+-</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN"><span class="NON_FUNCTIONAL">Nonfunctional code</span> (Empty line) </span></TD>
+</TR>
+<TR >
+<TD class="d1">
+19</TD>
+<TD class="d1">
+<span class="CODE">/* Output and update for referenced model: &#39;Heading_Mode&#39; */
+</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+-</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN"><span class="NON_FUNCTIONAL">Nonfunctional code</span> (Comment) </span></TD>
+</TR>
+<TR >
+<TD class="d1">
+20</TD>
+<TD class="d1">
+<span class="CODE">void Heading_Mode(const real_T *rtu_PsiRef, const real_T *rtu_Psi, const real_T ...</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+<a href="matlab:slci.internal.ReportConfig.traceCallBack('C:\Users\bpotter\LocalWorkArea\demos\autopilot_R2013b_workarea\Heading_Mode.slx','Heading_Mode')">output function interface</a>
+</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN">-</span></TD>
+</TR>
+<TR >
+<TD class="d1">
+21</TD>
+<TD class="d1">
+<span class="CODE">                  rtu_TAS, real_T *rty_PhiCmd, rtB_Heading_Mode *localB, real_T...</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+<a href="matlab:slci.internal.ReportConfig.traceCallBack('C:\Users\bpotter\LocalWorkArea\demos\autopilot_R2013b_workarea\Heading_Mode.slx','Heading_Mode')">output function interface</a>
+</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN">-</span></TD>
+</TR>
+<TR >
+<TD class="d1">
+22</TD>
+<TD class="d1">
+<span class="CODE">                  rtp_hdgGain)
+</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+<a href="matlab:slci.internal.ReportConfig.traceCallBack('C:\Users\bpotter\LocalWorkArea\demos\autopilot_R2013b_workarea\Heading_Mode.slx','Heading_Mode')">output function interface</a>
+</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN">-</span></TD>
+</TR>
+<TR >
+<TD class="d1">
+23</TD>
+<TD class="d1">
+<span class="CODE">{
+</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+-</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN"><span class="NON_FUNCTIONAL">Nonfunctional code</span> (Start of code segment) </span></TD>
+</TR>
+<TR >
+<TD class="d1">
+24</TD>
+<TD class="d1">
+<span class="CODE">  real_T rtb_sum;
+</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+-</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN">Local variable declaration</span></TD>
+</TR>
+<TR >
+<TD class="d1">
+25</TD>
+<TD class="d1">
+<span class="CODE">  real_T y;
+</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+-</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN">Local variable declaration</span></TD>
+</TR>
+<TR >
+<TD class="d1">
+26</TD>
+<TD class="d1">
+<span class="CODE">
+</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+-</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN"><span class="NON_FUNCTIONAL">Nonfunctional code</span> (Empty line) </span></TD>
+</TR>
+<TR >
+<TD class="d1">
+27</TD>
+<TD class="d1">
+<span class="CODE">  /* Sum: &#39;&#60;S1&#62;/sum&#39; */
+</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+-</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN"><span class="NON_FUNCTIONAL">Nonfunctional code</span> (Comment) </span></TD>
+</TR>
+<TR >
+<TD class="d1">
+28</TD>
+<TD class="d1">
+<span class="CODE">  rtb_sum = (*rtu_PsiRef) - (*rtu_Psi);
+</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+<a href="matlab:slci.internal.ReportConfig.traceCallBack('C:\Users\bpotter\LocalWorkArea\demos\autopilot_R2013b_workarea\Heading_Mode.slx','Heading_Mode:1')">&#60;model&#62;/Psi Ref</a>
+</TD>
+</TR>
+<TR>
+<TD class="d0">
+<a href="matlab:slci.internal.ReportConfig.traceCallBack('C:\Users\bpotter\LocalWorkArea\demos\autopilot_R2013b_workarea\Heading_Mode.slx','Heading_Mode:2')">&#60;model&#62;/Psi</a>
+</TD>
+</TR>
+<TR>
+<TD class="d0">
+<a href="matlab:slci.internal.ReportConfig.traceCallBack('C:\Users\bpotter\LocalWorkArea\demos\autopilot_R2013b_workarea\Heading_Mode.slx','Heading_Mode:26:43')">&#60;model&#62;/Angle_Diff/sum</a>
+</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN">-</span></TD>
+</TR>
+<TR >
+<TD class="d1">
+29</TD>
+<TD class="d1">
+<span class="CODE">
+</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+-</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN"><span class="NON_FUNCTIONAL">Nonfunctional code</span> (Empty line) </span></TD>
+</TR>
+<TR >
+<TD class="d1">
+30</TD>
+<TD class="d1">
+<span class="CODE">  /* Signum: &#39;&#60;S1&#62;/signum&#39; */
+</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+-</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN"><span class="NON_FUNCTIONAL">Nonfunctional code</span> (Comment) </span></TD>
+</TR>
+<TR >
+<TD class="d1">
+31</TD>
+<TD class="d1">
+<span class="CODE">  if (rtb_sum &#60; 0.0) {
+</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+<a href="matlab:slci.internal.ReportConfig.traceCallBack('C:\Users\bpotter\LocalWorkArea\demos\autopilot_R2013b_workarea\Heading_Mode.slx','Heading_Mode:26:42')">&#60;model&#62;/Angle_Diff/signum</a>
+</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN">-</span></TD>
+</TR>
+<TR >
+<TD class="d1">
+32</TD>
+<TD class="d1">
+<span class="CODE">    y = -1.0;
+</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+<a href="matlab:slci.internal.ReportConfig.traceCallBack('C:\Users\bpotter\LocalWorkArea\demos\autopilot_R2013b_workarea\Heading_Mode.slx','Heading_Mode:26:42')">&#60;model&#62;/Angle_Diff/signum</a>
+</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN">-</span></TD>
+</TR>
+<TR >
+<TD class="d1">
+33</TD>
+<TD class="d1">
+<span class="CODE">  } else if (rtb_sum &#62; 0.0) {
+</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+<a href="matlab:slci.internal.ReportConfig.traceCallBack('C:\Users\bpotter\LocalWorkArea\demos\autopilot_R2013b_workarea\Heading_Mode.slx','Heading_Mode:26:42')">&#60;model&#62;/Angle_Diff/signum</a>
+</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN">-</span></TD>
+</TR>
+<TR >
+<TD class="d1">
+34</TD>
+<TD class="d1">
+<span class="CODE">    y = 1.0;
+</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+<a href="matlab:slci.internal.ReportConfig.traceCallBack('C:\Users\bpotter\LocalWorkArea\demos\autopilot_R2013b_workarea\Heading_Mode.slx','Heading_Mode:26:42')">&#60;model&#62;/Angle_Diff/signum</a>
+</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN">-</span></TD>
+</TR>
+<TR >
+<TD class="d1">
+35</TD>
+<TD class="d1">
+<span class="CODE">  } else {
+</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+<a href="matlab:slci.internal.ReportConfig.traceCallBack('C:\Users\bpotter\LocalWorkArea\demos\autopilot_R2013b_workarea\Heading_Mode.slx','Heading_Mode:26:42')">&#60;model&#62;/Angle_Diff/signum</a>
+</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN">-</span></TD>
+</TR>
+<TR >
+<TD class="d1">
+36</TD>
+<TD class="d1">
+<span class="CODE">    y = rtb_sum;
+</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+<a href="matlab:slci.internal.ReportConfig.traceCallBack('C:\Users\bpotter\LocalWorkArea\demos\autopilot_R2013b_workarea\Heading_Mode.slx','Heading_Mode:26:42')">&#60;model&#62;/Angle_Diff/signum</a>
+</TD>
+</TR>
+<TR>
+<TD class="d0">
+<a href="matlab:slci.internal.ReportConfig.traceCallBack('C:\Users\bpotter\LocalWorkArea\demos\autopilot_R2013b_workarea\Heading_Mode.slx','Heading_Mode:26:43')">&#60;model&#62;/Angle_Diff/sum</a>
+</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN">-</span></TD>
+</TR>
+<TR >
+<TD class="d1">
+37</TD>
+<TD class="d1">
+<span class="CODE">  }
+</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+-</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN"><span class="NON_FUNCTIONAL">Nonfunctional code</span> (End of code segment) </span></TD>
+</TR>
+<TR >
+<TD class="d1">
+38</TD>
+<TD class="d1">
+<span class="CODE">
+</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+-</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN"><span class="NON_FUNCTIONAL">Nonfunctional code</span> (Empty line) </span></TD>
+</TR>
+<TR >
+<TD class="d1">
+39</TD>
+<TD class="d1">
+<span class="CODE">  /* Sum: &#39;&#60;S1&#62;/sum1&#39; incorporates:
+</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+-</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN"><span class="NON_FUNCTIONAL">Nonfunctional code</span> (Comment) </span></TD>
+</TR>
+<TR >
+<TD class="d1">
+40</TD>
+<TD class="d1">
+<span class="CODE">   *  Abs: &#39;&#60;S1&#62;/abs&#39;
+</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+-</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN"><span class="NON_FUNCTIONAL">Nonfunctional code</span> (Comment) </span></TD>
+</TR>
+<TR >
+<TD class="d1">
+41</TD>
+<TD class="d1">
+<span class="CODE">   *  Constant: &#39;&#60;S1&#62;/constant&#39;
+</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+-</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN"><span class="NON_FUNCTIONAL">Nonfunctional code</span> (Comment) </span></TD>
+</TR>
+<TR >
+<TD class="d1">
+42</TD>
+<TD class="d1">
+<span class="CODE">   *  Constant: &#39;&#60;S1&#62;/constant1&#39;
+</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+-</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN"><span class="NON_FUNCTIONAL">Nonfunctional code</span> (Comment) </span></TD>
+</TR>
+<TR >
+<TD class="d1">
+43</TD>
+<TD class="d1">
+<span class="CODE">   *  Product: &#39;&#60;S1&#62;/product&#39;
+</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+-</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN"><span class="NON_FUNCTIONAL">Nonfunctional code</span> (Comment) </span></TD>
+</TR>
+<TR >
+<TD class="d1">
+44</TD>
+<TD class="d1">
+<span class="CODE">   *  Product: &#39;&#60;S1&#62;/product1&#39;
+</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+-</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN"><span class="NON_FUNCTIONAL">Nonfunctional code</span> (Comment) </span></TD>
+</TR>
+<TR >
+<TD class="d1">
+45</TD>
+<TD class="d1">
+<span class="CODE">   *  Product: &#39;&#60;S1&#62;/product2&#39;
+</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+-</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN"><span class="NON_FUNCTIONAL">Nonfunctional code</span> (Comment) </span></TD>
+</TR>
+<TR >
+<TD class="d1">
+46</TD>
+<TD class="d1">
+<span class="CODE">   *  Rounding: &#39;&#60;S1&#62;/floor&#39;
+</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+-</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN"><span class="NON_FUNCTIONAL">Nonfunctional code</span> (Comment) </span></TD>
+</TR>
+<TR >
+<TD class="d1">
+47</TD>
+<TD class="d1">
+<span class="CODE">   *  Signum: &#39;&#60;S1&#62;/signum&#39;
+</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+-</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN"><span class="NON_FUNCTIONAL">Nonfunctional code</span> (Comment) </span></TD>
+</TR>
+<TR >
+<TD class="d1">
+48</TD>
+<TD class="d1">
+<span class="CODE">   *  Sum: &#39;&#60;S1&#62;/sum2&#39;
+</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+-</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN"><span class="NON_FUNCTIONAL">Nonfunctional code</span> (Comment) </span></TD>
+</TR>
+<TR >
+<TD class="d1">
+49</TD>
+<TD class="d1">
+<span class="CODE">   */
+</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+-</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN"><span class="NON_FUNCTIONAL">Nonfunctional code</span> (Comment) </span></TD>
+</TR>
+<TR >
+<TD class="d1">
+50</TD>
+<TD class="d1">
+<span class="CODE">  localB-&#62;hdgError = rtb_sum - (y * (floor((fabs(rtb_sum) + 180.0) / 360.0) *
+</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+<a href="matlab:slci.internal.ReportConfig.traceCallBack('C:\Users\bpotter\LocalWorkArea\demos\autopilot_R2013b_workarea\Heading_Mode.slx','Heading_Mode:26:35')">&#60;model&#62;/Angle_Diff/abs</a>
+</TD>
+</TR>
+<TR>
+<TD class="d0">
+<a href="matlab:slci.internal.ReportConfig.traceCallBack('C:\Users\bpotter\LocalWorkArea\demos\autopilot_R2013b_workarea\Heading_Mode.slx','Heading_Mode:26:36')">&#60;model&#62;/Angle_Diff/constant</a>
+</TD>
+</TR>
+<TR>
+<TD class="d0">
+<a href="matlab:slci.internal.ReportConfig.traceCallBack('C:\Users\bpotter\LocalWorkArea\demos\autopilot_R2013b_workarea\Heading_Mode.slx','Heading_Mode:26:37')">&#60;model&#62;/Angle_Diff/constant1</a>
+</TD>
+</TR>
+<TR>
+<TD class="d0">
+<a href="matlab:slci.internal.ReportConfig.traceCallBack('C:\Users\bpotter\LocalWorkArea\demos\autopilot_R2013b_workarea\Heading_Mode.slx','Heading_Mode:26:38')">&#60;model&#62;/Angle_Diff/floor</a>
+</TD>
+</TR>
+<TR>
+<TD class="d0">
+<a href="matlab:slci.internal.ReportConfig.traceCallBack('C:\Users\bpotter\LocalWorkArea\demos\autopilot_R2013b_workarea\Heading_Mode.slx','Heading_Mode:26:39')">&#60;model&#62;/Angle_Diff/product</a>
+</TD>
+</TR>
+<TR>
+<TD class="d0">
+<a href="matlab:slci.internal.ReportConfig.traceCallBack('C:\Users\bpotter\LocalWorkArea\demos\autopilot_R2013b_workarea\Heading_Mode.slx','Heading_Mode:26:40')">&#60;model&#62;/Angle_Diff/product1</a>
+</TD>
+</TR>
+<TR>
+<TD class="d0">
+<a href="matlab:slci.internal.ReportConfig.traceCallBack('C:\Users\bpotter\LocalWorkArea\demos\autopilot_R2013b_workarea\Heading_Mode.slx','Heading_Mode:26:41')">&#60;model&#62;/Angle_Diff/product2</a>
+</TD>
+</TR>
+<TR>
+<TD class="d0">
+<a href="matlab:slci.internal.ReportConfig.traceCallBack('C:\Users\bpotter\LocalWorkArea\demos\autopilot_R2013b_workarea\Heading_Mode.slx','Heading_Mode:26:44')">&#60;model&#62;/Angle_Diff/sum1</a>
+</TD>
+</TR>
+<TR>
+<TD class="d0">
+<a href="matlab:slci.internal.ReportConfig.traceCallBack('C:\Users\bpotter\LocalWorkArea\demos\autopilot_R2013b_workarea\Heading_Mode.slx','Heading_Mode:26:45')">&#60;model&#62;/Angle_Diff/sum2</a>
+</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN">-</span></TD>
+</TR>
+<TR >
+<TD class="d1">
+51</TD>
+<TD class="d1">
+<span class="CODE">    360.0));
+</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+<a href="matlab:slci.internal.ReportConfig.traceCallBack('C:\Users\bpotter\LocalWorkArea\demos\autopilot_R2013b_workarea\Heading_Mode.slx','Heading_Mode:26:37')">&#60;model&#62;/Angle_Diff/constant1</a>
+</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN">-</span></TD>
+</TR>
+<TR >
+<TD class="d1">
+52</TD>
+<TD class="d1">
+<span class="CODE">
+</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+-</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN"><span class="NON_FUNCTIONAL">Nonfunctional code</span> (Empty line) </span></TD>
+</TR>
+<TR >
+<TD class="d1">
+53</TD>
+<TD class="d1">
+<span class="CODE">  /* Product: &#39;&#60;Root&#62;/Product&#39; incorporates:
+</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+-</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN"><span class="NON_FUNCTIONAL">Nonfunctional code</span> (Comment) </span></TD>
+</TR>
+<TR >
+<TD class="d1">
+54</TD>
+<TD class="d1">
+<span class="CODE">   *  Gain: &#39;&#60;Root&#62;/Disp Gain&#39;
+</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+-</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN"><span class="NON_FUNCTIONAL">Nonfunctional code</span> (Comment) </span></TD>
+</TR>
+<TR >
+<TD class="d1">
+55</TD>
+<TD class="d1">
+<span class="CODE">   *
+</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+-</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN"><span class="NON_FUNCTIONAL">Nonfunctional code</span> (Comment) </span></TD>
+</TR>
+<TR >
+<TD class="d1">
+56</TD>
+<TD class="d1">
+<span class="CODE">   * Block requirements for &#39;&#60;Root&#62;/Product&#39;:
+</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+-</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN"><span class="NON_FUNCTIONAL">Nonfunctional code</span> (Comment) </span></TD>
+</TR>
+<TR >
+<TD class="d1">
+57</TD>
+<TD class="d1">
+<span class="CODE">   *  1. 1.10. Heading Performance
+</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+-</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN"><span class="NON_FUNCTIONAL">Nonfunctional code</span> (Comment) </span></TD>
+</TR>
+<TR >
+<TD class="d1">
+58</TD>
+<TD class="d1">
+<span class="CODE">   *
+</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+-</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN"><span class="NON_FUNCTIONAL">Nonfunctional code</span> (Comment) </span></TD>
+</TR>
+<TR >
+<TD class="d1">
+59</TD>
+<TD class="d1">
+<span class="CODE">   * Block requirements for &#39;&#60;Root&#62;/Disp Gain&#39;:
+</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+-</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN"><span class="NON_FUNCTIONAL">Nonfunctional code</span> (Comment) </span></TD>
+</TR>
+<TR >
+<TD class="d1">
+60</TD>
+<TD class="d1">
+<span class="CODE">   *  1. 1.10. Heading Performance
+</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+-</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN"><span class="NON_FUNCTIONAL">Nonfunctional code</span> (Comment) </span></TD>
+</TR>
+<TR >
+<TD class="d1">
+61</TD>
+<TD class="d1">
+<span class="CODE">   */
+</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+-</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN"><span class="NON_FUNCTIONAL">Nonfunctional code</span> (Comment) </span></TD>
+</TR>
+<TR >
+<TD class="d1">
+62</TD>
+<TD class="d1">
+<span class="CODE">  *rty_PhiCmd = (rtp_hdgGain * localB-&#62;hdgError) * (*rtu_TAS);
+</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+<a href="matlab:slci.internal.ReportConfig.traceCallBack('C:\Users\bpotter\LocalWorkArea\demos\autopilot_R2013b_workarea\Heading_Mode.slx','Heading_Mode:3')">&#60;model&#62;/TAS</a>
+</TD>
+</TR>
+<TR>
+<TD class="d0">
+<a href="matlab:slci.internal.ReportConfig.traceCallBack('C:\Users\bpotter\LocalWorkArea\demos\autopilot_R2013b_workarea\Heading_Mode.slx','Heading_Mode:4')">&#60;model&#62;/Disp Gain</a>
+</TD>
+</TR>
+<TR>
+<TD class="d0">
+<a href="matlab:slci.internal.ReportConfig.traceCallBack('C:\Users\bpotter\LocalWorkArea\demos\autopilot_R2013b_workarea\Heading_Mode.slx','Heading_Mode:6')">&#60;model&#62;/Product</a>
+</TD>
+</TR>
+<TR>
+<TD class="d0">
+<a href="matlab:slci.internal.ReportConfig.traceCallBack('C:\Users\bpotter\LocalWorkArea\demos\autopilot_R2013b_workarea\Heading_Mode.slx','Heading_Mode:8')">&#60;model&#62;/Phi Cmd</a>
+</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN">-</span></TD>
+</TR>
+<TR >
+<TD class="d1">
+63</TD>
+<TD class="d1">
+<span class="CODE">}
+</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+-</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN"><span class="NON_FUNCTIONAL">Nonfunctional code</span> (End of code segment) </span></TD>
+</TR>
+<TR >
+<TD class="d1">
+64</TD>
+<TD class="d1">
+<span class="CODE">
+</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+-</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN"><span class="NON_FUNCTIONAL">Nonfunctional code</span> (Empty line) </span></TD>
+</TR>
+<TR >
+<TD class="d1">
+65</TD>
+<TD class="d1">
+<span class="CODE">/* Model initialize function */
+</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+-</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN"><span class="NON_FUNCTIONAL">Nonfunctional code</span> (Comment) </span></TD>
+</TR>
+<TR >
+<TD class="d1">
+66</TD>
+<TD class="d1">
+<span class="CODE">void Heading_Mode_initialize(rtB_Heading_Mode *localB)
+</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+<a href="matlab:slci.internal.ReportConfig.traceCallBack('C:\Users\bpotter\LocalWorkArea\demos\autopilot_R2013b_workarea\Heading_Mode.slx','Heading_Mode')">initialize function interface</a>
+</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN">-</span></TD>
+</TR>
+<TR >
+<TD class="d1">
+67</TD>
+<TD class="d1">
+<span class="CODE">{
+</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+-</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN"><span class="NON_FUNCTIONAL">Nonfunctional code</span> (Start of code segment) </span></TD>
+</TR>
+<TR >
+<TD class="d1">
+68</TD>
+<TD class="d1">
+<span class="CODE">  /* Registration code */
+</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+-</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN"><span class="NON_FUNCTIONAL">Nonfunctional code</span> (Comment) </span></TD>
+</TR>
+<TR >
+<TD class="d1">
+69</TD>
+<TD class="d1">
+<span class="CODE">
+</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+-</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN"><span class="NON_FUNCTIONAL">Nonfunctional code</span> (Empty line) </span></TD>
+</TR>
+<TR >
+<TD class="d1">
+70</TD>
+<TD class="d1">
+<span class="CODE">  /* block I/O */
+</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+-</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN"><span class="NON_FUNCTIONAL">Nonfunctional code</span> (Comment) </span></TD>
+</TR>
+<TR >
+<TD class="d1">
+71</TD>
+<TD class="d1">
+<span class="CODE">  (void) memset(((void *) localB), 0,
+</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+<a href="matlab:slci.internal.ReportConfig.traceCallBack('C:\Users\bpotter\LocalWorkArea\demos\autopilot_R2013b_workarea\Heading_Mode.slx','Heading_Mode')">block I/O initialization code</a>
+</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN">-</span></TD>
+</TR>
+<TR >
+<TD class="d1">
+72</TD>
+<TD class="d1">
+<span class="CODE">                sizeof(rtB_Heading_Mode));
+</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+<a href="matlab:slci.internal.ReportConfig.traceCallBack('C:\Users\bpotter\LocalWorkArea\demos\autopilot_R2013b_workarea\Heading_Mode.slx','Heading_Mode')">block I/O initialization code</a>
+</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN">-</span></TD>
+</TR>
+<TR >
+<TD class="d1">
+73</TD>
+<TD class="d1">
+<span class="CODE">}
+</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+-</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN"><span class="NON_FUNCTIONAL">Nonfunctional code</span> (End of code segment) </span></TD>
+</TR>
+<TR >
+<TD class="d1">
+74</TD>
+<TD class="d1">
+<span class="CODE">
+</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+-</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN"><span class="NON_FUNCTIONAL">Nonfunctional code</span> (Empty line) </span></TD>
+</TR>
+<TR >
+<TD class="d1">
+75</TD>
+<TD class="d1">
+<span class="CODE">/*
+</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+-</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN"><span class="NON_FUNCTIONAL">Nonfunctional code</span> (Comment) </span></TD>
+</TR>
+<TR >
+<TD class="d1">
+76</TD>
+<TD class="d1">
+<span class="CODE"> * File trailer for generated code.
+</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+-</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN"><span class="NON_FUNCTIONAL">Nonfunctional code</span> (Comment) </span></TD>
+</TR>
+<TR >
+<TD class="d1">
+77</TD>
+<TD class="d1">
+<span class="CODE"> *
+</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+-</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN"><span class="NON_FUNCTIONAL">Nonfunctional code</span> (Comment) </span></TD>
+</TR>
+<TR >
+<TD class="d1">
+78</TD>
+<TD class="d1">
+<span class="CODE"> * [EOF]
+</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+-</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN"><span class="NON_FUNCTIONAL">Nonfunctional code</span> (Comment) </span></TD>
+</TR>
+<TR >
+<TD class="d1">
+79</TD>
+<TD class="d1">
+<span class="CODE"> */
+</span></TD>
+<TD class="d1">
+<table class="T0"><TR>
+<TD class="d0">
+-</TD>
+</TR>
+</table></TD>
+<TD class="d1">
+<span class="UNKNOWN"><span class="NON_FUNCTIONAL">Nonfunctional code</span> (Comment) </span></TD>
+</TR>
+</table></TD>
+</TR>
+</table></TD>
+</TR>
+</table>
+ </td>
+ </tr>
+ </table>
+ </td>
+ </tr>
+ </table></TD>
+</TR>
+</table><br/><hr></body></html>

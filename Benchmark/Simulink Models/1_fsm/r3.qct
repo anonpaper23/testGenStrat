@@ -1,0 +1,15 @@
+#3. The autopilot shall change states from TRANSITION to NOMINAL when the system is supported and sensor data is good.
+
+# UPDATED: 
+# 1) QCT from LM had a few versions.
+# 2) Referencing supported{t} rather than supported{t-1}. The requirements 
+#    are ambiguous as to which is correct. The model uses supported{t}.
+# 3) The variable limits is not referenced in the requirement, and has been left out of the QCT.
+
+# VIOLATION: standby overrides supported. This violation can be supressed:
+#
+#    (not standby{t} and FiniteStateMachine.STATE{t-1}==0 and 
+#    supported{t} and FiniteStateMachine.good{t-1}) impl 
+#    (FiniteStateMachine.STATE{t}==1);
+
+(FiniteStateMachine.STATE{t-1}==0 and supported{t} and FiniteStateMachine.good{t-1}) impl (FiniteStateMachine.STATE{t}==1);

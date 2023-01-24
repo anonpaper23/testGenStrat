@@ -1,0 +1,8 @@
+#10.    The sensor shall change states from NOMINAL to FAULT when limits are exceeded.
+
+# UPDATED: 
+# 1) Replacing {all} with specific timesteps. Requirement is not explicit
+# about which timesteps to use. These are based on the model.
+# 2) Typo in original referenced STATE rather than SENSTATE.
+
+(FiniteStateMachine.SENSTATE{t-1}==0 and limits) impl (FiniteStateMachine.SENSTATE{t}==2);

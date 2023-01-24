@@ -1,0 +1,10 @@
+#7. The autopilot shall change states from PULLUP to TRANSITION when the system is supported and sensor data is good.
+
+# VIOLATION: standby override. This will be found when Max-Time > 1
+# This violation can be suppressed:
+#
+#   (not standby and FiniteStateMachine.STATE{t-1}==2 and 
+#   supported{t} and FiniteStateMachine.good{t-1}) impl 
+#   (FiniteStateMachine.STATE{t}==0);
+
+(FiniteStateMachine.STATE{t-1}==2 and supported{t} and FiniteStateMachine.good{t-1}) impl (FiniteStateMachine.STATE{t}==0);

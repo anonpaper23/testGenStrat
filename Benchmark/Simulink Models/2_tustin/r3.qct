@@ -1,0 +1,6 @@
+# 3. When in normal operation (as defined in reqs document), the Output 
+# (yout) shall be the result of the equation, yout = T/2*(xin + xinpv)+ypv.
+
+( not reset and 
+(((TL >= yout) and (yout >= BL)) or ((BL >= yout) and (yout >= TL))) ) impl 
+(yout == (0.5*T*(xin{t} + xin{t-1}) + yout{t-1}));

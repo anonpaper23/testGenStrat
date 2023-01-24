@@ -1,0 +1,98 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>RTW Report - look1_binlag.c</title>
+<style> .LN { font-style: italic; color: #888888 } </style>
+<style> .CT { font-style: italic; color: #117755 } </style>
+<style> .PP { font-style: bold;   color: #992211 } </style>
+<style> .KW { font-style: bold;   color: #112266 } </style>
+<style> .DT { font-style: bold;   color: #112266 } </style>
+<link rel="stylesheet" type="text/css" href="rtwreport.css"></link><script language="JavaScript" type="text/javascript" src="rtwreport_utils.js"></script>
+<SCRIPT type="text/javascript" src="rtwannotate.js"></SCRIPT>
+</head>
+<body bgcolor="#eeeeee" text="#1122aa" onload="try {if (top) { if (top.rtwFileOnLoad) top.rtwFileOnLoad(window.document); else local_onload();}} catch(err) {};if (typeof rtwannotate === 'function') {rtwannotate('look1_binlag_c_cov.xml');}">
+<p>
+<table border="0" cellspacing="0" cellpadding="6" width="100%%" height="100%%"><tr><td width="100%%" valign="top" bgcolor="#ffffff">
+<h4>File: <a href="../look1_binlag.c" target="rtwreport_document_frame" id="linkToText_plain">look1_binlag.c</a></h4>
+<pre id="RTWcode">
+<span><a class="LN" name="1">    1   </a><span class="CT">/*</span>
+</span><span><a class="LN" name="2">    2   </a><span class="CT"> * File: look1_binlag.c</span>
+</span><span><a class="LN" name="3">    3   </a><span class="CT"> *</span>
+</span><span><a class="LN" name="4">    4   </a><span class="CT"> * Code generated for Simulink model 'Altitude_Mode'.</span>
+</span><span><a class="LN" name="5">    5   </a><span class="CT"> *</span>
+</span><span><a class="LN" name="6">    6   </a><span class="CT"> * Model version                  : 1.100</span>
+</span><span><a class="LN" name="7">    7   </a><span class="CT"> * Simulink Coder version         : 8.5 (R2013b) 08-Aug-2013</span>
+</span><span><a class="LN" name="8">    8   </a><span class="CT"> * C/C++ source code generated on : Mon Feb 03 08:13:10 2014</span>
+</span><span><a class="LN" name="9">    9   </a><span class="CT"> */</span>
+</span><span><a class="LN" name="10">   10   </a>
+</span><span><a class="LN" name="11">   11   </a><font color="#992211">#</font><span class="PP">include</span> <font color="#992211">&quot;rtwtypes.h&quot;</font>
+</span><span><a class="LN" name="12">   12   </a><font color="#992211">#</font><span class="PP">include</span> <font color="#992211">&quot;rtw_shared_utils.h&quot;</font>
+</span><span><a class="LN" name="13">   13   </a>
+</span><span><a class="LN" name="14">   14   </a><a href="rtwtypes_h.html#type_real_T" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_real_T');" target="rtwreport_document_frame"><font color="#1122aa">real_T</font></a> <a name="fcn_look1_binlag">look1_binlag</a>(<a href="rtwtypes_h.html#type_real_T" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_real_T');" target="rtwreport_document_frame"><font color="#1122aa">real_T</font></a> u0, <span class="DT">const</span> <a href="rtwtypes_h.html#type_real_T" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_real_T');" target="rtwreport_document_frame"><font color="#1122aa">real_T</font></a> bp0[], <span class="DT">const</span> <a href="rtwtypes_h.html#type_real_T" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_real_T');" target="rtwreport_document_frame"><font color="#1122aa">real_T</font></a> table[],
+</span><span><a class="LN" name="15">   15   </a>                    <a href="rtwtypes_h.html#type_uint32_T" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_uint32_T');" target="rtwreport_document_frame"><font color="#1122aa">uint32_T</font></a> maxIndex)
+</span><span><a class="LN" name="16">   16   </a><b>{</b>
+</span><span><a class="LN" name="17">   17   </a>  <a href="rtwtypes_h.html#type_real_T" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_real_T');" target="rtwreport_document_frame"><font color="#1122aa">real_T</font></a> y;
+</span><span><a class="LN" name="18">   18   </a>  <a href="rtwtypes_h.html#type_real_T" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_real_T');" target="rtwreport_document_frame"><font color="#1122aa">real_T</font></a> frac;
+</span><span><a class="LN" name="19">   19   </a>  <a href="rtwtypes_h.html#type_uint32_T" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_uint32_T');" target="rtwreport_document_frame"><font color="#1122aa">uint32_T</font></a> iRght;
+</span><span><a class="LN" name="20">   20   </a>  <a href="rtwtypes_h.html#type_uint32_T" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_uint32_T');" target="rtwreport_document_frame"><font color="#1122aa">uint32_T</font></a> iLeft;
+</span><span><a class="LN" name="21">   21   </a>  <a href="rtwtypes_h.html#type_uint32_T" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_uint32_T');" target="rtwreport_document_frame"><font color="#1122aa">uint32_T</font></a> bpIdx;
+</span><span><a class="LN" name="22">   22   </a>
+</span><span><a class="LN" name="23">   23   </a>  <span class="CT">/* Lookup 1-D</span>
+</span><span><a class="LN" name="24">   24   </a><span class="CT">     Search method: 'binary'</span>
+</span><span><a class="LN" name="25">   25   </a><span class="CT">     Use previous index: 'off'</span>
+</span><span><a class="LN" name="26">   26   </a><span class="CT">     Interpolation method: 'Linear'</span>
+</span><span><a class="LN" name="27">   27   </a><span class="CT">     Use last breakpoint for index at or above upper limit: 'on'</span>
+</span><span><a class="LN" name="28">   28   </a><span class="CT">     Remove protection against out-of-range input in generated code: 'on'</span>
+</span><span><a class="LN" name="29">   29   </a><span class="CT">   */</span>
+</span><span><a class="LN" name="30">   30   </a>  <span class="CT">/* Prelookup - Index and Fraction</span>
+</span><span><a class="LN" name="31">   31   </a><span class="CT">     Index Search method: 'binary'</span>
+</span><span><a class="LN" name="32">   32   </a><span class="CT">     Use previous index: 'off'</span>
+</span><span><a class="LN" name="33">   33   </a><span class="CT">     Use last breakpoint for index at or above upper limit: 'on'</span>
+</span><span><a class="LN" name="34">   34   </a><span class="CT">     Remove protection against out-of-range input in generated code: 'on'</span>
+</span><span><a class="LN" name="35">   35   </a><span class="CT">   */</span>
+</span><span><a class="LN" name="36">   36   </a>  <span class="KW">if</span> (u0 &lt; bp0[maxIndex]) <b>{</b>
+</span><span><a class="LN" name="37">   37   </a>    <span class="CT">/* Binary Search */</span>
+</span><span><a class="LN" name="38">   38   </a>    bpIdx = (maxIndex &gt;&gt; 1U);
+</span><span><a class="LN" name="39">   39   </a>    iLeft = 0U;
+</span><span><a class="LN" name="40">   40   </a>    iRght = maxIndex;
+</span><span><a class="LN" name="41">   41   </a>    <span class="KW">while</span> ((iRght - iLeft) &gt; 1U) <b>{</b>
+</span><span><a class="LN" name="42">   42   </a>      <span class="KW">if</span> (u0 &lt; bp0[bpIdx]) <b>{</b>
+</span><span><a class="LN" name="43">   43   </a>        iRght = bpIdx;
+</span><span><a class="LN" name="44">   44   </a>      <b>}</b> <span class="KW">else</span> <b>{</b>
+</span><span><a class="LN" name="45">   45   </a>        iLeft = bpIdx;
+</span><span><a class="LN" name="46">   46   </a>      <b>}</b>
+</span><span><a class="LN" name="47">   47   </a>
+</span><span><a class="LN" name="48">   48   </a>      bpIdx = ((iRght + iLeft) &gt;&gt; 1U);
+</span><span><a class="LN" name="49">   49   </a>    <b>}</b>
+</span><span><a class="LN" name="50">   50   </a>
+</span><span><a class="LN" name="51">   51   </a>    frac = (u0 - bp0[iLeft]) / (bp0[iLeft + 1U] - bp0[iLeft]);
+</span><span><a class="LN" name="52">   52   </a>  <b>}</b> <span class="KW">else</span> <b>{</b>
+</span><span><a class="LN" name="53">   53   </a>    iLeft = maxIndex;
+</span><span><a class="LN" name="54">   54   </a>    frac = 0.0;
+</span><span><a class="LN" name="55">   55   </a>  <b>}</b>
+</span><span><a class="LN" name="56">   56   </a>
+</span><span><a class="LN" name="57">   57   </a>  <span class="CT">/* Interpolation 1-D</span>
+</span><span><a class="LN" name="58">   58   </a><span class="CT">     Interpolation method: 'Linear'</span>
+</span><span><a class="LN" name="59">   59   </a><span class="CT">     Use last breakpoint for index at or above upper limit: 'on'</span>
+</span><span><a class="LN" name="60">   60   </a><span class="CT">     Overflow mode: 'wrapping'</span>
+</span><span><a class="LN" name="61">   61   </a><span class="CT">   */</span>
+</span><span><a class="LN" name="62">   62   </a>  <span class="KW">if</span> (iLeft == maxIndex) <b>{</b>
+</span><span><a class="LN" name="63">   63   </a>    y = table[iLeft];
+</span><span><a class="LN" name="64">   64   </a>  <b>}</b> <span class="KW">else</span> <b>{</b>
+</span><span><a class="LN" name="65">   65   </a>    y = table[iLeft] + (frac * (table[iLeft + 1U] - table[iLeft]));
+</span><span><a class="LN" name="66">   66   </a>  <b>}</b>
+</span><span><a class="LN" name="67">   67   </a>
+</span><span><a class="LN" name="68">   68   </a>  <span class="KW">return</span> y;
+</span><span><a class="LN" name="69">   69   </a><b>}</b>
+</span><span><a class="LN" name="70">   70   </a>
+</span><span><a class="LN" name="71">   71   </a><span class="CT">/*</span>
+</span><span><a class="LN" name="72">   72   </a><span class="CT"> * File trailer for generated code.</span>
+</span><span><a class="LN" name="73">   73   </a><span class="CT"> *</span>
+</span><span><a class="LN" name="74">   74   </a><span class="CT"> * [EOF]</span>
+</span><span><a class="LN" name="75">   75   </a><span class="CT"> */</span>
+</span><span><a class="LN" name="76">   76   </a>
+</span></pre>
+</td></tr></table>
+</p>
+</body>
+</html>

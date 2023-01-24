@@ -1,0 +1,2 @@
+#12.    The sensor shall change states from FAULT to TRANSITION when the autopilot is not requesting support (not request) and limits are not exceeded (not limits).
+(FiniteStateMachine.SENSTATE{t-1}==2 and not FiniteStateMachine.REQUEST and not limits) impl (FiniteStateMachine.SENSTATE{t}==1);

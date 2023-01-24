@@ -1,0 +1,5 @@
+# 1. Exceeding sensor limits shall latch an autopilot pullup when the pilot is not in control (not standby) and the system is supported without failures (not apfail).
+
+# VIOLATION: pullup also depends on STATE{t-1} and good{t-1}
+
+(not standby and not apfail and supported and limits) impl pullup;

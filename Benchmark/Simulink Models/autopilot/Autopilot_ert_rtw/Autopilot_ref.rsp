@@ -1,0 +1,6 @@
+pitch_ap_rtwlib.lib
+Altitude_Mode_rtwlib.lib
+roll_ap_rtwlib.lib
+Heading_Mode_rtwlib.lib
+attitude_controller_rtwlib.lib
+yaw_damper_rtwlib.lib

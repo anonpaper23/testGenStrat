@@ -1,0 +1,14 @@
+#8. The autopilot shall change states from STANDBY to TRANSITION when the pilot is not in control (not standby).
+
+# UPDATED: 
+# 1) Replacing {never} with specific timesteps. Requirement is not explicit
+#    about which timesteps to use. These are based on the model.
+# 2) The variable apfail is not referenced in the requirement, and has been left out of the QCT.
+
+# Violation: apfail override. This violation can be suppressed:
+#
+#   (FiniteStateMachine.STATE{t-1}==3 and not standby and 
+#   not FiniteStateMachine.apfail) impl 
+#   (FiniteStateMachine.STATE{t}==0);
+
+(FiniteStateMachine.STATE{t-1}==3 and not standby) impl (FiniteStateMachine.STATE{t}==0);

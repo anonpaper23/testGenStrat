@@ -1,0 +1,244 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>RTW Report - target_io.c</title>
+<style> .LN { font-style: italic; color: #888888 } </style>
+<style> .CT { font-style: italic; color: #117755 } </style>
+<style> .PP { font-style: bold;   color: #992211 } </style>
+<style> .KW { font-style: bold;   color: #112266 } </style>
+<style> .DT { font-style: bold;   color: #112266 } </style>
+<link rel="stylesheet" type="text/css" href="rtwreport.css"></link><script language="JavaScript" type="text/javascript" src="rtwreport_utils.js"></script>
+<SCRIPT type="text/javascript" src="rtwannotate.js"></SCRIPT>
+</head>
+<body bgcolor="#eeeeee" text="#1122aa" onload="try {if (top) { if (top.rtwFileOnLoad) top.rtwFileOnLoad(window.document); else local_onload();}} catch(err) {};if (typeof rtwannotate === 'function') {rtwannotate('target_io_c_cov.xml');}">
+<p>
+<table border="0" cellspacing="0" cellpadding="6" width="100%%" height="100%%"><tr><td width="100%%" valign="top" bgcolor="#ffffff">
+<h4>File: <a href="../../../../../../../../../Program Files/MATLAB/R2013b/toolbox/rtw/targets/pil/c/target_io.c" target="rtwreport_document_frame" id="linkToText_plain">target_io.c</a></h4>
+<pre id="RTWcode">
+<span><a class="LN" name="1">    1   </a><span class="CT">/* Copyright 2011-2013 The MathWorks, Inc. */</span>
+</span><span><a class="LN" name="2">    2   </a><font color="#992211">#</font><span class="PP">include</span> <font color="#992211">&lt;stdio.h&gt;</font> <span class="CT">/* sprintf */</span>
+</span><span><a class="LN" name="3">    3   </a><font color="#992211">#</font><span class="PP">include</span> <font color="#992211">&lt;stdarg.h&gt;</font> <span class="CT">/* variable argument lists */</span>
+</span><span><a class="LN" name="4">    4   </a><font color="#992211">#</font><span class="PP">include</span> <font color="#992211">&quot;xil_interface_common.h&quot;</font>
+</span><span><a class="LN" name="5">    5   </a><font color="#992211">#</font><span class="PP">include</span> <font color="#992211">&quot;xil_data_stream.h&quot;</font>
+</span><span><a class="LN" name="6">    6   </a><font color="#992211">#</font><span class="PP">include</span> <font color="#992211">&quot;xil_common.h&quot;</font>
+</span><span><a class="LN" name="7">    7   </a><font color="#992211">#</font><span class="PP">include</span> <font color="#992211">&quot;target_io.h&quot;</font>
+</span><span><a class="LN" name="8">    8   </a><font color="#992211">#</font><span class="PP">include</span> <font color="#992211">&quot;rtwtypes.h&quot;</font>
+</span><span><a class="LN" name="9">    9   </a>
+</span><span><a class="LN" name="10">   10   </a><span class="CT">/* test for ISO C99 or greater, which supports vsnprintf </span>
+</span><span><a class="LN" name="11">   11   </a><span class="CT"> * </span>
+</span><span><a class="LN" name="12">   12   </a><span class="CT"> * WARNING: if the compiler is ANSI C90 then we use vsprintf instead.</span>
+</span><span><a class="LN" name="13">   13   </a><span class="CT"> * Therefore, it is possible to overrun the buffer so the </span>
+</span><span><a class="LN" name="14">   14   </a><span class="CT"> * caller must take care not to exceed the buffer size! </span>
+</span><span><a class="LN" name="15">   15   </a><span class="CT"> */</span>
+</span><span><a class="LN" name="16">   16   </a><font color="#992211">#</font><span class="PP">if</span> __STDC_VERSION__ &gt;= 199901L
+</span><span><a class="LN" name="17">   17   </a><font color="#992211">#</font><span class="PP">define</span> VSNPRINTF_AVAILABLE
+</span><span><a class="LN" name="18">   18   </a><font color="#992211">#</font><span class="PP">endif</span>
+</span><span><a class="LN" name="19">   19   </a>
+</span><span><a class="LN" name="20">   20   </a><font color="#992211">#</font><span class="PP">ifndef</span> <a href="#var_TARGET_IO_BUFFER_SIZE" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_TARGET_IO_BUFFER_SIZE');" target="rtwreport_document_frame"><font color="#1122aa">TARGET_IO_BUFFER_SIZE</font></a>
+</span><span><a class="LN" name="21">   21   </a><span class="CT">/* default buffer size is large enough for most use cases */</span>
+</span><span><a class="LN" name="22">   22   </a><font color="#992211">#</font><span class="PP">define</span> <a href="#var_TARGET_IO_BUFFER_SIZE" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_TARGET_IO_BUFFER_SIZE');" target="rtwreport_document_frame"><font color="#1122aa">TARGET_IO_BUFFER_SIZE</font></a> 64 
+</span><span><a class="LN" name="23">   23   </a><font color="#992211">#</font><span class="PP">endif</span>
+</span><span><a class="LN" name="24">   24   </a>
+</span><span><a class="LN" name="25">   25   </a><font color="#992211">#</font><span class="PP">ifndef</span> TARGET_IO_MAX_FILE_ID
+</span><span><a class="LN" name="26">   26   </a><span class="CT">/* -1 avoids warning about the comparison that is done</span>
+</span><span><a class="LN" name="27">   27   </a><span class="CT"> * in targetFopen </span>
+</span><span><a class="LN" name="28">   28   </a><span class="CT"> *</span>
+</span><span><a class="LN" name="29">   29   </a><span class="CT"> * note that MAX_uint16_T will be limited to uint16 max</span>
+</span><span><a class="LN" name="30">   30   </a><span class="CT"> * even when portable word sizes maps uint16 to a larger </span>
+</span><span><a class="LN" name="31">   31   </a><span class="CT"> * type such as uint32 on the SHARC */</span>
+</span><span><a class="LN" name="32">   32   </a><font color="#992211">#</font><span class="PP">define</span> TARGET_IO_MAX_FILE_ID (MAX_uint16_T - 1)
+</span><span><a class="LN" name="33">   33   </a><font color="#992211">#</font><span class="PP">endif</span>
+</span><span><a class="LN" name="34">   34   </a>
+</span><span><a class="LN" name="35">   35   </a><span class="KW">typedef</span> <span class="KW">enum</span> <b>{</b>TARGET_IO_SUCCESS=0,
+</span><span><a class="LN" name="36">   36   </a>              TARGET_IO_BUFFER_TRUNC <b>}</b> <a name="type_TARGET_IO_ERROR_ID">TARGET_IO_ERROR_ID</a>;
+</span><span><a class="LN" name="37">   37   </a>
+</span><span><a class="LN" name="38">   38   </a><span class="DT">static</span> <span class="DT">char</span> targetStdioBuffer[<a name="var_TARGET_IO_BUFFER_SIZE">TARGET_IO_BUFFER_SIZE</a>];
+</span><span><a class="LN" name="39">   39   </a><font color="#992211">#</font><span class="PP">ifdef</span> HOST_WORD_ADDRESSABLE_TESTING
+</span><span><a class="LN" name="40">   40   </a><span class="DT">static</span> MemUnit_T <a name="var_hostWordStdioBuffer">hostWordStdioBuffer</a>[<a href="#var_TARGET_IO_BUFFER_SIZE" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_TARGET_IO_BUFFER_SIZE');" target="rtwreport_document_frame"><font color="#1122aa">TARGET_IO_BUFFER_SIZE</font></a>];
+</span><span><a class="LN" name="41">   41   </a><font color="#992211">#</font><span class="PP">endif</span>
+</span><span><a class="LN" name="42">   42   </a>
+</span><span><a class="LN" name="43">   43   </a><span class="CT">/* fid is the file id on target and is limited to TARGET_IO_MAX_FILE_ID */</span>
+</span><span><a class="LN" name="44">   44   </a><span class="DT">static</span> <a href="../../_sharedutils/html/rtwtypes_h.html#type_uint16_T" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_uint16_T');" target="rtwreport_document_frame"><font color="#1122aa">uint16_T</font></a> <a name="var_fid">fid</a> = 0;
+</span><span><a class="LN" name="45">   45   </a>
+</span><span><a class="LN" name="46">   46   </a><span class="CT">/* call xilWriteData and check for errors */</span>
+</span><span><a class="LN" name="47">   47   </a><span class="DT">static</span> <span class="DT">void</span> <a href="#fcn_targetWriteDataWithErrorCheck" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_targetWriteDataWithErrorCheck');" target="rtwreport_document_frame"><font color="#1122aa">targetWriteDataWithErrorCheck</font></a>(<span class="DT">const</span> MemUnit_T *, <a href="../../_sharedutils/html/rtwtypes_h.html#type_uint32_T" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_uint32_T');" target="rtwreport_document_frame"><font color="#1122aa">uint32_T</font></a>);
+</span><span><a class="LN" name="48">   48   </a><font color="#992211">#</font><span class="PP">ifdef</span> HOST_WORD_ADDRESSABLE_TESTING
+</span><span><a class="LN" name="49">   49   </a><span class="DT">static</span> <span class="DT">void</span> <a href="#fcn_targetWriteDataWithCharToMemUnitWidening" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_targetWriteDataWithCharToMemUnitWidening');" target="rtwreport_document_frame"><font color="#1122aa">targetWriteDataWithCharToMemUnitWidening</font></a>(<span class="DT">const</span> <span class="DT">char</span> *, MemUnit_T *, <a href="../../_sharedutils/html/rtwtypes_h.html#type_uint16_T" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_uint16_T');" target="rtwreport_document_frame"><font color="#1122aa">uint16_T</font></a>);
+</span><span><a class="LN" name="50">   50   </a><font color="#992211">#</font><span class="PP">endif</span> <span class="CT">/* HOST_WORD_ADDRESSABLE_TESTING */</span>
+</span><span><a class="LN" name="51">   51   </a>
+</span><span><a class="LN" name="52">   52   </a><span class="DT">void</span> <a name="fcn_targetWriteDataWithErrorCheck">targetWriteDataWithErrorCheck</a>(<span class="DT">const</span> MemUnit_T * data, <a href="../../_sharedutils/html/rtwtypes_h.html#type_uint32_T" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_uint32_T');" target="rtwreport_document_frame"><font color="#1122aa">uint32_T</font></a> size) <b>{</b>
+</span><span><a class="LN" name="53">   53   </a>   <span class="KW">if</span> (<a href="xil_rtio_data_stream_c.html#fcn_xilWriteData" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_xilWriteData');" target="rtwreport_document_frame"><font color="#1122aa">xilWriteData</font></a>(data, size) != XIL_DATA_STREAM_SUCCESS) <b>{</b>
+</span><span><a class="LN" name="54">   54   </a>      <span class="KW">for</span> (;;) <b>{</b>
+</span><span><a class="LN" name="55">   55   </a>         <span class="CT">/* fatal comms error */</span>
+</span><span><a class="LN" name="56">   56   </a>      <b>}</b>
+</span><span><a class="LN" name="57">   57   </a>   <b>}</b>
+</span><span><a class="LN" name="58">   58   </a><b>}</b>
+</span><span><a class="LN" name="59">   59   </a>
+</span><span><a class="LN" name="60">   60   </a><font color="#992211">#</font><span class="PP">ifdef</span> HOST_WORD_ADDRESSABLE_TESTING
+</span><span><a class="LN" name="61">   61   </a><span class="DT">static</span> <span class="DT">void</span> <a name="fcn_targetWriteDataWithCharToMemUnitWidening">targetWriteDataWithCharToMemUnitWidening</a>(<span class="DT">const</span> <span class="DT">char</span> *pCharBuff, MemUnit_T *pMemUnitBuff, <a href="../../_sharedutils/html/rtwtypes_h.html#type_uint16_T" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_uint16_T');" target="rtwreport_document_frame"><font color="#1122aa">uint16_T</font></a> buffSize) <b>{</b>
+</span><span><a class="LN" name="62">   62   </a>   <a href="../../_sharedutils/html/rtwtypes_h.html#type_uint16_T" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_uint16_T');" target="rtwreport_document_frame"><font color="#1122aa">uint16_T</font></a> i;
+</span><span><a class="LN" name="63">   63   </a>   <span class="KW">for</span>(i=0;i&lt;buffSize;i++) <b>{</b>
+</span><span><a class="LN" name="64">   64   </a>      pMemUnitBuff[i] = (MemUnit_T) pCharBuff[i];
+</span><span><a class="LN" name="65">   65   </a>   <b>}</b>
+</span><span><a class="LN" name="66">   66   </a>   <a href="#fcn_targetWriteDataWithErrorCheck" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_targetWriteDataWithErrorCheck');" target="rtwreport_document_frame"><font color="#1122aa">targetWriteDataWithErrorCheck</font></a>(pMemUnitBuff, buffSize * <span class="KW">sizeof</span>(MemUnit_T));
+</span><span><a class="LN" name="67">   67   </a><b>}</b>
+</span><span><a class="LN" name="68">   68   </a><font color="#992211">#</font><span class="PP">endif</span>
+</span><span><a class="LN" name="69">   69   </a>
+</span><span><a class="LN" name="70">   70   </a><span class="CT">/* Forward a printf back to the host machine</span>
+</span><span><a class="LN" name="71">   71   </a><span class="CT"> *</span>
+</span><span><a class="LN" name="72">   72   </a><span class="CT"> * Printf size must not exceed the TARGET_IO_BUFFER_SIZE</span>
+</span><span><a class="LN" name="73">   73   </a><span class="CT"> * otherwise overflow will occur. </span>
+</span><span><a class="LN" name="74">   74   </a><span class="CT"> */</span>
+</span><span><a class="LN" name="75">   75   </a><span class="DT">void</span> <a name="fcn_targetPrintf">targetPrintf</a>(<span class="DT">const</span> <span class="DT">char</span> * fmt, ...) <b>{</b>   
+</span><span><a class="LN" name="76">   76   </a>   va_list argptr;
+</span><span><a class="LN" name="77">   77   </a>   <a href="../../_sharedutils/html/rtwtypes_h.html#type_uint16_T" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_uint16_T');" target="rtwreport_document_frame"><font color="#1122aa">uint16_T</font></a> printSize;
+</span><span><a class="LN" name="78">   78   </a>   <span class="DT">int</span> vsPrintSize;
+</span><span><a class="LN" name="79">   79   </a>   MemUnit_T responseId = XIL_RESPONSE_PRINTF;
+</span><span><a class="LN" name="80">   80   </a>   MemUnit_T errorId = TARGET_IO_SUCCESS;
+</span><span><a class="LN" name="81">   81   </a>
+</span><span><a class="LN" name="82">   82   </a>   va_start(argptr, fmt);
+</span><span><a class="LN" name="83">   83   </a><font color="#992211">#</font><span class="PP">ifdef</span> VSNPRINTF_AVAILABLE
+</span><span><a class="LN" name="84">   84   </a>   <span class="CT">/* size arg includes '\0', return value does not */</span>
+</span><span><a class="LN" name="85">   85   </a>   vsPrintSize = vsnprintf(&amp;targetStdioBuffer[0], <a href="#var_TARGET_IO_BUFFER_SIZE" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_TARGET_IO_BUFFER_SIZE');" target="rtwreport_document_frame"><font color="#1122aa">TARGET_IO_BUFFER_SIZE</font></a>, fmt, argptr);
+</span><span><a class="LN" name="86">   86   </a><font color="#992211">#</font><span class="PP">else</span>
+</span><span><a class="LN" name="87">   87   </a>   vsPrintSize = vsprintf(&amp;targetStdioBuffer[0], fmt, argptr);
+</span><span><a class="LN" name="88">   88   </a><font color="#992211">#</font><span class="PP">endif</span>   
+</span><span><a class="LN" name="89">   89   </a>   <span class="KW">if</span> ((vsPrintSize &lt; 0) || (vsPrintSize &gt;= <a href="#var_TARGET_IO_BUFFER_SIZE" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_TARGET_IO_BUFFER_SIZE');" target="rtwreport_document_frame"><font color="#1122aa">TARGET_IO_BUFFER_SIZE</font></a>)) <b>{</b>
+</span><span><a class="LN" name="90">   90   </a>      <span class="CT">/* set error id if error or buffer overruns */</span>      
+</span><span><a class="LN" name="91">   91   </a>      errorId = TARGET_IO_BUFFER_TRUNC;
+</span><span><a class="LN" name="92">   92   </a>      <span class="CT">/* do not send any data */</span>
+</span><span><a class="LN" name="93">   93   </a>      printSize = 0;
+</span><span><a class="LN" name="94">   94   </a>   <b>}</b> <span class="KW">else</span> <b>{</b>
+</span><span><a class="LN" name="95">   95   </a>      <span class="CT">/* add one for the terminating null character */</span>
+</span><span><a class="LN" name="96">   96   </a>      printSize = (<a href="../../_sharedutils/html/rtwtypes_h.html#type_uint16_T" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_uint16_T');" target="rtwreport_document_frame"><font color="#1122aa">uint16_T</font></a>) vsPrintSize + 1;   		
+</span><span><a class="LN" name="97">   97   </a>   <b>}</b>
+</span><span><a class="LN" name="98">   98   </a>   va_end(argptr);
+</span><span><a class="LN" name="99">   99   </a>
+</span><span><a class="LN" name="100">  100   </a>   <span class="CT">/* send response id */</span>
+</span><span><a class="LN" name="101">  101   </a>   <a href="#fcn_targetWriteDataWithErrorCheck" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_targetWriteDataWithErrorCheck');" target="rtwreport_document_frame"><font color="#1122aa">targetWriteDataWithErrorCheck</font></a>(&amp;responseId, <span class="KW">sizeof</span>(responseId));
+</span><span><a class="LN" name="102">  102   </a>   <span class="CT">/* send error id */</span>
+</span><span><a class="LN" name="103">  103   </a>   <a href="#fcn_targetWriteDataWithErrorCheck" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_targetWriteDataWithErrorCheck');" target="rtwreport_document_frame"><font color="#1122aa">targetWriteDataWithErrorCheck</font></a>(&amp;errorId, <span class="KW">sizeof</span>(errorId));
+</span><span><a class="LN" name="104">  104   </a>   <span class="CT">/* send printSize */</span>
+</span><span><a class="LN" name="105">  105   </a>   <a href="#fcn_targetWriteDataWithErrorCheck" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_targetWriteDataWithErrorCheck');" target="rtwreport_document_frame"><font color="#1122aa">targetWriteDataWithErrorCheck</font></a>((MemUnit_T *) &amp;printSize, <span class="KW">sizeof</span>(printSize));
+</span><span><a class="LN" name="106">  106   </a>   <span class="CT">/* send data */</span>
+</span><span><a class="LN" name="107">  107   </a>   <span class="KW">if</span> (printSize &gt; 0) <b>{</b>
+</span><span><a class="LN" name="108">  108   </a><font color="#992211">#</font><span class="PP">ifdef</span> HOST_WORD_ADDRESSABLE_TESTING
+</span><span><a class="LN" name="109">  109   </a>      <a href="#fcn_targetWriteDataWithCharToMemUnitWidening" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_targetWriteDataWithCharToMemUnitWidening');" target="rtwreport_document_frame"><font color="#1122aa">targetWriteDataWithCharToMemUnitWidening</font></a>(&amp;targetStdioBuffer[0], &amp;<a href="#var_hostWordStdioBuffer" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_hostWordStdioBuffer');" target="rtwreport_document_frame"><font color="#1122aa">hostWordStdioBuffer</font></a>[0], printSize);
+</span><span><a class="LN" name="110">  110   </a><font color="#992211">#</font><span class="PP">else</span>
+</span><span><a class="LN" name="111">  111   </a>      <a href="#fcn_targetWriteDataWithErrorCheck" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_targetWriteDataWithErrorCheck');" target="rtwreport_document_frame"><font color="#1122aa">targetWriteDataWithErrorCheck</font></a>((MemUnit_T *)&amp;targetStdioBuffer[0], printSize);
+</span><span><a class="LN" name="112">  112   </a><font color="#992211">#</font><span class="PP">endif</span>
+</span><span><a class="LN" name="113">  113   </a>   <b>}</b>
+</span><span><a class="LN" name="114">  114   </a>   <span class="KW">return</span>;
+</span><span><a class="LN" name="115">  115   </a><b>}</b>
+</span><span><a class="LN" name="116">  116   </a>
+</span><span><a class="LN" name="117">  117   </a>
+</span><span><a class="LN" name="118">  118   </a><span class="CT">/* Forward a fopen back to the host.</span>
+</span><span><a class="LN" name="119">  119   </a><span class="CT"> *</span>
+</span><span><a class="LN" name="120">  120   </a><span class="CT"> * fid is used on target to act as a valid </span>
+</span><span><a class="LN" name="121">  121   </a><span class="CT"> * "file descriptor".</span>
+</span><span><a class="LN" name="122">  122   </a><span class="CT"> */</span>
+</span><span><a class="LN" name="123">  123   </a><span class="DT">unsigned</span> <span class="DT">short</span> <a name="fcn_targetFopen">targetFopen</a>(<span class="DT">const</span> <span class="DT">char</span> * fileName) <b>{</b>
+</span><span><a class="LN" name="124">  124   </a>   <a href="../../_sharedutils/html/rtwtypes_h.html#type_uint16_T" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_uint16_T');" target="rtwreport_document_frame"><font color="#1122aa">uint16_T</font></a> fileNameSize;
+</span><span><a class="LN" name="125">  125   </a>   MemUnit_T responseId = XIL_RESPONSE_FOPEN;
+</span><span><a class="LN" name="126">  126   </a>
+</span><span><a class="LN" name="127">  127   </a>   <span class="CT">/* size of file name string */</span>
+</span><span><a class="LN" name="128">  128   </a>   fileNameSize = (<a href="../../_sharedutils/html/rtwtypes_h.html#type_uint16_T" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_uint16_T');" target="rtwreport_document_frame"><font color="#1122aa">uint16_T</font></a>) strlen(fileName);
+</span><span><a class="LN" name="129">  129   </a>
+</span><span><a class="LN" name="130">  130   </a>   <span class="CT">/* add one for the terminating null character */</span>
+</span><span><a class="LN" name="131">  131   </a>   fileNameSize++;
+</span><span><a class="LN" name="132">  132   </a> 
+</span><span><a class="LN" name="133">  133   </a>   <span class="CT">/* check bounds and reset to 0 if necessary which will trigger an error </span>
+</span><span><a class="LN" name="134">  134   </a><span class="CT">    * on the host */</span>
+</span><span><a class="LN" name="135">  135   </a>   <span class="KW">if</span>(<a href="#var_fid" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_fid');" target="rtwreport_document_frame"><font color="#1122aa">fid</font></a> &gt; TARGET_IO_MAX_FILE_ID) <b>{</b>
+</span><span><a class="LN" name="136">  136   </a>      <a href="#var_fid" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_fid');" target="rtwreport_document_frame"><font color="#1122aa">fid</font></a> = 0;
+</span><span><a class="LN" name="137">  137   </a>   <b>}</b>
+</span><span><a class="LN" name="138">  138   </a>   <span class="CT">/* send response id */</span>
+</span><span><a class="LN" name="139">  139   </a>   <a href="#fcn_targetWriteDataWithErrorCheck" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_targetWriteDataWithErrorCheck');" target="rtwreport_document_frame"><font color="#1122aa">targetWriteDataWithErrorCheck</font></a>(&amp;responseId, <span class="KW">sizeof</span>(responseId));
+</span><span><a class="LN" name="140">  140   </a>   <span class="CT">/* send file id */</span>
+</span><span><a class="LN" name="141">  141   </a>   <a href="#fcn_targetWriteDataWithErrorCheck" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_targetWriteDataWithErrorCheck');" target="rtwreport_document_frame"><font color="#1122aa">targetWriteDataWithErrorCheck</font></a>((MemUnit_T *)&amp;<a href="#var_fid" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_fid');" target="rtwreport_document_frame"><font color="#1122aa">fid</font></a>, <span class="KW">sizeof</span>(<a href="#var_fid" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_fid');" target="rtwreport_document_frame"><font color="#1122aa">fid</font></a>));
+</span><span><a class="LN" name="142">  142   </a>   <span class="CT">/* send size of file name string */</span>
+</span><span><a class="LN" name="143">  143   </a>   <a href="#fcn_targetWriteDataWithErrorCheck" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_targetWriteDataWithErrorCheck');" target="rtwreport_document_frame"><font color="#1122aa">targetWriteDataWithErrorCheck</font></a>((MemUnit_T *)&amp;fileNameSize, <span class="KW">sizeof</span>(fileNameSize));
+</span><span><a class="LN" name="144">  144   </a><font color="#992211">#</font><span class="PP">ifdef</span> HOST_WORD_ADDRESSABLE_TESTING
+</span><span><a class="LN" name="145">  145   </a>   <span class="CT">/* in case the total size is bigger than the hostWordStdioBuffer, send in </span>
+</span><span><a class="LN" name="146">  146   </a><span class="CT">    * multiple chunks */</span>
+</span><span><a class="LN" name="147">  147   </a>   <b>{</b>      
+</span><span><a class="LN" name="148">  148   </a>      <span class="KW">while</span> (fileNameSize &gt; 0) <b>{</b>
+</span><span><a class="LN" name="149">  149   </a>         <a href="../../_sharedutils/html/rtwtypes_h.html#type_uint16_T" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_uint16_T');" target="rtwreport_document_frame"><font color="#1122aa">uint16_T</font></a> transferSize = MIN(fileNameSize, <a href="#var_TARGET_IO_BUFFER_SIZE" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_TARGET_IO_BUFFER_SIZE');" target="rtwreport_document_frame"><font color="#1122aa">TARGET_IO_BUFFER_SIZE</font></a>);
+</span><span><a class="LN" name="150">  150   </a>         <span class="CT">/* send file name string */</span>
+</span><span><a class="LN" name="151">  151   </a>         <a href="#fcn_targetWriteDataWithCharToMemUnitWidening" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_targetWriteDataWithCharToMemUnitWidening');" target="rtwreport_document_frame"><font color="#1122aa">targetWriteDataWithCharToMemUnitWidening</font></a>(fileName, &amp;<a href="#var_hostWordStdioBuffer" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_hostWordStdioBuffer');" target="rtwreport_document_frame"><font color="#1122aa">hostWordStdioBuffer</font></a>[0], transferSize);   
+</span><span><a class="LN" name="152">  152   </a>         fileNameSize -= transferSize;
+</span><span><a class="LN" name="153">  153   </a>         fileName += transferSize;
+</span><span><a class="LN" name="154">  154   </a>      <b>}</b>
+</span><span><a class="LN" name="155">  155   </a>   <b>}</b>
+</span><span><a class="LN" name="156">  156   </a><font color="#992211">#</font><span class="PP">else</span>
+</span><span><a class="LN" name="157">  157   </a>   <span class="CT">/* send file name string */</span>
+</span><span><a class="LN" name="158">  158   </a>   <a href="#fcn_targetWriteDataWithErrorCheck" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_targetWriteDataWithErrorCheck');" target="rtwreport_document_frame"><font color="#1122aa">targetWriteDataWithErrorCheck</font></a>((<span class="DT">const</span> MemUnit_T *)fileName, fileNameSize);
+</span><span><a class="LN" name="159">  159   </a><font color="#992211">#</font><span class="PP">endif</span>
+</span><span><a class="LN" name="160">  160   </a>
+</span><span><a class="LN" name="161">  161   </a>   <span class="CT">/* return fid, THEN increment it */</span>
+</span><span><a class="LN" name="162">  162   </a>   <span class="KW">return</span> (<span class="DT">unsigned</span> <span class="DT">short</span>) (<a href="#var_fid" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_fid');" target="rtwreport_document_frame"><font color="#1122aa">fid</font></a>++); <span class="CT">/* unsigned short is at least 16-bits</span>
+</span><span><a class="LN" name="163">  163   </a><span class="CT">                                     * wide. See header file for more</span>
+</span><span><a class="LN" name="164">  164   </a><span class="CT">                                     * information on why this cast is</span>
+</span><span><a class="LN" name="165">  165   </a><span class="CT">                                     * required. */</span>
+</span><span><a class="LN" name="166">  166   </a><b>}</b>
+</span><span><a class="LN" name="167">  167   </a>
+</span><span><a class="LN" name="168">  168   </a><span class="DT">void</span> <a name="fcn_targetFprintf">targetFprintf</a>(<span class="DT">unsigned</span> <span class="DT">short</span> targetFid, <span class="DT">const</span> <span class="DT">char</span> * fmt, ...) <b>{</b>
+</span><span><a class="LN" name="169">  169   </a>   va_list argptr;
+</span><span><a class="LN" name="170">  170   </a>   <a href="../../_sharedutils/html/rtwtypes_h.html#type_uint16_T" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_uint16_T');" target="rtwreport_document_frame"><font color="#1122aa">uint16_T</font></a> fprintSize;
+</span><span><a class="LN" name="171">  171   </a>   <span class="DT">int</span> vsFprintSize;
+</span><span><a class="LN" name="172">  172   </a>   MemUnit_T responseId = XIL_RESPONSE_FPRINTF;
+</span><span><a class="LN" name="173">  173   </a>   MemUnit_T errorId = TARGET_IO_SUCCESS;
+</span><span><a class="LN" name="174">  174   </a>   <span class="DT">const</span> <a href="../../_sharedutils/html/rtwtypes_h.html#type_uint16_T" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_uint16_T');" target="rtwreport_document_frame"><font color="#1122aa">uint16_T</font></a> targetFid16 = (<a href="../../_sharedutils/html/rtwtypes_h.html#type_uint16_T" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_uint16_T');" target="rtwreport_document_frame"><font color="#1122aa">uint16_T</font></a>) targetFid;  <span class="CT">/* We only use the</span>
+</span><span><a class="LN" name="175">  175   </a><span class="CT">                                                        * lowermost 16 bits of</span>
+</span><span><a class="LN" name="176">  176   </a><span class="CT">                                                        * targetFid. unsigned</span>
+</span><span><a class="LN" name="177">  177   </a><span class="CT">                                                        * int is guaranteed to</span>
+</span><span><a class="LN" name="178">  178   </a><span class="CT">                                                        * be at least 16 bits</span>
+</span><span><a class="LN" name="179">  179   </a><span class="CT">                                                        * wide. See header file</span>
+</span><span><a class="LN" name="180">  180   </a><span class="CT">                                                        * for more information</span>
+</span><span><a class="LN" name="181">  181   </a><span class="CT">                                                        * on why this cast is</span>
+</span><span><a class="LN" name="182">  182   </a><span class="CT">                                                        * required. */</span>
+</span><span><a class="LN" name="183">  183   </a>
+</span><span><a class="LN" name="184">  184   </a>   va_start(argptr, fmt);
+</span><span><a class="LN" name="185">  185   </a><font color="#992211">#</font><span class="PP">ifdef</span> VSNPRINTF_AVAILABLE
+</span><span><a class="LN" name="186">  186   </a>   <span class="CT">/* size arg includes '\0', return value does not */</span>
+</span><span><a class="LN" name="187">  187   </a>   vsFprintSize = vsnprintf(&amp;targetStdioBuffer[0], <a href="#var_TARGET_IO_BUFFER_SIZE" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_TARGET_IO_BUFFER_SIZE');" target="rtwreport_document_frame"><font color="#1122aa">TARGET_IO_BUFFER_SIZE</font></a>, fmt, argptr);
+</span><span><a class="LN" name="188">  188   </a><font color="#992211">#</font><span class="PP">else</span>
+</span><span><a class="LN" name="189">  189   </a>   vsFprintSize = vsprintf(&amp;targetStdioBuffer[0], fmt, argptr);
+</span><span><a class="LN" name="190">  190   </a><font color="#992211">#</font><span class="PP">endif</span>   
+</span><span><a class="LN" name="191">  191   </a>   <span class="KW">if</span> ((vsFprintSize &lt; 0) || (vsFprintSize &gt;= <a href="#var_TARGET_IO_BUFFER_SIZE" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_TARGET_IO_BUFFER_SIZE');" target="rtwreport_document_frame"><font color="#1122aa">TARGET_IO_BUFFER_SIZE</font></a>)) <b>{</b>
+</span><span><a class="LN" name="192">  192   </a>      <span class="CT">/* set error id if error or buffer overruns */</span>      
+</span><span><a class="LN" name="193">  193   </a>      errorId = TARGET_IO_BUFFER_TRUNC;
+</span><span><a class="LN" name="194">  194   </a>      <span class="CT">/* do not send any data */</span>
+</span><span><a class="LN" name="195">  195   </a>      fprintSize = 0;
+</span><span><a class="LN" name="196">  196   </a>   <b>}</b> <span class="KW">else</span> <b>{</b>
+</span><span><a class="LN" name="197">  197   </a>      <span class="CT">/* add one for the terminating null character */</span>
+</span><span><a class="LN" name="198">  198   </a>      fprintSize = (<a href="../../_sharedutils/html/rtwtypes_h.html#type_uint16_T" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_uint16_T');" target="rtwreport_document_frame"><font color="#1122aa">uint16_T</font></a>) vsFprintSize + 1;
+</span><span><a class="LN" name="199">  199   </a>   <b>}</b>
+</span><span><a class="LN" name="200">  200   </a>   va_end(argptr);
+</span><span><a class="LN" name="201">  201   </a>
+</span><span><a class="LN" name="202">  202   </a>   <span class="CT">/* send response id */</span>
+</span><span><a class="LN" name="203">  203   </a>   <a href="#fcn_targetWriteDataWithErrorCheck" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_targetWriteDataWithErrorCheck');" target="rtwreport_document_frame"><font color="#1122aa">targetWriteDataWithErrorCheck</font></a>(&amp;responseId, <span class="KW">sizeof</span>(responseId));
+</span><span><a class="LN" name="204">  204   </a>   <span class="CT">/* send error id */</span>
+</span><span><a class="LN" name="205">  205   </a>   <a href="#fcn_targetWriteDataWithErrorCheck" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_targetWriteDataWithErrorCheck');" target="rtwreport_document_frame"><font color="#1122aa">targetWriteDataWithErrorCheck</font></a>(&amp;errorId, <span class="KW">sizeof</span>(errorId));
+</span><span><a class="LN" name="206">  206   </a>   <span class="CT">/* send file id*/</span>
+</span><span><a class="LN" name="207">  207   </a>   <a href="#fcn_targetWriteDataWithErrorCheck" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_targetWriteDataWithErrorCheck');" target="rtwreport_document_frame"><font color="#1122aa">targetWriteDataWithErrorCheck</font></a>((MemUnit_T *)&amp;targetFid16, 
+</span><span><a class="LN" name="208">  208   </a>                                 <span class="KW">sizeof</span>(targetFid16));
+</span><span><a class="LN" name="209">  209   </a>   <span class="CT">/* send fprintSize */</span>
+</span><span><a class="LN" name="210">  210   </a>   <a href="#fcn_targetWriteDataWithErrorCheck" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_targetWriteDataWithErrorCheck');" target="rtwreport_document_frame"><font color="#1122aa">targetWriteDataWithErrorCheck</font></a>((MemUnit_T *)&amp;fprintSize, <span class="KW">sizeof</span>(fprintSize));
+</span><span><a class="LN" name="211">  211   </a>   <span class="KW">if</span> (fprintSize &gt; 0) <b>{</b>
+</span><span><a class="LN" name="212">  212   </a><font color="#992211">#</font><span class="PP">ifdef</span> HOST_WORD_ADDRESSABLE_TESTING
+</span><span><a class="LN" name="213">  213   </a>      <span class="CT">/* send data */</span>
+</span><span><a class="LN" name="214">  214   </a>      <a href="#fcn_targetWriteDataWithCharToMemUnitWidening" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_targetWriteDataWithCharToMemUnitWidening');" target="rtwreport_document_frame"><font color="#1122aa">targetWriteDataWithCharToMemUnitWidening</font></a>(&amp;targetStdioBuffer[0], &amp;<a href="#var_hostWordStdioBuffer" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_hostWordStdioBuffer');" target="rtwreport_document_frame"><font color="#1122aa">hostWordStdioBuffer</font></a>[0], fprintSize);
+</span><span><a class="LN" name="215">  215   </a><font color="#992211">#</font><span class="PP">else</span>
+</span><span><a class="LN" name="216">  216   </a>      <span class="CT">/* send data */</span>
+</span><span><a class="LN" name="217">  217   </a>      <a href="#fcn_targetWriteDataWithErrorCheck" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_targetWriteDataWithErrorCheck');" target="rtwreport_document_frame"><font color="#1122aa">targetWriteDataWithErrorCheck</font></a>((MemUnit_T *)&amp;targetStdioBuffer[0], fprintSize);
+</span><span><a class="LN" name="218">  218   </a><font color="#992211">#</font><span class="PP">endif</span>
+</span><span><a class="LN" name="219">  219   </a>   <b>}</b>
+</span><span><a class="LN" name="220">  220   </a>   <span class="KW">return</span>;
+</span><span><a class="LN" name="221">  221   </a><b>}</b>
+</span><span><a class="LN" name="222">  222   </a>
+</span></pre>
+</td></tr></table>
+</p>
+</body>
+</html>

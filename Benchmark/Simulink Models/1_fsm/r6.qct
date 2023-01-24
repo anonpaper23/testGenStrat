@@ -1,0 +1,6 @@
+#6. The autopilot shall change states from MANEUVER to STANDBY when the pilot is in control (standby) and sensor data is good.
+
+# UPDATED: Replacing {all} with specific timesteps. Requirement is not explicit
+# about which timesteps to use. These are based on the model.
+
+(FiniteStateMachine.STATE{t-1}==2 and standby{t} and FiniteStateMachine.good{t-1}) impl (FiniteStateMachine.STATE{t}==3);

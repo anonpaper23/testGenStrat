@@ -1,0 +1,6 @@
+#9. The autopilot shall change states from STANDBY to MANEUVER when a failure occurs (apfail).
+
+# UPDATED: Replacing {all} with specific timesteps. Requirement is not explicit
+# about which timesteps to use. These are based on the model.
+
+(FiniteStateMachine.STATE{t-1}==3 and FiniteStateMachine.apfail) impl (FiniteStateMachine.STATE{t}==2);

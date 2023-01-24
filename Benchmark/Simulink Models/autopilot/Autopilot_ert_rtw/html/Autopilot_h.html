@@ -1,0 +1,128 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>RTW Report - Autopilot.h</title>
+<style> .LN { font-style: italic; color: #888888 } </style>
+<style> .CT { font-style: italic; color: #117755 } </style>
+<style> .PP { font-style: bold;   color: #992211 } </style>
+<style> .KW { font-style: bold;   color: #112266 } </style>
+<style> .DT { font-style: bold;   color: #112266 } </style>
+<link rel="stylesheet" type="text/css" href="rtwreport.css"></link><script language="JavaScript" type="text/javascript" src="rtwreport_utils.js"></script>
+<SCRIPT type="text/javascript" src="rtwannotate.js"></SCRIPT>
+</head>
+<body bgcolor="#eeeeee" text="#1122aa" onload="try {if (top) { if (top.rtwFileOnLoad) top.rtwFileOnLoad(window.document); else local_onload();}} catch(err) {};if (typeof rtwannotate === 'function') {rtwannotate('Autopilot_h_cov.xml');}">
+<p>
+<table border="0" cellspacing="0" cellpadding="6" width="100%%" height="100%%"><tr><td width="100%%" valign="top" bgcolor="#ffffff">
+<h4>File: <a href="../Autopilot.h" target="rtwreport_document_frame" id="linkToText_plain">Autopilot.h</a></h4>
+<pre id="RTWcode">
+<span><a class="LN" name="1">    1   </a><span class="CT">/*</span>
+</span><span><a class="LN" name="2">    2   </a><span class="CT"> * File: Autopilot.h</span>
+</span><span><a class="LN" name="3">    3   </a><span class="CT"> *</span>
+</span><span><a class="LN" name="4">    4   </a><span class="CT"> * Code generated for Simulink model 'Autopilot'.</span>
+</span><span><a class="LN" name="5">    5   </a><span class="CT"> *</span>
+</span><span><a class="LN" name="6">    6   </a><span class="CT"> * Model version                  : 1.152</span>
+</span><span><a class="LN" name="7">    7   </a><span class="CT"> * Simulink Coder version         : 8.5 (R2013b) 08-Aug-2013</span>
+</span><span><a class="LN" name="8">    8   </a><span class="CT"> * C/C++ source code generated on : Mon Feb 03 08:13:57 2014</span>
+</span><span><a class="LN" name="9">    9   </a><span class="CT"> *</span>
+</span><span><a class="LN" name="10">   10   </a><span class="CT"> * Target selection: ert.tlc</span>
+</span><span><a class="LN" name="11">   11   </a><span class="CT"> * Embedded hardware selection: 32-bit Embedded Processor</span>
+</span><span><a class="LN" name="12">   12   </a><span class="CT"> * Code generation objectives: Unspecified</span>
+</span><span><a class="LN" name="13">   13   </a><span class="CT"> * Validation result: Not run</span>
+</span><span><a class="LN" name="14">   14   </a><span class="CT"> */</span>
+</span><span><a class="LN" name="15">   15   </a>
+</span><span><a class="LN" name="16">   16   </a><font color="#992211">#</font><span class="PP">ifndef</span> RTW_HEADER_Autopilot_h_
+</span><span><a class="LN" name="17">   17   </a><font color="#992211">#</font><span class="PP">define</span> RTW_HEADER_Autopilot_h_
+</span><span><a class="LN" name="18">   18   </a><font color="#992211">#</font><span class="PP">ifndef</span> Autopilot_COMMON_INCLUDES_
+</span><span><a class="LN" name="19">   19   </a><font color="#992211">#</font> <span class="PP">define</span> Autopilot_COMMON_INCLUDES_
+</span><span><a class="LN" name="20">   20   </a><font color="#992211">#</font><span class="PP">include</span> <font color="#992211">&lt;string.h&gt;</font>
+</span><span><a class="LN" name="21">   21   </a><font color="#992211">#</font><span class="PP">include</span> <font color="#992211">&quot;rtwtypes.h&quot;</font>
+</span><span><a class="LN" name="22">   22   </a><font color="#992211">#</font><span class="PP">include</span> <font color="#992211">&quot;model_reference_types.h&quot;</font>
+</span><span><a class="LN" name="23">   23   </a><font color="#992211">#</font><span class="PP">endif</span>                                 <span class="CT">/* Autopilot_COMMON_INCLUDES_ */</span>
+</span><span><a class="LN" name="24">   24   </a>
+</span><span><a class="LN" name="25">   25   </a><font color="#992211">#</font><span class="PP">include</span> <font color="#992211">&quot;Autopilot_types.h&quot;</font>
+</span><span><a class="LN" name="26">   26   </a>
+</span><span><a class="LN" name="27">   27   </a><span class="CT">/* Child system includes */</span>
+</span><span><a class="LN" name="28">   28   </a><font color="#992211">#</font><span class="PP">include</span> <font color="#992211">&quot;yaw_damper.h&quot;</font>
+</span><span><a class="LN" name="29">   29   </a><font color="#992211">#</font><span class="PP">include</span> <font color="#992211">&quot;roll_ap.h&quot;</font>
+</span><span><a class="LN" name="30">   30   </a><font color="#992211">#</font><span class="PP">include</span> <font color="#992211">&quot;pitch_ap.h&quot;</font>
+</span><span><a class="LN" name="31">   31   </a>
+</span><span><a class="LN" name="32">   32   </a><span class="CT">/* Macros for accessing real-time model data structure */</span>
+</span><span><a class="LN" name="33">   33   </a>
+</span><span><a class="LN" name="34">   34   </a><span class="CT">/* Block states (auto storage) for system '<a href="matlab:coder.internal.code2model('Autopilot')" name="code2model"><font color="#117755"><i>&lt;Root&gt;</i></font></a>' */</span>
+</span><span><a class="LN" name="35">   35   </a><span class="KW">typedef</span> <span class="KW">struct</span> <b>{</b>
+</span><span><a class="LN" name="36">   36   </a>  rtMdlrefDWork_roll_ap Roll_Autopilot_DWORK1;<span class="CT">/* '<a href="matlab:coder.internal.code2model('Autopilot:14')" name="code2model"><font color="#117755"><i>&lt;Root&gt;/Roll_Autopilot</i></font></a>' (DWork 1)  */</span>
+</span><span><a class="LN" name="37">   37   </a>  rtMdlrefDWork_pitch_ap Pitch_Autopilot_DWORK1;<span class="CT">/* '<a href="matlab:coder.internal.code2model('Autopilot:13')" name="code2model"><font color="#117755"><i>&lt;Root&gt;/Pitch_Autopilot</i></font></a>' (DWork 1)  */</span>
+</span><span><a class="LN" name="38">   38   </a>  rtMdlrefDWork_yaw_damper Yaw_Damper_DWORK1;<span class="CT">/* '<a href="matlab:coder.internal.code2model('Autopilot:15')" name="code2model"><font color="#117755"><i>&lt;Root&gt;/Yaw_Damper</i></font></a>' (DWork 1)  */</span>
+</span><span><a class="LN" name="39">   39   </a><b>}</b> <a name="type_D_Work_Autopilot">D_Work_Autopilot</a>;
+</span><span><a class="LN" name="40">   40   </a>
+</span><span><a class="LN" name="41">   41   </a><span class="CT">/* External inputs (root inport signals with auto storage) */</span>
+</span><span><a class="LN" name="42">   42   </a><span class="KW">typedef</span> <span class="KW">struct</span> <b>{</b>
+</span><span><a class="LN" name="43">   43   </a>  <a href="Autopilot_types_h.html#type_slBus1" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_slBus1');" target="rtwreport_document_frame"><font color="#1122aa">slBus1</font></a> AirData;                      <span class="CT">/* '<a href="matlab:coder.internal.code2model('Autopilot:2')" name="code2model"><font color="#117755"><i>&lt;Root&gt;/Air Data</i></font></a>' */</span>
+</span><span><a class="LN" name="44">   44   </a>  <a href="Autopilot_types_h.html#type_slBus2" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_slBus2');" target="rtwreport_document_frame"><font color="#1122aa">slBus2</font></a> Inertial;                     <span class="CT">/* '<a href="matlab:coder.internal.code2model('Autopilot:3')" name="code2model"><font color="#117755"><i>&lt;Root&gt;/Inertial</i></font></a>' */</span>
+</span><span><a class="LN" name="45">   45   </a>  <a href="../../slprj/ert/_sharedutils/html/rtwtypes_h.html#type_boolean_T" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_boolean_T');" target="rtwreport_document_frame"><font color="#1122aa">boolean_T</font></a> APeng;                     <span class="CT">/* '<a href="matlab:coder.internal.code2model('Autopilot:4')" name="code2model"><font color="#117755"><i>&lt;Root&gt;/AP Eng</i></font></a>' */</span>
+</span><span><a class="LN" name="46">   46   </a>  <a href="../../slprj/ert/_sharedutils/html/rtwtypes_h.html#type_boolean_T" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_boolean_T');" target="rtwreport_document_frame"><font color="#1122aa">boolean_T</font></a> HDGmode;                   <span class="CT">/* '<a href="matlab:coder.internal.code2model('Autopilot:5')" name="code2model"><font color="#117755"><i>&lt;Root&gt;/HDG Mode</i></font></a>' */</span>
+</span><span><a class="LN" name="47">   47   </a>  <a href="../../slprj/ert/_sharedutils/html/rtwtypes_h.html#type_boolean_T" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_boolean_T');" target="rtwreport_document_frame"><font color="#1122aa">boolean_T</font></a> ALTMode;                   <span class="CT">/* '<a href="matlab:coder.internal.code2model('Autopilot:6')" name="code2model"><font color="#117755"><i>&lt;Root&gt;/ALT Mode</i></font></a>' */</span>
+</span><span><a class="LN" name="48">   48   </a>  <a href="../../slprj/ert/_sharedutils/html/rtwtypes_h.html#type_real_T" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_real_T');" target="rtwreport_document_frame"><font color="#1122aa">real_T</font></a> HDGref;                       <span class="CT">/* '<a href="matlab:coder.internal.code2model('Autopilot:7')" name="code2model"><font color="#117755"><i>&lt;Root&gt;/HDG Ref</i></font></a>' */</span>
+</span><span><a class="LN" name="49">   49   </a>  <a href="../../slprj/ert/_sharedutils/html/rtwtypes_h.html#type_real_T" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_real_T');" target="rtwreport_document_frame"><font color="#1122aa">real_T</font></a> TurnKnob;                     <span class="CT">/* '<a href="matlab:coder.internal.code2model('Autopilot:8')" name="code2model"><font color="#117755"><i>&lt;Root&gt;/Turn Knob</i></font></a>' */</span>
+</span><span><a class="LN" name="50">   50   </a>  <a href="../../slprj/ert/_sharedutils/html/rtwtypes_h.html#type_real_T" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_real_T');" target="rtwreport_document_frame"><font color="#1122aa">real_T</font></a> ALTRef;                       <span class="CT">/* '<a href="matlab:coder.internal.code2model('Autopilot:9')" name="code2model"><font color="#117755"><i>&lt;Root&gt;/ALT Ref</i></font></a>' */</span>
+</span><span><a class="LN" name="51">   51   </a>  <a href="../../slprj/ert/_sharedutils/html/rtwtypes_h.html#type_real_T" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_real_T');" target="rtwreport_document_frame"><font color="#1122aa">real_T</font></a> PitchWheel;                   <span class="CT">/* '<a href="matlab:coder.internal.code2model('Autopilot:10')" name="code2model"><font color="#117755"><i>&lt;Root&gt;/Pitch Wheel</i></font></a>' */</span>
+</span><span><a class="LN" name="52">   52   </a><b>}</b> <a name="type_ExternalInputs_Autopilot">ExternalInputs_Autopilot</a>;
+</span><span><a class="LN" name="53">   53   </a>
+</span><span><a class="LN" name="54">   54   </a><span class="CT">/* External outputs (root outports fed by signals with auto storage) */</span>
+</span><span><a class="LN" name="55">   55   </a><span class="KW">typedef</span> <span class="KW">struct</span> <b>{</b>
+</span><span><a class="LN" name="56">   56   </a>  <a href="../../slprj/ert/_sharedutils/html/rtwtypes_h.html#type_real_T" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_real_T');" target="rtwreport_document_frame"><font color="#1122aa">real_T</font></a> AileronCmd;                   <span class="CT">/* '<a href="matlab:coder.internal.code2model('Autopilot:16')" name="code2model"><font color="#117755"><i>&lt;Root&gt;/Aileron Cmd</i></font></a>' */</span>
+</span><span><a class="LN" name="57">   57   </a>  <a href="../../slprj/ert/_sharedutils/html/rtwtypes_h.html#type_real_T" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_real_T');" target="rtwreport_document_frame"><font color="#1122aa">real_T</font></a> ElevatorCmd;                  <span class="CT">/* '<a href="matlab:coder.internal.code2model('Autopilot:17')" name="code2model"><font color="#117755"><i>&lt;Root&gt;/Elevator Cmd</i></font></a>' */</span>
+</span><span><a class="LN" name="58">   58   </a>  <a href="../../slprj/ert/_sharedutils/html/rtwtypes_h.html#type_real_T" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_real_T');" target="rtwreport_document_frame"><font color="#1122aa">real_T</font></a> RudderCmd;                    <span class="CT">/* '<a href="matlab:coder.internal.code2model('Autopilot:18')" name="code2model"><font color="#117755"><i>&lt;Root&gt;/Rudder Cmd</i></font></a>' */</span>
+</span><span><a class="LN" name="59">   59   </a><b>}</b> <a name="type_ExternalOutputs_Autopilot">ExternalOutputs_Autopilot</a>;
+</span><span><a class="LN" name="60">   60   </a>
+</span><span><a class="LN" name="61">   61   </a><span class="CT">/* Block states (auto storage) */</span>
+</span><span><a class="LN" name="62">   62   </a><span class="DT">extern</span> <a href="#type_D_Work_Autopilot" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_D_Work_Autopilot');" target="rtwreport_document_frame"><font color="#1122aa">D_Work_Autopilot</font></a> <a href="Autopilot_c.html#var_Autopilot_DWork" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_Autopilot_DWork');" target="rtwreport_document_frame"><font color="#1122aa">Autopilot_DWork</font></a>;
+</span><span><a class="LN" name="63">   63   </a>
+</span><span><a class="LN" name="64">   64   </a><span class="CT">/* External inputs (root inport signals with auto storage) */</span>
+</span><span><a class="LN" name="65">   65   </a><span class="DT">extern</span> <a href="#type_ExternalInputs_Autopilot" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_ExternalInputs_Autopilot');" target="rtwreport_document_frame"><font color="#1122aa">ExternalInputs_Autopilot</font></a> <a href="Autopilot_c.html#var_Autopilot_U" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_Autopilot_U');" target="rtwreport_document_frame"><font color="#1122aa">Autopilot_U</font></a>;
+</span><span><a class="LN" name="66">   66   </a>
+</span><span><a class="LN" name="67">   67   </a><span class="CT">/* External outputs (root outports fed by signals with auto storage) */</span>
+</span><span><a class="LN" name="68">   68   </a><span class="DT">extern</span> <a href="#type_ExternalOutputs_Autopilot" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_ExternalOutputs_Autopilot');" target="rtwreport_document_frame"><font color="#1122aa">ExternalOutputs_Autopilot</font></a> <a href="Autopilot_c.html#var_Autopilot_Y" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_Autopilot_Y');" target="rtwreport_document_frame"><font color="#1122aa">Autopilot_Y</font></a>;
+</span><span><a class="LN" name="69">   69   </a>
+</span><span><a class="LN" name="70">   70   </a><span class="CT">/* External data declarations for dependent source files */</span>
+</span><span><a class="LN" name="71">   71   </a><span class="DT">extern</span> <span class="DT">const</span> <a href="Autopilot_types_h.html#type_slBus1" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_slBus1');" target="rtwreport_document_frame"><font color="#1122aa">slBus1</font></a> <a href="Autopilot_c.html#var_Autopilot_rtZslBus1" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_Autopilot_rtZslBus1');" target="rtwreport_document_frame"><font color="#1122aa">Autopilot_rtZslBus1</font></a>;<span class="CT">/* slBus1 ground */</span>
+</span><span><a class="LN" name="72">   72   </a><span class="DT">extern</span> <span class="DT">const</span> <a href="Autopilot_types_h.html#type_slBus2" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_slBus2');" target="rtwreport_document_frame"><font color="#1122aa">slBus2</font></a> <a href="Autopilot_c.html#var_Autopilot_rtZslBus2" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_Autopilot_rtZslBus2');" target="rtwreport_document_frame"><font color="#1122aa">Autopilot_rtZslBus2</font></a>;<span class="CT">/* slBus2 ground */</span>
+</span><span><a class="LN" name="73">   73   </a>
+</span><span><a class="LN" name="74">   74   </a><span class="CT">/* Model entry point functions */</span>
+</span><span><a class="LN" name="75">   75   </a><span class="DT">extern</span> <span class="DT">void</span> <a href="Autopilot_c.html#fcn_Autopilot_initialize" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_Autopilot_initialize');" target="rtwreport_document_frame"><font color="#1122aa">Autopilot_initialize</font></a>(<span class="DT">void</span>);
+</span><span><a class="LN" name="76">   76   </a><span class="DT">extern</span> <span class="DT">void</span> <a href="Autopilot_c.html#fcn_Autopilot_step" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_Autopilot_step');" target="rtwreport_document_frame"><font color="#1122aa">Autopilot_step</font></a>(<span class="DT">void</span>);
+</span><span><a class="LN" name="77">   77   </a>
+</span><span><a class="LN" name="78">   78   </a><span class="CT">/*-</span>
+</span><span><a class="LN" name="79">   79   </a><span class="CT"> * The generated code includes comments that allow you to trace directly</span>
+</span><span><a class="LN" name="80">   80   </a><span class="CT"> * back to the appropriate location in the model.  The basic format</span>
+</span><span><a class="LN" name="81">   81   </a><span class="CT"> * is &lt;system&gt;/block_name, where system is the system number (uniquely</span>
+</span><span><a class="LN" name="82">   82   </a><span class="CT"> * assigned by Simulink) and block_name is the name of the block.</span>
+</span><span><a class="LN" name="83">   83   </a><span class="CT"> *</span>
+</span><span><a class="LN" name="84">   84   </a><span class="CT"> * Use the MATLAB hilite_system command to trace the generated code back</span>
+</span><span><a class="LN" name="85">   85   </a><span class="CT"> * to the model.  For example,</span>
+</span><span><a class="LN" name="86">   86   </a><span class="CT"> *</span>
+</span><span><a class="LN" name="87">   87   </a><span class="CT"> * hilite_system('&lt;S3&gt;')    - opens system 3</span>
+</span><span><a class="LN" name="88">   88   </a><span class="CT"> * hilite_system('&lt;S3&gt;/Kp') - opens and selects block Kp which resides in S3</span>
+</span><span><a class="LN" name="89">   89   </a><span class="CT"> *</span>
+</span><span><a class="LN" name="90">   90   </a><span class="CT"> * Here is the system hierarchy for this model</span>
+</span><span><a class="LN" name="91">   91   </a><span class="CT"> *</span>
+</span><span><a class="LN" name="92">   92   </a><span class="CT"> * '<a href="matlab:coder.internal.code2model('Autopilot')" name="code2model"><font color="#117755"><i>&lt;Root&gt;</i></font></a>' : 'Autopilot'</span>
+</span><span><a class="LN" name="93">   93   </a><span class="CT"> * '<a href="matlab:coder.internal.code2model('Autopilot:21')" name="code2model"><font color="#117755"><i>&lt;S1&gt;</i></font></a>'   : 'Autopilot/Model Info'</span>
+</span><span><a class="LN" name="94">   94   </a><span class="CT"> */</span>
+</span><span><a class="LN" name="95">   95   </a>
+</span><span><a class="LN" name="96">   96   </a><span class="CT">/*-</span>
+</span><span><a class="LN" name="97">   97   </a><span class="CT"> * Requirements for '<a href="matlab:coder.internal.code2model('Autopilot')" name="code2model"><font color="#117755"><i>&lt;Root&gt;</i></font></a>': Autopilot</span>
+</span><span><a class="LN" name="98">   98   </a><span class="CT"> */</span>
+</span><span><a class="LN" name="99">   99   </a><font color="#992211">#</font><span class="PP">endif</span>                                 <span class="CT">/* RTW_HEADER_Autopilot_h_ */</span>
+</span><span><a class="LN" name="100">  100   </a>
+</span><span><a class="LN" name="101">  101   </a><span class="CT">/*</span>
+</span><span><a class="LN" name="102">  102   </a><span class="CT"> * File trailer for generated code.</span>
+</span><span><a class="LN" name="103">  103   </a><span class="CT"> *</span>
+</span><span><a class="LN" name="104">  104   </a><span class="CT"> * [EOF]</span>
+</span><span><a class="LN" name="105">  105   </a><span class="CT"> */</span>
+</span><span><a class="LN" name="106">  106   </a>
+</span></pre>
+</td></tr></table>
+</p>
+</body>
+</html>
