@@ -41,7 +41,17 @@ Prerequisite
 - dpinger (https://github.com/dennypage/dpinger) [For NTSS]
 
 ## Instructions to run the proposed algorithms
-- open the folder ``testGenStrat`` with Matlab
-- add the folder ``testGenStrat`` and all of its subfolders on your classpath (right click on the folder > add to path > selected folder and subfolders)
-- Open the file ``executeXXnewHCR`` where ``XX`` is replaced with the values that correspond to the Simulink model under test. The values that ``XX`` can take are ``AP`` (Autopilot), ``TU`` (Tustin), ``REG`` (Regulator), ``FSM`` (Finite State Machine), ``NL`` (Non linear Guidance). Once opened, depending upon the algorithm that needs to be executed, enter the appropriate values inside the Python list ``models`` and ``req`` to set the algorithm (i.e Surrogate technique, ML-guided technique or Random search) and the requirement that needs to be tested. 
-- run the command ``executeXXnewHCR`` on the terminal.
+
+<ul>
+  <li> <h3> Simulink Models </h3> </li>
+  
+- Open the folder ``testGenStrat`` with Matlab
+- Add the folder ``testGenStrat`` and all of its subfolders on your classpath (right click on the folder > add to path > selected folder and subfolders) 
+- Open the file ``executeXXnewHCR`` where ``XX`` is replaced with the values that correspond to the Simulink model under test. The values that ``XX`` can take are ``AP`` (Autopilot), ``TU`` (Tustin), ``REG`` (Regulator), ``FSM`` (Finite State Machine), ``NL`` (Non linear Guidance). Once opened, depending upon the algorithm that needs to be executed, enter the appropriate values inside the Python list ``models`` and ``req`` to set the algorithm (i.e Surrogate technique, ML-guided technique or Random search) and the requirement that needs to be tested.  
+- Run the command ``executeXXnewHCR`` on the terminal.
+
+<li> <h3> NTSS </h3> </li>
+  
+- First follow the instructions <a href = "https://github.com/baharin/ENRICH" > here </a> for building virtual machines and installing required packages. 
+- Copy the scripts in ``code`` folder to the ``Documents`` directory of VM1 virtual machine.
+- Open a terminal and navigate to ``Documents``. Then, run the scripts using python. For example, to run surrogate-assisted algorithm, type ``python3 SurrogateAssisted.py``.
