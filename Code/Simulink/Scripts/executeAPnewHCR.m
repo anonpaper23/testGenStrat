@@ -51,7 +51,7 @@ function executeAPnewHCR()
                         end
                         endTime = toc(startTime);
                         timeData(1) = endTime;
-                        %Log time data in milliseconds
+                        %Log time data in seconds
                         tPath = strcat(timePath,models(i),'_timeTaken.csv');
                         writematrix(timeData,tPath,'WriteMode', 'append');
 
