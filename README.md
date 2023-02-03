@@ -45,7 +45,7 @@ Prerequisite
 <ul>
   <li> <h3> Simulink Models </h3> </li>
   
-- Create a Anaconda python environment with the packages listed in ``requirements.txt``.
+- Create a Anaconda python environment with the packages listed in ``Code/Simulink/pyScripts/requirements.txt``.
 - Open anaconda terminal and proceed to ``testGenStrat`` main folder.
 - Type ``matlab`` command to launch MATLAB software along with the Python packages. 
 - Add the folder ``testGenStrat`` and all of its subfolders on your classpath (right click on the folder > add to path > selected folder and subfolders) 
