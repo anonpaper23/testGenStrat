@@ -328,6 +328,4 @@ def getLow(simulink, VarName):
             low = -100
     return low
 
-# data_file_location = "C:\\Python-Workspace\\thesis\\FSE2023\\Results\\ModelTestingResults\\exp1\\tustin\\tustin_R1b_regression_3500_genRegTree_0.csv"
-# verify_file_location = "C:\\Python-Workspace\\thesis\\FSE2023\\Results\\ModelTestingResults\\exp1\\tustin\\verify\\tustin_R1b_verify_3500_genRegTree_0.csv"
 listOfBpaths = extractRanges(data_file_location,verify_file_location)
