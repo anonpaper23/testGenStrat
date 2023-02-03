@@ -12,8 +12,6 @@ function [bestfit,curfit] = ars(Global)
     run = Global.run;
     iterations = Global.evaluation;
 
-    %Make the path relative
-%     p = 'C:\Python-Workspace\thesis\FSE2023\Results\';
     p = '..\..\Results\';
     data_path = strcat(p,func2str(Global.problem),'\');
     replace_dot = strrep(Global.requirement,'.','_');
@@ -59,7 +57,6 @@ function [bestfit,curfit] = ars(Global)
     %the input search space
      while (counter < Global.evaluation)
             disp('Searching for the csv file');
-%             p = 'C:\Python-Workspace\thesis\FSE2023\Results\';
             p = '..\..\Results\';
             data_path = strcat(p,func2str(Global.problem),'\');
             replace_dot = strrep(Global.requirement,'.','_');
