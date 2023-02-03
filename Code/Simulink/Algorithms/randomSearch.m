@@ -2,7 +2,6 @@
 %that generates an input randomly from input search space and simulates the
 %inputs iteratively till the simulation budget is reached. 
 function PopObj = randomSearch(run,element,problem,req,evaluation)
-%     p = 'C:\Python-Workspace\thesis\FSE2023\Results\';
     p = '..\..\Results\';
     data_path = strcat(p,func2str(problem),'\');
     replace_dot = strrep(req,'.','_');
