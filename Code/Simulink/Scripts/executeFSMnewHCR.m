@@ -50,7 +50,7 @@ function executeFSMnewHCR()
 
                         end
                         endTime = toc(startTime);
-                        %Log time data in milliseconds
+                        %Log time data in seconds
                         timeData(1) = endTime;
                         tPath = strcat(timePath,models(i),'_timeTaken.csv');
                         writematrix(timeData,tPath,'WriteMode', 'append');
