@@ -1,1 +1,0 @@
-   Heading_Mode.c 
