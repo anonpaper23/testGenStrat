@@ -5,7 +5,6 @@ function PopObj = regressionTree(run,element,mlmodel,initialSimNum,problem,req,e
 
             model_name = mlmodel;
             initialSimulationNum = initialSimNum; %300
-%             p = 'C:\Python-Workspace\thesis\FSE2023\Results\';
             p = '..\..\Results\';
             data_path = strcat(p,func2str(problem),'\');
             replace_dot = strrep(req,'.','_');
@@ -146,9 +145,7 @@ function PopObj = regressionTree(run,element,mlmodel,initialSimNum,problem,req,e
                 prevTemplateArray = load(".\Utilities\Ranges.mat");
 
                 path = cP;
-%                 disp(path{1}{1});
-%                 disp(path{1}{2}{1});
-%                 disp(path{1}{2}{2});
+
                 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
                 %For each node for which a refined range has been found
                 %from fitting the regression tree, parse the lower bound
