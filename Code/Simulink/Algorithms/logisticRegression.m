@@ -1,7 +1,6 @@
 function PopObj = logisticRegression(run,element,mlmodel,initialSimNum,problem,req,evaluation)
             model_name = mlmodel;
             initialSimulationNum = initialSimNum;
-%             p = 'C:\Python-Workspace\thesis\FSE2023\Results\';
             p = '..\..\Results\';
             data_path = strcat(p,func2str(problem),'\');
             replace_dot = strrep(req,'.','_');
