@@ -19,8 +19,8 @@ Content description
 Folders
 - ``Benchmark``: contains two folder ``Formalization`` which contains the formalization details of the requirements for each Simulink model and NTSS system. Folder ``Simulink Models`` contains the benchmark Simulink models (.slx files).
 - ``Code``: contains scripts related to the implementation of all the approaches in this paper. It contains two subfolder namely ``Simulink`` and ``NTSS``. As the name suggests, ``Simulink`` contains code related to the all the approaches implemented for the Simulink models and ``NTSS`` contains code for NTSS system. ``Simulink`` folder contains seven sub folders. They are:
-  - ``Algorithms``: contains code to perform random search (``ars.m``) on the input search space. 
-  - ``Approaches``: Contains the implementation for Surrogate-assisted (Folders ``Dynamic Surrogate`` and ``Individual Surrogate``), ML-guided test generation (``logisticRegression.m`` and ``regressionTree.m``) and baseline naive random search (``randomSearch.m``). 
+  - ``inputGenerator``: contains code to perform random search (``ars.m``) on the input search space. 
+  - ``Algorithms``: Contains the implementation for Surrogate-assisted (Folders ``Dynamic Surrogate`` and ``Individual Surrogate``), ML-guided test generation (``logisticRegression.m`` and ``regressionTree.m``), naive random search baseline (``randomSearch.m``) and state-of-the-art baseline (```decisiontreeSoTA.m```). 
   - ``Functions``: contains intermediate scripts that is required for all the implementation to work.
   - ``Models``: contains files that define the input search space, requirements and calls differents algorithms (i.e Surrogate, ML-guided and random search) on a requirement that is set.
   - ``Scripts``: [IMPORTANT] This folder is the starting point for all the algorithms. The information of the requirement or the algorithm that needs to be performed to generate the dataset is defined in this folder.
