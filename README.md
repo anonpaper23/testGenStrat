@@ -1,4 +1,4 @@
-Test Generation Strategies for Explaining Spurious Failures of Compute-Intensive Systems
+Test Generation Strategies for Building Failure Models and Explaining Spurious Failures
 ------------------------------------------------------------
 
 In this paper, we propose to develop failure models for inferring explainable rules on test inputs that cause spurious failures. We implement and compare two approaches for building failure models: surrogate-assisted and ML-guided test generation. Surrogate-assisted test generation leverages ML that acts as a surrogate to the system under test that predicts the labels for test inputs instead of exercising all the inputs. More specifically, we propose a new surrogate-assisted algorithm that uses multiple surrogate models simultaneously, and selects the most accurate ML model dynamically for prediction. On the other hand, ML-guided test generation infers boundary regions that separate passing and failing test inputs and subsequently samples test inputs from those regions. An overview of the approaches are discussed below:
