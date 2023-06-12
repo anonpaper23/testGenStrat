@@ -298,7 +298,7 @@ specifyrun = 1
 data = pd.read_excel('ensrun' + str(specifyrun) + '.xlsx')[:100]
 finaldata =  data
 
-#build initial tree - the hyper-parameters are optimized
+#build initial tree
 
 X_train = data.loc[:, ['TIN 0 Req-BW', 'TIN 1 Req-BW', 'TIN 2 Req-BW', 'TIN 3 Req-BW', 'TIN 4 Req-BW', 'TIN 5 Req-BW', 'TIN 6 Req-BW', 'TIN 7 Req-BW']]
 y_train = data.Label.values
